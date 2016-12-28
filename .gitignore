@@ -68,3 +68,7 @@
 # Apache
 /error.log
 /access.log
+
+# Application
+/app/
+/web/
