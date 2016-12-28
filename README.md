@@ -49,6 +49,7 @@ database_password (null): password1
 mailer_transport (mail): 
 mailer_host (127.0.0.1): 
 mailer_port (null): 
+
 mailer_encryption (null): 
 mailer_user (null): 
 mailer_password (null): 
@@ -92,6 +93,20 @@ Install camunda by running the BPM install commands.
 ### Done!
 
 Open a browser and access your fresh installation in dev mode at `http://localhost/app_dev.php/`.
+
+## Using in other projets
+The Platform bundles uses https://github.com/Atlantic18/DoctrineExtensions ensure that you have the following configuration in your `app/config/config.yml`
+
+```yaml
+stof_doctrine_extensions:
+    default_locale: en
+    translation_fallback: true
+    orm:
+        default:
+            translatable:     true
+            tree:             true
+            timestampable:    true
+```
 
 ## Documentation
 
