@@ -1,0 +1,21 @@
+{% import 'OroUIBundle::macros.html.twig' as UI %}
+
+<div class="widget-content">
+    <div class="row-fluid form-horizontal">
+        <div class="responsive-block">
+            {{ UI.renderProperty('ds.communication.content.id.label'|trans, entity.id) }}
+            {{ UI.renderHtmlProperty('ds.communication.content.communication.label'|trans, '<a href="' ~ path('ds_communication_communication_view', { id: entity.communication.id }) ~ '">' ~ entity.communication.title ~ '</a>') }}
+            {{ UI.renderHtmlProperty('ds.communication.content.channel.label'|trans, '<a href="' ~ path('ds_communication_channel_view', { id: entity.channel.id }) ~ '">' ~ entity.channel.defaultTitle ~ '</a>') }}
+            {{ UI.renderHtmlProperty('ds.communication.content.profile.label'|trans, '<a href="' ~ path('ds_transport_profile_view', { id: entity.profile.id }) ~ '">' ~ entity.profile.title ~ '</a>') }}
+            {% if entity.template %}
+                {{ UI.renderHtmlProperty('ds.communication.content.template.label'|trans, '<a href="' ~ path('ds_communication_template_view', { id: entity.template.id }) ~ '">' ~ entity.template.title ~ '</a>') }}
+            {% else %}
+                {{ UI.renderHtmlProperty('ds.communication.content.template.label'|trans, 'ds.communication.content.template.none'|trans) }}
+            {% endif %}
+            {{ UI.renderProperty('ds.communication.content.title.label'|trans, entity.title) }}
+        </div>
+    </div>
+    {% for widget in ds_widgets({ position: 'ds_communication_content_entity_content', context: context }, { entity: entity }) %}
+        {{ widget.content|raw }}
+    {% endfor %}
+</div>

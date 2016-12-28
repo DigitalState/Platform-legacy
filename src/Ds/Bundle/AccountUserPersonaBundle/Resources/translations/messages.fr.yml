@@ -1,0 +1,9 @@
+ds:
+    accountuserpersona:
+        persona:
+            page:
+                account:
+                    index:
+                        title: Mes personnages
+                    view:
+                        title: Mes personnages

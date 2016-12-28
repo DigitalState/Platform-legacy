@@ -1,0 +1,11 @@
+services:
+    ds.servicebpm.widget.entity:
+        parent: ds.widget.widget.abstract
+        class: Ds\Bundle\ServiceBpmBundle\Widget\ServiceBpm\EntityWidget
+        tags:
+            - { name: ds.widget, position: ds_service_service_entity, context: bpm }
+    ds.servicebpm.widget.form:
+        parent: ds.widget.widget.abstract
+        class: Ds\Bundle\ServiceBpmBundle\Widget\ServiceBpm\FormWidget
+        tags:
+            - { name: ds.widget, position: ds_service_service_form, context: bpm }

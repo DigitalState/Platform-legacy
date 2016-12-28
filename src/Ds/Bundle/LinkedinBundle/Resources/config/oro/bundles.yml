@@ -1,0 +1,2 @@
+bundles:
+    - { name: Ds\Bundle\LinkedinBundle\DsLinkedinBundle, priority: 10 }

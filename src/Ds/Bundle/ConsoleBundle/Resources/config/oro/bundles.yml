@@ -1,0 +1,2 @@
+bundles:
+    - { name: Ds\Bundle\ConsoleBundle\DsConsoleBundle, priority: 10 }

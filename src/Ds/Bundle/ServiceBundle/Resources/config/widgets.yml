@@ -1,0 +1,31 @@
+services:
+    ds.service.widget.activation.entity:
+        parent: ds.widget.widget.abstract
+        class: Ds\Bundle\ServiceBundle\Widget\Activation\EntityWidget
+        tags:
+            - { name: ds.widget, position: ds_service_activation_entity }
+    ds.service.widget.activation.form:
+        parent: ds.widget.widget.abstract
+        class: Ds\Bundle\ServiceBundle\Widget\Activation\FormWidget
+        tags:
+            - { name: ds.widget, position: ds_service_activation_form }
+    ds.service.widget.activation.owner:
+        parent: ds.widget.widget.abstract
+        class: Ds\Bundle\ServiceBundle\Widget\Activation\OwnerWidget
+        tags:
+            - { name: ds.widget, position: ds_service_activation_form }
+    ds.service.widget.service.entity:
+        parent: ds.widget.widget.abstract
+        class: Ds\Bundle\ServiceBundle\Widget\Service\EntityWidget
+        tags:
+            - { name: ds.widget, position: ds_service_service_entity }
+    ds.service.widget.service.form:
+        parent: ds.widget.widget.abstract
+        class: Ds\Bundle\ServiceBundle\Widget\Service\FormWidget
+        tags:
+            - { name: ds.widget, position: ds_service_service_form }
+    ds.service.widget.service.owner:
+        parent: ds.widget.widget.abstract
+        class: Ds\Bundle\ServiceBundle\Widget\Service\OwnerWidget
+        tags:
+            - { name: ds.widget, position: ds_service_service_form }

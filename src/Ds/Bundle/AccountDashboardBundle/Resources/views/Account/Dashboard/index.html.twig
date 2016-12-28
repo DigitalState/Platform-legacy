@@ -1,0 +1,239 @@
+{% extends 'DsAccountBundle:Account:base.html.twig' %}
+
+{% block breadcrumb %}
+    <ul class="breadcrumb">
+        <li>
+            <i class="fa fa-home"></i>
+            <a href="{{ path('ds_portal_portal_home_index') }}">
+                {% trans %}ds.portal.home.page.portal.index.title{% endtrans %}
+            </a>
+        </li>
+        <li>
+            <a href="{{ path('ds_accountdashboard_account_dashboard_index') }}">
+                {% trans %}ds.account.home.page.account.index.title{% endtrans %}
+            </a>
+        </li>
+        <li class="active">
+            {% trans %}ds.accountdashboard.page.account.index.title{% endtrans %}
+        </li>
+    </ul>
+{% endblock %}
+
+{% block content %}
+    <div class="row">
+        <div class="col-lg-12">
+            <h1>
+                Welcome {{ ds_persona('standard', 'firstName') }}
+            </h1>
+        </div>
+    </div>
+    <hr>
+    <style type="text/css">
+        .hero-widget { text-align: center; padding-top: 20px; padding-bottom: 20px; }
+        .hero-widget .icon { display: block; font-size: 96px; line-height: 96px; margin-bottom: 10px; text-align: center; }
+        .hero-widget var { display: block; height: 64px; font-size: 64px; line-height: 64px; font-style: normal; }
+        .hero-widget label { font-size: 17px; }
+        .hero-widget .options { margin-top: 10px; }
+    </style>
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <div class="row">
+                <div class="col-sm-3">
+                    <div class="hero-widget well well-sm">
+                        <div class="icon">
+                            <i class="fa fa-bullhorn"></i>
+                        </div>
+                        <div class="text">
+                            <var>{{ caseCount }}</var>
+                            <label class="text-muted">My Service Requests</label>
+                        </div>
+                        <div class="options">
+                            <a href="{{ path('ds_accountcase_account_case_index') }}" class="btn btn-default btn-lg">View</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="hero-widget well well-sm">
+                        <div class="icon">
+                            <i class="fa fa-thumb-tack"></i>
+                        </div>
+                        <div class="text">
+                            <var>{{ taskCount }}</var>
+                            <label class="text-muted">My Tasks</label>
+                        </div>
+                        <div class="options">
+                            <a href="{{ path('ds_accountbpm_account_task_index') }}" class="btn btn-default btn-lg">View</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="hero-widget well well-sm">
+                        <div class="icon">
+                            <i class="fa fa-usd"></i>
+                        </div>
+                        <div class="text">
+                            <var>1</var>
+                            <label class="text-muted">My Outstanding Payments</label>
+                        </div>
+                        <div class="options">
+                            <a href="javascript:;" class="btn btn-default btn-lg">Pay</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="hero-widget well well-sm">
+                        <div class="icon">
+                            <i class="fa fa-home"></i>
+                        </div>
+                        <div class="text">
+                            <var>$500</var>
+                            <label class="text-muted">Eligible Tax Deductions</label>
+                        </div>
+                        <div class="options">
+                            <a href="javascript:;" class="btn btn-default btn-lg">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <style type="text/css">
+        .dashboard-progress-bar {
+            margin-top: 10px;
+        }
+
+        .dashboard-leads-indicator {
+            text-align: center;
+        }
+    </style>
+    <div class="row">
+        <div class="col-lg-6 col-md-6">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <div class="">
+                        <div class="">
+                            <span class="x-icon-headings-invert icon-x-order x-icon-headings"></span>
+                            <h3 class="header-white header-smaller">Recent Service Requests</h3>
+                        </div>
+                    </div>
+                </div>
+                {% for case in cases %}
+                    <a href="{{ path('ds_accountcase_account_case_view', { id: case.id }) }}">
+                        <div class="panel-body">
+                            <div class="row">
+                                <div class="col-lg-6 clearfix">
+                                    <span>
+                                        {{ case.titles|localized_value }}
+                                    </span>
+                                </div>
+                                <div class="col-lg-4 clearfix dashboard-leads-indicator">
+                                    {% if statuses[case.id] is not empty %}
+                                        <span>{{ statuses[case.id].titles|localized_value }}</span>
+                                    {% endif %}
+                                </div>
+                                <div class="col-lg-2 clearfix dashboard-progress-bar">
+                                    {% if statuses[case.id] is not empty %}
+                                        <div class="progress" style="background-color: rgba(221, 221, 221, 1)">
+                                            <div class="progress-bar" progress-bar-success="yes" role="progressbar" aria-valuenow="{{ statuses[case.id].percentage }}" aria-valuemin="0" aria-valuemax="100" style="width: {{ statuses[case.id].percentage }}.00%" title="{{ statuses[case.id].percentage }}%"></div>
+                                        </div>
+                                    {% endif %}
+                                </div>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                    </a>
+                {% else %}
+                    <div class="panel-body">
+                        <div class="row">
+                            <div class="col-lg-12 clearfix">
+                                <p>
+                                    No records found.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+        {#<div class="col-lg-6 col-md-6">#}
+            {#<div class="panel panel-default">#}
+                {#<div class="panel-heading">#}
+                    {#<div class="">#}
+                        {#<div class="">#}
+                            {#<span class="x-icon-headings-invert icon-x-order x-icon-headings"></span>#}
+                            {#<h3 class="header-white header-smaller">Recent Notifications</h3>#}
+                        {#</div>#}
+                    {#</div>#}
+                {#</div>#}
+                {#{% for message in messages %}#}
+                    {#<div class="panel-body">#}
+                        {#<div class="row">#}
+                            {#<div class="col-lg-6 clearfix"><span class="pull-left">{{ message.title }}</span></div>#}
+                            {#<div class="col-lg-2 clearfix"><span class="pull-left">{{ message.channel.slug }}</span></div>#}
+                            {#<div class="col-lg-4 clearfix"><span class="pull-left">{{ message.sentAt|ago }}</span></div>#}
+                        {#</div>#}
+                        {#<div class="clearfix"></div>#}
+                    {#</div>#}
+                {#{% else %}#}
+                    {#<div class="panel-body">#}
+                        {#<div class="row">#}
+                            {#<div class="col-lg-12 clearfix">#}
+                                {#<p>#}
+                                    {#No records found.#}
+                                {#</p>#}
+                            {#</div>#}
+                        {#</div>#}
+                    {#</div>#}
+                {#{% endfor %}#}
+            {#</div>#}
+        {#</div>#}
+    </div>
+    <div class="row">
+        <div class="col-lg-6 col-md-6">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <div class="">
+                        <div class="">
+                            <span class="x-icon-headings-invert icon-x-order x-icon-headings"></span>
+                            <h3 class="header-white header-smaller">Popular Service Requests</h3>
+                        </div>
+                    </div>
+                </div>
+                {% for service in services %}
+                    <a href="{{ path('ds_portalservice_portal_service_view', { id: service.id }) }}">
+                        <div class="panel-body">
+                            <div class="row">
+                                <div class="col-lg-9 clearfix">
+                                    <span class="pull-left">
+                                        {{ service.titles|localized_value }}
+                                    </span>
+                                </div>
+                                <div class="col-lg-3 clearfix">
+                                    <span class="pull-left">
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star-half-o"></i>
+                                        <i class="fa fa-star-o"></i>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                    </a>
+                {% else %}
+                    <div class="panel-body">
+                        <div class="row">
+                            <div class="col-lg-12 clearfix">
+                                <p>
+                                    No records found.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+{% endblock %}

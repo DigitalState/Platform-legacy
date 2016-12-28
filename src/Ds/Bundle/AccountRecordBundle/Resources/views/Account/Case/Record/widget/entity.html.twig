@@ -1,0 +1,24 @@
+<table class="table table-striped table-hover ">
+    <thead>
+        <tr>
+            <th>Record Title</th>
+            <th>Created Date</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for record in records %}
+            <tr>
+                <td>
+                    <a href="{{ path('ds_accountrecord_account_record_view', { id: record.id }) }}">
+                        {{ record.title }}
+                    </a>
+                </td>
+                <td>
+                    <span title="{{ record.createdAt|date('F jS, Y \\a\\t g:ia') }}">
+                        {{ record.createdAt|ago }}
+                    </span>
+                </td>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>

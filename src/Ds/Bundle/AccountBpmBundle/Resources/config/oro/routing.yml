@@ -1,0 +1,4 @@
+ds_accountbpm_account:
+    resource: @DsAccountBpmBundle/Controller/Account
+    type: annotation
+    prefix: %ds.account.prefix%

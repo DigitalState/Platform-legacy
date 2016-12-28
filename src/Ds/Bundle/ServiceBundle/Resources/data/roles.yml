@@ -1,0 +1,6 @@
+roles:
+    -
+        role: ROLE_SERVICE_MANAGER
+        label: Service Manager
+
+prototype: []

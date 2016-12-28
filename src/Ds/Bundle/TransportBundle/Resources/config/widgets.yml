@@ -1,0 +1,31 @@
+services:
+    ds.transport.widget.profile.entity:
+        parent: ds.widget.widget.abstract
+        class: Ds\Bundle\TransportBundle\Widget\Profile\EntityWidget
+        tags:
+            - { name: ds.widget, position: ds_transport_profile_entity }
+    ds.transport.widget.profile.form:
+        parent: ds.widget.widget.abstract
+        class: Ds\Bundle\TransportBundle\Widget\Profile\FormWidget
+        tags:
+            - { name: ds.widget, position: ds_transport_profile_form }
+    ds.transport.widget.profile.owner:
+        parent: ds.widget.widget.abstract
+        class: Ds\Bundle\TransportBundle\Widget\Profile\OwnerWidget
+        tags:
+            - { name: ds.widget, position: ds_transport_profile_form }
+    ds.transport.widget.transport.entity:
+        parent: ds.widget.widget.abstract
+        class: Ds\Bundle\TransportBundle\Widget\Transport\EntityWidget
+        tags:
+            - { name: ds.widget, position: ds_transport_transport_entity }
+    ds.transport.widget.transport.form:
+        parent: ds.widget.widget.abstract
+        class: Ds\Bundle\TransportBundle\Widget\Transport\FormWidget
+        tags:
+            - { name: ds.widget, position: ds_transport_transport_form }
+    ds.transport.widget.transport.owner:
+        parent: ds.widget.widget.abstract
+        class: Ds\Bundle\TransportBundle\Widget\Transport\OwnerWidget
+        tags:
+            - { name: ds.widget, position: ds_transport_transport_form }

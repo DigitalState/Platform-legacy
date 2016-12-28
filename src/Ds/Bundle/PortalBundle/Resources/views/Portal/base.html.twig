@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html{% block html_tag %}{% endblock %}>
+    <head{% block head_tag %}{% endblock %}>
+        {% block head %}
+            <title>
+                {% block title %}{{ oro_config_value('ds_portal.meta_title') }}{% endblock %}
+            </title>
+            {% block meta %}
+                <meta charset="utf-8">
+                <meta http-equiv="X-UA-Compatible" content="IE=edge">
+                <meta name="viewport" content="width=device-width, initial-scale=1">
+                <meta name="description" content="{{ oro_config_value('ds_portal.meta_description') }}">
+                <meta name="keywords" content="{{ oro_config_value('ds_portal.meta_keywords') }}">
+                <meta name="author" content="{{ oro_config_value('ds_portal.meta_author') }}">
+            {% endblock %}
+            {% block stylesheets %}
+                <link rel="stylesheet" href="/bundles/dsportal/vendor/bootstrap/css/bootstrap.min.css">
+                <link rel="stylesheet" href="/bundles/dsportal/vendor/bootstrap-toggle/css/bootstrap-toggle.min.css">
+                <link rel="stylesheet" href="/bundles/dsportal/vendor/bootswatch/flatly-custom/bootstrap.css">
+                <link rel="stylesheet" href="/bundles/dsportal/vendor/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css">
+                <link rel="stylesheet" href="/bundles/dsportal/vendor/font-awesome/css/font-awesome.min.css">
+                <link rel="stylesheet" href="/bundles/dsportal/css/base.css">
+            {% endblock %}
+            {% block scripts %}
+                <script src="/bundles/dsportal/vendor/jquery/jquery.min.js"></script>
+                <script src="/bundles/dsportal/vendor/jquery-form/jquery.form.min.js"></script>
+                <script src="/bundles/dsportal/vendor/bootstrap/js/bootstrap.min.js"></script>
+                <script src="/bundles/dsportal/vendor/bootstrap-toggle/js/bootstrap-toggle.min.js"></script>
+                <script src="/bundles/dsportal/vendor/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
+                <script src="/bundles/dsportal/js/base.js"></script>
+            {% endblock %}
+        {% endblock %}
+    </head>
+    <body{% block body_tag %}{% endblock %}>
+        {% block body %}
+            <div class="container">
+                <header{% block header_tag %} class="clearfix"{% endblock %}>
+                    {% block header %}
+                        <nav class="navbar navbar-default">
+                            <div class="container-fluid">
+                                <div class="navbar-header">
+                                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                                        <span class="sr-only">Toggle navigation</span>
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                    </button>
+                                    <a class="navbar-brand" href="#">
+                                        {{ oro_config_value('ds_portal.meta_title') }}
+                                    </a>
+                                </div>
+                                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                                    <ul class="nav navbar-nav navbar-right">
+                                        <li>
+                                            <a href="{{ path('ds_portal_portal_home_index') }}">
+                                                Home <span class="sr-only">(current)</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="{{ path('ds_portalservice_portal_service_index') }}">
+                                                {% trans %}ds.portalservice.service.page.portal.index.title{% endtrans %}
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="{{ path('ds_portalnotification_portal_notification_index') }}">
+                                                {% trans %}ds.portalnotification.notification.page.portal.index.title{% endtrans %}
+                                            </a>
+                                        </li>
+                                        {% if app.user %}
+                                            <li class="dropdown">
+                                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                                    {% trans %}ds.account.home.page.account.index.title{% endtrans %} <span class="caret"></span>
+                                                </a>
+                                                <ul class="dropdown-menu">
+                                                    <li>
+                                                        <span>
+                                                            <i class="fa fa-user"></i> {{ ds_persona('standard', 'firstName') }}
+                                                        </span>
+                                                    </li>
+                                                    <li>
+                                                        <a href="{{ path('ds_accountdashboard_account_dashboard_index') }}">
+                                                            {% trans %}ds.accountdashboard.page.account.index.title{% endtrans %}
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="{{ path('ds_accountbpm_account_task_index') }}">
+                                                            My Tasks
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="{{ path('ds_accountcase_account_case_index') }}">
+                                                            {% trans %}ds.accountcase.caseentity.page.account.index.title{% endtrans %}
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="{{ path('ds_accountuserpersona_account_persona_view', { slug: 'standard' }) }}">
+                                                            {% trans %}ds.accountuserpersona.persona.page.account.view.title{% endtrans %}
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a id="logout" href="/app_dev.php/user/logout">
+                                                            Logout
+                                                        </a>
+                                                        <script>
+                                                            $(document).ready(function() {
+                                                                $('#logout').click(function() {
+                                                                    $.ajax({
+                                                                        url: $(this).attr('href'),
+                                                                        success: function() {
+                                                                            window.location = '{{ path('ds_portal_portal_home_index') }}';
+                                                                        },
+                                                                        error: function() {
+                                                                            window.location = '{{ path('ds_portal_portal_home_index') }}';
+                                                                        }
+                                                                    });
+
+                                                                    return false;
+                                                                });
+                                                            });
+                                                        </script>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        {% else %}
+                                            <li>
+                                                <a href="{{ path('ds_accountdashboard_account_dashboard_index') }}">
+                                                    {% trans %}ds.account.home.page.account.index.title{% endtrans %}
+                                                </a>
+                                            </li>
+                                        {% endif %}
+                                        <li>
+                                            <a href="">
+                                                <i class="fa fa-search"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </nav>
+                    {% endblock %}
+                </header>
+                <main{% block main_tag %}{% endblock %}>
+                    {% block main %}
+                        {% block breadcrumb %}
+                        {% endblock %}
+                        {% block content %}
+                        {% endblock %}
+                    {% endblock %}
+                </main>
+            </div>
+            <footer{% block footer_tag %} class="clearfix"{% endblock %}>
+                {% block footer %}
+                    <p class="text-muted">
+                        &copy; 2016 {{ oro_config_value('ds_portal.title') }}. <span class="hidden-xs">All Rights Reserved.</span><br>
+                        <a href="{{ path('ds_portal_portal_reset_reset') }}">Reset demo</a>
+                    </p>
+                {% endblock %}
+            </footer>
+            <style type="text/css">
+                .chat {
+                    position: fixed;
+                    bottom: 75px;
+                    right: 30px;
+                    width: 64px;
+                    color: #000000;
+                    font-size: 30px;
+                }
+            </style>
+            <div class="chat">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <i class="fa fa-comments-o"></i>
+                    </div>
+                </div>
+            </div>
+        {% endblock %}
+    </body>
+</html>

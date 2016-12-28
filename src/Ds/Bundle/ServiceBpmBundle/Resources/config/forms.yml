@@ -1,0 +1,7 @@
+services:
+    ds.servicebpm.form.type.servicebpm:
+        class: Ds\Bundle\ServiceBpmBundle\Form\Type\ServiceBpmType
+        arguments:
+            - @ds.bpm.collection.bpm.api
+        tags:
+            - { name: form.type, alias: ds_servicebpm_servicebpm }

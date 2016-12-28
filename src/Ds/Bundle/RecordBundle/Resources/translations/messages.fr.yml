@@ -1,0 +1,55 @@
+ds:
+    record:
+        entity_label: Enregistrement
+        entity_plural_label: Enregistrements
+        entity_description: L'enregistrement.
+        id:
+            label: Id
+            description: ~
+        created_at:
+            label: Créé le
+            description: ~
+        updated_at:
+            label: Mis à jour le
+            description: ~
+        title:
+            label: Titre
+            description: ~
+        type:
+            label: Type
+            description: ~
+        source:
+            label: Source
+            description: ~
+        data:
+            label: Données
+            description: ~
+        case:
+            label: Cas
+            description: ~
+            placeholder: Sélectionner un cas
+            none: Non-assigné
+        owner:
+            label: Unité d'affaires
+            description: ~
+        menu:
+            tab:
+                label: Enregistrements
+            index:
+                label: Enregistrements
+        page:
+            index:
+                title: Enregistrements
+            view: ~
+            edit: ~
+        grid:
+            actions:
+                view: Visionner
+                update: Editer
+                delete: Supprimer
+        button:
+            create: Créer un enregistrement
+        widget:
+            entity: Enregistrement
+            form: Enregistrement
+            owner: Propriétaire

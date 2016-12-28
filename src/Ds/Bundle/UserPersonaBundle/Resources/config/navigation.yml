@@ -1,0 +1,24 @@
+oro_menu_config:
+    items:
+        ds_user_persona_tab:
+            label: ds.userpersona.persona.menu.tab.label
+            uri: '#'
+            extras:
+                position: 35
+        ds_user_persona_index:
+            label: ds.userpersona.persona.menu.index.label
+            route: ds_userpersona_persona_index
+        ds_user_persona_definition_index:
+            label: ds.userpersona.definition.menu.index.label
+            route: ds_userpersona_definition_index
+    tree:
+        application_menu:
+            children:
+                system_tab:
+                    children:
+                        users_management:
+                            children:
+                                ds_user_persona_tab:
+                                    children:
+                                        ds_user_persona_index: ~
+                                        ds_user_persona_definition_index: ~

@@ -1,0 +1,31 @@
+services:
+    ds.userpersona.widget.definition.entity:
+        parent: ds.widget.widget.abstract
+        class: Ds\Bundle\UserPersonaBundle\Widget\Definition\EntityWidget
+        tags:
+            - { name: ds.widget, position: ds_userpersona_definition_entity }
+    ds.userpersona.widget.definition.form:
+        parent: ds.widget.widget.abstract
+        class: Ds\Bundle\UserPersonaBundle\Widget\Definition\FormWidget
+        tags:
+            - { name: ds.widget, position: ds_userpersona_definition_form }
+    ds.userpersona.widget.definition.owner:
+        parent: ds.widget.widget.abstract
+        class: Ds\Bundle\UserPersonaBundle\Widget\Definition\OwnerWidget
+        tags:
+            - { name: ds.widget, position: ds_userpersona_definition_form }
+    ds.userpersona.widget.persona.entity:
+        parent: ds.widget.widget.abstract
+        class: Ds\Bundle\UserPersonaBundle\Widget\Persona\EntityWidget
+        tags:
+            - { name: ds.widget, position: ds_userpersona_persona_entity }
+    ds.userpersona.widget.persona.form:
+        parent: ds.widget.widget.abstract
+        class: Ds\Bundle\UserPersonaBundle\Widget\Persona\FormWidget
+        tags:
+            - { name: ds.widget, position: ds_userpersona_persona_form }
+    ds.userpersona.widget.persona.owner:
+        parent: ds.widget.widget.abstract
+        class: Ds\Bundle\UserPersonaBundle\Widget\Persona\OwnerWidget
+        tags:
+            - { name: ds.widget, position: ds_userpersona_persona_form }

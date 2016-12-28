@@ -1,0 +1,119 @@
+ds.communication.channel.view:
+    type: entity
+    class: DsCommunicationBundle:Channel
+    permission: VIEW
+
+ds.communication.channel.create:
+    type: entity
+    class: DsCommunicationBundle:Channel
+    permission: CREATE
+
+ds.communication.channel.edit:
+    type: entity
+    class: DsCommunicationBundle:Channel
+    permission: EDIT
+
+ds.communication.channel.delete:
+    type: entity
+    class: DsCommunicationBundle:Channel
+    permission: DELETE
+
+ds.communication.communication.view:
+    type: entity
+    class: DsCommunicationBundle:Communication
+    permission: VIEW
+
+ds.communication.communication.create:
+    type: entity
+    class: DsCommunicationBundle:Communication
+    permission: CREATE
+
+ds.communication.communication.edit:
+    type: entity
+    class: DsCommunicationBundle:Communication
+    permission: EDIT
+
+ds.communication.communication.delete:
+    type: entity
+    class: DsCommunicationBundle:Communication
+    permission: DELETE
+
+ds.communication.content.view:
+    type: entity
+    class: DsCommunicationBundle:Content
+    permission: VIEW
+
+ds.communication.content.create:
+    type: entity
+    class: DsCommunicationBundle:Content
+    permission: CREATE
+
+ds.communication.content.edit:
+    type: entity
+    class: DsCommunicationBundle:Content
+    permission: EDIT
+
+ds.communication.content.delete:
+    type: entity
+    class: DsCommunicationBundle:Content
+    permission: DELETE
+
+ds.communication.criterion.view:
+    type: entity
+    class: DsCommunicationBundle:Criterion
+    permission: VIEW
+
+ds.communication.criterion.create:
+    type: entity
+    class: DsCommunicationBundle:Criterion
+    permission: CREATE
+
+ds.communication.criterion.edit:
+    type: entity
+    class: DsCommunicationBundle:Criterion
+    permission: EDIT
+
+ds.communication.criterion.delete:
+    type: entity
+    class: DsCommunicationBundle:Criterion
+    permission: DELETE
+
+ds.communication.message.view:
+    type: entity
+    class: DsCommunicationBundle:Message
+    permission: VIEW
+
+ds.communication.message.create:
+    type: entity
+    class: DsCommunicationBundle:Message
+    permission: CREATE
+
+ds.communication.message.edit:
+    type: entity
+    class: DsCommunicationBundle:Message
+    permission: EDIT
+
+ds.communication.message.delete:
+    type: entity
+    class: DsCommunicationBundle:Message
+    permission: DELETE
+
+ds.communication.template.view:
+    type: entity
+    class: DsCommunicationBundle:Template
+    permission: VIEW
+
+ds.communication.template.create:
+    type: entity
+    class: DsCommunicationBundle:Template
+    permission: CREATE
+
+ds.communication.template.edit:
+    type: entity
+    class: DsCommunicationBundle:Template
+    permission: EDIT
+
+ds.communication.template.delete:
+    type: entity
+    class: DsCommunicationBundle:Template
+    permission: DELETE

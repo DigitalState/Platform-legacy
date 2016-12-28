@@ -1,0 +1,16 @@
+<div class="widget-content">
+    <div class="row-fluid form-horizontal">
+        <div class="responsive-block">
+            {{ form_row(form.communication) }}
+            {{ form_row(form.operand1) }}
+            {{ form_row(form.operator) }}
+            {{ form_row(form.operand2) }}
+        </div>
+        <div class="responsive-block">
+            {{ form_row(form.implementation) }}
+        </div>
+    </div>
+    {% for widget in ds_widgets({ position: 'ds_communication_criterion_form_criterion', context: context }, { form: form }) %}
+        {{ widget.content|raw }}
+    {% endfor %}
+</div>

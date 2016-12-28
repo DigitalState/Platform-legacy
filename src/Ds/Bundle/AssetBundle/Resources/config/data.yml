@@ -1,0 +1,7 @@
+services:
+    ds.asset.data.resolver.asset:
+        class: Ds\Bundle\AssetBundle\Data\Resolver\AssetResolver
+        arguments:
+            - @ds.asset.manager.asset
+        tags:
+            - { name: ds.data.resolver }

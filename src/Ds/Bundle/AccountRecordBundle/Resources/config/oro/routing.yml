@@ -1,0 +1,4 @@
+ds_accountrecord_account:
+    resource: @DsAccountRecordBundle/Controller/Account
+    type: annotation
+    prefix: %ds.account.prefix%

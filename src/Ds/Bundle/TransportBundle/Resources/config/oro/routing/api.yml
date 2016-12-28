@@ -1,0 +1,7 @@
+ds_transport_api_rest_profile:
+    resource: Ds\Bundle\TransportBundle\Controller\Api\Rest\ProfileController
+    type: rest
+
+ds_transport_api_rest_transport:
+    resource: Ds\Bundle\TransportBundle\Controller\Api\Rest\TransportController
+    type: rest

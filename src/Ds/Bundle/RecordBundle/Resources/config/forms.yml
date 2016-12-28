@@ -1,0 +1,23 @@
+services:
+    ds.record.form.type.record:
+        class: Ds\Bundle\RecordBundle\Form\Type\RecordType
+        tags:
+            - { name: form.type, alias: ds_record_record }
+    ds.record.form.type.api.record:
+        class: Ds\Bundle\RecordBundle\Form\Type\Api\RecordType
+        tags:
+            - { name: form.type, alias: ds_record_api_record }
+    ds.record.form.api.record:
+        class: Symfony\Component\Form\Form
+        factory_method: createNamed
+        factory_service: form.factory
+        arguments:
+            - ~
+            - ds_record_api_record
+    ds.record.form.handler.record:
+        class: Ds\Bundle\RecordBundle\Form\Handler\RecordHandler
+        scope: request
+        arguments:
+            - @ds.record.form.api.record
+            - @request
+            - @doctrine.orm.entity_manager

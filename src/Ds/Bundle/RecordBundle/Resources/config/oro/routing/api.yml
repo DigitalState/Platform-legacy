@@ -1,0 +1,3 @@
+ds_record_api_rest_record:
+    resource: Ds\Bundle\RecordBundle\Controller\Api\Rest\RecordController
+    type: rest

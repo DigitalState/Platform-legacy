@@ -1,0 +1,11 @@
+services:
+    ds.serviceurl.widget.serviceurl.entity:
+        parent: ds.widget.widget.abstract
+        class: Ds\Bundle\ServiceUrlBundle\Widget\ServiceUrl\EntityWidget
+        tags:
+            - { name: ds.widget, position: ds_service_service_entity, context: url }
+    ds.serviceurl.widget.serviceurl.form:
+        parent: ds.widget.widget.abstract
+        class: Ds\Bundle\ServiceUrlBundle\Widget\ServiceUrl\FormWidget
+        tags:
+            - { name: ds.widget, position: ds_service_service_form, context: url }

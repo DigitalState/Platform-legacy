@@ -1,0 +1,176 @@
+datagrid:
+    ds-userpersona-definition:
+        extended_entity_name: Ds\Bundle\UserPersonaBundle\Entity\Definition
+        source:
+            acl_resource: ds.userpersona.definition.view
+            type: orm
+            query:
+                select:
+                    - d.id
+                    - d.title
+                    - d.createdAt
+                    - d.updatedAt
+                from:
+                    - { table: DsUserPersonaBundle:Definition, alias: d }
+        inline_editing:
+            enable: true
+        columns:
+            id:
+                label: ds.userpersona.definition.id.label
+            title:
+                label: ds.userpersona.definition.title.label
+            createdAt:
+                label: ds.userpersona.definition.created_at.label
+                frontend_type: datetime
+            updatedAt:
+                label: ds.userpersona.definition.updated_at.label
+                frontend_type: datetime
+        properties:
+            id: ~
+            update_link:
+                type: url
+                route: ds_userpersona_definition_edit
+                params:
+                    - id
+            view_link:
+                type: url
+                route: ds_userpersona_definition_view
+                params:
+                    - id
+            delete_link:
+                type: url
+                route: ds_userpersona_api_rest_delete_definition
+                params:
+                    - id
+        sorters:
+            columns:
+                id:
+                    data_name: d.id
+                title:
+                    data_name: d.title
+                createdAt:
+                    data_name: d.createdAt
+                updatedAt:
+                    data_name: d.updatedAt
+            default:
+                id: ASC
+        filters:
+            columns:
+                title:
+                    type: string
+                    data_name: d.title
+                createdAt:
+                    type: datetime
+                    data_name: d.createdAt
+                updatedAt:
+                    type: datetime
+                    data_name: d.updatedAt
+        actions:
+            view:
+                type: navigate
+                label: ds.userpersona.definition.grid.actions.view
+                link: view_link
+                icon: eye-open
+                acl_resource: ds.userpersona.definition.view
+                rowAction: true
+            update:
+                type: navigate
+                label: ds.userpersona.definition.grid.actions.update
+                link: update_link
+                icon: edit
+                acl_resource: ds.userpersona.definition.edit
+            delete:
+                type: delete
+                label: ds.userpersona.definition.grid.actions.delete
+                link: delete_link
+                icon: trash
+                acl_resource: ds.userpersona.definition.delete
+    ds-userpersona-persona:
+        extended_entity_name: Ds\Bundle\UserPersonaBundle\Entity\Persona
+        source:
+            acl_resource: ds.userpersona.persona.view
+            type: orm
+            query:
+                select:
+                    - p.id
+                    - u.username as user_username
+                    - p.createdAt
+                    - p.updatedAt
+                from:
+                    - { table: DsUserPersonaBundle:Persona, alias: p }
+                join:
+                    left:
+                        - { join: p.user, alias: u }
+        inline_editing:
+            enable: true
+        columns:
+            id:
+                label: ds.userpersona.persona.id.label
+            user_username:
+                label: ds.userpersona.persona.user.username.label
+            createdAt:
+                label: ds.userpersona.persona.created_at.label
+                frontend_type: datetime
+            updatedAt:
+                label: ds.userpersona.persona.updated_at.label
+                frontend_type: datetime
+        properties:
+            id: ~
+            update_link:
+                type: url
+                route: ds_userpersona_persona_edit
+                params:
+                    - id
+            view_link:
+                type: url
+                route: ds_userpersona_persona_view
+                params:
+                    - id
+            delete_link:
+                type: url
+                route: ds_userpersona_api_rest_delete_persona
+                params:
+                    - id
+        sorters:
+            columns:
+                id:
+                    data_name: p.id
+                user_username:
+                    data_name: u.username
+                createdAt:
+                    data_name: p.createdAt
+                updatedAt:
+                    data_name: p.updatedAt
+            default:
+                id: ASC
+        filters:
+            columns:
+                user_username:
+                    type: string
+                    data_name: u.username
+                createdAt:
+                    type: datetime
+                    data_name: p.createdAt
+                updatedAt:
+                    type: datetime
+                    data_name: p.updatedAt
+        actions:
+            view:
+                type: navigate
+                label: ds.userpersona.persona.grid.actions.view
+                link: view_link
+                icon: eye-open
+                acl_resource: ds.userpersona.persona.view
+                rowAction: true
+            update:
+                type: navigate
+                label: ds.userpersona.persona.grid.actions.update
+                link: update_link
+                icon: edit
+                acl_resource: ds.userpersona.persona.edit
+            delete:
+                type: delete
+                label: ds.userpersona.persona.grid.actions.delete
+                link: delete_link
+                icon: trash
+                acl_resource: ds.userpersona.persona.delete

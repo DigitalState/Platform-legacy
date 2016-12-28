@@ -1,0 +1,19 @@
+oro_entity_config:
+    asset:
+        entity:
+            items:
+                enabled:
+                    options:
+                        require_schema_update: true
+                        priority: 250
+                        default_value: false
+                    form:
+                        type: oro_entity_extend_association_choice
+                        options:
+                            block: associations
+                            required: true
+                            label: ds.asset.config.enabled.label
+                            association_class: 'DsAssetBundle:Asset'
+                immutable:
+                    options:
+                        auditable: false

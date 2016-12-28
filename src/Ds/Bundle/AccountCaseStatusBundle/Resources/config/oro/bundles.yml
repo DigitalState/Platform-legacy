@@ -1,0 +1,2 @@
+bundles:
+    - { name: Ds\Bundle\AccountCaseStatusBundle\DsAccountCaseStatusBundle, priority: 30 }

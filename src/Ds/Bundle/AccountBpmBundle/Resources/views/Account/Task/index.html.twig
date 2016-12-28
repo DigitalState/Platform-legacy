@@ -1,0 +1,103 @@
+{% extends 'DsAccountBundle:Account:base.html.twig' %}
+
+{% block breadcrumb %}
+    <ul class="breadcrumb">
+        <li>
+            <i class="fa fa-home"></i>
+            <a href="{{ path('ds_portal_portal_home_index') }}">
+                {% trans %}ds.portal.home.page.portal.index.title{% endtrans %}
+            </a>
+        </li>
+        <li>
+            <a href="{{ path('ds_accountdashboard_account_dashboard_index') }}">
+                {% trans %}ds.account.home.page.account.index.title{% endtrans %}
+            </a>
+        </li>
+        <li class="active">
+            My Tasks
+        </li>
+    </ul>
+{% endblock %}
+
+{% block content %}
+    <div class="row">
+        <div class="col-lg-12">
+            <h1>
+                My Tasks
+            </h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <form role="search">
+                        <input type="text" class="form-control" placeholder="Search Tasks..." style="border-top: 0px; border-right: 0px; border-left: 0px; font-size: 24px;" data-plugin="filter" data-filter-row="#tasks tbody tr" data-filter-data=".name">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <table id="tasks" class="table table-striped table-hover ">
+                        <thead>
+                            <tr>
+                                <th>
+                                    Task Name
+                                </th>
+                                <th>
+                                    Created Date
+                                </th>
+                                <th>
+                                    Service Title
+                                </th>
+                                <th>
+                                    Service Request ID
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for task in tasks %}
+                                <tr>
+                                    <td>
+                                        <a href="{{ path('ds_accountbpm_account_task_form', { id: task.id }) }}" class="name">
+                                            {{ task.name }}
+                                        </a>
+                                    </td>
+                                    <td>
+                                        {{ task.created|ago }}
+                                    </td>
+                                    <td>
+                                        {% if task.case %}
+                                            {{ task.case.service.title }}
+                                        {% endif %}
+                                    </td>
+                                    <td class="text-center">
+                                        {% if task.case %}
+                                            {% if app.user == task.case.user %}
+                                                <a href="{{ path('ds_accountcase_account_case_view', { id: task.case.id }) }}">
+                                                    {{ task.case.id }}
+                                                </a>
+                                            {% else %}
+                                                {{ task.case.id }}
+                                            {% endif %}
+                                        {% endif %}
+                                    </td>
+                                </tr>
+                            {% else %}
+                                <tr>
+                                    <td colspan="4">
+                                        No records found.
+                                    </td>
+                                </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

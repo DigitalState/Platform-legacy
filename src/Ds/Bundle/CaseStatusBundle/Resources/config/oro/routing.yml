@@ -1,0 +1,13 @@
+ds_casestatus:
+    resource: @DsCaseStatusBundle/Controller
+    type: annotation
+
+ds_casestatus_api_rest:
+    resource: @DsCaseStatusBundle/Resources/config/oro/routing/api.yml
+    type: rest
+    prefix: %ds.api.rest.prefix%/case
+    requirements:
+        version: %ds.api.rest.requirements.version%
+        _format: json
+    defaults:
+        version: %ds.api.rest.defaults.version%

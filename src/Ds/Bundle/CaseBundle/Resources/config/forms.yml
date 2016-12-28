@@ -1,0 +1,23 @@
+services:
+    ds.case.form.type.case:
+        class: Ds\Bundle\CaseBundle\Form\Type\CaseType
+        tags:
+            - { name: form.type, alias: ds_case_case }
+    ds.case.form.type.api.case:
+        class: Ds\Bundle\CaseBundle\Form\Type\Api\CaseType
+        tags:
+            - { name: form.type, alias: ds_case_api_case }
+    ds.case.form.api.case:
+        class: Symfony\Component\Form\Form
+        factory_method: createNamed
+        factory_service: form.factory
+        arguments:
+            - ~
+            - ds_case_api_case
+    ds.case.form.handler.case:
+        class: Ds\Bundle\CaseBundle\Form\Handler\CaseHandler
+        scope: request
+        arguments:
+            - @ds.case.form.api.case
+            - @request
+            - @doctrine.orm.entity_manager

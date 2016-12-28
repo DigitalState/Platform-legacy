@@ -1,0 +1,6 @@
+services:
+    ds.bpm_pm.bpm.api.pm:
+        parent: ds.bpm.bpm.api.abstract
+        class: Ds\Bundle\BpmPmBundle\Bpm\Api\PmApi
+        tags:
+            - { name: ds.bpm.api, alias: pm }

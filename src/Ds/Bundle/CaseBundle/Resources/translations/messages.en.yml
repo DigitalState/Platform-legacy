@@ -1,0 +1,73 @@
+ds:
+    case:
+        caseentity:
+            entity_label: Case
+            entity_plural_label: Cases
+            entity_description: The case.
+            id:
+                label: ID
+                description: ~
+            created_at:
+                label: Created At
+                description: ~
+            updated_at:
+                label: Updated At
+                description: ~
+            user:
+                label: User
+                description: ~
+                placeholder: Select User
+                none: Unassigned
+                username:
+                    label: User
+            service:
+                label: Service
+                description: ~
+                placeholder: Select Service
+                none: Unassigned
+            title:
+                label: Title
+                description: ~
+            source:
+                label: Source
+                description: ~
+            state:
+                label: State
+                description: ~
+                choice:
+                    active: Active
+                    inactive: Inactive
+            status:
+                label: Status
+                description: ~
+                choice:
+                    active: Active
+                    resolved: Resolved
+                    cancelled: Cancelled
+            owner:
+                label: Business Unit
+                description: ~
+            records:
+                label: Records
+                description: ~
+            menu:
+                tab:
+                    label: Cases
+                index:
+                    label: Cases
+            page:
+                index:
+                    title: Cases
+                view: ~
+                edit: ~
+            grid:
+                actions:
+                    view: View
+                    update: Edit
+                    delete: Delete
+            button:
+                create: Create Case
+            widget:
+                entity: Case
+                form: Case
+                owner: Owner

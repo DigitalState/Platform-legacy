@@ -1,0 +1,7 @@
+ds:
+    sso_linkedin:
+        system_configuration:
+            groups:
+                sso_linkedin_settings: Authentification unique LinkedIn
+            fields:
+                enable_sso: Activer

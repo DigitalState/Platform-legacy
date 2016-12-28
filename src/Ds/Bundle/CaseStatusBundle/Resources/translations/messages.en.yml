@@ -1,0 +1,68 @@
+ds:
+    casestatus:
+        status:
+            entity_label: Status
+            entity_plural_label: Statuses
+            entity_description: The status.
+            id:
+                label: ID
+                description: ~
+            title:
+                label: Title
+                description: ~
+            source:
+                label: Source
+                description: ~
+            type:
+                label: Type
+                description: ~
+            description:
+                label: Description
+                description: ~
+            percentage:
+                label: Percentage
+                description: ~
+            case:
+                label: Case
+                description: ~
+                placeholder: Select Case
+                title:
+                    label: Case
+            data:
+                label: Data
+                description: ~
+            created_at:
+                label: Created At
+                description: ~
+            updated_at:
+                label: Updated At
+                description: ~
+            user:
+                username:
+                    label: User
+            owner:
+                label: Business Unit
+                description: ~
+            menu:
+                index:
+                    label: Statuses
+            page:
+                index:
+                    title: Case Statuses
+                view: ~
+                edit: ~
+            grid:
+                actions:
+                    view: View
+                    update: Edit
+                    delete: Delete
+            button:
+                create: Create Status
+            widget:
+                entity: Status
+                form: Status
+                owner: Owner
+        caseentity:
+            widget:
+                statuses:
+                    grid: Statuses

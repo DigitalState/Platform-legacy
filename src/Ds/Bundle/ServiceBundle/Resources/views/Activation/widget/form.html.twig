@@ -1,0 +1,11 @@
+<div class="widget-content">
+    <div class="row-fluid form-horizontal">
+        <div class="responsive-block">
+            {{ form_row(form.service) }}
+            {{ form_row(form.user) }}
+        </div>
+    </div>
+    {% for widget in ds_widgets({ position: 'ds_service_activation_form_activation', context: context }, { form: form }) %}
+        {{ widget.content|raw }}
+    {% endfor %}
+</div>

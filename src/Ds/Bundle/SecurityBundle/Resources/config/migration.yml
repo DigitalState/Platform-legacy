@@ -1,0 +1,7 @@
+services:
+     ds.security.migration.extension.acl:
+        class: Ds\Bundle\SecurityBundle\Migration\Extension\AclExtension
+        arguments:
+            - @oro_security.acl.manager
+#        tags:
+#            - { name: oro_migration.extension, extension_name: acl }

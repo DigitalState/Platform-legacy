@@ -1,0 +1,21 @@
+services:
+    ds.casestatus.widget.status.entity:
+        parent: ds.widget.widget.abstract
+        class: Ds\Bundle\CaseStatusBundle\Widget\Status\EntityWidget
+        tags:
+            - { name: ds.widget, position: ds_casestatus_status_entity }
+    ds.casestatus.widget.status.form:
+        parent: ds.widget.widget.abstract
+        class: Ds\Bundle\CaseStatusBundle\Widget\Status\FormWidget
+        tags:
+            - { name: ds.widget, position: ds_casestatus_status_form }
+    ds.casestatus.widget.status.owner:
+        parent: ds.widget.widget.abstract
+        class: Ds\Bundle\CaseStatusBundle\Widget\Status\OwnerWidget
+        tags:
+            - { name: ds.widget, position: ds_casestatus_status_form }
+    ds.casestatus.widget.case.statuses.grid:
+        parent: ds.widget.widget.abstract
+        class: Ds\Bundle\CaseStatusBundle\Widget\CaseEntity\Statuses\GridWidget
+        tags:
+            - { name: ds.widget, position: ds_case_case_entity }

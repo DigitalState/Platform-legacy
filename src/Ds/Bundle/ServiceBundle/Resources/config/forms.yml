@@ -1,0 +1,45 @@
+services:
+    ds.service.form.type.activation:
+        class: Ds\Bundle\ServiceBundle\Form\Type\ActivationType
+        tags:
+            - { name: form.type, alias: ds_service_activation }
+    ds.service.form.type.api.activation:
+        class: Ds\Bundle\ServiceBundle\Form\Type\Api\ActivationType
+        tags:
+            - { name: form.type, alias: ds_service_api_activation }
+    ds.service.form.api.activation:
+        class: Symfony\Component\Form\Form
+        factory_method: createNamed
+        factory_service: form.factory
+        arguments:
+            - ~
+            - ds_service_api_activation
+    ds.service.form.handler.activation:
+        class: Ds\Bundle\ServiceBundle\Form\Handler\ActivationHandler
+        scope: request
+        arguments:
+            - @ds.service.form.api.activation
+            - @request
+            - @doctrine.orm.entity_manager
+    ds.service.form.type.service:
+        class: Ds\Bundle\ServiceBundle\Form\Type\ServiceType
+        tags:
+            - { name: form.type, alias: ds_service_service }
+    ds.service.form.type.api.service:
+        class: Ds\Bundle\ServiceBundle\Form\Type\Api\ServiceType
+        tags:
+            - { name: form.type, alias: ds_service_api_service }
+    ds.service.form.api.service:
+        class: Symfony\Component\Form\Form
+        factory_method: createNamed
+        factory_service: form.factory
+        arguments:
+            - ~
+            - ds_service_api_service
+    ds.service.form.handler.service:
+        class: Ds\Bundle\ServiceBundle\Form\Handler\ServiceHandler
+        scope: request
+        arguments:
+            - @ds.service.form.api.service
+            - @request
+            - @doctrine.orm.entity_manager

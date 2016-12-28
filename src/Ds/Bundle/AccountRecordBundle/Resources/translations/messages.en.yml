@@ -1,0 +1,6 @@
+ds:
+    accountrecord:
+        case:
+            record:
+                widget:
+                    entity: My Records

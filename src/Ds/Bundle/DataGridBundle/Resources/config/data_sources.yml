@@ -1,0 +1,9 @@
+services:
+    ds.datagrid.datasource.rest:
+        class: Ds\Bundle\DataGridBundle\Datasource\Rest\RestDatasource
+        tags:
+            - { name: oro_datagrid.datasource, type: rest }
+    ds.datagrid.datasource.repository:
+        class: Ds\Bundle\DataGridBundle\Datasource\Repository\RepositoryDatasource
+        tags:
+            - { name: oro_datagrid.datasource, type: repository }

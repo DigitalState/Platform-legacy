@@ -1,0 +1,7 @@
+services:
+    ds.record.manager.record:
+        class: Ds\Bundle\RecordBundle\Manager\RecordManager
+        parent: oro_soap.manager.entity_manager.abstract
+        arguments:
+            - Ds\Bundle\RecordBundle\Entity\Record
+            - @doctrine.orm.entity_manager

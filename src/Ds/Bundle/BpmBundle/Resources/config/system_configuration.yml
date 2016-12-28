@@ -1,0 +1,92 @@
+oro_system_configuration:
+    groups:
+        ds_bpm:
+            title: ds.bpm.system_configuration.groups.bpm.title
+        ds_bpm_process:
+            title: ds.bpm.system_configuration.groups.bpm_process.title
+            icon: icon-wrench
+        ds_bpm_process_variable_general:
+            title: ds.bpm.system_configuration.groups.bpm_process_variable_general.title
+        ds_bpm_process_variable_none_start_event:
+            title: ds.bpm.system_configuration.groups.bpm_process_variable_none_start_event.title
+        ds_bpm_process_variable_user_task:
+            title: ds.bpm.system_configuration.groups.bpm_process_variable_user_task.title
+    fields:
+        ds_bpm.variable_user_id:
+            data_type: string
+            type: text
+            options:
+                label: ds.bpm.system_configuration.fields.variable_user_id.label
+                tooltip: ~
+            priority: 8
+        ds_bpm.variable_user_business_unit_id:
+            data_type: string
+            type: text
+            options:
+                label: ds.bpm.system_configuration.fields.variable_user_business_unit_id.label
+                tooltip: ~
+            priority: 7
+        ds_bpm.variable_user_organization_id:
+            data_type: string
+            type: text
+            options:
+                label: ds.bpm.system_configuration.fields.variable_user_organization_id.label
+                tooltip: ~
+            priority: 6
+        ds_bpm.variable_service_id:
+            data_type: string
+            type: text
+            options:
+                label: ds.bpm.system_configuration.fields.variable_service_id.label
+                tooltip: ~
+            priority: 5
+        ds_bpm.variable_service_business_unit_id:
+            data_type: string
+            type: text
+            options:
+                label: ds.bpm.system_configuration.fields.variable_service_business_unit_id.label
+                tooltip: ~
+            priority: 4
+        ds_bpm.variable_service_organization_id:
+            data_type: string
+            type: text
+            options:
+                label: ds.bpm.system_configuration.fields.variable_service_organization_id.label
+                tooltip: ~
+            priority: 3
+        ds_bpm.variable_none_start_event_form_data:
+            data_type: string
+            type: text
+            options:
+                label: ds.bpm.system_configuration.fields.variable_none_start_event_form_data.label
+                tooltip: ~
+            priority: 2
+        ds_bpm.variable_user_task_form_data:
+            data_type: string
+            type: text
+            options:
+                label: ds.bpm.system_configuration.fields.variable_user_task_form_data.label
+                tooltip: ~
+            priority: 1
+    tree:
+        system_configuration:
+            platform:
+                children:
+                    ds_bpm:
+                        children:
+                            ds_bpm_process:
+                                children:
+                                    ds_bpm_process_variable_general:
+                                        children:
+                                            - ds_bpm.variable_user_id
+                                            - ds_bpm.variable_user_business_unit_id
+                                            - ds_bpm.variable_user_organization_id
+                                            - ds_bpm.variable_service_id
+                                            - ds_bpm.variable_service_business_unit_id
+                                            - ds_bpm.variable_service_organization_id
+                                    ds_bpm_process_variable_none_start_event:
+                                        children:
+                                            - ds_bpm.variable_none_start_event_form_data
+                                    ds_bpm_process_variable_user_task:
+                                        children:
+                                            - ds_bpm.variable_user_task_form_data

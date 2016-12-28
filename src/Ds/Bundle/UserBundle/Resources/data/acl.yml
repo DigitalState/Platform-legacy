@@ -1,0 +1,4 @@
+acl:
+    ROLE_USER_MANAGER: []
+    ROLE_INDIVIDUAL: []
+    ROLE_EMPLOYEE: []

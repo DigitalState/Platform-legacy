@@ -1,0 +1,81 @@
+datagrid:
+    ds-asset-asset:
+        extended_entity_name: Ds\Bundle\AssetBundle\Entity\Asset
+        source:
+            acl_resource: ds.asset.asset.view
+            type: orm
+            query:
+                select:
+                    - a.id
+                    - a.createdAt
+                    - a.updatedAt
+                from:
+                    - { table: DsAssetBundle:Asset, alias: a }
+        inline_editing:
+            enable: true
+        columns:
+            id:
+                label: ds.asset.id.label
+            title:
+                label: ds.asset.title.label
+            createdAt:
+                label: ds.asset.created_at.label
+                frontend_type: datetime
+            updatedAt:
+                label: ds.asset.updated_at.label
+                frontend_type: datetime
+        properties:
+            id: ~
+            update_link:
+                type: url
+                route: ds_asset_asset_edit
+                params:
+                    - id
+            view_link:
+                type: url
+                route: ds_asset_asset_view
+                params:
+                    - id
+            delete_link:
+                type: url
+                route: ds_asset_api_rest_delete_asset
+                params:
+                    - id
+        sorters:
+            columns:
+                id:
+                    data_name: a.id
+                createdAt:
+                    data_name: a.createdAt
+                updatedAt:
+                    data_name: a.updatedAt
+            default:
+                id: ASC
+        filters:
+            columns:
+                createdAt:
+                    type: datetime
+                    data_name: a.createdAt
+                updatedAt:
+                    type: datetime
+                    data_name: a.updatedAt
+        actions:
+            view:
+                type: navigate
+                label: ds.asset.grid.actions.view
+                link: view_link
+                icon: eye-open
+                acl_resource: ds.asset.asset.view
+                rowAction: true
+            update:
+                type: navigate
+                label: ds.asset.grid.actions.update
+                link: update_link
+                icon: edit
+                acl_resource: ds.asset.asset.edit
+            delete:
+                type: delete
+                label: ds.asset.grid.actions.delete
+                link: delete_link
+                icon: trash
+                acl_resource: ds.asset.asset.delete

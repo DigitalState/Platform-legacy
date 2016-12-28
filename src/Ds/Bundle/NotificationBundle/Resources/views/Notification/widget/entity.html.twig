@@ -1,0 +1,23 @@
+{% import 'OroUIBundle::macros.html.twig' as UI %}
+
+<div class="widget-content">
+    <div class="row-fluid form-horizontal">
+        <div class="responsive-block">
+            {{ UI.renderProperty('ds.notification.id.label'|trans, entity.id) }}
+            {{ UI.renderProperty('ds.notification.title.label'|trans, entity.defaultTitle) }}
+            {{ UI.renderProperty('ds.notification.description.label'|trans, entity.defaultDescription) }}
+            {{ UI.renderProperty('ds.notification.icon.label'|trans, entity.icon) }}
+            {% set channels = '' %}
+            {% for channel in entity.channels %}
+                {% set channels = channels ~ '<span class="label label-primary">' ~ channel.defaultTitle ~ '</span>&nbsp;' %}
+            {% endfor %}
+            {{ UI.renderHtmlProperty('ds.notification.channels.label'|trans, channels) }}
+        </div>
+        <div class="responsive-block">
+            {{ UI.renderProperty('ds.notification.slug.label'|trans, entity.slug) }}
+        </div>
+    </div>
+    {% for widget in ds_widgets({ position: 'ds_notification_notification_entity_notification', context: context }, { entity: entity }) %}
+        {{ widget.content|raw }}
+    {% endfor %}
+</div>

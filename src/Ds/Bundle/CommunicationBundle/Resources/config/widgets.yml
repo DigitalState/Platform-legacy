@@ -1,0 +1,118 @@
+services:
+    ds.communication.widget.channel.entity:
+        parent: ds.widget.widget.abstract
+        class: Ds\Bundle\CommunicationBundle\Widget\Channel\EntityWidget
+        tags:
+            - { name: ds.widget, position: ds_communication_channel_entity }
+    ds.communication.widget.channel.form:
+        parent: ds.widget.widget.abstract
+        class: Ds\Bundle\CommunicationBundle\Widget\Channel\FormWidget
+        tags:
+            - { name: ds.widget, position: ds_communication_channel_form }
+    ds.communication.widget.channel.owner:
+        parent: ds.widget.widget.abstract
+        class: Ds\Bundle\CommunicationBundle\Widget\Channel\OwnerWidget
+        tags:
+            - { name: ds.widget, position: ds_communication_channel_form }
+    ds.communication.widget.communication.entity:
+        parent: ds.widget.widget.abstract
+        class: Ds\Bundle\CommunicationBundle\Widget\Communication\EntityWidget
+        tags:
+            - { name: ds.widget, position: ds_communication_communication_entity }
+    ds.communication.widget.communication.form:
+        parent: ds.widget.widget.abstract
+        class: Ds\Bundle\CommunicationBundle\Widget\Communication\FormWidget
+        tags:
+            - { name: ds.widget, position: ds_communication_communication_form }
+    ds.communication.widget.communication.owner:
+        parent: ds.widget.widget.abstract
+        class: Ds\Bundle\CommunicationBundle\Widget\Communication\OwnerWidget
+        tags:
+            - { name: ds.widget, position: ds_communication_communication_form }
+    ds.communication.widget.communication.contents.form:
+        parent: ds.widget.widget.abstract
+        class: Ds\Bundle\CommunicationBundle\Widget\Communication\Contents\FormWidget
+        tags:
+            - { name: ds.widget, position: ds_communication_communication_form }
+    ds.communication.widget.communication.contents.grid:
+        parent: ds.widget.widget.abstract
+        class: Ds\Bundle\CommunicationBundle\Widget\Communication\Contents\GridWidget
+        tags:
+            - { name: ds.widget, position: ds_communication_communication_entity }
+    ds.communication.widget.communication.criteria.form:
+        parent: ds.widget.widget.abstract
+        class: Ds\Bundle\CommunicationBundle\Widget\Communication\Criteria\FormWidget
+        tags:
+            - { name: ds.widget, position: ds_communication_communication_form }
+    ds.communication.widget.communication.criteria.grid:
+        parent: ds.widget.widget.abstract
+        class: Ds\Bundle\CommunicationBundle\Widget\Communication\Criteria\GridWidget
+        tags:
+            - { name: ds.widget, position: ds_communication_communication_entity }
+    ds.communication.widget.communication.users.grid:
+        parent: ds.widget.widget.abstract
+        class: Ds\Bundle\CommunicationBundle\Widget\Communication\Users\GridWidget
+        arguments:
+            - @ds.communication.manager.communication
+        tags:
+            - { name: ds.widget, position: ds_communication_communication_entity }
+    ds.communication.widget.content.entity:
+        parent: ds.widget.widget.abstract
+        class: Ds\Bundle\CommunicationBundle\Widget\Content\EntityWidget
+        tags:
+            - { name: ds.widget, position: ds_communication_content_entity }
+    ds.communication.widget.content.form:
+        parent: ds.widget.widget.abstract
+        class: Ds\Bundle\CommunicationBundle\Widget\Content\FormWidget
+        tags:
+            - { name: ds.widget, position: ds_communication_content_form }
+    ds.communication.widget.content.owner:
+        parent: ds.widget.widget.abstract
+        class: Ds\Bundle\CommunicationBundle\Widget\Content\OwnerWidget
+        tags:
+            - { name: ds.widget, position: ds_communication_content_form }
+    ds.communication.widget.criterion.entity:
+        parent: ds.widget.widget.abstract
+        class: Ds\Bundle\CommunicationBundle\Widget\Criterion\EntityWidget
+        tags:
+            - { name: ds.widget, position: ds_communication_criterion_entity }
+    ds.communication.widget.criterion.form:
+        parent: ds.widget.widget.abstract
+        class: Ds\Bundle\CommunicationBundle\Widget\Criterion\FormWidget
+        tags:
+            - { name: ds.widget, position: ds_communication_criterion_form }
+    ds.communication.widget.criterion.owner:
+        parent: ds.widget.widget.abstract
+        class: Ds\Bundle\CommunicationBundle\Widget\Criterion\OwnerWidget
+        tags:
+            - { name: ds.widget, position: ds_communication_criterion_form }
+    ds.communication.widget.message.entity:
+        parent: ds.widget.widget.abstract
+        class: Ds\Bundle\CommunicationBundle\Widget\Message\EntityWidget
+        tags:
+            - { name: ds.widget, position: ds_communication_message_entity }
+    ds.communication.widget.message.form:
+        parent: ds.widget.widget.abstract
+        class: Ds\Bundle\CommunicationBundle\Widget\Message\FormWidget
+        tags:
+            - { name: ds.widget, position: ds_communication_message_form }
+    ds.communication.widget.message.owner:
+        parent: ds.widget.widget.abstract
+        class: Ds\Bundle\CommunicationBundle\Widget\Message\OwnerWidget
+        tags:
+            - { name: ds.widget, position: ds_communication_message_form }
+    ds.communication.widget.template.entity:
+        parent: ds.widget.widget.abstract
+        class: Ds\Bundle\CommunicationBundle\Widget\Template\EntityWidget
+        tags:
+            - { name: ds.widget, position: ds_communication_template_entity }
+    ds.communication.widget.template.form:
+        parent: ds.widget.widget.abstract
+        class: Ds\Bundle\CommunicationBundle\Widget\Template\FormWidget
+        tags:
+            - { name: ds.widget, position: ds_communication_template_form }
+    ds.communication.widget.template.owner:
+        parent: ds.widget.widget.abstract
+        class: Ds\Bundle\CommunicationBundle\Widget\Template\OwnerWidget
+        tags:
+            - { name: ds.widget, position: ds_communication_template_form }

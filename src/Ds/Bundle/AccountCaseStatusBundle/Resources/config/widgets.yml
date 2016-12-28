@@ -1,0 +1,8 @@
+services:
+    ds.accountcasestatus.widget.account.case.status.grid:
+        parent: ds.widget.widget.abstract
+        class: Ds\Bundle\AccountCaseStatusBundle\Widget\Account\CaseEntity\Status\GridWidget
+        arguments:
+            - @ds.casestatus.manager.status
+        tags:
+            - { name: ds.widget, position: ds_accountcase_account_case_entity }

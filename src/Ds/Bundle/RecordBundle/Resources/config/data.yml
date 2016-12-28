@@ -1,0 +1,7 @@
+services:
+    ds.record.data.resolver.record:
+        class: Ds\Bundle\RecordBundle\Data\Resolver\RecordResolver
+        arguments:
+            - @ds.record.manager.record
+        tags:
+            - { name: ds.data.resolver }

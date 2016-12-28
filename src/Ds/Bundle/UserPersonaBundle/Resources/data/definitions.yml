@@ -1,0 +1,22 @@
+definitions:
+    -
+        title: Standard Profile
+        slug: standard
+        data:
+            firstName:
+                type: text
+            lastName:
+                type: text
+            addressLine1:
+                type: text
+            addressLine2:
+                type: text
+            homePhone:
+                type: text
+            mobilePhone:
+                type: text
+
+prototype:
+    owner: main
+    organization: default
+    data: {}

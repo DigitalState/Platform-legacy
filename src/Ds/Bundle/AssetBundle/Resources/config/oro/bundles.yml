@@ -1,0 +1,2 @@
+bundles:
+    - { name: Ds\Bundle\AssetBundle\DsAssetBundle, priority: 22 }

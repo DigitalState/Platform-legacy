@@ -1,0 +1,19 @@
+users:
+    -
+        username: camunda
+        password: camunda
+        email: camunda@ds.ca
+        roles: [ ROLE_BPM_SYSTEM ]
+        first_name: Camunda
+        last_name: System
+
+prototype:
+    email: ~
+    roles: []
+    first_name: ~
+    last_name: ~
+    owner: main
+    business_units: [ main ]
+    organization: default
+    organizations: [ default ]
+    enabled: true

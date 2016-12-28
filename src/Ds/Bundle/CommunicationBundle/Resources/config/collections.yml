@@ -1,0 +1,5 @@
+services:
+    ds.communication.collection.channel:
+        class: Ds\Bundle\CommunicationBundle\Collection\ChannelCollection
+    ds.communication.collection.criterion:
+        class: Ds\Bundle\CommunicationBundle\Collection\CriterionCollection

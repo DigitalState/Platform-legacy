@@ -1,0 +1,19 @@
+{% import 'OroUIBundle::macros.html.twig' as UI %}
+
+<div class="widget-content">
+    <div class="row-fluid form-horizontal">
+        <div class="responsive-block">
+            {{ UI.renderProperty('ds.service.id.label'|trans, entity.id) }}
+            {{ UI.renderProperty('ds.service.title.label'|trans, entity.defaultTitle) }}
+            {{ UI.renderProperty('ds.service.description.label'|trans, entity.defaultDescription) }}
+            {{ UI.renderProperty('ds.service.icon.label'|trans, entity.icon) }}
+            {{ UI.renderProperty('ds.service.button.label'|trans, entity.defaultButton) }}
+        </div>
+        <div class="responsive-block">
+            {{ UI.renderProperty('ds.service.slug.label'|trans, entity.slug) }}
+        </div>
+    </div>
+    {% for widget in ds_widgets({ position: 'ds_service_service_entity_service', context: context }, { entity: entity }) %}
+        {{ widget.content|raw }}
+    {% endfor %}
+</div>

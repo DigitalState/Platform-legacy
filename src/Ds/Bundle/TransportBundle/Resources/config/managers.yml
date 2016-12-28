@@ -1,0 +1,13 @@
+services:
+    ds.transport.manager.profile:
+        class: Ds\Bundle\TransportBundle\Manager\ProfileManager
+        parent: oro_soap.manager.entity_manager.abstract
+        arguments:
+            - Ds\Bundle\TransportBundle\Entity\Profile
+            - @doctrine.orm.entity_manager
+    ds.transport.manager.transport:
+        class: Ds\Bundle\TransportBundle\Manager\TransportManager
+        parent: oro_soap.manager.entity_manager.abstract
+        arguments:
+            - Ds\Bundle\TransportBundle\Entity\Transport
+            - @doctrine.orm.entity_manager

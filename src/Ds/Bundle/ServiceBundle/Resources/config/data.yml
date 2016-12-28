@@ -1,0 +1,13 @@
+services:
+    ds.service.data.resolver.activation:
+        class: Ds\Bundle\ServiceBundle\Data\Resolver\ActivationResolver
+        arguments:
+            - @ds.service.manager.activation
+        tags:
+            - { name: ds.data.resolver }
+    ds.service.data.resolver.service:
+        class: Ds\Bundle\ServiceBundle\Data\Resolver\ServiceResolver
+        arguments:
+            - @ds.service.manager.service
+        tags:
+            - { name: ds.data.resolver }

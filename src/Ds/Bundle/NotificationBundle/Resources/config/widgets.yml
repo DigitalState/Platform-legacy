@@ -1,0 +1,36 @@
+services:
+    ds.notification.widget.notification.entity:
+        parent: ds.widget.widget.abstract
+        class: Ds\Bundle\NotificationBundle\Widget\Notification\EntityWidget
+        tags:
+            - { name: ds.widget, position: ds_notification_notification_entity }
+    ds.notification.widget.notification.form:
+        parent: ds.widget.widget.abstract
+        class: Ds\Bundle\NotificationBundle\Widget\Notification\FormWidget
+        tags:
+            - { name: ds.widget, position: ds_notification_notification_form }
+    ds.notification.widget.notification.owner:
+        parent: ds.widget.widget.abstract
+        class: Ds\Bundle\NotificationBundle\Widget\Notification\OwnerWidget
+        tags:
+            - { name: ds.widget, position: ds_notification_notification_form }
+    ds.notification.widget.notification.subscriptions.grid:
+        parent: ds.widget.widget.abstract
+        class: Ds\Bundle\NotificationBundle\Widget\Notification\Subscriptions\GridWidget
+        tags:
+            - { name: ds.widget, position: ds_notification_notification_entity }
+    ds.notification.widget.subscription.entity:
+        parent: ds.widget.widget.abstract
+        class: Ds\Bundle\NotificationBundle\Widget\Subscription\EntityWidget
+        tags:
+            - { name: ds.widget, position: ds_notification_subscription_entity }
+    ds.notification.widget.subscription.form:
+        parent: ds.widget.widget.abstract
+        class: Ds\Bundle\NotificationBundle\Widget\Subscription\FormWidget
+        tags:
+            - { name: ds.widget, position: ds_notification_subscription_form }
+    ds.notification.widget.subscription.owner:
+        parent: ds.widget.widget.abstract
+        class: Ds\Bundle\NotificationBundle\Widget\Subscription\OwnerWidget
+        tags:
+            - { name: ds.widget, position: ds_notification_subscription_form }

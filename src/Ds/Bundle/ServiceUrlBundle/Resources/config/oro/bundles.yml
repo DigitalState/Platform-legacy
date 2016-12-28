@@ -1,0 +1,2 @@
+bundles:
+    - { name: Ds\Bundle\ServiceUrlBundle\DsServiceUrlBundle, priority: 30 }

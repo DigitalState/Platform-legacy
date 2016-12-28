@@ -1,0 +1,23 @@
+services:
+    ds.casestatus.form.type.status:
+        class: Ds\Bundle\CaseStatusBundle\Form\Type\StatusType
+        tags:
+            - { name: form.type, alias: ds_casestatus_status }
+    ds.casestatus.form.type.api.status:
+        class: Ds\Bundle\CaseStatusBundle\Form\Type\Api\StatusType
+        tags:
+            - { name: form.type, alias: ds_casestatus_api_status }
+    ds.casestatus.form.api.status:
+        class: Symfony\Component\Form\Form
+        factory_method: createNamed
+        factory_service: form.factory
+        arguments:
+            - ~
+            - ds_casestatus_api_status
+    ds.casestatus.form.handler.status:
+        class: Ds\Bundle\CaseStatusBundle\Form\Handler\StatusHandler
+        scope: request
+        arguments:
+            - @ds.casestatus.form.api.status
+            - @request
+            - @doctrine.orm.entity_manager

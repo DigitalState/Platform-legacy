@@ -1,0 +1,68 @@
+ds:
+    casestatus:
+        status:
+            entity_label: Statut
+            entity_plural_label: Statuts
+            entity_description: Le statut.
+            id:
+                label: Id
+                description: ~
+            title:
+                label: Titre
+                description: ~
+            source:
+                label: Source
+                description: ~
+            type:
+                label: Type
+                description: ~
+            description:
+                label: Description
+                description: ~
+            percentage:
+                label: Pourcentage
+                description: ~
+            case:
+                label: Cas
+                description: ~
+                placeholder: Sélectionner un cas
+                title:
+                    label: Cas
+            data:
+                label: Données
+                description: ~
+            created_at:
+                label: Créé le
+                description: ~
+            updated_at:
+                label: Mis à jour le
+                description: ~
+            user:
+                username:
+                    label: Usager
+            owner:
+                label: Unité d'affaires
+                description: ~
+            menu:
+                index:
+                    label: Statuts
+            page:
+                index:
+                    title: Statuts des cas
+                view: ~
+                edit: ~
+            grid:
+                actions:
+                    view: Visionner
+                    update: Editer
+                    delete: Supprimer
+            button:
+                create: Créer un statut
+            widget:
+                entity: Statut
+                form: Statut
+                owner: Propriétaire
+        caseentity:
+            widget:
+                statuses:
+                    grid: Statuts

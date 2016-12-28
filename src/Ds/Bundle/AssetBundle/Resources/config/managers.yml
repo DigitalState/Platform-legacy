@@ -1,0 +1,7 @@
+services:
+    ds.asset.manager.asset:
+        class: Ds\Bundle\AssetBundle\Manager\AssetManager
+        parent: oro_soap.manager.entity_manager.abstract
+        arguments:
+            - Ds\Bundle\AssetBundle\Entity\Asset
+            - @doctrine.orm.entity_manager

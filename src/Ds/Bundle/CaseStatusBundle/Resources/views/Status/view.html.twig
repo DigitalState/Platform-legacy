@@ -1,0 +1,47 @@
+{% extends 'OroUIBundle:actions:view.html.twig' %}
+
+{% import 'OroUIBundle::macros.html.twig' as UI %}
+
+{% block pageHeader %}
+    {% set breadcrumbs = {
+        entity: entity,
+        indexPath: path('ds_casestatus_status_index'),
+        indexLabel: 'ds.casestatus.status.menu.index.label'|trans,
+        entityTitle: entity.defaultTitle
+    } %}
+    {{ parent() }}
+{% endblock pageHeader %}
+
+{% block navButtons %}
+    {% if resource_granted('ds.casestatus.status.edit', entity) %}
+        {{ UI.editButton({
+            path: path('ds_casestatus_status_edit', { id: entity.id }),
+            entity_label: 'ds.casestatus.status.entity_label'|trans
+        }) }}
+    {% endif %}
+    {% if resource_granted('ds.casestatus.status.delete', entity) %}
+        {{ UI.deleteButton({
+            dataUrl: path('ds_casestatus_api_rest_delete_status', { id: entity.id }),
+            dataRedirect: path('ds_casestatus_status_index'),
+            aCss: 'no-hash remove-button',
+            id: 'btn-remove-communication',
+            dataId: entity.id,
+            entity_label: 'ds.casestatus.status.entity_label'|trans,
+        }) }}
+    {% endif %}
+{% endblock navButtons %}
+
+{% block content_data %}
+    {% set dataBlocks = [] %}
+    {% for widget in ds_widgets({ position: 'ds_casestatus_status_entity', context: context }, { entity: entity, context: context }) %}
+        {% set dataBlocks = dataBlocks|merge([ {
+            title: widget.title|trans,
+            subblocks: [ {
+                data : [ widget.content ]
+            } ]
+        } ]) %}
+    {% endfor %}
+    {% set id = 'status-view' %}
+    {% set data = { dataBlocks: dataBlocks } %}
+    {{ parent() }}
+{% endblock content_data %}

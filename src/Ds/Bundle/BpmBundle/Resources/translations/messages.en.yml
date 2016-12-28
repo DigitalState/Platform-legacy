@@ -1,0 +1,47 @@
+ds:
+    bpm:
+        system_configuration:
+            groups:
+                bpm:
+                    title: Bpm
+                bpm_process:
+                    title: Process Settings
+                bpm_process_variable_general:
+                    title: General Variables
+                bpm_process_variable_none_start_event:
+                    title: None Start Event Variables
+                bpm_process_variable_user_task:
+                    title: User Task Variables
+            fields:
+                variable_user_id:
+                    label: User ID
+                variable_user_business_unit_id:
+                    label: User Business Unit ID
+                variable_user_organization_id:
+                    label: User Organization ID
+                variable_service_id:
+                    label: Service ID
+                variable_service_business_unit_id:
+                    label: Service Business Unit ID
+                variable_service_organization_id:
+                    label: Service Organization ID
+                variable_none_start_event_form_data:
+                    label: Form Variables
+                variable_none_start_event_form_data:
+                    label: Form Data
+                variable_user_task_form_data:
+                    label: Form Data
+        menu:
+            tab:
+                label: Bpm
+        task:
+            menu:
+                tab:
+                    label: Tasks
+                index:
+                    label: Tasks
+
+oro:
+    user:
+        bpm_id:
+            label: Bpm ID

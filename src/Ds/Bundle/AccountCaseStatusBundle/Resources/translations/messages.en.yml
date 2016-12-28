@@ -1,0 +1,6 @@
+ds:
+    accountcasestatus:
+        case:
+            status:
+                widget:
+                    grid: Statuses

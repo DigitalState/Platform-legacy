@@ -1,0 +1,2 @@
+bundles:
+    - { name: Ds\Bundle\AccountDashboardBundle\DsAccountDashboardBundle, priority: 30 }

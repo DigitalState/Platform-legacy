@@ -1,0 +1,38 @@
+oro_system_configuration:
+    groups:
+        ds_linkedin:
+            title: ds.linkedin.system_configuration.groups.linkedin.title
+            icon: fa-linkedin
+        ds_linkedin_settings:
+            title: ds.linkedin.system_configuration.groups.linkedin_settings.title
+    fields:
+        ds_linkedin.client_id:
+            data_type: string
+            type: text
+            options:
+                label: ds.linkedin.system_configuration.fields.client_id.label
+                tooltip: ~
+                required: false
+                resettable: false
+            priority: 2
+        ds_linkedin.client_secret:
+            data_type: string
+            type: text
+            options:
+                label: ds.linkedin.system_configuration.fields.client_secret.label
+                tooltip: ~
+                required: false
+                resettable: false
+            priority: 1
+    tree:
+        system_configuration:
+            platform:
+                children:
+                    integrations:
+                        children:
+                            ds_linkedin:
+                                children:
+                                    ds_linkedin_settings:
+                                        children:
+                                            - ds_linkedin.client_id
+                                            - ds_linkedin.client_secret

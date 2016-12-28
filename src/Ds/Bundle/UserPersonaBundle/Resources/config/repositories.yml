@@ -1,0 +1,13 @@
+services:
+    ds.userpersona.repository.definition:
+        class: Doctrine\Common\Persistence\ObjectRepository
+        factory_service: doctrine
+        factory_method: getRepository
+        arguments:
+            - Ds\Bundle\UserPersonaBundle\Entity\Definition
+    ds.userpersona.repository.persona:
+        class: Doctrine\Common\Persistence\ObjectRepository
+        factory_service: doctrine
+        factory_method: getRepository
+        arguments:
+            - Ds\Bundle\UserPersonaBundle\Entity\Persona

@@ -1,0 +1,110 @@
+ds:
+    notification:
+        entity_label: Notification
+        entity_plural_label: Notifications
+        entity_description: La notification.
+        id:
+            label: Id
+            description: ~
+        created_at:
+            label: Créé le
+            description: ~
+        updated_at:
+            label: Mis à jour le
+            description: ~
+        title:
+            label: Titre
+            description: ~
+        slug:
+            label: Jeton url
+            description: ~
+        description:
+            label: Description
+            description: ~
+        icon:
+            label: Icône
+            description: ~
+        presentation:
+            label: Présentation
+            description: ~
+        owner:
+            label: Unité d'affaires
+            description: ~
+        menu:
+            tab:
+                label: Notifications
+            index:
+                label: Notifications
+        grid:
+            actions:
+                view: Visionner
+                update: Editer
+                delete: Supprimer
+        button:
+            create: Créer une notification
+        widget:
+            entity: Notification
+            form: Notification
+            owner: Propriétaire
+            subscriptions:
+                grid: Souscriptions
+        page:
+            index:
+                title: Notifications
+            view: ~
+            edit: ~
+            portal:
+                index:
+                    title: Notifications
+
+        subscription:
+            entity_label: Souscription
+            entity_plural_label: Souscriptions
+            entity_description: La souscription.
+            id:
+                label: Id
+                description: Le champ id.
+            created_at:
+                label: Créé le
+                description: Le champ créé le.
+            updated_at:
+                label: Mis à jour le
+                description: Le champ mis à jour le.
+            user:
+                label: Usager
+                description: Le champ usager.
+                placeholder: Sélectionner un usager
+                username:
+                    label: Nom de l'usager
+            notification:
+                label: Notification
+                description: Le champ notification.
+                placeholder: Sélectionner un notification
+                title:
+                    label: Notification
+            channels:
+                label: Canals
+                description: Le champ canals.
+            menu:
+                index:
+                    label: Souscriptions
+            grid:
+                actions:
+                    view: Visionner
+                    update: Editer
+                    delete: Supprimer
+            button:
+                create: Créer une souscription
+            widget:
+                entity: Souscription
+                form: Souscription
+                owner: Propriétaire
+            page:
+                index:
+                    title: Souscriptions
+                view: ~
+                edit: ~
+    communication:
+        criterion:
+            collection:
+                notification: Notification

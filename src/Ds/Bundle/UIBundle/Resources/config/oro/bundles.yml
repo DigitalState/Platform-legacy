@@ -1,0 +1,2 @@
+bundles:
+    - { name: Ds\Bundle\UIBundle\DsUIBundle, priority: 10 }

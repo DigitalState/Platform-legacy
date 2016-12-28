@@ -1,0 +1,53 @@
+{% extends 'OroUIBundle:actions:view.html.twig' %}
+
+{% import 'OroUIBundle::macros.html.twig' as UI %}
+
+{% block pageHeader %}
+    {% set breadcrumbs = {
+        entity: entity,
+        indexPath: path('ds_communication_communication_index'),
+        indexLabel: 'ds.communication.menu.index.label'|trans,
+        entityTitle: entity.title
+    } %}
+    {{ parent() }}
+{% endblock pageHeader %}
+
+{% block navButtons %}
+    {{ UI.button({
+        path: path('ds_communication_communication_send', { id: entity.id }),
+        label: 'ds.communication.button.send'|trans,
+        aCss: 'btn-success',
+        iCss: 'icon-envelope-alt'
+    }) }}
+    {% if resource_granted('ds.communication.communication.edit', entity) %}
+        {{ UI.editButton({
+            path: path('ds_communication_communication_edit', { id: entity.id }),
+            entity_label: 'ds.communication.entity_label'|trans
+        }) }}
+    {% endif %}
+    {% if resource_granted('ds.communication.communication.delete', entity) %}
+        {{ UI.deleteButton({
+            dataUrl: path('ds_communication_api_rest_delete_communication', { id: entity.id }),
+            dataRedirect: path('ds_communication_communication_index'),
+            aCss: 'no-hash remove-button',
+            id: 'btn-remove-communication',
+            dataId: entity.id,
+            entity_label: 'ds.communication.entity_label'|trans,
+        }) }}
+    {% endif %}
+{% endblock navButtons %}
+
+{% block content_data %}
+    {% set dataBlocks = [] %}
+    {% for widget in ds_widgets({ position: 'ds_communication_communication_entity', context: context }, { entity: entity, context: context }) %}
+        {% set dataBlocks = dataBlocks|merge([ {
+            title: widget.title|trans,
+            subblocks: [ {
+                data : [ widget.content ]
+            } ]
+        } ]) %}
+    {% endfor %}
+    {% set id = 'communication-view' %}
+    {% set data = { dataBlocks: dataBlocks } %}
+    {{ parent() }}
+{% endblock content_data %}

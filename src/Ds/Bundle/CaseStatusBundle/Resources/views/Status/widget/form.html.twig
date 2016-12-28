@@ -1,0 +1,16 @@
+<div class="widget-content">
+    <div class="row-fluid form-horizontal">
+        <div class="responsive-block">
+            {{ form_row(form.titles) }}
+            {{ form_row(form.case) }}
+            {{ form_row(form.type) }}
+            {{ form_row(form.source) }}
+            {{ form_row(form.descriptions) }}
+            {{ form_row(form.percentage) }}
+            {{ form_row(form.data) }}
+        </div>
+    </div>
+    {% for widget in ds_widgets({ position: 'ds_casestatus_status_form_status', context: context }, { form: form }) %}
+        {{ widget.content|raw }}
+    {% endfor %}
+</div>

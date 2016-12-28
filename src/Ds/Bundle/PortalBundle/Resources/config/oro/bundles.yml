@@ -1,0 +1,3 @@
+bundles:
+    - { name: Ds\Bundle\PortalBundle\DsPortalBundle, priority: 10 }
+    - { name: Knp\Bundle\TimeBundle\KnpTimeBundle, priority: 0 }

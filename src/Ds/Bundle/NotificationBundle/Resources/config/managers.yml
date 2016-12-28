@@ -1,0 +1,15 @@
+services:
+    ds.notification.manager.notification:
+        class: Ds\Bundle\NotificationBundle\Manager\NotificationManager
+        parent: oro_soap.manager.entity_manager.abstract
+        arguments:
+            - Ds\Bundle\NotificationBundle\Entity\Notification
+            - @doctrine.orm.entity_manager
+    ds.notification.manager.subscription:
+        class: Ds\Bundle\NotificationBundle\Manager\SubscriptionManager
+        parent: oro_soap.manager.entity_manager.abstract
+        arguments:
+            - Ds\Bundle\NotificationBundle\Entity\Subscription
+            - @doctrine.orm.entity_manager
+    ds.notification.manager.communication:
+        class: Ds\Bundle\NotificationBundle\Manager\CommunicationManager

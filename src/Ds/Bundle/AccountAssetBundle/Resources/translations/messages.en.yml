@@ -1,0 +1,7 @@
+ds:
+    accountasset:
+        asset:
+            page:
+                account:
+                    index:
+                        title: My Assets

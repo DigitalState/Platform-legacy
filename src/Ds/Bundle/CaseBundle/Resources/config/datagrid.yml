@@ -1,0 +1,119 @@
+datagrid:
+    ds-case-case:
+        extended_entity_name: Ds\Bundle\CaseBundle\Entity\CaseEntity
+        source:
+            acl_resource: ds.case.case.view
+            type: orm
+            query:
+                select:
+                    - c.id
+                    - u.username as user_username
+                    - c.state
+                    - c.status
+                    - c.createdAt
+                    - c.updatedAt
+                from:
+                    - { table: DsCaseBundle:CaseEntity, alias: c }
+                join:
+                    left:
+                        - { join: c.user, alias: u }
+        inline_editing:
+            enable: true
+        columns:
+            id:
+                label: ds.case.caseentity.id.label
+            title:
+                label: ds.case.caseentity.title.label
+            user_username:
+                label: ds.case.caseentity.user.username.label
+            state:
+                label: ds.case.caseentity.state.label
+            status:
+                label: ds.case.caseentity.status.label
+            createdAt:
+                label: ds.case.caseentity.created_at.label
+                frontend_type: datetime
+            updatedAt:
+                label: ds.case.caseentity.updated_at.label
+                frontend_type: datetime
+        properties:
+            id: ~
+            update_link:
+                type: url
+                route: ds_case_case_edit
+                params:
+                    - id
+            view_link:
+                type: url
+                route: ds_case_case_view
+                params:
+                    - id
+            delete_link:
+                type: url
+                route: ds_case_api_rest_delete_case
+                params:
+                    - id
+        sorters:
+            columns:
+                id:
+                    data_name: c.id
+                user_username:
+                    data_name: u.username
+                state:
+                    data_name: c.state
+                status:
+                    data_name: c.status
+                createdAt:
+                    data_name: c.createdAt
+                updatedAt:
+                    data_name: c.updatedAt
+            default:
+                id: ASC
+        filters:
+            columns:
+                user_username:
+                    type: string
+                    data_name: u.username
+                state:
+                    type: choice
+                    data_name: c.state
+                    options:
+                        field_options:
+                            choices:
+                                active: ds.case.caseentity.state.choice.active
+                                inactive: ds.case.caseentity.state.choice.inactive
+                status:
+                    type: choice
+                    data_name: c.status
+                    options:
+                        field_options:
+                            choices:
+                                active: ds.case.caseentity.status.choice.active
+                                resolved: ds.case.caseentity.status.choice.resolved
+                                cancelled: ds.case.caseentity.status.choice.cancelled
+                createdAt:
+                    type: datetime
+                    data_name: c.createdAt
+                updatedAt:
+                    type: datetime
+                    data_name: c.updatedAt
+        actions:
+            view:
+                type: navigate
+                label: ds.case.caseentity.grid.actions.view
+                link: view_link
+                icon: eye-open
+                acl_resource: ds.case.case.view
+                rowAction: true
+            update:
+                type: navigate
+                label: ds.case.caseentity.grid.actions.update
+                link: update_link
+                icon: edit
+                acl_resource: ds.case.case.edit
+            delete:
+                type: delete
+                label: ds.case.caseentity.grid.actions.delete
+                link: delete_link
+                icon: trash
+                acl_resource: ds.case.case.delete

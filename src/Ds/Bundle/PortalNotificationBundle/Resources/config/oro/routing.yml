@@ -1,0 +1,4 @@
+ds_portalnotification_portal:
+    resource: @DsPortalNotificationBundle/Controller/Portal
+    type: annotation
+    prefix: '%ds.portal.prefix%'

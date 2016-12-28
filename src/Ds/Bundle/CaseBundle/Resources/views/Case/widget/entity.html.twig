@@ -1,0 +1,28 @@
+{% import 'OroUIBundle::macros.html.twig' as UI %}
+
+<div class="widget-content">
+    <div class="row-fluid form-horizontal">
+        <div class="responsive-block">
+            {{ UI.renderProperty('ds.case.caseentity.id.label'|trans, entity.id) }}
+            {{ UI.renderProperty('ds.case.caseentity.title.label'|trans, entity.defaultTitle) }}
+            {% if entity.user %}
+                {{ UI.renderHtmlProperty('ds.case.caseentity.user.label'|trans, '<a href="' ~ path('oro_user_view', { id: entity.user.id }) ~ '">' ~ entity.user.username ~ '</a>') }}
+            {% else %}
+                {{ UI.renderProperty('ds.case.caseentity.user.label'|trans, 'ds.case.caseentity.user.none'|trans) }}
+            {% endif %}
+            {% if entity.service %}
+                {{ UI.renderHtmlProperty('ds.case.caseentity.service.label'|trans, '<a href="' ~ path('ds_service_service_view', { id: entity.service.id }) ~ '">' ~ entity.service.defaultTitle ~ '</a>') }}
+            {% else %}
+                {{ UI.renderProperty('ds.case.caseentity.service.label'|trans, 'ds.case.caseentity.service.none'|trans) }}
+            {% endif %}
+            {{ UI.renderProperty('ds.case.caseentity.source.label'|trans, entity.source) }}
+        </div>
+        <div class="responsive-block">
+            {{ UI.renderHtmlProperty('ds.case.caseentity.state.label'|trans, '<span class="label label-primary">' ~ entity.state ~ '</span>') }}
+            {{ UI.renderHtmlProperty('ds.case.caseentity.status.label'|trans, '<span class="label label-primary">' ~ entity.status ~ '</span>') }}
+        </div>
+    </div>
+    {% for widget in ds_widgets({ position: 'ds_case_case_entity_case', context: context }, { entity: entity }) %}
+        {{ widget.content|raw }}
+    {% endfor %}
+</div>

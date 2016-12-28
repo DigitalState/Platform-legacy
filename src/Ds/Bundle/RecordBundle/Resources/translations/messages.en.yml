@@ -1,0 +1,55 @@
+ds:
+    record:
+        entity_label: Record
+        entity_plural_label: Records
+        entity_description: The record.
+        id:
+            label: ID
+            description: ~
+        created_at:
+            label: Created At
+            description: ~
+        updated_at:
+            label: Updated At
+            description: ~
+        title:
+            label: Title
+            description: ~
+        type:
+            label: Type
+            description: ~
+        source:
+            label: Source
+            description: ~
+        data:
+            label: Data
+            description: ~
+        case:
+            label: Case
+            description: ~
+            placeholder: Select Case
+            none: Unassigned
+        owner:
+            label: Business Unit
+            description: ~
+        menu:
+            tab:
+                label: Records
+            index:
+                label: Records
+        page:
+            index:
+                title: Records
+            view: ~
+            edit: ~
+        grid:
+            actions:
+                view: View
+                update: Edit
+                delete: Delete
+        button:
+            create: Create Record
+        widget:
+            entity: Record
+            form: Record
+            owner: Owner

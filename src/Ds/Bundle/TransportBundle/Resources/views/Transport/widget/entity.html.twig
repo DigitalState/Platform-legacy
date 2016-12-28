@@ -1,0 +1,17 @@
+{% import 'OroUIBundle::macros.html.twig' as UI %}
+
+<div class="widget-content">
+    <div class="row-fluid form-horizontal">
+        <div class="responsive-block">
+            {{ UI.renderProperty('ds.transport.id.label'|trans, entity.id) }}
+            {{ UI.renderProperty('ds.transport.title.label'|trans, entity.title) }}
+            {{ UI.renderProperty('ds.transport.data.label'|trans, entity.data|keys|join(', ')) }}
+        </div>
+        <div class="responsive-block">
+            {{ UI.renderProperty('ds.transport.implementation.label'|trans, entity.implementation) }}
+        </div>
+    </div>
+    {% for widget in ds_widgets({ position: 'ds_transport_transport_entity_transport', context: context }, { entity: entity }) %}
+        {{ widget.content|raw }}
+    {% endfor %}
+</div>

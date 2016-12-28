@@ -1,0 +1,7 @@
+services:
+    ds.casestatus.data.resolver.status:
+        class: Ds\Bundle\CaseStatusBundle\Data\Resolver\StatusResolver
+        arguments:
+            - @ds.casestatus.manager.status
+        tags:
+            - { name: ds.data.resolver }

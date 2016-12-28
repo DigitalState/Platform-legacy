@@ -1,0 +1,6 @@
+roles:
+    -
+        role: ROLE_BPM_SYSTEM
+        label: Bpm System
+
+prototype: []

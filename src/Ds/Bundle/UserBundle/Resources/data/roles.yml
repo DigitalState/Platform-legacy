@@ -1,0 +1,12 @@
+roles:
+    -
+        role: ROLE_USER_MANAGER
+        label: User Manager
+    -
+        role: ROLE_INDIVIDUAL
+        label: Individual
+    -
+        role: ROLE_EMPLOYEE
+        label: Employee
+
+prototype: []

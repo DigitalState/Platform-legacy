@@ -1,0 +1,54 @@
+{% extends 'OroUIBundle:actions:view.html.twig' %}
+
+{% import 'OroUIBundle::macros.html.twig' as UI %}
+
+{% block pageHeader %}
+    {% set breadcrumbs = {
+        entity: entity,
+        indexPath: path('ds_notification_notification_index'),
+        indexLabel: 'ds.notification.menu.index.label'|trans,
+        entityTitle: entity.defaultTitle
+    } %}
+    {{ parent() }}
+{% endblock pageHeader %}
+
+{% block navButtons %}
+    {% if resource_granted('ds.communication.communication.create') %}
+        {{ UI.button({
+            path: path('ds_notification_communication_create', { id: entity.id }),
+            label: 'ds.communication.button.create'|trans,
+            aCss: 'btn-primary'
+        }) }}
+    {% endif %}
+    {% if resource_granted('ds.notification.notification.edit', entity) %}
+        {{ UI.editButton({
+            path: path('ds_notification_notification_edit', { id: entity.id }),
+            entity_label: 'ds.notification.entity_label'|trans
+        }) }}
+    {% endif %}
+    {% if resource_granted('ds.notification.notification.delete', entity) %}
+        {{ UI.deleteButton({
+            dataUrl: path('ds_notification_api_rest_delete_notification', { id: entity.id }),
+            dataRedirect: path('ds_notification_notification_index'),
+            aCss: 'no-hash remove-button',
+            id: 'btn-remove-notification',
+            dataId: entity.id,
+            entity_label: 'ds.notification.entity_label'|trans,
+        }) }}
+    {% endif %}
+{% endblock navButtons %}
+
+{% block content_data %}
+    {% set dataBlocks = [] %}
+    {% for widget in ds_widgets({ position: 'ds_notification_notification_entity', context: context }, { entity: entity, context: context }) %}
+        {% set dataBlocks = dataBlocks|merge([ {
+            title: widget.title|trans,
+            subblocks: [ {
+                data : [ widget.content ]
+            } ]
+        } ]) %}
+    {% endfor %}
+    {% set id = 'notification-view' %}
+    {% set data = { dataBlocks: dataBlocks } %}
+    {{ parent() }}
+{% endblock content_data %}

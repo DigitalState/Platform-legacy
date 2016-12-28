@@ -1,0 +1,8 @@
+services:
+    ds.bpm.bpm.api.abstract:
+        abstract: true
+    ds.bpm.bpm.api.factory:
+        class: Ds\Bundle\BpmBundle\Bpm\Api\Factory
+        arguments:
+            - @ds.bpm.collection.bpm.api
+            - @oro_config.user

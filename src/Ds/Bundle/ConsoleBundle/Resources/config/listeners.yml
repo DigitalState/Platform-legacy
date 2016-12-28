@@ -1,0 +1,13 @@
+services:
+    ds.console.event.listener.console_exception:
+        class: Ds\Bundle\ConsoleBundle\Event\Listener\ConsoleExceptionListener
+        arguments:
+            - @logger
+        tags:
+            - { name: kernel.event_listener, event: console.exception }
+    ds.console.event.listener.console_error:
+        class: Ds\Bundle\ConsoleBundle\Event\Listener\ConsoleErrorListener
+        arguments:
+            - @logger
+        tags:
+            - { name: kernel.event_listener, event: console.terminate }

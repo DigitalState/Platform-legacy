@@ -1,0 +1,81 @@
+datagrid:
+    ds-record-record:
+        extended_entity_name: Ds\Bundle\RecordBundle\Entity\Record
+        source:
+            acl_resource: ds.record.record.view
+            type: orm
+            query:
+                select:
+                    - r.id
+                    - r.createdAt
+                    - r.updatedAt
+                from:
+                    - { table: DsRecordBundle:Record, alias: r }
+        inline_editing:
+            enable: true
+        columns:
+            id:
+                label: ds.record.id.label
+            title:
+                label: ds.record.title.label
+            createdAt:
+                label: ds.record.created_at.label
+                frontend_type: datetime
+            updatedAt:
+                label: ds.record.updated_at.label
+                frontend_type: datetime
+        properties:
+            id: ~
+            update_link:
+                type: url
+                route: ds_record_record_edit
+                params:
+                    - id
+            view_link:
+                type: url
+                route: ds_record_record_view
+                params:
+                    - id
+            delete_link:
+                type: url
+                route: ds_record_api_rest_delete_record
+                params:
+                    - id
+        sorters:
+            columns:
+                id:
+                    data_name: r.id
+                createdAt:
+                    data_name: r.createdAt
+                updatedAt:
+                    data_name: r.updatedAt
+            default:
+                id: ASC
+        filters:
+            columns:
+                createdAt:
+                    type: datetime
+                    data_name: r.createdAt
+                updatedAt:
+                    type: datetime
+                    data_name: r.updatedAt
+        actions:
+            view:
+                type: navigate
+                label: ds.record.grid.actions.view
+                link: view_link
+                icon: eye-open
+                acl_resource: ds.record.record.view
+                rowAction: true
+            update:
+                type: navigate
+                label: ds.record.grid.actions.update
+                link: update_link
+                icon: edit
+                acl_resource: ds.record.record.edit
+            delete:
+                type: delete
+                label: ds.record.grid.actions.delete
+                link: delete_link
+                icon: trash
+                acl_resource: ds.record.record.delete

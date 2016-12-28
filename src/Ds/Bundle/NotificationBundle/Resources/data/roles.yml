@@ -1,0 +1,6 @@
+roles:
+    -
+        role: ROLE_NOTIFICATION_MANAGER
+        label: Notification Manager
+
+prototype: []

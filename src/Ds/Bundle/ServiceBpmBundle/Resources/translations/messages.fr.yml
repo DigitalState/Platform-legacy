@@ -1,0 +1,27 @@
+ds:
+    servicebpm:
+        entity_label: Service bpm
+        bpm:
+            label: Système Bpm
+            description: ~
+            placeholder: Sélectionner un système bpm
+        bpm_id:
+            label: Id de la définition du processus
+            description: ~
+        service:
+            widget:
+                bpm: Bpm
+            button:
+                create: Service bpm
+        widget:
+            form: Bpm
+            entity: Bpm
+        task:
+            page:
+                index:
+                    title: Tâches
+            menu:
+                tab:
+                    label: Tâches
+                index:
+                    label: Tâches

@@ -1,0 +1,7 @@
+services:
+    ds.servicebpm.repository.servicebpm:
+        class: Doctrine\Common\Persistence\ObjectRepository
+        factory_service: doctrine
+        factory_method: getRepository
+        arguments:
+            - Ds\Bundle\ServiceBpmBundle\Entity\ServiceBpm

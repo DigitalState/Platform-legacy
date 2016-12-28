@@ -1,0 +1,108 @@
+ds:
+    service:
+        entity_label: Service
+        entity_plural_label: Services
+        entity_description: Le service.
+        id:
+            label: Id
+            description: ~
+        created_at:
+            label: Créé le
+            description: ~
+        updated_at:
+            label: Mis à jour le
+            description: ~
+        titles:
+            label: Titres
+            description: ~
+        title:
+            label: Titre
+            description: ~
+        slug:
+            label: Jeton url
+            description: ~
+        description:
+            label: Description
+            description: ~
+        icon:
+            label: Icône
+            description: ~
+        button:
+            label: Bouton
+            description: ~
+            create: Créer un service
+        presentation:
+            label: Présentation
+            description: ~
+        owner:
+            label: Unité d'affaires
+            description: ~
+        menu:
+            tab:
+                label: Services
+            index:
+                label: Services
+        grid:
+            actions:
+                view: Visionner
+                update: Editer
+                delete: Supprimer
+        button:
+            # See above
+        widget:
+            entity: Service
+            form: Service
+            owner: Propriétaire
+        page:
+            index:
+                title: Services
+            view: ~
+            edit: ~
+            portal:
+                index:
+                    title: Information and Services
+        activation:
+            entity_label: Activation
+            entity_plural_label: Activations
+            entity_description: L'activation.
+            id:
+                label: Id
+                description: ~
+            created_at:
+                label: Créé le
+                description: ~
+            updated_at:
+                label: Mis à jour le
+                description: ~
+            user:
+                label: Usager
+                description: ~
+                placeholder: Sélectionner un usager
+                username:
+                    label: Usager
+            service:
+                label: Service
+                description: ~
+                placeholder: Sélectionner un service
+                id:
+                    label: Id
+            owner:
+                label: Unité d'affaires
+                description: ~
+            menu:
+                index:
+                    label: Activations
+            grid:
+                actions:
+                    view: Visionner
+                    update: Editer
+                    delete: Supprimer
+            button:
+                create: Créer une activation
+            widget:
+                entity: Activation
+                form: Activation
+                owner: Propriétaire
+            page:
+                index:
+                    title: Activations

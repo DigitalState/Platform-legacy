@@ -1,0 +1,64 @@
+ds:
+    asset:
+        entity_label: Asset
+        entity_plural_label: Assets
+        entity_description: The asset.
+        id:
+            label: ID
+            description: ~
+        created_at:
+            label: Created At
+            description: ~
+        updated_at:
+            label: Updated At
+            description: ~
+        title:
+            label: Title
+            description: ~
+        type:
+            label: Type
+            description: ~
+        source:
+            label: Source
+            description: ~
+        data:
+            label: Data
+            description: ~
+        user:
+            label: User
+            description: ~
+            placeholder: Select User
+        case:
+            label: Case
+            description: ~
+            placeholder: Select Case
+        owner:
+            label: Business Unit
+            description: ~
+        menu:
+            tab:
+                label: Assets
+            index:
+                label: Assets
+        page:
+            index:
+                title: Assets
+            view: ~
+            edit: ~
+            account:
+                index:
+                    title: My Assets
+        grid:
+            actions:
+                view: View
+                update: Edit
+                delete: Delete
+        button:
+            create: Create Asset
+        widget:
+            entity: Asset
+            form: Asset
+            owner: Owner
+        config:
+            enabled:
+                label: Enabled Assets
