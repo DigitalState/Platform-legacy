@@ -1,0 +1,7 @@
+services:
+    ds.data.form.extension.data:
+        class: Ds\Bundle\DataBundle\Form\Extension\DataTypeExtension
+        arguments:
+            - @ds.data.data
+        tags:
+            - { name: form.type_extension, extended_type: form }

@@ -1,0 +1,3 @@
+acl:
+    ROLE_CASE_MANAGER:
+        Entity:DsCaseStatusBundle:Status: [ VIEW_SYSTEM, CREATE_SYSTEM, EDIT_SYSTEM, DELETE_SYSTEM, ASSIGN_SYSTEM ]

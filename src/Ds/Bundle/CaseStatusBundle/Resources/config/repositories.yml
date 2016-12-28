@@ -1,0 +1,7 @@
+services:
+    ds.casestatus.repository.status:
+        class: Doctrine\Common\Persistence\ObjectRepository
+        factory_service: doctrine
+        factory_method: getRepository
+        arguments:
+            - Ds\Bundle\CaseStatusBundle\Entity\Status

@@ -1,0 +1,73 @@
+{% extends 'DsPortalBundle:Portal:base.html.twig' %}
+
+{% use 'CraueFormFlowBundle:FormFlow:stepList_blocks.html.twig' %}
+
+{% form_theme form 'bootstrap_3_layout.html.twig' %}
+
+{% block breadcrumb %}
+    <ul class="breadcrumb">
+        <li>
+            <i class="fa fa-home"></i>
+            <a href="{{ path('ds_portal_portal_home_index') }}">
+                {% trans %}ds.portal.home.page.portal.index.title{% endtrans %}
+            </a>
+        </li>
+        <li>
+            <a href="{{ path('ds_accountdashboard_account_dashboard_index') }}">
+                {% trans %}ds.account.home.page.account.index.title{% endtrans %}
+            </a>
+        </li>
+        <li>
+            <a href="{{ path('ds_portalservice_portal_service_view', { id: service.id }) }}">
+                {{ service.titles|localized_value }}
+            </a>
+        </li>
+        <li class="active">
+            Start
+        </li>
+    </ul>
+{% endblock %}
+
+{% block content %}
+    <div class="row">
+        <div class="col-lg-12">
+            <h1>
+                {{ service.titles|localized_value }}
+            </h1>
+        </div>
+    </div>
+    <hr>
+    {% if flow %}
+        <div class="row">
+            <div class="col-lg-12">
+                {% if flow %}
+                    {%- if flow.getStepLabels() is not empty -%}
+                        <div class="panel panel-default">
+                            <div class="panel-body">
+                                <div class="stepwizard">
+                                    <div class="stepwizard-row">
+                                        {% for stepLabel in flow.getStepLabels() %}
+                                            <div class="stepwizard-step{% if loop.index == flow.getCurrentStepNumber() %} current{% endif %}">
+                                                <button type="button" class="btn btn-default btn-circle">
+                                                    {{ loop.index }}
+                                                </button>
+                                                <p>
+                                                    {{ block('craue_flow_stepLabel') }}
+                                                </p>
+                                            </div>
+                                        {% endfor %}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    {% endif %}
+                {% endif %}
+            </div>
+        </div>
+    {% endif %}
+    {% if flow %}
+        {% include 'DsAccountBpmBundle:Account:Bpm/Form/' ~ service.bpmId ~ '/' ~ flow.getCurrentStepLabel() ~ '.html.twig' with { flow: flow, form: form } %}
+    {% else %}
+        {% include 'DsAccountBpmBundle:Account:Bpm/Form/' ~ service.bpmId ~ '/start.html.twig' with { flow: flow, form: form } %}
+    {% endif %}
+{% endblock %}

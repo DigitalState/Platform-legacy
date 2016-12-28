@@ -1,0 +1,158 @@
+<div class="panel panel-default">
+    <div class="panel-heading clearfix">
+        <h1 class="pull-left">
+            {{ asset.title }}
+        </h1>
+        <p class="pull-right">
+            <a href="" class="btn btn-default">
+                <i class="fa fa-print"></i> Print
+            </a>
+            <a href="" class="btn btn-default">
+                <i class="fa fa-file-pdf-o"></i> Download PDF
+            </a>
+        </p>
+    </div>
+    <div class="panel-body">
+        {% if asset.data['formData'] is defined %}
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4>
+                        Asset Attributes
+                    </h4>
+                </div>
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
+                            <p class="text-right">
+                                <strong>Asset Title</strong>
+                            </p>
+                        </div>
+                        <div class="col-lg-9 col-md-9 col-sm-6 col-xs-6">
+                            <p>
+                                {{ asset.title }}
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
+                            <p class="text-right">
+                                <strong>Related Service Request ID</strong>
+                            </p>
+                        </div>
+                        <div class="col-lg-9 col-md-9 col-sm-6 col-xs-6">
+                            <p>
+                                {{ asset.case.id }}
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
+                            <p class="text-right">
+                                <strong>Related Service Title</strong>
+                            </p>
+                        </div>
+                        <div class="col-lg-9 col-md-9 col-sm-6 col-xs-6">
+                            <p>
+                                {{ asset.case.service.title }}
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
+                            <p class="text-right">
+                                <strong>Created At</strong>
+                            </p>
+                        </div>
+                        <div class="col-lg-9 col-md-9 col-sm-6 col-xs-6">
+                            <p>
+                                {{ asset.createdAt|date('F jS, Y \\a\\t g:ia') }}
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
+                            <p class="text-right">
+                                <strong>Source</strong>
+                            </p>
+                        </div>
+                        <div class="col-lg-9 col-md-9 col-sm-6 col-xs-6">
+                            <p>
+                                {{ asset.source }}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        {% endif %}
+        {% if asset.data['formData'] is defined %}
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4>
+                        Form Data
+                    </h4>
+                </div>
+                <div class="panel-body">
+                    {% for key, value in asset.data['formData'] %}
+                        {% if value is iterable %}
+                            <h4>{{ key }}</h4>
+                            {% for value2 in value %}
+                                <div class="panel panel-default">
+                                    <div class="panel-body">
+                                        {% for key3, value3 in value2 %}
+                                            <div class="row">
+                                                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
+                                                    <p class="text-right"><strong>{{ key3|inflect }}:</strong></p>
+                                                </div>
+                                                <div class="col-lg-9 col-md-9 col-sm-6 col-xs-6">
+                                                    <p>{{ value3 }}</p>
+                                                </div>
+                                            </div>
+                                        {% endfor %}
+                                    </div>
+                                </div>
+                            {% endfor %}
+                        {% else %}
+                            <div class="row">
+                                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
+                                    <p class="text-right">
+                                        <strong>{{ key|inflect }}</strong>
+                                    </p>
+                                </div>
+                                <div class="col-lg-9 col-md-9 col-sm-6 col-xs-6">
+                                    <p>
+                                        {{ value }}
+                                    </p>
+                                </div>
+                            </div>
+                        {% endif %}
+                    {% endfor %}
+                </div>
+            </div>
+        {% endif %}
+        {% if asset.data['systemData'] is defined %}
+            <div class="panel panel-warning">
+                <div class="panel-heading">
+                    <h4>
+                        System Data (Viewed by Admin)
+                    </h4>
+                </div>
+                <div class="panel-body">
+                    {% for key, value in asset.data['systemData'] %}
+                        <div class="row">
+                            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
+                                <p class="text-right">
+                                    <strong>{{ key|inflect }}</strong>
+                                </p>
+                            </div>
+                            <div class="col-lg-9 col-md-9 col-sm-6 col-xs-6">
+                                <p>
+                                    {{ value }}
+                                </p>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        {% endif %}
+    </div>
+</div>

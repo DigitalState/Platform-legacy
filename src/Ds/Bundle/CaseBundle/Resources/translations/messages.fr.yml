@@ -1,0 +1,73 @@
+ds:
+    case:
+        caseentity:
+            entity_label: Cas
+            entity_plural_label: Cas
+            entity_description: Le cas.
+            id:
+                label: Id
+                description: ~
+            created_at:
+                label: Créé le
+                description: ~
+            updated_at:
+                label: Mis à jour le
+                description: ~
+            user:
+                label: Usager
+                description: ~
+                placeholder: Sélectionner un usager
+                none: Non-assigné
+                username:
+                    label: Usager
+            service:
+                label: Service
+                description: ~
+                placeholder: Sélectionner un service
+                none: Non-assigné
+            title:
+                label: Titre
+                description: ~
+            source:
+                label: Source
+                description: ~
+            state:
+                label: État
+                description: ~
+                choice:
+                    active: Actif
+                    inactive: Inactif
+            status:
+                label: Statut
+                description: ~
+                choice:
+                    active: Actif
+                    resolved: Résolu
+                    cancelled: Annulé
+            owner:
+                label: Unité d'affaires
+                description: ~
+            records:
+                label: Enregistrements
+                description: ~
+            menu:
+                tab:
+                    label: Cas
+                index:
+                    label: Cas
+            page:
+                index:
+                    title: Cas
+                view: ~
+                edit: ~
+            grid:
+                actions:
+                view: Visionner
+                update: Editer
+                delete: Supprimer
+            button:
+                create: Créer un cas
+            widget:
+                entity: Cas
+                form: Cas
+                owner: Propriétaire

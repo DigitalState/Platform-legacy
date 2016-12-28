@@ -1,0 +1,8 @@
+services:
+    ds.serviceurl.manager.serviceurl:
+        class: Ds\Bundle\ServiceUrlBundle\Manager\ServiceUrlManager
+        parent: oro_soap.manager.entity_manager.abstract
+        arguments:
+            - Ds\Bundle\ServiceUrlBundle\Entity\ServiceUrl
+            - @doctrine.orm.entity_manager
+            - @ds.service.manager.activation

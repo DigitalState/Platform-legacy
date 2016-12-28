@@ -1,0 +1,182 @@
+datagrid:
+    ds-service-service:
+        extended_entity_name: Ds\Bundle\ServiceBundle\Entity\Service
+        source:
+            acl_resource: ds.service.service.view
+            type: orm
+            query:
+                select:
+                    - s.id
+                    - s.createdAt
+                    - s.updatedAt
+                from:
+                    - { table: DsServiceBundle:Service, alias: s }
+        inline_editing:
+            enable: true
+        columns:
+            id:
+                label: ds.service.id.label
+            service_title:
+                label: ds.service.title.label
+                type: twig
+                frontend_type: html
+                template: DsServiceBundle:Service:datagrid/property/title.html.twig
+            createdAt:
+                label: ds.service.created_at.label
+                frontend_type: datetime
+            updatedAt:
+                label: ds.service.created_at.label
+                frontend_type: datetime
+        properties:
+            id: ~
+            update_link:
+                type: url
+                route: ds_service_service_edit
+                params:
+                    - id
+            view_link:
+                type: url
+                route: ds_service_service_view
+                params:
+                    - id
+            delete_link:
+                type: url
+                route: ds_service_api_rest_delete_service
+                params:
+                    - id
+        sorters:
+            columns:
+                id:
+                    data_name: s.id
+                createdAt:
+                    data_name: s.createdAt
+                updatedAt:
+                    data_name: s.updatedAt
+            default:
+                id: ASC
+        filters:
+            columns:
+                createdAt:
+                    type: datetime
+                    data_name: s.createdAt
+                updatedAt:
+                    type: datetime
+                    data_name: s.updatedAt
+        actions:
+            view:
+                type: navigate
+                label: ds.service.grid.actions.view
+                link: view_link
+                icon: eye-open
+                acl_resource: ds.service.service.view
+                rowAction: true
+            update:
+                type: navigate
+                label: ds.service.grid.actions.update
+                link: update_link
+                icon: edit
+                acl_resource: ds.service.service.edit
+            delete:
+                type: delete
+                label: ds.service.grid.actions.delete
+                link: delete_link
+                icon: trash
+                acl_resource: ds.service.service.delete
+    ds-service-activation:
+        extended_entity_name: Ds\Bundle\ServiceBundle\Entity\Activation
+        source:
+            acl_resource: ds.service.activation.view
+            type: orm
+            query:
+                select:
+                    - a.id
+                    - s.id as service_id
+                    - u.username as user_username
+                    - a.createdAt
+                    - a.updatedAt
+                from:
+                    - { table: DsServiceBundle:Activation, alias: a }
+                join:
+                    left:
+                        - { join: a.service, alias: s }
+                        - { join: a.user, alias: u }
+        inline_editing:
+            enable: true
+        columns:
+            id:
+                label: ds.service.activation.id.label
+            service_id:
+                label: ds.service.activation.service.id.label
+            user_username:
+                label: ds.service.activation.user.username.label
+            createdAt:
+                label: ds.service.activation.created_at.label
+                frontend_type: datetime
+            updatedAt:
+                label: ds.service.activation.updated_at.label
+                frontend_type: datetime
+        properties:
+            id: ~
+            update_link:
+                type: url
+                route: ds_service_activation_edit
+                params:
+                    - id
+            view_link:
+                type: url
+                route: ds_service_activation_view
+                params:
+                    - id
+            delete_link:
+                type: url
+                route: ds_service_api_rest_delete_activation
+                params:
+                    - id
+        sorters:
+            columns:
+                id:
+                    data_name: a.id
+                service_id:
+                    data_name: s.id
+                user_username:
+                    data_name: u.username
+                createdAt:
+                    data_name: a.createdAt
+                updatedAt:
+                    data_name: a.updatedAt
+            default:
+                id: ASC
+        filters:
+            columns:
+                service_id:
+                    type: string
+                    data_name: s.id
+                user_username:
+                    type: string
+                    data_name: u.username
+                createdAt:
+                    type: datetime
+                    data_name: s.createdAt
+                updatedAt:
+                    type: datetime
+                    data_name: s.updatedAt
+        actions:
+            view:
+                type: navigate
+                label: ds.service.activation.grid.actions.view
+                link: view_link
+                icon: eye-open
+                acl_resource: ds.service.activation.view
+                rowAction: true
+            update:
+                type: navigate
+                label: ds.service.activation.grid.actions.update
+                link: update_link
+                icon: edit
+                acl_resource: ds.service.activation.edit
+            delete:
+                type: delete
+                label: ds.service.activation.grid.actions.delete
+                link: delete_link
+                icon: trash
+                acl_resource: ds.service.activation.delete

@@ -1,0 +1,22 @@
+oro_menu_config:
+    items:
+        ds_service_tab:
+            label: ds.service.menu.tab.label
+            uri: '#'
+            extras:
+                position: 21
+        ds_service_index:
+            label: ds.service.menu.index.label
+            route: ds_service_service_index
+        ds_activation_index:
+            label: ds.service.activation.menu.index.label
+            route: ds_service_activation_index
+    tree:
+        application_menu:
+            children:
+                system_tab:
+                    children:
+                        ds_service_tab:
+                            children:
+                                ds_service_index: ~
+                                ds_activation_index: ~

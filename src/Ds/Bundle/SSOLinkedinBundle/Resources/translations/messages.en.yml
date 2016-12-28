@@ -1,0 +1,7 @@
+ds:
+    sso_linkedin:
+        system_configuration:
+            groups:
+                sso_linkedin_settings: LinkedIn Single Sign-On
+            fields:
+                enable_sso: Enable

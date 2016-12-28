@@ -1,0 +1,28 @@
+ds:
+    portal:
+        system_configuration:
+            groups:
+                portal:
+                    title: Portal
+                portal_display:
+                    title: Display Settings
+                portal_display_meta:
+                    title: Meta
+                portal_display_header:
+                    title: Header
+            fields:
+                meta_title:
+                    label: Title
+                meta_description:
+                    label: Description
+                meta_keywords:
+                    label: Keywords
+                meta_author:
+                    label: Author
+                title:
+                    label: Title
+        home:
+            page:
+                portal:
+                    index:
+                        title: Home

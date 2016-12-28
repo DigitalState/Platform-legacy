@@ -1,0 +1,4 @@
+ds_accountdashboard_account:
+    resource: @DsAccountDashboardBundle/Controller/Account
+    type: annotation
+    prefix: %ds.account.prefix%

@@ -1,0 +1,31 @@
+{% extends 'DsAccountBundle:Account:base.html.twig' %}
+
+{% block breadcrumb %}
+    <ul class="breadcrumb">
+        <li>
+            <i class="fa fa-home"></i>
+            <a href="{{ path('ds_portal_portal_home_index') }}">
+                {% trans %}ds.portal.home.page.portal.index.title{% endtrans %}
+            </a>
+        </li>
+        <li>
+            <a href="{{ path('ds_accountdashboard_account_dashboard_index') }}">
+                {% trans %}ds.account.home.page.account.index.title{% endtrans %}
+            </a>
+        </li>
+        <li>
+            {% trans %}ds.asset.asset.page.account.index.title{% endtrans %}
+        </li>
+        <li class="active">
+            {{ asset.title }}
+        </li>
+    </ul>
+{% endblock %}
+
+{% block content %}
+    <div class="row">
+        <div class="col-lg-12">
+            {% include 'DsAssetBundle:Asset:type/default.html.twig' with { asset: asset } %}
+        </div>
+    </div>
+{% endblock %}

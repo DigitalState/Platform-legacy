@@ -1,0 +1,37 @@
+services:
+    ds.communication.data.resolver.channel:
+        class: Ds\Bundle\CommunicationBundle\Data\Resolver\ChannelResolver
+        arguments:
+            - @ds.communication.manager.channel
+        tags:
+            - { name: ds.data.resolver }
+    ds.communication.data.resolver.communication:
+        class: Ds\Bundle\CommunicationBundle\Data\Resolver\CommunicationResolver
+        arguments:
+            - @ds.communication.manager.communication
+        tags:
+            - { name: ds.data.resolver }
+    ds.communication.data.resolver.content:
+        class: Ds\Bundle\CommunicationBundle\Data\Resolver\ContentResolver
+        arguments:
+            - @ds.communication.manager.content
+        tags:
+            - { name: ds.data.resolver }
+    ds.communication.data.resolver.criterion:
+        class: Ds\Bundle\CommunicationBundle\Data\Resolver\CriterionResolver
+        arguments:
+            - @ds.communication.manager.criterion
+        tags:
+            - { name: ds.data.resolver }
+    ds.communication.data.resolver.message:
+        class: Ds\Bundle\CommunicationBundle\Data\Resolver\MessageResolver
+        arguments:
+            - @ds.communication.manager.message
+        tags:
+            - { name: ds.data.resolver }
+    ds.communication.data.resolver.template:
+        class: Ds\Bundle\CommunicationBundle\Data\Resolver\TemplateResolver
+        arguments:
+            - @ds.communication.manager.template
+        tags:
+            - { name: ds.data.resolver }

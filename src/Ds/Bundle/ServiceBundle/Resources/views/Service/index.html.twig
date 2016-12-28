@@ -1,0 +1,21 @@
+{% extends 'OroUIBundle:actions:index.html.twig' %}
+
+{% import 'OroUIBundle::macros.html.twig' as UI %}
+
+{% set pageTitle = 'ds.service.page.index.title'|trans %}
+
+{% block navButtons %}
+    {% if resource_granted('ds.service.service.create') %}
+        <div class="btn-group pull-right">
+            <a href="{{ path('ds_service_service_create') }}" class="btn btn-primary action-button">
+                {% trans %}ds.service.button.create{% endtrans %}
+            </a>
+            <a href="#" class="btn-primary btn dropdown-toggle" data-toggle="dropdown">
+                <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu">
+                {% placeholder ds_service_service_button_create %}
+            </ul>
+        </div>
+    {% endif %}
+{% endblock %}

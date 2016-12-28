@@ -1,0 +1,2 @@
+bundles:
+    - { name: Ds\Bundle\CaseBundle\DsCaseBundle, priority: 21 }

@@ -1,0 +1,7 @@
+services:
+    ds.case.manager.case:
+        class: Ds\Bundle\CaseBundle\Manager\CaseManager
+        parent: oro_soap.manager.entity_manager.abstract
+        arguments:
+            - Ds\Bundle\CaseBundle\Entity\CaseEntity
+            - @doctrine.orm.entity_manager

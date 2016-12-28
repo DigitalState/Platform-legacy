@@ -1,0 +1,57 @@
+{% extends 'DsAccountBundle:Account:base.html.twig' %}
+
+{% form_theme form 'bootstrap_3_layout.html.twig' %}
+
+{% block breadcrumb %}
+    <ul class="breadcrumb">
+        <li>
+            <i class="fa fa-home"></i>
+            <a href="{{ path('ds_portal_portal_home_index') }}">
+                {% trans %}ds.portal.home.page.portal.index.title{% endtrans %}
+            </a>
+        </li>
+        <li>
+            <a href="{{ path('ds_accountdashboard_account_dashboard_index') }}">
+                {% trans %}ds.account.home.page.account.index.title{% endtrans %}
+            </a>
+        </li>
+        <li>
+            <a href="{{ path('ds_accountuserpersona_account_persona_index') }}">
+                {% trans %}ds.userpersona.persona.page.account.index.title{% endtrans %}
+            </a>
+        </li>
+        <li class="active">
+            {{ persona.type }}
+        </li>
+    </ul>
+{% endblock %}
+
+{% block content %}
+    <div class="row">
+        <div class="col-lg-12">
+            <h1>
+                {% trans %}ds.accountuserpersona.persona.page.account.view.title{% endtrans %}
+            </h1>
+        </div>
+    </div>
+    <hr>
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3>Profile Attributes</h3>
+                </div>
+                <div class="panel-body">
+                    {{ form_start(form) }}
+                    {{ form_errors(form) }}
+                    {{ form_widget(form) }}
+                    {{ form_rest(form) }}
+                    <button type="submit" class="btn btn-primary">
+                        Save
+                    </button>
+                    {{ form_end(form) }}
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

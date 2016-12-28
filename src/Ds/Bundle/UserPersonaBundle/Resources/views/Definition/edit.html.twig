@@ -1,0 +1,59 @@
+{% extends 'OroUIBundle:actions:update.html.twig' %}
+
+{% form_theme form with 'OroFormBundle:Form:fields.html.twig' %}
+
+{% if entity.id %}
+    {% set formAction = path('ds_userpersona_definition_edit', { id: entity.id }) %}
+{% else %}
+    {% set formAction = path('ds_userpersona_definition_create', { alias: alias }) %}
+{% endif %}
+
+{% block navButtons %}
+    {% if entity.id and resource_granted('ds.userpersona.definition.delete', entity) %}
+        {{ UI.deleteButton({
+            dataUrl: path('ds_userpersona_api_rest_delete_definition', { id: entity.id }),
+            dataRedirect: path('ds_userpersona_definition_index'),
+            aCss: 'no-hash remove-button',
+            id: 'btn-remove-tag',
+            dataId: entity.id,
+            entity_label: 'ds.userpersona.definition.entity_label'|trans
+        }) }}
+        {{ UI.buttonSeparator() }}
+    {% endif %}
+    {{ UI.cancelButton(path('ds_userpersona_definition_index')) }}
+    {% if resource_granted('ds.userpersona.definition.edit', entity) %}
+        {% set html = UI.saveAndCloseButton() %}
+        {% set html = html ~ UI.saveAndStayButton() %}
+        {{ UI.dropdownSaveButton({ html: html }) }}
+    {% endif %}
+{% endblock navButtons %}
+
+{% block pageHeader %}
+    {% if entity.id %}
+        {% set breadcrumbs = {
+            entity: entity,
+            indexPath: path('ds_userpersona_definition_index'),
+            indexLabel: 'ds.userpersona.definition.menu.index.label'|trans,
+            entityTitle: entity.title
+        } %}
+        {{ parent() }}
+    {% else %}
+        {% set title = 'oro.ui.create_entity'|trans({ '%entityName%': 'ds.userpersona.definition.entity_label'|trans }) %}
+        {% include 'OroUIBundle::page_title_block.html.twig' with { title: title } %}
+    {% endif %}
+{% endblock pageHeader %}
+
+{% block content_data %}
+    {% set dataBlocks = [] %}
+    {% for widget in ds_widgets({ position: 'ds_userpersona_definition_form', context: context }, { form: form, context: context }) %}
+        {% set dataBlocks = dataBlocks|merge([ {
+            title: widget.title|trans,
+            subblocks: [ {
+                data : [ widget.content ]
+            } ]
+        } ]) %}
+    {% endfor %}
+    {% set id = 'user-persona-definition-edit' %}
+    {% set data = { dataBlocks: dataBlocks } %}
+    {{ parent() }}
+{% endblock content_data %}

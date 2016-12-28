@@ -1,0 +1,16 @@
+personas:
+    -
+        user: admin
+        data:
+            firstName: Mr
+            lastName: Admin
+            addressLine1: ''
+            addressLine2: ''
+            homePhone: ''
+            mobilePhone: ''
+
+prototype:
+    owner: main
+    organization: default
+    definition: standard
+    data: {}

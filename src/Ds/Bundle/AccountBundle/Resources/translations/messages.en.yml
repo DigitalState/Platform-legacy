@@ -1,0 +1,7 @@
+ds:
+    account:
+        home:
+            page:
+                account:
+                    index:
+                        title: My Account

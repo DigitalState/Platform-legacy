@@ -1,0 +1,19 @@
+{% import 'OroUIBundle::macros.html.twig' as UI %}
+
+<div class="widget-content">
+    <div class="row-fluid form-horizontal">
+        <div class="responsive-block">
+            {{ UI.renderProperty('ds.communication.criterion.id.label'|trans, entity.id) }}
+            {{ UI.renderHtmlProperty('ds.communication.criterion.communication.label'|trans, '<a href="' ~ path('ds_communication_communication_view', { id: entity.communication.id }) ~ '">' ~ entity.communication.title ~ '</a>') }}
+            {{ UI.renderProperty('ds.communication.criterion.operand_1.label'|trans, entity.operand1) }}
+            {{ UI.renderProperty('ds.communication.criterion.operator.label'|trans, entity.operator) }}
+            {{ UI.renderProperty('ds.communication.criterion.operand_2.label'|trans, entity.operand2) }}
+        </div>
+        <div class="responsive-block">
+            {{ UI.renderProperty('ds.communication.criterion.implementation.label'|trans, entity.implementation) }}
+        </div>
+    </div>
+    {% for widget in ds_widgets({ position: 'ds_communication_criterion_entity_criterion', context: context }, { entity: entity }) %}
+        {{ widget.content|raw }}
+    {% endfor %}
+</div>

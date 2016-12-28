@@ -1,0 +1,58 @@
+oro_entity_config:
+    entity:
+        entity:
+            items:
+                type:
+                    options:
+                        default_value: ~
+                        translatable: false
+                        indexed: false
+                    grid:
+                        type: string
+                        label: Type
+                        show_filter: true
+                        filterable: true
+                        filter_type: string
+                        sortable: true
+                    form:
+                        type: text
+                        options:
+                            block: entity
+                            label: Type
+                alias:
+                    options:
+                        default_value: ~
+                        translatable: false
+                        indexed: false
+                    grid:
+                        type: string
+                        label: Alias
+                        show_filter: true
+                        filterable: true
+                        filter_type: string
+                        sortable: true
+                    form:
+                        type: text
+                        options:
+                            block: entity
+                            label: Alias
+    manager:
+        entity:
+            items:
+                default:
+                    options:
+                        default_value: ~
+                        translatable: false
+                        indexed: false
+                    grid:
+                        type: string
+                        label: Manager
+                        show_filter: true
+                        filterable: true
+                        filter_type: string
+                        sortable: true
+                    form:
+                        type: text
+                        options:
+                            block: entity
+                            label: Manager

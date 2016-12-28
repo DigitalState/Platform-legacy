@@ -1,0 +1,8 @@
+services:
+    ds.accountrecord.widget.account.case.record.entity:
+        parent: ds.widget.widget.abstract
+        class: Ds\Bundle\AccountRecordBundle\Widget\Account\CaseEntity\Record\EntityWidget
+        arguments:
+            - @ds.record.manager.record
+        tags:
+            - { name: ds.widget, position: ds_case_account_case_entity }

@@ -1,0 +1,7 @@
+services:
+    ds.record.repository.record:
+        class: Doctrine\Common\Persistence\ObjectRepository
+        factory_service: doctrine
+        factory_method: getRepository
+        arguments:
+            - Ds\Bundle\RecordBundle\Entity\Record

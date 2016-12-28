@@ -1,0 +1,13 @@
+services:
+    ds.notification.repository.notification:
+        class: Doctrine\Common\Persistence\ObjectRepository
+        factory_service: doctrine
+        factory_method: getRepository
+        arguments:
+            - Ds\Bundle\NotificationBundle\Entity\Notification
+    ds.notification.repository.subscription:
+        class: Doctrine\Common\Persistence\ObjectRepository
+        factory_service: doctrine
+        factory_method: getRepository
+        arguments:
+            - Ds\Bundle\NotificationBundle\Entity\Subscription

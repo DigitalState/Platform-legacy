@@ -1,0 +1,26 @@
+oro_menu_config:
+    items:
+        ds_bpm_tab:
+            label: ds.bpm.menu.tab.label
+            uri: '#'
+            extras:
+                position: 41
+        ds_bpm_task_tab:
+            label: ds.bpm.task.menu.tab.label
+            uri: '#'
+            extras:
+                position: 16
+        ds_bpm_task_index:
+            label: ds.bpm.task.menu.index.label
+            route: ds_bpm_task_index
+    tree:
+        application_menu:
+            children:
+                system_tab:
+                    children:
+                        ds_bpm_tab:
+                            children:
+                                ds_bpm_task_index: ~
+                ds_bpm_task_tab:
+                    children:
+                        ds_bpm_task_index: ~

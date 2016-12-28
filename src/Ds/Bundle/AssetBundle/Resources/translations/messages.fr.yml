@@ -1,0 +1,64 @@
+ds:
+    asset:
+        entity_label: Bien
+        entity_plural_label: Biens
+        entity_description: Le bien.
+        id:
+            label: Id
+            description: ~
+        created_at:
+            label: Créé le
+            description: ~
+        updated_at:
+            label: Mis à jour le
+            description: ~
+        title:
+            label: Titre
+            description: ~
+        type:
+            label: Type
+            description: ~
+        source:
+            label: Source
+            description: ~
+        data:
+            label: Données
+            description: ~
+        user:
+            label: Usager
+            description: ~
+            placeholder: Selectionner un usager
+        case:
+            label: Cas
+            description: ~
+            placeholder: Selectionner un Cas
+        owner:
+            label: Unité d'affaires
+            description: ~
+        menu:
+            tab:
+                label: Biens
+            index:
+                label: Biens
+        page:
+            index:
+                title: Biens
+            view: ~
+            edit: ~
+            account:
+                index:
+                    title: Mes Biens
+        grid:
+            actions:
+                view: Visionner
+                update: Editer
+                delete: Supprimer
+        button:
+            create: Créer un bien
+        widget:
+            entity: Bien
+            form: Bien
+            owner: Propriétaire
+        config:
+            enabled:
+                label: Enabled Assets

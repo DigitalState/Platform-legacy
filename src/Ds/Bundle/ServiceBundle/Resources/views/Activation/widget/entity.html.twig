@@ -1,0 +1,14 @@
+{% import 'OroUIBundle::macros.html.twig' as UI %}
+
+<div class="widget-content">
+    <div class="row-fluid form-horizontal">
+        <div class="responsive-block">
+            {{ UI.renderProperty('ds.service.activation.id.label'|trans, entity.id) }}
+            {{ UI.renderHtmlProperty('ds.service.activation.service.label'|trans, '<a href="' ~ path('ds_service_service_view', { id: entity.service.id }) ~ '">' ~ entity.service.defaultTitle ~ '</a>') }}
+            {{ UI.renderHtmlProperty('ds.service.activation.user.label'|trans, '<a href="' ~ path('oro_user_view', { id: entity.user.id }) ~ '">' ~ entity.user.username ~ '</a>') }}
+        </div>
+    </div>
+    {% for widget in ds_widgets({ position: 'ds_service_activation_entity_activation', context: context }, { entity: entity }) %}
+        {{ widget.content|raw }}
+    {% endfor %}
+</div>

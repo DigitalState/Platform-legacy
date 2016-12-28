@@ -1,0 +1,45 @@
+ds:
+    bpm:
+        system_configuration:
+            groups:
+                bpm:
+                    title: Bpm
+                bpm_process:
+                    title: Paramètres du processus
+                bpm_process_variable_general:
+                    title: Variables générales
+                bpm_process_variable_none_start_event:
+                    title: Variables événement de départ
+                bpm_process_variable_user_task:
+                    title: Variables tâche usager
+            fields:
+                variable_user_id:
+                    label: Id de l'usager
+                variable_user_business_unit_id:
+                    label: Id de l'unité d'affaires de l'usager
+                variable_user_organization_id:
+                    label: Id de l'organisation de l'usager
+                variable_service_id:
+                    label: Id du service
+                variable_service_business_unit_id:
+                    label: Id de l'unité d'affaires du service
+                variable_service_organization_id:
+                    label: Id de l'organisation du service
+                variable_none_start_event_form_data:
+                    label: Formulaire de démarrage
+                variable_user_task_form_data:
+                    label: Formulaire tâche usager
+        menu:
+            tab:
+                label: Bpm
+        task:
+            menu:
+                tab:
+                    label: Tâches
+                index:
+                    label: Tâches
+
+oro:
+    user:
+        bpm_id:
+            label: Id bpm

@@ -1,0 +1,8 @@
+services:
+    ds.user.data.resolver.session:
+        class: Ds\Bundle\UserBundle\Data\Resolver\SessionResolver
+        arguments:
+            - @security.context
+            - @ds.userpersona.manager.persona
+        tags:
+            - { name: ds.data.resolver }

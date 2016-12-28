@@ -1,0 +1,19 @@
+ds.record.record.view:
+    type: entity
+    class: DsRecordBundle:Record
+    permission: VIEW
+
+ds.record.record.create:
+    type: entity
+    class: DsRecordBundle:Record
+    permission: CREATE
+
+ds.record.record.edit:
+    type: entity
+    class: DsRecordBundle:Record
+    permission: EDIT
+
+ds.record.record.delete:
+    type: entity
+    class: DsRecordBundle:Record
+    permission: DELETE

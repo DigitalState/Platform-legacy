@@ -1,0 +1,13 @@
+ds_userpersona:
+    resource: @DsUserPersonaBundle/Controller
+    type: annotation
+
+ds_userpersona_api_rest:
+    resource: @DsUserPersonaBundle/Resources/config/oro/routing/api.yml
+    type: rest
+    prefix: %ds.api.rest.prefix%
+    requirements:
+        version: %ds.api.rest.requirements.version%
+        _format: json
+    defaults:
+        version: %ds.api.rest.defaults.version%

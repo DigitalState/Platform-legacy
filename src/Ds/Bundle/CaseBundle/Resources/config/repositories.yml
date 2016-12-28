@@ -1,0 +1,7 @@
+services:
+    ds.case.repository.case:
+        class: Doctrine\Common\Persistence\ObjectRepository
+        factory_service: doctrine
+        factory_method: getRepository
+        arguments:
+            - Ds\Bundle\CaseEntityBundle\Entity\CaseEntity

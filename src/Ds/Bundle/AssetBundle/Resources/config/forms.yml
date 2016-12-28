@@ -1,0 +1,23 @@
+services:
+    ds.asset.form.type.asset:
+        class: Ds\Bundle\AssetBundle\Form\Type\AssetType
+        tags:
+            - { name: form.type, alias: ds_asset_asset }
+    ds.asset.form.type.api.asset:
+        class: Ds\Bundle\AssetBundle\Form\Type\Api\AssetType
+        tags:
+            - { name: form.type, alias: ds_asset_api_asset }
+    ds.asset.form.api.asset:
+        class: Symfony\Component\Form\Form
+        factory_method: createNamed
+        factory_service: form.factory
+        arguments:
+            - ~
+            - ds_asset_api_asset
+    ds.asset.form.handler.asset:
+        class: Ds\Bundle\AssetBundle\Form\Handler\AssetHandler
+        scope: request
+        arguments:
+            - @ds.asset.form.api.asset
+            - @request
+            - @doctrine.orm.entity_manager

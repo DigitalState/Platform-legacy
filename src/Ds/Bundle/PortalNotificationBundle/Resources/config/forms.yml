@@ -1,0 +1,5 @@
+services:
+    ds.portalnotification.form.type.portal.subscription:
+        class: Ds\Bundle\PortalNotificationBundle\Form\Type\Portal\SubscriptionType
+        tags:
+            - { name: form.type, alias: ds_portalnotification_portal_subscription }

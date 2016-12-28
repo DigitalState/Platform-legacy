@@ -1,0 +1,13 @@
+services:
+    ds.service.repository.activation:
+        class: Doctrine\Common\Persistence\ObjectRepository
+        factory_service: doctrine
+        factory_method: getRepository
+        arguments:
+            - Ds\Bundle\ServiceBundle\Entity\Activation
+    ds.service.repository.service:
+        class: Doctrine\Common\Persistence\ObjectRepository
+        factory_service: doctrine
+        factory_method: getRepository
+        arguments:
+            - Ds\Bundle\ServiceBundle\Entity\Service

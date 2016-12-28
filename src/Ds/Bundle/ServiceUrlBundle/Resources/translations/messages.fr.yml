@@ -1,0 +1,10 @@
+ds:
+    serviceurl:
+        entity_label: Service Url
+        url:
+            label: Url
+        button:
+            create: Service Url
+        widget:
+            entity: Url
+            form: Url

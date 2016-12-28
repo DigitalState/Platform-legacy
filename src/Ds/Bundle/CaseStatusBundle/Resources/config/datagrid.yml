@@ -1,0 +1,123 @@
+datagrid:
+    ds-casestatus-status:
+        extended_entity_name: Ds\Bundle\CaseStatusBundle\Entity\Status
+        source:
+            acl_resource: ds.casestatus.status.view
+            type: orm
+            query:
+                select:
+                    - s.id
+                    - u.username as user_username
+                    - s.source
+                    - s.createdAt
+                    - s.updatedAt
+                from:
+                    - { table: DsCaseStatusBundle:Status, alias: s }
+                join:
+                    left:
+                        - { join: s.case, alias: c }
+                        - { join: c.user, alias: u }
+        inline_editing:
+            enable: true
+        columns:
+            id:
+                label: ds.casestatus.status.id.label
+            title:
+                label: ds.casestatus.status.title.label
+            case_title:
+                label: ds.casestatus.status.case.title.label
+            user_username:
+                label: ds.casestatus.status.user.username.label
+            source:
+                label: ds.casestatus.status.source.label
+            description:
+                label: ds.casestatus.status.description.label
+            createdAt:
+                label: ds.casestatus.status.created_at.label
+                frontend_type: datetime
+            updatedAt:
+                label: ds.casestatus.status.updated_at.label
+                frontend_type: datetime
+        properties:
+            id: ~
+            update_link:
+                type: url
+                route: ds_casestatus_status_edit
+                params:
+                    - id
+            view_link:
+                type: url
+                route: ds_casestatus_status_view
+                params:
+                    - id
+            delete_link:
+                type: url
+                route: ds_casestatus_api_rest_delete_status
+                params:
+                    - id
+        sorters:
+            columns:
+                id:
+                    data_name: s.id
+                user_username:
+                    data_name: u.username
+                source:
+                    data_name: s.source
+                createdAt:
+                    data_name: s.createdAt
+                updatedAt:
+                    data_name: s.updatedAt
+            default:
+                id: ASC
+        filters:
+            columns:
+                user_username:
+                    type: string
+                    data_name: u.username
+                source:
+                    type: string
+                    data_name: s.source
+                createdAt:
+                    type: datetime
+                    data_name: s.createdAt
+                updatedAt:
+                    type: datetime
+                    data_name: s.updatedAt
+        actions:
+            view:
+                type: navigate
+                label: ds.casestatus.status.grid.actions.view
+                link: view_link
+                icon: eye-open
+                acl_resource: ds.casestatus.status.view
+                rowAction: true
+            update:
+                type: navigate
+                label: ds.casestatus.status.grid.actions.update
+                link: update_link
+                icon: edit
+                acl_resource: ds.casestatus.status.edit
+            delete:
+                type: delete
+                label: ds.casestatus.status.grid.actions.delete
+                link: delete_link
+                icon: trash
+                acl_resource: ds.casestatus.status.delete
+    ds-casestatus-case-status:
+        extends: ds-casestatus-status
+        options:
+            toolbarOptions:
+                hide: true
+                pagination:
+                    onePage: true
+        source:
+            query:
+                where:
+                    and:
+                        - s.case = :case
+            bind_parameters:
+                - case
+        columns:
+            user_username:
+                renderable: false
+        filters: ~

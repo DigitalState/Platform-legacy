@@ -1,0 +1,93 @@
+{% extends 'DsAccountBundle:Account:base.html.twig' %}
+
+{% use 'CraueFormFlowBundle:FormFlow:stepList_blocks.html.twig' %}
+
+{% form_theme form 'bootstrap_3_layout.html.twig' %}
+
+{% block breadcrumb %}
+    <ul class="breadcrumb">
+        <li>
+            <i class="fa fa-home"></i>
+            <a href="{{ path('ds_portal_portal_home_index') }}">
+                {% trans %}ds.portal.home.page.portal.index.title{% endtrans %}
+            </a>
+        </li>
+        <li>
+            <a href="{{ path('ds_accountdashboard_account_dashboard_index') }}">
+                {% trans %}ds.account.home.page.account.index.title{% endtrans %}
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                My Tasks
+            </a>
+        </li>
+        <li class="active">
+            {{ task.name }}
+        </li>
+    </ul>
+{% endblock %}
+
+{% block content %}
+    <div class="row">
+        <div class="col-lg-12">
+            <h1>
+                {{ task.name }}
+            </h1>
+        </div>
+    </div>
+    <hr>
+    {% if flow %}
+        <div class="row">
+            <div class="col-lg-12">
+                {% if flow %}
+                    {%- if flow.getStepLabels() is not empty -%}
+                        <div class="stepwizard">
+                            <div class="stepwizard-row">
+                                {% for stepLabel in flow.getStepLabels() %}
+                                    <div class="stepwizard-step{% if loop.index == flow.getCurrentStepNumber() %} current{% endif %}">
+                                        <button type="button" class="btn btn-default btn-circle">
+                                            {{ loop.index }}
+                                        </button>
+                                        <p>
+                                            {{ block('craue_flow_stepLabel') }}
+                                        </p>
+                                    </div>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    {% endif %}
+                {% endif %}
+            </div>
+        </div>
+    {% endif %}
+    {% if flow %}
+        {% include 'DsBpmBundle:Account:Bpm/Form/' ~ service.bpmId ~ '/' ~ flow.getCurrentStepLabel() ~ '.html.twig' with { flow: flow, form: form } %}
+    {% else %}
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        {{ form_start(form) }}
+                        {{ form_errors(form) }}
+                        {{ form_widget(form) }}
+                        {% if flow %}
+                            {% include 'CraueFormFlowBundle:FormFlow:buttons.html.twig' with {
+                            craue_formflow_button_class_last: 'btn btn-primary',
+                            craue_formflow_button_class_back: 'btn',
+                            craue_formflow_button_class_reset: 'btn btn-warning',
+                            craue_formflow_button_label_finish: 'submit',
+                            craue_formflow_button_label_reset: 'reset the flow'
+                            } %}
+                        {% else %}
+                            <button type="submit" class="btn btn-primary">
+                                Submit
+                            </button>
+                        {% endif %}
+                        {{ form_end(form) }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% endif %}
+{% endblock %}

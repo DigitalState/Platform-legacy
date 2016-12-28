@@ -1,0 +1,7 @@
+ds_service_api_rest_service:
+    resource: Ds\Bundle\ServiceBundle\Controller\Api\Rest\ServiceController
+    type: rest
+
+ds_service_api_rest_activation:
+    resource: Ds\Bundle\ServiceBundle\Controller\Api\Rest\ActivationController
+    type: rest

@@ -1,0 +1,3 @@
+{% import 'OroDataGridBundle::macros.html.twig' as dataGrid %}
+
+{{ dataGrid.renderGrid('ds-casestatus-case-status', { case: entity.id }, { cssClass: 'inner-grid' }) }}

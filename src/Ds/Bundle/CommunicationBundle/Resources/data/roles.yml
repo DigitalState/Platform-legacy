@@ -1,0 +1,6 @@
+roles:
+    -
+        role: ROLE_COMMUNICATION_MANAGER
+        label: Communication Manager
+
+prototype: []

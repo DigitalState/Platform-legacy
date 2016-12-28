@@ -1,0 +1,8 @@
+services:
+    ds.portal.event.listener.locale:
+        class: Ds\Bundle\PortalBundle\Event\Listener\LocaleListener
+        arguments:
+            - @request_stack
+            - @translator
+        tags:
+            - { name: kernel.event_listener, event: kernel.request }

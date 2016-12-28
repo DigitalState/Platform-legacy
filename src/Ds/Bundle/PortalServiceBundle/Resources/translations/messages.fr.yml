@@ -1,0 +1,7 @@
+ds:
+    portalservice:
+        service:
+            page:
+                portal:
+                    index:
+                        title: Information et services

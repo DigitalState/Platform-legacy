@@ -1,0 +1,12 @@
+ds:
+    bpm:
+        bpm:
+            not_blank: The bpm is required.
+            length:
+                min: The bpm must be at least {{ limit }} character long.
+                max: The bpm cannot be longer than {{ limit }} characters.
+        bpm_id:
+            not_blank: The bpm id is required.
+            length:
+                min: The bpm id must be at least {{ limit }} character long.
+                max: The bpm id cannot be longer than {{ limit }} characters.

@@ -1,0 +1,64 @@
+oro_system_configuration:
+    groups:
+        ds_portal:
+            title: ds.portal.system_configuration.groups.portal.title
+        ds_portal_display:
+            title: ds.portal.system_configuration.groups.portal_display.title
+            icon: icon-eye-open
+        ds_portal_display_meta:
+            title: ds.portal.system_configuration.groups.portal_display_meta.title
+        ds_portal_display_header:
+            title: ds.portal.system_configuration.groups.portal_display_header.title
+    fields:
+        ds_portal.meta_title:
+            data_type: string
+            type: text
+            options:
+                label: ds.portal.system_configuration.fields.meta_title.label
+                tooltip: ~
+            priority: 5
+        ds_portal.meta_description:
+            data_type: string
+            type: text
+            options:
+                label: ds.portal.system_configuration.fields.meta_description.label
+                tooltip: ~
+            priority: 4
+        ds_portal.meta_keywords:
+            data_type: string
+            type: text
+            options:
+                label: ds.portal.system_configuration.fields.meta_keywords.label
+                tooltip: ~
+            priority: 3
+        ds_portal.meta_author:
+            data_type: string
+            type: text
+            options:
+                label: ds.portal.system_configuration.fields.meta_author.label
+                tooltip: ~
+            priority: 2
+        ds_portal.title:
+            data_type: string
+            type: text
+            options:
+                label: ds.portal.system_configuration.fields.title.label
+                tooltip: ~
+            priority: 1
+    tree:
+        system_configuration:
+            platform:
+                children:
+                    ds_portal:
+                        children:
+                            ds_portal_display:
+                                children:
+                                    ds_portal_display_meta:
+                                        children:
+                                            - ds_portal.meta_title
+                                            - ds_portal.meta_description
+                                            - ds_portal.meta_keywords
+                                            - ds_portal.meta_author
+                                    ds_portal_display_header:
+                                        children:
+                                            - ds_portal.title

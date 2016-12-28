@@ -1,0 +1,14 @@
+services:
+    ds.service.manager.activation:
+        class: Ds\Bundle\ServiceBundle\Manager\ActivationManager
+        parent: oro_soap.manager.entity_manager.abstract
+        arguments:
+            - Ds\Bundle\ServiceBundle\Entity\Activation
+            - @doctrine.orm.entity_manager
+    ds.service.manager.service:
+        class: Ds\Bundle\ServiceBundle\Manager\ServiceManager
+        parent: oro_soap.manager.entity_manager.abstract
+        arguments:
+            - Ds\Bundle\ServiceBundle\Entity\Service
+            - @doctrine.orm.entity_manager
+            - @ds.service.manager.activation

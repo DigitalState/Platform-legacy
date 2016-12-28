@@ -1,0 +1,9 @@
+services:
+    ds.servicebpm.manager.servicebpm:
+        class: Ds\Bundle\ServiceBpmBundle\Manager\ServiceBpmManager
+        parent: oro_soap.manager.entity_manager.abstract
+        arguments:
+            - Ds\Bundle\ServiceBpmBundle\Entity\ServiceBpm
+            - @doctrine.orm.entity_manager
+            - @ds.service.manager.activation
+            - @router

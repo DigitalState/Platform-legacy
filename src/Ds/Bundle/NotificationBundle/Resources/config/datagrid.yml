@@ -1,0 +1,185 @@
+datagrid:
+    ds-notification-notification:
+        extended_entity_name: Ds\Bundle\NotificationBundle\Entity\Notification
+        source:
+            acl_resource: ds.notification.notification.view
+            type: orm
+            query:
+                select:
+                    - n.id
+                    - n.createdAt
+                    - n.updatedAt
+                from:
+                    - { table: DsNotificationBundle:Notification, alias: n }
+        inline_editing:
+            enable: true
+        columns:
+            id:
+                label: ds.notification.id.label
+            title:
+                label: ds.notification.title.label
+            createdAt:
+                label: ds.notification.created_at.label
+                frontend_type: datetime
+            updatedAt:
+                label: ds.notification.created_at.label
+                frontend_type: datetime
+        properties:
+            id: ~
+            update_link:
+                type: url
+                route: ds_notification_notification_edit
+                params:
+                    - id
+            view_link:
+                type: url
+                route: ds_notification_notification_view
+                params:
+                    - id
+            delete_link:
+                type: url
+                route: ds_notification_api_rest_delete_notification
+                params:
+                    - id
+        sorters:
+            columns:
+                id:
+                    data_name: n.id
+                createdAt:
+                    data_name: n.createdAt
+                updatedAt:
+                    data_name: n.updatedAt
+            default:
+                id: ASC
+        filters:
+            columns:
+                createdAt:
+                    type: datetime
+                    data_name: n.createdAt
+                updatedAt:
+                    type: datetime
+                    data_name: n.updatedAt
+        actions:
+            view:
+                type: navigate
+                label: ds.notification.grid.actions.view
+                link: view_link
+                icon: eye-open
+                acl_resource: ds.notification.notification.view
+                rowAction: true
+            update:
+                type: navigate
+                label: ds.notification.grid.actions.update
+                link: update_link
+                icon: edit
+                acl_resource: ds.notification.notification.edit
+            delete:
+                type: delete
+                label: ds.notification.grid.actions.delete
+                link: delete_link
+                icon: trash
+                acl_resource: ds.notification.notification.delete
+    ds-notification-notification-subscription:
+        extends: ds-notification-subscription
+        source:
+            query:
+                where:
+                    and:
+                        - s.notification = :notification
+            bind_parameters:
+                - notification
+        columns:
+            title:
+                renderable: false
+    ds-notification-subscription:
+        extended_entity_name: Ds\Bundle\NotificationBundle\Entity\Subscription
+        source:
+            acl_resource: ds.notification.subscription.view
+            type: orm
+            query:
+                select:
+                    - s.id
+                    - s.createdAt
+                    - s.updatedAt
+                    - u.username
+                from:
+                    - { table: DsNotificationBundle:Subscription, alias: s }
+                join:
+                    left:
+                        - { join: s.notification, alias: n }
+                        - { join: s.user, alias: u }
+        inline_editing:
+            enable: true
+        columns:
+            id:
+                label: ds.notification.subscription.id.label
+            title:
+                label: ds.notification.subscription.notification.title.label
+            username:
+                label: ds.notification.subscription.user.username.label
+            createdAt:
+                label: ds.notification.subscription.created_at.label
+                frontend_type: datetime
+            updatedAt:
+                label: ds.notification.subscription.updated_at.label
+                frontend_type: datetime
+        properties:
+            id: ~
+            update_link:
+                type: url
+                route: ds_notification_subscription_edit
+                params:
+                    - id
+            view_link:
+                type: url
+                route: ds_notification_subscription_view
+                params:
+                    - id
+            delete_link:
+                type: url
+                route: ds_notification_api_rest_delete_subscription
+                params:
+                    - id
+        sorters:
+            columns:
+                id:
+                    data_name: s.id
+                username:
+                    data_name: u.username
+                createdAt:
+                    data_name: s.createdAt
+                updatedAt:
+                    data_name: s.updatedAt
+            default:
+                id: ASC
+        filters:
+            columns:
+                username:
+                    type: string
+                    data_name: u.username
+                createdAt:
+                    type: datetime
+                    data_name: s.createdAt
+                updatedAt:
+                    type: datetime
+                    data_name: s.updatedAt
+        actions:
+            view:
+                type: navigate
+                label: ds.notification.subscription.grid.actions.view
+                link: view_link
+                icon: eye-open
+                acl_resource: ds.notification.subscription.view
+                rowAction: true
+            update:
+                type: navigate
+                label: ds.notification.subscription.grid.actions.update
+                link: update_link
+                icon: edit
+                acl_resource: ds.notification.subscription.edit
+            delete:
+                type: delete
+                label: ds.notification.subscription.grid.actions.delete
+                link: delete_link
+                icon: trash
+                acl_resource: ds.notification.subscription.delete

@@ -1,0 +1,16 @@
+services:
+    ds.asset.widget.asset.entity:
+        parent: ds.widget.widget.abstract
+        class: Ds\Bundle\AssetBundle\Widget\Asset\EntityWidget
+        tags:
+            - { name: ds.widget, position: ds_asset_asset_entity }
+    ds.asset.widget.asset.form:
+        parent: ds.widget.widget.abstract
+        class: Ds\Bundle\AssetBundle\Widget\Asset\FormWidget
+        tags:
+            - { name: ds.widget, position: ds_asset_asset_form }
+    ds.asset.widget.asset.owner:
+        parent: ds.widget.widget.abstract
+        class: Ds\Bundle\AssetBundle\Widget\Asset\OwnerWidget
+        tags:
+            - { name: ds.widget, position: ds_asset_asset_form }

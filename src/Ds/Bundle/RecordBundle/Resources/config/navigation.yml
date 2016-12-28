@@ -1,0 +1,18 @@
+oro_menu_config:
+    items:
+        ds_record_tab:
+            label: ds.record.menu.tab.label
+            uri: '#'
+            extras:
+                position: 22
+        ds_record_index:
+            label: ds.record.menu.index.label
+            route: ds_record_record_index
+    tree:
+        application_menu:
+            children:
+                system_tab:
+                    children:
+                        ds_record_tab:
+                            children:
+                                ds_record_index: ~

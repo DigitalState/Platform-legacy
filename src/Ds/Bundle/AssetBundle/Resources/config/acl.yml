@@ -1,0 +1,19 @@
+ds.asset.asset.view:
+    type: entity
+    class: DsAssetBundle:Asset
+    permission: VIEW
+
+ds.asset.asset.create:
+    type: entity
+    class: DsAssetBundle:Asset
+    permission: CREATE
+
+ds.asset.asset.edit:
+    type: entity
+    class: DsAssetBundle:Asset
+    permission: EDIT
+
+ds.asset.asset.delete:
+    type: entity
+    class: DsAssetBundle:Asset
+    permission: DELETE

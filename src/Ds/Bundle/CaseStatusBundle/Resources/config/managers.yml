@@ -1,0 +1,7 @@
+services:
+    ds.casestatus.manager.status:
+        class: Ds\Bundle\CaseStatusBundle\Manager\StatusManager
+        parent: oro_soap.manager.entity_manager.abstract
+        arguments:
+            - Ds\Bundle\CaseStatusBundle\Entity\Status
+            - @doctrine.orm.entity_manager

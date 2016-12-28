@@ -1,0 +1,13 @@
+ds_notification:
+    resource: @DsNotificationBundle/Controller
+    type: annotation
+
+ds_notification_api_rest:
+    resource: @DsNotificationBundle/Resources/config/oro/routing/api.yml
+    type: rest
+    prefix: %ds.api.rest.prefix%
+    requirements:
+        version: %ds.api.rest.requirements.version%
+        _format: json
+    defaults:
+        version: %ds.api.rest.defaults.version%

@@ -1,0 +1,47 @@
+{% extends 'OroUIBundle:actions:view.html.twig' %}
+
+{% import 'OroUIBundle::macros.html.twig' as UI %}
+
+{% block pageHeader %}
+    {% set breadcrumbs = {
+        entity: entity,
+        indexPath: path('ds_transport_profile_index'),
+        indexLabel: 'ds.transport.profile.menu.index.label'|trans,
+        entityTitle: 'ds.transport.profile.entity_label'|trans ~ ' ' ~ entity.title
+    } %}
+    {{ parent() }}
+{% endblock pageHeader %}
+
+{% block navButtons %}
+    {% if resource_granted('ds.transport.profile.edit', entity) %}
+        {{ UI.editButton({
+            path: path('ds_transport_profile_edit', { id: entity.id }),
+            entity_label: 'ds.transport.profile.entity_label'|trans
+        }) }}
+    {% endif %}
+    {% if resource_granted('ds.transport.profile.delete', entity) %}
+        {{ UI.deleteButton({
+            dataUrl: path('ds_transport_api_rest_delete_profile', { id: entity.id }),
+            dataRedirect: path('ds_transport_profile_index'),
+            aCss: 'no-hash remove-button',
+            id: 'btn-remove-profile',
+            dataId: entity.id,
+            entity_label: 'ds.transport.profile.entity_label'|trans,
+        }) }}
+    {% endif %}
+{% endblock navButtons %}
+
+{% block content_data %}
+    {% set dataBlocks = [] %}
+    {% for widget in ds_widgets({ position: 'ds_transport_profile_entity', context: context }, { entity: entity, context: context }) %}
+        {% set dataBlocks = dataBlocks|merge([ {
+            title: widget.title|trans,
+            subblocks: [ {
+                data : [ widget.content ]
+            } ]
+        } ]) %}
+    {% endfor %}
+    {% set id = 'profile-view' %}
+    {% set data = { dataBlocks: dataBlocks } %}
+    {{ parent() }}
+{% endblock content_data %}

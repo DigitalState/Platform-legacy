@@ -1,0 +1,16 @@
+services:
+    ds.record.widget.record.entity:
+        parent: ds.widget.widget.abstract
+        class: Ds\Bundle\RecordBundle\Widget\Record\EntityWidget
+        tags:
+            - { name: ds.widget, position: ds_record_record_entity }
+    ds.record.widget.record.form:
+        parent: ds.widget.widget.abstract
+        class: Ds\Bundle\RecordBundle\Widget\Record\FormWidget
+        tags:
+            - { name: ds.widget, position: ds_record_record_form }
+    ds.record.widget.record.owner:
+        parent: ds.widget.widget.abstract
+        class: Ds\Bundle\RecordBundle\Widget\Record\OwnerWidget
+        tags:
+            - { name: ds.widget, position: ds_record_record_form }

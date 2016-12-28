@@ -1,0 +1,39 @@
+ds.transport.profile.view:
+    type: entity
+    class: DsTransportBundle:Profile
+    permission: VIEW
+
+ds.transport.profile.create:
+    type: entity
+    class: DsTransportBundle:Profile
+    permission: CREATE
+
+ds.transport.profile.edit:
+    type: entity
+    class: DsTransportBundle:Profile
+    permission: EDIT
+
+ds.transport.profile.delete:
+    type: entity
+    class: DsTransportBundle:Profile
+    permission: DELETE
+
+ds.transport.transport.view:
+    type: entity
+    class: DsTransportBundle:Transport
+    permission: VIEW
+
+ds.transport.transport.create:
+    type: entity
+    class: DsTransportBundle:Transport
+    permission: CREATE
+
+ds.transport.transport.edit:
+    type: entity
+    class: DsTransportBundle:Transport
+    permission: EDIT
+
+ds.transport.transport.delete:
+    type: entity
+    class: DsTransportBundle:Transport
+    permission: DELETE

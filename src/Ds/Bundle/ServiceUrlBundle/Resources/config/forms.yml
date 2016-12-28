@@ -1,0 +1,5 @@
+services:
+    ds.serviceurl.form.type.serviceurl:
+        class: Ds\Bundle\ServiceUrlBundle\Form\Type\ServiceUrlType
+        tags:
+            - { name: form.type, alias: ds_serviceurl_serviceurl }

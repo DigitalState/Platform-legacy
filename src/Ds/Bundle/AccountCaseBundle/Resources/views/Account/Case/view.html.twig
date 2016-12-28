@@ -1,0 +1,182 @@
+{% extends 'DsAccountBundle:Account:base.html.twig' %}
+
+{% block breadcrumb %}
+    <ul class="breadcrumb">
+        <li>
+            <i class="fa fa-home"></i>
+            <a href="{{ path('ds_portal_portal_home_index') }}">
+                {% trans %}ds.portal.home.page.portal.index.title{% endtrans %}
+            </a>
+        </li>
+        <li>
+            <a href="{{ path('ds_accountdashboard_account_dashboard_index') }}">
+                {% trans %}ds.account.home.page.account.index.title{% endtrans %}
+            </a>
+        </li>
+        <li>
+            <a href="{{ path('ds_accountcase_account_case_index') }}">
+                {% trans %}ds.accountcase.caseentity.page.account.index.title{% endtrans %}
+            </a>
+        </li>
+        <li class="active">
+            {{ case.titles|localized_value }}
+        </li>
+    </ul>
+{% endblock %}
+
+{% block content %}
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="panel panel-default">
+                <div class="panel-heading clearfix">
+                    <h1 class="pull-left">
+                        {{ case.titles|localized_value }}
+                    </h1>
+                    <p class="pull-right">
+                        <a href="" class="btn btn-default">
+                            <i class="fa fa-print"></i> Print
+                        </a>
+                        <a href="" class="btn btn-default">
+                            <i class="fa fa-file-pdf-o"></i> Download PDF
+                        </a>
+                    </p>
+                </div>
+                <div class="panel-body">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3>Service Request Attributes</h3>
+                        </div>
+                        <div class="panel-body">
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="row">
+                                        <div class="col-lg-4">
+                                            <p class="lead"><strong>Subject</strong></p>
+                                        </div>
+                                        <div class="col-lg-8">
+                                            <p class="lead">{{ case.titles|localized_value }}</p>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-4">
+                                            <p class="lead"><strong>Request ID</strong></p>
+                                        </div>
+                                        <div class="col-lg-8">
+                                            <p class="lead">{{ case.id }}</p>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-4">
+                                            <p class="lead"><strong>Gov Request ID</strong></p>
+                                        </div>
+                                        <div class="col-lg-8">
+                                            <p class="lead">2016-09-123</p>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-4">
+                                            <p class="lead"><strong>Opened</strong></p>
+                                        </div>
+                                        <div class="col-lg-8">
+                                            <p class="lead">{{ case.createdAt|date('F jS \\a\\t g:i:sa') }}</p>
+                                        </div>
+                                    </div>
+                                    {% if case.state == 'inactive' and case.status == 'resolved' %}
+                                        <div class="row">
+                                            <div class="col-lg-4">
+                                                <p class="lead"><strong>Closed</strong></p>
+                                            </div>
+                                            <div class="col-lg-8">
+                                                <p class="lead">{{ case.updatedAt|date('F jS \\a\\t g:i:sa') }}</p>
+                                            </div>
+                                        </div>
+                                    {% endif %}
+                                    <div class="row">
+                                        <div class="col-lg-4">
+                                            <p class="lead"><strong>State</strong></p>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <ul class="list-group">
+                                                <li class="list-group-item">
+                                                    {% if case.state == 'active' %}
+                                                        Open
+                                                    {% elseif case.state == 'inactive' %}
+                                                        Closed
+                                                    {% endif %}
+                                                    <span class="badge">
+                                                        {% if case.status == 'active' %}
+                                                            Active
+                                                        {% elseif case.status == 'resolved' %}
+                                                            Resolved
+                                                        {% elseif case.status == 'cancelled' %}
+                                                            Cancelled
+                                                        {% endif %}
+                                                    </span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="row">
+                                        <div class="col-lg-4">
+                                            <p class="lead"><strong>Tags</strong></p>
+                                        </div>
+                                        <div class="col-lg-8">
+                                            <p class="lead">
+                                                <span class="label label-primary">Security</span>
+                                                <span class="label label-success">Access Request</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-4">
+                                            <p class="lead"><strong>Source Channel</strong></p>
+                                        </div>
+                                        <div class="col-lg-8">
+                                            <p class="lead">Portal</p>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-4">
+                                            <p class="lead"><strong>Service used to create request</strong></p>
+                                        </div>
+                                        <div class="col-lg-8">
+                                            {% if case.service %}
+                                                <p class="lead">{{ case.service.titles|localized_value }}</p>
+                                            {% endif %}
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-4">
+                                            <p class="lead"><strong>Transaction Type</strong></p>
+                                        </div>
+                                        <div class="col-lg-8">
+                                            <p class="lead">Apply</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {% for widget in ds_widgets({ position: 'ds_accountcase_account_case_entity' }, { case: case }) %}
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <h3>
+                                            {{ widget.title|trans }}
+                                        </h3>
+                                    </div>
+                                    <div class="panel-body">
+                                        {{ widget.content|raw }}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

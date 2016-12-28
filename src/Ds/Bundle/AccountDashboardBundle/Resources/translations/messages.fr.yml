@@ -1,0 +1,6 @@
+ds:
+    accountdashboard:
+        page:
+            account:
+                index:
+                    title: Tableau de bord

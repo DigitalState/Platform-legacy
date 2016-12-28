@@ -1,0 +1,184 @@
+datagrid:
+    ds-transport-profile:
+        extended_entity_name: Ds\Bundle\TransportBundle\Entity\Profile
+        source:
+            acl_resource: ds.transport.profile.view
+            type: orm
+            query:
+                select:
+                    - p.id
+                    - p.title
+                    - t.title as transport_title
+                    - p.createdAt
+                    - p.updatedAt
+                from:
+                    - { table: DsTransportBundle:Profile, alias: p }
+                join:
+                    left:
+                        - { join: p.transport, alias: t }
+        inline_editing:
+            enable: true
+        columns:
+            id:
+                label: ds.transport.profile.id.label
+            title:
+                label: ds.transport.profile.title.label
+            transport_title:
+                label: ds.transport.profile.transport.title.label
+            createdAt:
+                label: ds.transport.profile.created_at.label
+                frontend_type: datetime
+            updatedAt:
+                label: ds.transport.profile.updated_at.label
+                frontend_type: datetime
+        properties:
+            id: ~
+            update_link:
+                type: url
+                route: ds_transport_profile_edit
+                params:
+                    - id
+            view_link:
+                type: url
+                route: ds_transport_profile_view
+                params:
+                    - id
+            delete_link:
+                type: url
+                route: ds_transport_api_rest_delete_profile
+                params:
+                    - id
+        sorters:
+            columns:
+                id:
+                    data_name: p.id
+                title:
+                    data_name: p.title
+                transport_title:
+                    data_name: t.title
+                createdAt:
+                    data_name: p.createdAt
+                updatedAt:
+                    data_name: p.updatedAt
+            default:
+                id: ASC
+        filters:
+            columns:
+                title:
+                    type: string
+                    data_name: p.title
+                transport_title:
+                    type: string
+                    data_name: t.title
+                createdAt:
+                    type: datetime
+                    data_name: p.createdAt
+                updatedAt:
+                    type: datetime
+                    data_name: p.updatedAt
+        actions:
+            view:
+                type: navigate
+                label: ds.transport.profile.grid.actions.view
+                link: view_link
+                icon: eye-open
+                acl_resource: ds.transport.profile.view
+                rowAction: true
+            update:
+                type: navigate
+                label: ds.transport.profile.grid.actions.update
+                link: update_link
+                icon: edit
+                acl_resource: ds.transport.profile.edit
+            delete:
+                type: delete
+                label: ds.transport.profile.grid.actions.delete
+                link: delete_link
+                icon: trash
+                acl_resource: ds.transport.profile.delete
+    ds-transport-transport:
+        extended_entity_name: Ds\Bundle\TransportBundle\Entity\Transport
+        source:
+            acl_resource: ds.transport.transport.view
+            type: orm
+            query:
+                select:
+                    - t.id
+                    - t.title
+                    - t.createdAt
+                    - t.updatedAt
+                from:
+                    - { table: DsTransportBundle:Transport, alias: t }
+        inline_editing:
+            enable: true
+        columns:
+            id:
+                label: ds.transport.id.label
+            title:
+                label: ds.transport.title.label
+            createdAt:
+                label: ds.transport.created_at.label
+                frontend_type: datetime
+            updatedAt:
+                label: ds.transport.updated_at.label
+                frontend_type: datetime
+        properties:
+            id: ~
+            update_link:
+                type: url
+                route: ds_transport_transport_edit
+                params:
+                    - id
+            view_link:
+                type: url
+                route: ds_transport_transport_view
+                params:
+                    - id
+            delete_link:
+                type: url
+                route: ds_transport_api_rest_delete_transport
+                params:
+                    - id
+        sorters:
+            columns:
+                id:
+                    data_name: t.id
+                title:
+                    data_name: t.title
+                createdAt:
+                    data_name: t.createdAt
+                updatedAt:
+                    data_name: t.updatedAt
+            default:
+                id: ASC
+        filters:
+            columns:
+                title:
+                    type: string
+                    data_name: t.title
+                createdAt:
+                    type: datetime
+                    data_name: t.createdAt
+                updatedAt:
+                    type: datetime
+                    data_name: t.updatedAt
+        actions:
+            view:
+                type: navigate
+                label: ds.transport.grid.actions.view
+                link: view_link
+                icon: eye-open
+                acl_resource: ds.transport.transport.view
+                rowAction: true
+            update:
+                type: navigate
+                label: ds.transport.grid.actions.update
+                link: update_link
+                icon: edit
+                acl_resource: ds.transport.transport.edit
+            delete:
+                type: delete
+                label: ds.transport.grid.actions.delete
+                link: delete_link
+                icon: trash
+                acl_resource: ds.transport.transport.delete

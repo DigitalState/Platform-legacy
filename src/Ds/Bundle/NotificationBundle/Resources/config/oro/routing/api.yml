@@ -1,0 +1,7 @@
+ds_notification_api_rest_notification:
+    resource: Ds\Bundle\NotificationBundle\Controller\Api\Rest\NotificationController
+    type: rest
+
+ds_notification_api_rest_subscription:
+    resource: Ds\Bundle\NotificationBundle\Controller\Api\Rest\SubscriptionController
+    type: rest

@@ -1,0 +1,47 @@
+{% extends 'OroUIBundle:actions:view.html.twig' %}
+
+{% import 'OroUIBundle::macros.html.twig' as UI %}
+
+{% block pageHeader %}
+    {% set breadcrumbs = {
+        entity: entity,
+        indexPath: path('ds_case_case_index'),
+        indexLabel: 'ds.case.caseentity.menu.index.label'|trans,
+        entityTitle: entity.defaultTitle ~ ' (#' ~ entity.id ~ ')'
+    } %}
+    {{ parent() }}
+{% endblock pageHeader %}
+
+{% block navButtons %}
+    {% if resource_granted('ds.case.case.edit', entity) %}
+        {{ UI.editButton({
+            path: path('ds_case_case_edit', { id: entity.id }),
+            entity_label: 'ds.case.caseentity.entity_label'|trans
+        }) }}
+    {% endif %}
+    {% if resource_granted('ds.case.case.delete', entity) %}
+        {{ UI.deleteButton({
+            dataUrl: path('ds_case_api_rest_delete_case', { id: entity.id }),
+            dataRedirect: path('ds_case_case_index'),
+            aCss: 'no-hash remove-button',
+            id: 'btn-remove-service',
+            dataId: entity.id,
+            entity_label: 'ds.case.caseentity.entity_label'|trans,
+        }) }}
+    {% endif %}
+{% endblock navButtons %}
+
+{% block content_data %}
+    {% set dataBlocks = [] %}
+    {% for widget in ds_widgets({ position: 'ds_case_case_entity', context: context }, { entity: entity, context: context }) %}
+        {% set dataBlocks = dataBlocks|merge([ {
+            title: widget.title|trans,
+            subblocks: [ {
+                data : [ widget.content ] }
+            ]
+        } ]) %}
+    {% endfor %}
+    {% set id = 'case-view' %}
+    {% set data = { dataBlocks: dataBlocks } %}
+    {{ parent() }}
+{% endblock content_data %}

@@ -1,0 +1,18 @@
+{% import 'OroUIBundle::macros.html.twig' as UI %}
+
+<div class="widget-content">
+    <div class="row-fluid form-horizontal">
+        <div class="responsive-block">
+            {{ UI.renderProperty('ds.casestatus.status.id.label'|trans, entity.id) }}
+            {{ UI.renderProperty('ds.casestatus.status.title.label'|trans, entity.defaultTitle) }}
+            {{ UI.renderHtmlProperty('ds.casestatus.status.case.label'|trans, '<a href="' ~ path('ds_case_case_view', { id: entity.case.id }) ~ '">' ~ entity.case.defaultTitle ~ '</a>') }}
+            {{ UI.renderProperty('ds.casestatus.status.type.label'|trans, entity.type) }}
+            {{ UI.renderProperty('ds.casestatus.status.source.label'|trans, entity.source) }}
+            {{ UI.renderProperty('ds.casestatus.status.description.label'|trans, entity.defaultDescription) }}
+            {{ UI.renderProperty('ds.casestatus.status.percentage.label'|trans, entity.percentage ~ '%') }}
+        </div>
+    </div>
+    {% for widget in ds_widgets({ position: 'ds_casestatus_status_entity_status', context: context }, { entity: entity }) %}
+        {{ widget.content|raw }}
+    {% endfor %}
+</div>
