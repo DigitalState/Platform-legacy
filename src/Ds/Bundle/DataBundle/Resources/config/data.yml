@@ -1,3 +1,0 @@
-services:
-    ds.data.data:
-        class: Ds\Bundle\DataBundle\Data\Data

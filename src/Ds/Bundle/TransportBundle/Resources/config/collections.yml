@@ -1,3 +1,0 @@
-services:
-    ds.transport.collection.transport:
-        class: Ds\Bundle\TransportBundle\Collection\TransportCollection
