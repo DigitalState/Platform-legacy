@@ -1,2 +1,0 @@
-bundles:
-    - { name: Ds\Bundle\NotificationBundle\DsNotificationBundle, priority: 22 }
