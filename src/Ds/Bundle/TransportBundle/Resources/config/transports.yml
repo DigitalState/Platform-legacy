@@ -1,5 +1,0 @@
-services:
-    ds.transport.transport.email.mail:
-        class: Ds\Bundle\TransportBundle\Transport\Email\MailTransport
-        tags:
-            - { name: ds.transport, implementation: email.mail }

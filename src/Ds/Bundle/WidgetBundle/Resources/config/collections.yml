@@ -1,3 +1,0 @@
-services:
-    ds.widget.collection.widget:
-        class: Ds\Bundle\WidgetBundle\Collection\WidgetCollection

@@ -1,2 +1,0 @@
-bundles:
-    - { name: Ds\Bundle\PortalNotificationBundle\DsPortalNotificationBundle, priority: 30 }

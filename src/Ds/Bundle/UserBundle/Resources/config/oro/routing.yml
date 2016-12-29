@@ -1,4 +1,0 @@
-ds_user:
-    resource: "@!OroUserBundle/Controller"
-    type: annotation
-    prefix: /user

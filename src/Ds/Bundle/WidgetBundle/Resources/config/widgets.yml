@@ -1,5 +1,0 @@
-services:
-    ds.widget.widget.abstract:
-        abstract: true
-        arguments:
-            - @templating
