@@ -112,7 +112,7 @@ stof_doctrine_extensions:
 
 ### API URLs
 
-You also need to add the following parameters in your `app/config/parameters.yml`
+You also need to add the following parameters in your `app/config/parameters.yml` and `app/config/parameters.yml.dist`
 ```yaml
 parameters:
     ds.api.rest.prefix: api/rest/{version}
