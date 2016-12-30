@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "f759ef1e463372df0edbe30f0f4e2211",
-    "content-hash": "2a6a9e327e08bde1753e54473af0755d",
+    "hash": "637bf5458ff271dc3c1052d89fb2e625",
+    "content-hash": "17835996cad6bd1a200cb044caacc1fb",
     "packages": [
         {
             "name": "a2lix/translation-form-bundle",
@@ -904,12 +904,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/DigitalState/Platform-Admin-Bundle.git",
-                "reference": "335bd4d3884f2cba93f683dde2e743f696f24119"
+                "reference": "015649029a789573530633110247854e44fcf7e0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/DigitalState/Platform-Admin-Bundle/zipball/335bd4d3884f2cba93f683dde2e743f696f24119",
-                "reference": "335bd4d3884f2cba93f683dde2e743f696f24119",
+                "url": "https://api.github.com/repos/DigitalState/Platform-Admin-Bundle/zipball/015649029a789573530633110247854e44fcf7e0",
+                "reference": "015649029a789573530633110247854e44fcf7e0",
                 "shasum": ""
             },
             "require": {
@@ -934,7 +934,7 @@
             "authors": [
                 {
                     "name": "Digital State, Inc",
-                    "homepage": "http://www.digitalState.ca"
+                    "homepage": "http://www.digitalstate.ca"
                 }
             ],
             "description": "DigitalState Platform Admin Bundle",
@@ -943,7 +943,7 @@
                 "ORO",
                 "communication"
             ],
-            "time": "2016-12-29 12:07:32"
+            "time": "2016-12-29 15:12:25"
         },
         {
             "name": "digitalstate/platform-api-bundle",
@@ -1326,6 +1326,52 @@
                 "communication"
             ],
             "time": "2016-12-29 15:46:45"
+        },
+        {
+            "name": "digitalstate/platform-linkedin-bundle",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/DigitalState/Platform-Linkedin-Bundle.git",
+                "reference": "c00dd668d86d4764038da5fbd3a8e5966de92111"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/DigitalState/Platform-Linkedin-Bundle/zipball/c00dd668d86d4764038da5fbd3a8e5966de92111",
+                "reference": "c00dd668d86d4764038da5fbd3a8e5966de92111",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.6"
+            },
+            "type": "symfony-bundle",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Ds\\Bundle\\LinkedinBundle": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "DigitalState, Inc",
+                    "homepage": "http://www.digitalstate.ca"
+                }
+            ],
+            "description": "DigitalState Linkedin Bundle",
+            "homepage": "https://github.com/DigitalState/Platform-Linkedin-Bundle.git",
+            "keywords": [
+                "ORO",
+                "linkedin"
+            ],
+            "time": "2016-12-30 15:02:46"
         },
         {
             "name": "digitalstate/platform-notification-bundle",
@@ -9817,6 +9863,7 @@
         "digitalstate/platform-entity-bundle": 20,
         "digitalstate/platform-widget-bundle": 20,
         "digitalstate/platform-security-bundle": 20,
+        "digitalstate/platform-linkedin-bundle": 20,
         "knplabs/knp-time-bundle": 20
     },
     "prefer-stable": true,

@@ -31,6 +31,7 @@
         "digitalstate/platform-entity-bundle" : "dev-master",
         "digitalstate/platform-widget-bundle" : "dev-master",
         "digitalstate/platform-security-bundle" : "dev-master",
+        "digitalstate/platform-linkedin-bundle" : "dev-master",
         "knplabs/knp-time-bundle": "dev-master"
     },
     "require-dev": {
