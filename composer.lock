@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "f5253808977cdda86d57d45d32b07e67",
-    "content-hash": "958816722e5841d5206aa9c6a3ed1369",
+    "hash": "3fec2fc1a4fb25be4e2c39b0cfa8b25d",
+    "content-hash": "9d3265e7f802510ca8e9610285b5edd8",
     "packages": [
         {
             "name": "a2lix/translation-form-bundle",
@@ -1604,6 +1604,52 @@
                 "notifications"
             ],
             "time": "2016-12-30 10:50:37"
+        },
+        {
+            "name": "digitalstate/platform-sso-bundle",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/DigitalState/Platform-SSO-Bundle.git",
+                "reference": "b7a92d6218b7042085c7a96405a9f8383d0020bc"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/DigitalState/Platform-SSO-Bundle/zipball/b7a92d6218b7042085c7a96405a9f8383d0020bc",
+                "reference": "b7a92d6218b7042085c7a96405a9f8383d0020bc",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.6"
+            },
+            "type": "symfony-bundle",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Ds\\Bundle\\SSOBundle": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "DigitalState, Inc",
+                    "homepage": "http://www.digitalstate.ca"
+                }
+            ],
+            "description": "DigitalState SSO Bundle",
+            "homepage": "https://github.com/DigitalState/Platform-SSO-Bundle.git",
+            "keywords": [
+                "ORO",
+                "SSO"
+            ],
+            "time": "2016-12-30 20:03:34"
         },
         {
             "name": "digitalstate/platform-transport-bundle",
@@ -10050,6 +10096,7 @@
         "digitalstate/platform-locale-bundle": 20,
         "digitalstate/platform-portal-bundle": 20,
         "digitalstate/platform-organization-bundle": 20,
+        "digitalstate/platform-sso-bundle": 20,
         "knplabs/knp-time-bundle": 20
     },
     "prefer-stable": true,
