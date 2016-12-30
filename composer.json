@@ -16,6 +16,7 @@
     },
     "require": {
         "oro/platform": "1.10.*",
+        "digitalstate/platform-console-bundle" : "dev-master",
         "digitalstate/platform-bpm-bundle" : "dev-master",
         "digitalstate/platform-bpm-camunda-bundle" : "dev-master",
         "digitalstate/platform-bpm-pm-bundle" : "dev-master",
