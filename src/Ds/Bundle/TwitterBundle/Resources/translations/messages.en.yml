@@ -1,9 +1,0 @@
-ds:
-    twitter:
-        system_configuration:
-            groups:
-                twitter: Twitter settings
-                twitter_settings: Twitter Integration Settings
-            fields:
-                client_id: Client ID
-                client_secret: Client Secret
