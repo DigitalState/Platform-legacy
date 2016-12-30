@@ -19,6 +19,7 @@
         "digitalstate/platform-bpm-bundle" : "dev-master",
         "digitalstate/platform-bpm-camunda-bundle" : "dev-master",
         "digitalstate/platform-bpm-pm-bundle" : "dev-master",
+        "digitalstate/platform-data-bundle" : "dev-master",
         "digitalstate/platform-communication-bundle" : "dev-master",
         "digitalstate/platform-transport-bundle" : "dev-master",
         "digitalstate/platform-notification-bundle" : "dev-master",
