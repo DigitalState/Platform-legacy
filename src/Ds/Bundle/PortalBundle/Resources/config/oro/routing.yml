@@ -1,4 +1,0 @@
-ds_portal_portal:
-    resource: @DsPortalBundle/Controller/Portal
-    type: annotation
-    prefix: '%ds.portal.prefix%'

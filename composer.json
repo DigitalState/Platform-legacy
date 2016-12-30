@@ -34,6 +34,7 @@
         "digitalstate/platform-linkedin-bundle" : "dev-master",
         "digitalstate/platform-twitter-bundle" : "dev-master",
         "digitalstate/platform-locale-bundle" : "dev-master",
+        "digitalstate/platform-portal-bundle" : "dev-master",
         "knplabs/knp-time-bundle": "dev-master"
     },
     "require-dev": {
