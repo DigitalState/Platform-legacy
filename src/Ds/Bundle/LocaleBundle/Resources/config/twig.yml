@@ -1,8 +1,0 @@
-services:
-    ds.locale.twig.extension.locale:
-        class: Ds\Bundle\LocaleBundle\Twig\Extension\LocaleExtension
-        calls:
-            - [ setRequest, [ @request_stack ] ]
-        public: false
-        tags:
-            - { name: twig.extension }

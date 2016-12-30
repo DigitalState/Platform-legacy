@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "80dcc183ab02226516be2fdabdb92742",
-    "content-hash": "b4f991c883b0474a0b4f13c45b9a15f7",
+    "hash": "d8e73e1face8437de910e06eb7ecb397",
+    "content-hash": "049226ca47ee04f933b328baf94e8f83",
     "packages": [
         {
             "name": "a2lix/translation-form-bundle",
@@ -1372,6 +1372,52 @@
                 "linkedin"
             ],
             "time": "2016-12-30 15:02:46"
+        },
+        {
+            "name": "digitalstate/platform-locale-bundle",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/DigitalState/Platform-Locale-Bundle.git",
+                "reference": "dd09ccce4288868af12b31df9b1119bf16b49d65"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/DigitalState/Platform-Locale-Bundle/zipball/dd09ccce4288868af12b31df9b1119bf16b49d65",
+                "reference": "dd09ccce4288868af12b31df9b1119bf16b49d65",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.6"
+            },
+            "type": "symfony-bundle",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Ds\\Bundle\\LocaleBundle": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "DigitalState, Inc",
+                    "homepage": "http://www.digitalstate.ca"
+                }
+            ],
+            "description": "DigitalState Locale Bundle",
+            "homepage": "https://github.com/DigitalState/Platform-Locale-Bundle.git",
+            "keywords": [
+                "ORO",
+                "linkedin"
+            ],
+            "time": "2016-12-30 15:58:11"
         },
         {
             "name": "digitalstate/platform-notification-bundle",
@@ -9911,6 +9957,7 @@
         "digitalstate/platform-security-bundle": 20,
         "digitalstate/platform-linkedin-bundle": 20,
         "digitalstate/platform-twitter-bundle": 20,
+        "digitalstate/platform-locale-bundle": 20,
         "knplabs/knp-time-bundle": 20
     },
     "prefer-stable": true,

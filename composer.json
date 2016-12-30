@@ -33,6 +33,7 @@
         "digitalstate/platform-security-bundle" : "dev-master",
         "digitalstate/platform-linkedin-bundle" : "dev-master",
         "digitalstate/platform-twitter-bundle" : "dev-master",
+        "digitalstate/platform-locale-bundle" : "dev-master",
         "knplabs/knp-time-bundle": "dev-master"
     },
     "require-dev": {
