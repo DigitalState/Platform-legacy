@@ -1,0 +1,76 @@
+{% extends 'DsPortalBundle:Portal:base.html.twig' %}
+
+{% block title %}Portal{% endblock %}
+
+{% block breadcrumb %}
+    <ul class="breadcrumb">
+        <li>
+            <i class="fa fa-home"></i>
+            <a href="{{ path('ds_portal_portal_home_index') }}">
+                {% trans %}ds.portal.home.page.portal.index.title{% endtrans %}
+            </a>
+        </li>
+        <li class="active">
+            Notifications
+        </li>
+    </ul>
+{% endblock %}
+
+{% block content %}
+    <div class="row">
+        <div class="col-lg-12">
+            <h1>
+                Notifications
+            </h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <form role="search">
+                        <input type="text" class="form-control" placeholder="What would you like to be notified about?" style="border-top: 0px; border-right: 0px; border-left: 0px; font-size: 24px;" data-plugin="filter" data-filter-row="#notifications > .row" data-filter-data="h4 a">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="notifications">
+        {% for notification in notifications  %}
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <div class="row">
+                                <div class="col-lg-3">
+                                    <h4>
+                                        <a href="{{ path('ds_portalnotification_portal_notification_view', { id: notification.id }) }}">
+                                            {{ notification.titles|localized_value }}
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div class="col-lg-9">
+                                    <p>
+                                        {{ notification.descriptions|localized_value }}
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        {% else %}
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <p>
+                                No records found.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}

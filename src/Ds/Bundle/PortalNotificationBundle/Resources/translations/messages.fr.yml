@@ -1,0 +1,7 @@
+ds:
+    portalnotification:
+        notification:
+            page:
+                portal:
+                    index:
+                        title: Notifications
