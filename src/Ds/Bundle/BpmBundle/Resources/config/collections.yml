@@ -1,3 +1,0 @@
-services:
-    ds.bpm.collection.bpm.api:
-        class: Ds\Bundle\BpmBundle\Collection\Bpm\ApiCollection

@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "a28a58076b42ff37186f599cab565352",
-    "content-hash": "3e5fed0dab7fc4cbafe011138a699ca3",
+    "hash": "38b47a4438c854bf5dd21acc6d713d9f",
+    "content-hash": "feb5e2f9c1ecec534b1319e03ad11770",
     "packages": [
         {
             "name": "a2lix/translation-form-bundle",
@@ -834,71 +834,6 @@
             "time": "2016-09-28 07:17:45"
         },
         {
-            "name": "craue/formflow-bundle",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/craue/CraueFormFlowBundle.git",
-                "reference": "5cbe5f5dc1f2971b3b2b83b499f17458ca69f49f"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/craue/CraueFormFlowBundle/zipball/5cbe5f5dc1f2971b3b2b83b499f17458ca69f49f",
-                "reference": "5cbe5f5dc1f2971b3b2b83b499f17458ca69f49f",
-                "shasum": ""
-            },
-            "require": {
-                "paragonie/random_compat": "^1|^2",
-                "php": "^5.3.9|~7.0",
-                "symfony/form": "~2.7|~3.0",
-                "symfony/http-kernel": "~2.7|~3.0",
-                "symfony/translation": "~2.7|~3.0",
-                "symfony/yaml": "~2.7|~3.0"
-            },
-            "require-dev": {
-                "doctrine/doctrine-bundle": "~1.0",
-                "phpunit/phpunit": "~4.1|~5.0",
-                "sensio/framework-extra-bundle": "~3.0",
-                "symfony/phpunit-bridge": "~3.2",
-                "symfony/symfony": "~2.7|~3.0"
-            },
-            "type": "symfony-bundle",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "3.0.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Craue\\FormFlowBundle\\": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Christian Raue",
-                    "email": "christian.raue@gmail.com"
-                },
-                {
-                    "name": "Symfony Community",
-                    "homepage": "https://github.com/craue/CraueFormFlowBundle/contributors"
-                }
-            ],
-            "description": "Multi-step forms for your Symfony project.",
-            "homepage": "https://github.com/craue/CraueFormFlowBundle",
-            "keywords": [
-                "Symfony2",
-                "form",
-                "step",
-                "symfony3",
-                "wizard"
-            ],
-            "time": "2016-12-09 12:09:14"
-        },
-        {
             "name": "digitalstate/platform-admin-bundle",
             "version": "dev-master",
             "source": {
@@ -944,6 +879,149 @@
                 "communication"
             ],
             "time": "2016-12-29 12:07:32"
+        },
+        {
+            "name": "digitalstate/platform-bpm-bundle",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/DigitalState/Platform-Bpm-Bundle.git",
+                "reference": "4dacad24979762c598e1187e3cb7227e4fbda0bc"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/DigitalState/Platform-Bpm-Bundle/zipball/4dacad24979762c598e1187e3cb7227e4fbda0bc",
+                "reference": "4dacad24979762c598e1187e3cb7227e4fbda0bc",
+                "shasum": ""
+            },
+            "require": {
+                "digitalstate/platform-data-bundle": "dev-master",
+                "php": ">=5.6"
+            },
+            "type": "symfony-bundle",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Ds\\Bundle\\BpmBundle": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "DigitalState, Inc",
+                    "homepage": "http://www.digitalstate.ca"
+                }
+            ],
+            "description": "DigitalState Bpm Bundle",
+            "homepage": "https://github.com/DigitalState/Platform-Bpm-Bundle.git",
+            "keywords": [
+                "ORO",
+                "bpm"
+            ],
+            "time": "2016-12-30 11:32:14"
+        },
+        {
+            "name": "digitalstate/platform-bpm-camunda-bundle",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/DigitalState/Platform-Bpm-Camunda-Bundle.git",
+                "reference": "2f06b5c088482c0aeb83d7de46c6402b5f04e482"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/DigitalState/Platform-Bpm-Camunda-Bundle/zipball/2f06b5c088482c0aeb83d7de46c6402b5f04e482",
+                "reference": "2f06b5c088482c0aeb83d7de46c6402b5f04e482",
+                "shasum": ""
+            },
+            "require": {
+                "camunda/camunda-bpm-php-sdk": "dev-master",
+                "digitalstate/platform-bpm-bundle": "dev-master",
+                "digitalstate/platform-security-bundle": "dev-master",
+                "digitalstate/platform-user-bundle": "dev-master",
+                "php": ">=5.6"
+            },
+            "type": "symfony-bundle",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Ds\\Bundle\\BpmCamundaBundle": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "DigitalState, Inc",
+                    "homepage": "http://www.digitalstate.ca"
+                }
+            ],
+            "description": "DigitalState Bpm Camunda Bundle",
+            "homepage": "https://github.com/DigitalState/Platform-Bpm-Camunda-Bundle.git",
+            "keywords": [
+                "ORO",
+                "bpm"
+            ],
+            "time": "2016-12-30 11:38:33"
+        },
+        {
+            "name": "digitalstate/platform-bpm-pm-bundle",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/DigitalState/Platform-Bpm-Pm-Bundle.git",
+                "reference": "ece3feefe0c222f9795e2da7893e12d6ed558683"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/DigitalState/Platform-Bpm-Pm-Bundle/zipball/ece3feefe0c222f9795e2da7893e12d6ed558683",
+                "reference": "ece3feefe0c222f9795e2da7893e12d6ed558683",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.6"
+            },
+            "type": "symfony-bundle",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Ds\\Bundle\\BpmPmBundle": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "DigitalState, Inc",
+                    "homepage": "http://www.digitalstate.ca"
+                }
+            ],
+            "description": "DigitalState Bpm ProcessMaker Bundle",
+            "homepage": "https://github.com/DigitalState/Platform-Bpm-Pm-Bundle.git",
+            "keywords": [
+                "ORO",
+                "bpm"
+            ],
+            "time": "2016-12-30 11:53:27"
         },
         {
             "name": "digitalstate/platform-communication-bundle",
@@ -9566,8 +9644,9 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
-        "camunda/camunda-bpm-php-sdk": 20,
-        "craue/formflow-bundle": 20,
+        "digitalstate/platform-bpm-bundle": 20,
+        "digitalstate/platform-bpm-camunda-bundle": 20,
+        "digitalstate/platform-bpm-pm-bundle": 20,
         "digitalstate/platform-communication-bundle": 20,
         "digitalstate/platform-transport-bundle": 20,
         "digitalstate/platform-notification-bundle": 20,

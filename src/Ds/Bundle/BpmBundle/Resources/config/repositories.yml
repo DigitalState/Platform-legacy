@@ -1,3 +1,0 @@
-services:
-    ds.bpm.repository.task:
-        class: Ds\Bundle\BpmBundle\Repository\TaskRepository

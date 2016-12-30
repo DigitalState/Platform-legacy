@@ -1,5 +1,0 @@
-services:
-    ds.bpm.data.resolver.bpm:
-        class: Ds\Bundle\BpmBundle\Data\Resolver\BpmResolver
-        tags:
-            - { name: ds.data.resolver }

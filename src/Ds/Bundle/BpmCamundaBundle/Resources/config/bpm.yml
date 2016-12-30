@@ -1,6 +1,0 @@
-services:
-    ds.bpm_camunda.bpm.api.camunda:
-        parent: ds.bpm.bpm.api.abstract
-        class: Ds\Bundle\BpmCamundaBundle\Bpm\Api\CamundaApi
-        tags:
-            - { name: ds.bpm.api, alias: camunda }

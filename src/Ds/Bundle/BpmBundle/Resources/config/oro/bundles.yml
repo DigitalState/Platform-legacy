@@ -1,3 +1,0 @@
-bundles:
-    - { name: Ds\Bundle\BpmBundle\DsBpmBundle, priority: 20 }
-    - { name: Craue\FormFlowBundle\CraueFormFlowBundle, priority: 0 }
