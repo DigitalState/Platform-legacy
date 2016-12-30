@@ -1,4 +1,0 @@
-parameters:
-    ds.api.rest.prefix: api/rest/{version}
-    ds.api.rest.requirements.version: latest|v1
-    ds.api.rest.defaults.version: latest

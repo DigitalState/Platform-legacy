@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "5d67201dbdf0bac3feba6f2ddab932ed",
-    "content-hash": "08da359d566939cfc39eb497fdedf33c",
+    "hash": "f759ef1e463372df0edbe30f0f4e2211",
+    "content-hash": "2a6a9e327e08bde1753e54473af0755d",
     "packages": [
         {
             "name": "a2lix/translation-form-bundle",
@@ -944,6 +944,52 @@
                 "communication"
             ],
             "time": "2016-12-29 12:07:32"
+        },
+        {
+            "name": "digitalstate/platform-api-bundle",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/DigitalState/Platform-Api-Bundle.git",
+                "reference": "26aeb2ace43fe7d63683746659fc68b6293b246b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/DigitalState/Platform-Api-Bundle/zipball/26aeb2ace43fe7d63683746659fc68b6293b246b",
+                "reference": "26aeb2ace43fe7d63683746659fc68b6293b246b",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.6"
+            },
+            "type": "symfony-bundle",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Ds\\Bundle\\ApiBundle": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "DigitalState, Inc",
+                    "homepage": "http://www.digitalstate.ca"
+                }
+            ],
+            "description": "DigitalState Api Bundle",
+            "homepage": "https://github.com/DigitalState/Platform-Api-Bundle.git",
+            "keywords": [
+                "ORO",
+                "api"
+            ],
+            "time": "2016-12-30 13:50:13"
         },
         {
             "name": "digitalstate/platform-bpm-bundle",
@@ -9756,6 +9802,7 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
+        "digitalstate/platform-api-bundle": 20,
         "digitalstate/platform-console-bundle": 20,
         "digitalstate/platform-bpm-bundle": 20,
         "digitalstate/platform-bpm-camunda-bundle": 20,

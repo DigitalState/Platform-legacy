@@ -1,3 +1,0 @@
-ds_api:
-    resource: @DsApiBundle/Controller
-    type: annotation
