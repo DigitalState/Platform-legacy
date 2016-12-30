@@ -1,2 +1,0 @@
-bundles:
-    - { name: Ds\Bundle\SecurityBundle\DsSecurityBundle, priority: 10 }
