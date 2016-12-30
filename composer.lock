@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "03fc8fe2fffca1a93a98f647e72e7146",
-    "content-hash": "3552fd01d4fdea32be2a6c43cc3fc438",
+    "hash": "f5253808977cdda86d57d45d32b07e67",
+    "content-hash": "958816722e5841d5206aa9c6a3ed1369",
     "packages": [
         {
             "name": "a2lix/translation-form-bundle",
@@ -1468,6 +1468,51 @@
                 "notifications"
             ],
             "time": "2016-12-29 15:05:08"
+        },
+        {
+            "name": "digitalstate/platform-organization-bundle",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/DigitalState/Platform-Organization-Bundle.git",
+                "reference": "57d7c2e8f59c3a106489152d35f028460b10c3d6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/DigitalState/Platform-Organization-Bundle/zipball/57d7c2e8f59c3a106489152d35f028460b10c3d6",
+                "reference": "57d7c2e8f59c3a106489152d35f028460b10c3d6",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.6"
+            },
+            "type": "symfony-bundle",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Ds\\Bundle\\OrganizationBundle": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "DigitalState, Inc",
+                    "homepage": "http://www.digitalstate.ca"
+                }
+            ],
+            "description": "DigitalState Organization Bundle",
+            "homepage": "https://github.com/DigitalState/Platform-Organization-Bundle.git",
+            "keywords": [
+                "ORO"
+            ],
+            "time": "2016-12-30 19:30:58"
         },
         {
             "name": "digitalstate/platform-portal-bundle",
@@ -10004,6 +10049,7 @@
         "digitalstate/platform-twitter-bundle": 20,
         "digitalstate/platform-locale-bundle": 20,
         "digitalstate/platform-portal-bundle": 20,
+        "digitalstate/platform-organization-bundle": 20,
         "knplabs/knp-time-bundle": 20
     },
     "prefer-stable": true,
