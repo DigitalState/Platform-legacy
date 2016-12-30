@@ -37,6 +37,7 @@
         "digitalstate/platform-portal-bundle" : "dev-master",
         "digitalstate/platform-organization-bundle" : "dev-master",
         "digitalstate/platform-sso-bundle" : "dev-master",
+        "digitalstate/platform-sso-linkedin-bundle" : "dev-master",
         "knplabs/knp-time-bundle": "dev-master"
     },
     "require-dev": {
