@@ -1048,12 +1048,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/DigitalState/Platform-Bpm-Camunda-Bundle.git",
-                "reference": "e464463bfb2c5526a7e2605d9217ce2e0367aca0"
+                "reference": "bca85e925118f8dd505a4d08393044b1ae013f06"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/DigitalState/Platform-Bpm-Camunda-Bundle/zipball/e464463bfb2c5526a7e2605d9217ce2e0367aca0",
-                "reference": "e464463bfb2c5526a7e2605d9217ce2e0367aca0",
+                "url": "https://api.github.com/repos/DigitalState/Platform-Bpm-Camunda-Bundle/zipball/bca85e925118f8dd505a4d08393044b1ae013f06",
+                "reference": "bca85e925118f8dd505a4d08393044b1ae013f06",
                 "shasum": ""
             },
             "require": {
@@ -1069,7 +1069,7 @@
             },
             "autoload": {
                 "psr-0": {
-                    "Ds\\Bundle\\BpmPmBundle": ""
+                    "Ds\\Bundle\\BpmCamundaBundle": ""
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -1088,7 +1088,7 @@
                 "ORO",
                 "bpm"
             ],
-            "time": "2017-01-02 15:14:14"
+            "time": "2017-01-02 17:30:29"
         },
         {
             "name": "digitalstate/platform-bpm-pm-bundle",
