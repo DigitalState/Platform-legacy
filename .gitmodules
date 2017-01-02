@@ -46,9 +46,6 @@
 [submodule "src/Ds/Bundle/OrganizationBundle"]
 	path = src/Ds/Bundle/OrganizationBundle
 	url = git@github.com:DigitalState/Platform-Organization-Bundle.git
-[submodule "src/Ds/Bundle/PortalBundle"]
-	path = src/Ds/Bundle/PortalBundle
-	url = git@github.com:DigitalState/Platform-Portal-Bundle.git
 [submodule "src/Ds/Bundle/SecurityBundle"]
 	path = src/Ds/Bundle/SecurityBundle
 	url = git@github.com:DigitalState/Platform-Security-Bundle.git
