@@ -67,3 +67,6 @@
 [submodule "src/Ds/Bundle/WidgetBundle"]
 	path = src/Ds/Bundle/WidgetBundle
 	url = git@github.com:DigitalState/Platform-Widget-Bundle.git
+[submodule "src/Ds/Bundle/PortalBundle"]
+	path = src/Ds/Bundle/PortalBundle
+	url = git@github.com:DigitalState/Platform-Portal-Bundle.git
