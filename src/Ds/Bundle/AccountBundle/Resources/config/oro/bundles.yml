@@ -1,2 +1,0 @@
-bundles:
-    - { name: Ds\Bundle\AccountBundle\DsAccountBundle, priority: 10 }

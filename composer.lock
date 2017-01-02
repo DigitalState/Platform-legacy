@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "4d57205c7746cd94353d83cf73d3df81",
-    "content-hash": "3ab4dc83358ca0a3f68f9b13e08c7681",
+    "hash": "496f060632c30d5f4cfb96ca4dc512a1",
+    "content-hash": "001ddd65c24505768ece423d0f6be233",
     "packages": [
         {
             "name": "a2lix/translation-form-bundle",
@@ -897,6 +897,51 @@
                 "wizard"
             ],
             "time": "2016-12-09 12:09:14"
+        },
+        {
+            "name": "digitalstate/platform-account-bundle",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/DigitalState/Platform-Account-Bundle.git",
+                "reference": "91ef7c6553ab247ab5e25f378ba8d631cad97b1c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/DigitalState/Platform-Account-Bundle/zipball/91ef7c6553ab247ab5e25f378ba8d631cad97b1c",
+                "reference": "91ef7c6553ab247ab5e25f378ba8d631cad97b1c",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.6"
+            },
+            "type": "symfony-bundle",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Ds\\Bundle\\AccountBundle": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "DigitalState, Inc",
+                    "homepage": "http://www.digitalstate.ca"
+                }
+            ],
+            "description": "DigitalState Account Bundle",
+            "homepage": "https://github.com/DigitalState/Platform-Account-Bundle.git",
+            "keywords": [
+                "ORO"
+            ],
+            "time": "2017-01-02 14:06:43"
         },
         {
             "name": "digitalstate/platform-admin-bundle",
@@ -10191,6 +10236,7 @@
         "digitalstate/platform-sso-bundle": 20,
         "digitalstate/platform-sso-linkedin-bundle": 20,
         "digitalstate/platform-datagrid-bundle": 20,
+        "digitalstate/platform-account-bundle": 20,
         "knplabs/knp-time-bundle": 20
     },
     "prefer-stable": true,
