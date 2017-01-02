@@ -1,0 +1,3 @@
+[submodule "src/Ds/Bundle/SSOBundle"]
+	path = src/Ds/Bundle/SSOBundle
+	url = git@github.com:DigitalState/Platform-SSO-Bundle.git
