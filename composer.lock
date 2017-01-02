@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "8e16406d4fdc1c95ae7e8631d5e5f632",
-    "content-hash": "b6156b6e27039f186b464ff8c794f348",
+    "hash": "4d57205c7746cd94353d83cf73d3df81",
+    "content-hash": "3ab4dc83358ca0a3f68f9b13e08c7681",
     "packages": [
         {
             "name": "a2lix/translation-form-bundle",
@@ -1279,6 +1279,51 @@
                 "communication"
             ],
             "time": "2016-12-29 15:53:58"
+        },
+        {
+            "name": "digitalstate/platform-datagrid-bundle",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/DigitalState/Platform-DataGrid-Bundle.git",
+                "reference": "adcf78f804868831ac8fd4d94af575e07d90047c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/DigitalState/Platform-DataGrid-Bundle/zipball/adcf78f804868831ac8fd4d94af575e07d90047c",
+                "reference": "adcf78f804868831ac8fd4d94af575e07d90047c",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.6"
+            },
+            "type": "symfony-bundle",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Ds\\Bundle\\DataGridBundle": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "DigitalState, Inc",
+                    "homepage": "http://www.digitalstate.ca"
+                }
+            ],
+            "description": "DigitalState DataGrid Bundle",
+            "homepage": "https://github.com/DigitalState/Platform-DataGrid-Bundle.git",
+            "keywords": [
+                "ORO"
+            ],
+            "time": "2017-01-02 13:41:27"
         },
         {
             "name": "digitalstate/platform-entity-bundle",
@@ -6294,17 +6339,17 @@
         },
         {
             "name": "sensio/distribution-bundle",
-            "version": "v4.0.12",
+            "version": "v4.0.37",
             "target-dir": "Sensio/Bundle/DistributionBundle",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sensiolabs/SensioDistributionBundle.git",
-                "reference": "f2bbaa81fe980f64ccf32bb63038bf130855f5f1"
+                "reference": "d9facbe0b0a80ee82c53064147d3c5e5b6341028"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sensiolabs/SensioDistributionBundle/zipball/f2bbaa81fe980f64ccf32bb63038bf130855f5f1",
-                "reference": "f2bbaa81fe980f64ccf32bb63038bf130855f5f1",
+                "url": "https://api.github.com/repos/sensiolabs/SensioDistributionBundle/zipball/d9facbe0b0a80ee82c53064147d3c5e5b6341028",
+                "reference": "d9facbe0b0a80ee82c53064147d3c5e5b6341028",
                 "shasum": ""
             },
             "require": {
@@ -6350,7 +6395,7 @@
                 "configuration",
                 "distribution"
             ],
-            "time": "2016-10-30 23:17:28"
+            "time": "2016-12-31 08:38:05"
         },
         {
             "name": "sensio/framework-extra-bundle",
@@ -10145,6 +10190,7 @@
         "digitalstate/platform-organization-bundle": 20,
         "digitalstate/platform-sso-bundle": 20,
         "digitalstate/platform-sso-linkedin-bundle": 20,
+        "digitalstate/platform-datagrid-bundle": 20,
         "knplabs/knp-time-bundle": 20
     },
     "prefer-stable": true,
