@@ -39,8 +39,7 @@
         "digitalstate/platform-linkedin-bundle" : "dev-master",
         "digitalstate/platform-twitter-bundle" : "dev-master",
         "digitalstate/platform-sso-bundle" : "dev-master",
-        "digitalstate/platform-sso-linkedin-bundle" : "dev-master",
-        "knplabs/knp-time-bundle": "dev-master"
+        "digitalstate/platform-sso-linkedin-bundle" : "dev-master"
     },
     "require-dev": {
         "sensio/generator-bundle": "2.5.3",
