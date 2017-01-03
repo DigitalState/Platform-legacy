@@ -1,6 +1,0 @@
-roles:
-    -
-        role: ROLE_RECORD_MANAGER
-        label: Record Manager
-
-prototype: []
