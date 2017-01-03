@@ -1,6 +1,0 @@
-roles:
-    -
-        role: ROLE_ASSET_MANAGER
-        label: Asset Manager
-
-prototype: []
