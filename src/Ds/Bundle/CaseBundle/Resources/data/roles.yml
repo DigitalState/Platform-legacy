@@ -1,6 +1,0 @@
-roles:
-    -
-        role: ROLE_CASE_MANAGER
-        label: Case Manager
-
-prototype: []
