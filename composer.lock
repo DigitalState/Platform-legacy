@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "90cf40918b9c9a842e9d402ad30b6a1c",
-    "content-hash": "0948a8ceb73b23da249fa6836c6b8208",
+    "hash": "c9131feada67669d3de7b332c0d2b7e7",
+    "content-hash": "bfd1b511c2ec1c89b8a4bc7100e66e6a",
     "packages": [
         {
             "name": "a2lix/translation-form-bundle",
@@ -1670,12 +1670,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/DigitalState/Platform-SSO-Bundle.git",
-                "reference": "98952f91b2fa50c06827b1b37c5525a53d67ee95"
+                "reference": "e652e1313bdd3ea4f2d7b2b228fd88a56aca903b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/DigitalState/Platform-SSO-Bundle/zipball/98952f91b2fa50c06827b1b37c5525a53d67ee95",
-                "reference": "98952f91b2fa50c06827b1b37c5525a53d67ee95",
+                "url": "https://api.github.com/repos/DigitalState/Platform-SSO-Bundle/zipball/e652e1313bdd3ea4f2d7b2b228fd88a56aca903b",
+                "reference": "e652e1313bdd3ea4f2d7b2b228fd88a56aca903b",
                 "shasum": ""
             },
             "require": {
@@ -1709,7 +1709,7 @@
                 "ORO",
                 "SSO"
             ],
-            "time": "2017-01-02 18:02:02"
+            "time": "2017-01-07 12:15:04"
         },
         {
             "name": "digitalstate/platform-sso-linkedin-bundle",
@@ -1717,15 +1717,17 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/DigitalState/Platform-SSO-Linkedin-Bundle.git",
-                "reference": "09730c6146f20ae5101b6c467b59e284364720fe"
+                "reference": "f831f0038e37fc683c016a5793788ba4e0aad9dd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/DigitalState/Platform-SSO-Linkedin-Bundle/zipball/09730c6146f20ae5101b6c467b59e284364720fe",
-                "reference": "09730c6146f20ae5101b6c467b59e284364720fe",
+                "url": "https://api.github.com/repos/DigitalState/Platform-SSO-Linkedin-Bundle/zipball/f831f0038e37fc683c016a5793788ba4e0aad9dd",
+                "reference": "f831f0038e37fc683c016a5793788ba4e0aad9dd",
                 "shasum": ""
             },
             "require": {
+                "digitalstate/platform-linkedin-bundle": "dev-master",
+                "digitalstate/platform-sso-bundle": "dev-master",
                 "oro/platform": "1.10.*",
                 "php": ">=5.6"
             },
@@ -1757,7 +1759,57 @@
                 "SSO",
                 "linkedin"
             ],
-            "time": "2017-01-02 15:23:39"
+            "time": "2017-01-07 12:15:04"
+        },
+        {
+            "name": "digitalstate/platform-sso-twitter-bundle",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/DigitalState/Platform-SSO-Twitter-Bundle.git",
+                "reference": "c0337c408357390297296b3689036bb4603c249f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/DigitalState/Platform-SSO-Twitter-Bundle/zipball/c0337c408357390297296b3689036bb4603c249f",
+                "reference": "c0337c408357390297296b3689036bb4603c249f",
+                "shasum": ""
+            },
+            "require": {
+                "digitalstate/platform-sso-bundle": "dev-master",
+                "digitalstate/platform-twitter-bundle": "dev-master",
+                "oro/platform": "1.10.*",
+                "php": ">=5.6"
+            },
+            "type": "symfony-bundle",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Ds\\Bundle\\SSOTwitterBundle": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "DigitalState, Inc",
+                    "homepage": "http://www.digitalstate.ca"
+                }
+            ],
+            "description": "DigitalState SSO Twitter Bundle",
+            "homepage": "https://github.com/DigitalState/Platform-SSO-Twitter-Bundle.git",
+            "keywords": [
+                "ORO",
+                "SSO",
+                "twitter"
+            ],
+            "time": "2017-01-07 12:08:28"
         },
         {
             "name": "digitalstate/platform-transport-bundle",
@@ -10212,7 +10264,8 @@
         "digitalstate/platform-linkedin-bundle": 20,
         "digitalstate/platform-twitter-bundle": 20,
         "digitalstate/platform-sso-bundle": 20,
-        "digitalstate/platform-sso-linkedin-bundle": 20
+        "digitalstate/platform-sso-linkedin-bundle": 20,
+        "digitalstate/platform-sso-twitter-bundle": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,
