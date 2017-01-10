@@ -4,11 +4,11 @@ The Service bundle provides managers the ability to manage government services a
 
 ## Table of Contents
 
-- [Service Definition](#service-definition)
+- [Service Entity](#service-entity)
 - [Activation Definition](#activation-definition)
 - [Todo](#todo)
 
-## Service Definition
+## Service Entity
 
 Services represents the actual details for a given service offered by the government; a title, a description, etc.
 
