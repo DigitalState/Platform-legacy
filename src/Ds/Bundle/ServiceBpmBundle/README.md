@@ -4,10 +4,10 @@ The ServiceBpm bundle grafts itself on top of the [DsServiceBundle](../ServiceBu
 
 ## Table of Contents
 
-- [ServiceBpm Definition](#servicebpm-definition)
+- [ServiceBpm Entity](#servicebpm-entity)
 - [Todo](#todo)
 
-## ServiceBpm Definition
+## ServiceBpm Entity
 
 ServiceBpms are technically the same as generic Services. They only contains additional configurations to map to a Bpm process.
 
