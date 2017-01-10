@@ -4,10 +4,10 @@ The ServiceUrl bundle grafts itself on top of the [DsServiceBundle](../ServiceBu
 
 ## Table of Contents
 
-- [ServiceUrl Definition](#serviceurl-definition)
+- [ServiceUrl Entity](#serviceurl-entity)
 - [Todo](#todo)
 
-## ServiceUrl Definition
+## ServiceUrl Entity
 
 ServiceUrls are technically the same as generic Services. They only contains additional configurations to map to an outbound url link.
 
