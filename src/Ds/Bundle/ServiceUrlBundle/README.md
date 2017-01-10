@@ -1,6 +1,6 @@
 # DsServiceUrlBundle
 
-The ServiceUrl bundle grafts itself on top of the [DsServiceBundle](../ServiceBundle) and provides managers the additional ability to manage url-based outbound services. It introduces one new entity to the system: ServiceUrl.
+The ServiceUrl bundle extends the [DsServiceBundle](../ServiceBundle) and provides business users the additional ability to manage url-based outbound services. It introduces one new entity to the system: [ServiceUrl](Entity/ServiceUrl.php).
 
 ## Table of Contents
 

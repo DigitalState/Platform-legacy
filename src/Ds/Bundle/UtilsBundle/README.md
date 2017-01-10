@@ -1,6 +1,6 @@
 # DsUtilsBundle
 
-The Utils bundle provides the developer various core functionality. 
+The Utils bundle provides the developers various core functionality. 
 
 ## Table of Contents
 

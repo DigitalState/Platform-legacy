@@ -1,6 +1,6 @@
 # DsServiceBpmBundle
 
-The ServiceBpm bundle grafts itself on top of the [DsServiceBundle](../ServiceBundle) and provides managers the additional ability to manage bpm-based services. It introduces one new entity to the system: ServiceBpm.
+The ServiceBpm bundle extends the [DsServiceBundle](../ServiceBundle) and provides business users the additional ability to manage bpm-based services. It introduces one new entity to the system: [ServiceBpm](Entity/ServiceBpm.php).
 
 ## Table of Contents
 

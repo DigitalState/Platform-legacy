@@ -1,6 +1,6 @@
 # DsServiceBundle
 
-The Service bundle provides managers the ability to manage government services and citizen service activations. It introduces two new entities to the system: Service and Activation.
+The Service bundle provides business users the ability to manage government services and citizen service activations. It introduces two new entities to the system: [Service](Entity/Service.php) and [Activation](Entity/Activation.php).
 
 ## Table of Contents
 
