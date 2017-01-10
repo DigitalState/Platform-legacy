@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "c9131feada67669d3de7b332c0d2b7e7",
+    "hash": "4af292b5b03b37a5580f52f7716665b2",
     "content-hash": "bfd1b511c2ec1c89b8a4bc7100e66e6a",
     "packages": [
         {
@@ -1385,12 +1385,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/DigitalState/Platform-Linkedin-Bundle.git",
-                "reference": "f9d621d0db7b6d022678a087c62298896f4e7d36"
+                "reference": "37be5ffff666722c4cb0335e6e71dfb7ee163d9b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/DigitalState/Platform-Linkedin-Bundle/zipball/f9d621d0db7b6d022678a087c62298896f4e7d36",
-                "reference": "f9d621d0db7b6d022678a087c62298896f4e7d36",
+                "url": "https://api.github.com/repos/DigitalState/Platform-Linkedin-Bundle/zipball/37be5ffff666722c4cb0335e6e71dfb7ee163d9b",
+                "reference": "37be5ffff666722c4cb0335e6e71dfb7ee163d9b",
                 "shasum": ""
             },
             "require": {
@@ -1424,7 +1424,7 @@
                 "ORO",
                 "linkedin"
             ],
-            "time": "2017-01-09 14:39:10"
+            "time": "2017-01-10 11:28:49"
         },
         {
             "name": "digitalstate/platform-locale-bundle",
@@ -1623,12 +1623,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/DigitalState/Platform-Security-Bundle.git",
-                "reference": "ecc5b268cd7c30117c8416ab04856fb40d44f573"
+                "reference": "0ca33a69c4530ac50666da3d1479fd34f3c9b710"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/DigitalState/Platform-Security-Bundle/zipball/ecc5b268cd7c30117c8416ab04856fb40d44f573",
-                "reference": "ecc5b268cd7c30117c8416ab04856fb40d44f573",
+                "url": "https://api.github.com/repos/DigitalState/Platform-Security-Bundle/zipball/0ca33a69c4530ac50666da3d1479fd34f3c9b710",
+                "reference": "0ca33a69c4530ac50666da3d1479fd34f3c9b710",
                 "shasum": ""
             },
             "require": {
@@ -1662,7 +1662,7 @@
                 "ORO",
                 "notifications"
             ],
-            "time": "2017-01-09 14:38:04"
+            "time": "2017-01-10 13:01:17"
         },
         {
             "name": "digitalstate/platform-sso-bundle",
@@ -1817,12 +1817,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/DigitalState/Platform-Transport-Bundle.git",
-                "reference": "1466f3a2af8c43f169304e582a076f34b0f5943a"
+                "reference": "3c72dbe7cbf83b3987d85bb537c9cad53c0e2098"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/DigitalState/Platform-Transport-Bundle/zipball/1466f3a2af8c43f169304e582a076f34b0f5943a",
-                "reference": "1466f3a2af8c43f169304e582a076f34b0f5943a",
+                "url": "https://api.github.com/repos/DigitalState/Platform-Transport-Bundle/zipball/3c72dbe7cbf83b3987d85bb537c9cad53c0e2098",
+                "reference": "3c72dbe7cbf83b3987d85bb537c9cad53c0e2098",
                 "shasum": ""
             },
             "require": {
@@ -1859,7 +1859,7 @@
                 "ORO",
                 "communication"
             ],
-            "time": "2017-01-09 14:37:10"
+            "time": "2017-01-10 16:25:35"
         },
         {
             "name": "digitalstate/platform-twitter-bundle",
@@ -1867,12 +1867,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/DigitalState/Platform-Twitter-Bundle.git",
-                "reference": "75658f79e846370c16cfb0dc599ec5171c21bb00"
+                "reference": "ece3e9a87d81ad5a87a41a45623796881583b005"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/DigitalState/Platform-Twitter-Bundle/zipball/75658f79e846370c16cfb0dc599ec5171c21bb00",
-                "reference": "75658f79e846370c16cfb0dc599ec5171c21bb00",
+                "url": "https://api.github.com/repos/DigitalState/Platform-Twitter-Bundle/zipball/ece3e9a87d81ad5a87a41a45623796881583b005",
+                "reference": "ece3e9a87d81ad5a87a41a45623796881583b005",
                 "shasum": ""
             },
             "require": {
@@ -1906,7 +1906,7 @@
                 "ORO",
                 "twitter"
             ],
-            "time": "2017-01-09 14:36:57"
+            "time": "2017-01-10 11:28:00"
         },
         {
             "name": "digitalstate/platform-user-bundle",
@@ -1914,12 +1914,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/DigitalState/Platform-User-Bundle.git",
-                "reference": "038a85ec1b740d43cc267d59604008d37bf07510"
+                "reference": "065ac56fdda890f45c20dd185f986b265e0cbbea"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/DigitalState/Platform-User-Bundle/zipball/038a85ec1b740d43cc267d59604008d37bf07510",
-                "reference": "038a85ec1b740d43cc267d59604008d37bf07510",
+                "url": "https://api.github.com/repos/DigitalState/Platform-User-Bundle/zipball/065ac56fdda890f45c20dd185f986b265e0cbbea",
+                "reference": "065ac56fdda890f45c20dd185f986b265e0cbbea",
                 "shasum": ""
             },
             "require": {
@@ -1954,7 +1954,7 @@
                 "ORO",
                 "communication"
             ],
-            "time": "2017-01-09 14:36:46"
+            "time": "2017-01-10 11:13:53"
         },
         {
             "name": "digitalstate/platform-user-persona-bundle",
@@ -1962,12 +1962,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/DigitalState/Platform-User-Persona-Bundle.git",
-                "reference": "9c32ad73d9b4d0e7edd8c27b0d928e933081fd87"
+                "reference": "4d6ba9fa33739784c2670c5cfcc500c5926d6097"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/DigitalState/Platform-User-Persona-Bundle/zipball/9c32ad73d9b4d0e7edd8c27b0d928e933081fd87",
-                "reference": "9c32ad73d9b4d0e7edd8c27b0d928e933081fd87",
+                "url": "https://api.github.com/repos/DigitalState/Platform-User-Persona-Bundle/zipball/4d6ba9fa33739784c2670c5cfcc500c5926d6097",
+                "reference": "4d6ba9fa33739784c2670c5cfcc500c5926d6097",
                 "shasum": ""
             },
             "require": {
@@ -2004,7 +2004,7 @@
                 "ORO",
                 "communication"
             ],
-            "time": "2017-01-09 14:36:31"
+            "time": "2017-01-10 12:56:32"
         },
         {
             "name": "digitalstate/platform-widget-bundle",
@@ -2012,12 +2012,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/DigitalState/Platform-Widget-Bundle.git",
-                "reference": "4ebeaaf634b52f4f4d5e09c2f42763558b757467"
+                "reference": "9e08a3f8b70d863c334b84903fd6f7f726c0fc89"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/DigitalState/Platform-Widget-Bundle/zipball/4ebeaaf634b52f4f4d5e09c2f42763558b757467",
-                "reference": "4ebeaaf634b52f4f4d5e09c2f42763558b757467",
+                "url": "https://api.github.com/repos/DigitalState/Platform-Widget-Bundle/zipball/9e08a3f8b70d863c334b84903fd6f7f726c0fc89",
+                "reference": "9e08a3f8b70d863c334b84903fd6f7f726c0fc89",
                 "shasum": ""
             },
             "require": {
@@ -2051,7 +2051,7 @@
                 "ORO",
                 "communication"
             ],
-            "time": "2017-01-09 14:36:13"
+            "time": "2017-01-10 16:48:37"
         },
         {
             "name": "doctrine/annotations",
