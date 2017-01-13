@@ -5,6 +5,7 @@ namespace Ds\Bundle\AssetBundle\Entity;
 use Ds\Bundle\AssetBundle\Model\ExtendAsset;
 use Ds\Bundle\EntityBundle\Entity\Attribute;
 use Oro\Bundle\OrganizationBundle\Entity\Ownership;
+use Oro\Bundle\LocaleBundle\Entity\FallbackTrait;
 use Ds\Bundle\CaseBundle\Entity\CaseEntity;
 use Oro\Bundle\UserBundle\Entity\User;
 use Doctrine\Common\Collections\ArrayCollection;
@@ -66,6 +67,8 @@ class Asset extends ExtendAsset
     use Attribute\Data;
 
     use Ownership\BusinessUnitAwareTrait;
+
+    use FallbackTrait;
 
     /**
      * @var \Oro\Bundle\LocaleBundle\Entity\LocalizedFallbackValue[]

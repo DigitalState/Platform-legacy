@@ -4,6 +4,7 @@ namespace Ds\Bundle\CaseStatusBundle\Entity;
 
 use Ds\Bundle\EntityBundle\Entity\Attribute;
 use Oro\Bundle\OrganizationBundle\Entity\Ownership;
+use Oro\Bundle\LocaleBundle\Entity\FallbackTrait;
 use Ds\Bundle\CaseBundle\Entity\CaseEntity;
 use Doctrine\Common\Collections\ArrayCollection;
 
@@ -66,6 +67,8 @@ class Status
     use Attribute\Data;
 
     use Ownership\BusinessUnitAwareTrait;
+
+    use FallbackTrait;
 
     /**
      * @var \Oro\Bundle\LocaleBundle\Entity\LocalizedFallbackValue[]

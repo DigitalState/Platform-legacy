@@ -5,6 +5,7 @@ namespace Ds\Bundle\RecordBundle\Entity;
 use Ds\Bundle\RecordBundle\Model\ExtendRecord;
 use Ds\Bundle\EntityBundle\Entity\Attribute;
 use Oro\Bundle\OrganizationBundle\Entity\Ownership;
+use Oro\Bundle\LocaleBundle\Entity\FallbackTrait;
 use Doctrine\Common\Collections\ArrayCollection;
 use Ds\Bundle\CaseBundle\Entity\CaseEntity;
 
@@ -65,6 +66,8 @@ class Record extends ExtendRecord
     use Attribute\Data;
 
     use Ownership\BusinessUnitAwareTrait;
+
+    use FallbackTrait;
 
     /**
      * @var \Oro\Bundle\LocaleBundle\Entity\LocalizedFallbackValue[]

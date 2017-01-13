@@ -4,6 +4,7 @@ namespace Ds\Bundle\CaseBundle\Entity;
 
 use Ds\Bundle\EntityBundle\Entity\Attribute;
 use Oro\Bundle\OrganizationBundle\Entity\Ownership;
+use Oro\Bundle\LocaleBundle\Entity\FallbackTrait;
 use Oro\Bundle\UserBundle\Entity\User;
 use Ds\Bundle\ServiceBundle\Entity\Service;
 use Ds\Bundle\RecordBundle\Entity\Record;
@@ -72,6 +73,8 @@ class CaseEntity
     use Attribute\Status;
 
     use Ownership\BusinessUnitAwareTrait;
+
+    use FallbackTrait;
 
     /**
      * @var \Oro\Bundle\LocaleBundle\Entity\LocalizedFallbackValue[]

@@ -4,6 +4,7 @@ namespace Ds\Bundle\ServiceBundle\Entity;
 
 use Ds\Bundle\EntityBundle\Entity\Attribute;
 use Oro\Bundle\OrganizationBundle\Entity\Ownership;
+use Oro\Bundle\LocaleBundle\Entity\FallbackTrait;
 use Oro\Bundle\UserBundle\Entity\User;
 
 use Oro\Bundle\EntityConfigBundle\Metadata\Annotation\Config;
@@ -61,6 +62,8 @@ class Activation
     use Attribute\UpdatedAt;
 
     use Ownership\BusinessUnitAwareTrait;
+
+    use FallbackTrait;
 
     /**
      * @var \Ds\Bundle\ServiceBundle\Entity\Service
