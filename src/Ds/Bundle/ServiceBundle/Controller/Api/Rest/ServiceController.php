@@ -2,7 +2,7 @@
 
 namespace Ds\Bundle\ServiceBundle\Controller\Api\Rest;
 
-use Oro\Bundle\SoapBundle\Controller\Api\Rest\RestController;
+use Ds\Bundle\ApiBundle\Controller\Api\Rest\AbstractController;
 
 use FOS\RestBundle\Controller\Annotations\NamePrefix;
 use FOS\RestBundle\Controller\Annotations\RouteResource;
@@ -15,7 +15,7 @@ use Oro\Bundle\SecurityBundle\Annotation\AclAncestor;
  * @RouteResource("service")
  * @NamePrefix("ds_service_api_rest_")
  */
-class ServiceController extends RestController
+class ServiceController extends AbstractController
 {
     /**
      * Get collection action
@@ -104,5 +104,23 @@ class ServiceController extends RestController
     public function getManager()
     {
         return $this->get('ds.service.manager.service');
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    protected function transformEntityField($field, &$value)
+    {
+        switch ($field) {
+            case 'titles':
+            case 'descriptions':
+            case 'buttons':
+            case 'presentations':
+                $value = $this->transformLocalizedValuesToTexts($value);
+                break;
+
+            default:
+                parent::transformEntityField($field, $value);
+        }
     }
 }

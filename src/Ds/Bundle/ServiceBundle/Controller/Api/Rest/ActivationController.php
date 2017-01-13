@@ -2,7 +2,7 @@
 
 namespace Ds\Bundle\ServiceBundle\Controller\Api\Rest;
 
-use Oro\Bundle\SoapBundle\Controller\Api\Rest\RestController;
+use Ds\Bundle\ApiBundle\Controller\Api\Rest\AbstractController;
 
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use FOS\RestBundle\Controller\Annotations\NamePrefix;
@@ -17,7 +17,7 @@ use Oro\Bundle\SecurityBundle\Annotation\AclAncestor;
  * @Route("/service")
  * @NamePrefix("ds_service_api_rest_")
  */
-class ActivationController extends RestController
+class ActivationController extends AbstractController
 {
     /**
      * Get collection action
@@ -106,5 +106,21 @@ class ActivationController extends RestController
     public function getManager()
     {
         return $this->get('ds.service.manager.activation');
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    protected function transformEntityField($field, &$value)
+    {
+        switch ($field) {
+            case 'service':
+            case 'user':
+                $value = $this->transformEntityToId($value);
+                break;
+
+            default:
+                parent::transformEntityField($field, $value);
+        }
     }
 }
