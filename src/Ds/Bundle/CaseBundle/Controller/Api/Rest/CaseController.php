@@ -2,7 +2,7 @@
 
 namespace Ds\Bundle\CaseBundle\Controller\Api\Rest;
 
-use Oro\Bundle\SoapBundle\Controller\Api\Rest\RestController;
+use Ds\Bundle\ApiBundle\Controller\Api\Rest\AbstractController;
 
 use FOS\RestBundle\Controller\Annotations\NamePrefix;
 use FOS\RestBundle\Controller\Annotations\RouteResource;
@@ -15,7 +15,7 @@ use Oro\Bundle\SecurityBundle\Annotation\AclAncestor;
  * @RouteResource("case")
  * @NamePrefix("ds_case_api_rest_")
  */
-class CaseController extends RestController
+class CaseController extends AbstractController
 {
     /**
      * Get collection action
@@ -104,5 +104,29 @@ class CaseController extends RestController
     public function getManager()
     {
         return $this->get('ds.case.manager.case');
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    protected function transformEntityField($field, &$value)
+    {
+        switch ($field) {
+            case 'user':
+            case 'service':
+                $value = $this->transformEntityToId($value);
+                break;
+
+            case 'records':
+                $value = $this->transformEntitiesToIds($value);
+                break;
+
+            case 'titles':
+                $value = $this->transformLocalizedValuesToTexts($value);
+                break;
+
+            default:
+                parent::transformEntityField($field, $value);
+        }
     }
 }
