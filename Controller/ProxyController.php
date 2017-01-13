@@ -27,26 +27,20 @@ class ProxyController extends Controller
         $method = $request->getMethod();
         $parameters = $request->query->all();
         $content = $request->getContent();
-        file_put_contents('../app/logs/proxy.log', $method . ' ' . $resource . "\n\n" . $content  . "\n\n" . print_r($_SERVER, true) . "\n\n\n\n", FILE_APPEND);
 
-        $baseUrl = 'http://platform.ds.dev/app_dev.php/api/rest/';
+        $logger = $this->get('logger');
+        $logger->info(sprintf('Proxy access "%s" "%s"', $method, $resource));
 
-        $user = 'admin';
-        $key = 'fc3ccae5b8c32b63793943a35dc168a6f4ba48ce';
+        $user = $parameters['user'];
+        $key = $parameters['key'];
         $nonce = uniqid();
         $created = date('c');
         $digest = base64_encode(sha1(base64_decode($nonce) . $created . $key, true));
 
-        //$wsse = 'Content-Type: application/vnd.api+json';
         $wsse = 'Authorization: WSSE profile="UsernameToken"' . "\n";
-        $wsse .= sprintf(
-            'X-WSSE: UsernameToken Username="%s", PasswordDigest="%s", Nonce="%s", Created="%s"',
-            $user,
-            $digest,
-            $nonce,
-            $created
-        );
+        $wsse .= sprintf('X-WSSE: UsernameToken Username="%s", PasswordDigest="%s", Nonce="%s", Created="%s"', $user, $digest, $nonce, $created);
 
+        $baseUrl = 'http://platform.ds.dev/app_dev.php/api/rest/';
         $client = new \Guzzle\Http\Client($baseUrl);
         $response = $client->{strtolower($method)}($resource, [ $wsse ], $content)->send();
         $data = json_decode($response->getBody());
