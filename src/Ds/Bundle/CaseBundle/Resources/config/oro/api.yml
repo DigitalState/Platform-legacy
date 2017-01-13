@@ -1,0 +1,3 @@
+oro_api:
+    entities:
+        Ds\Bundle\CaseBundle\Entity\CaseEntity: ~
