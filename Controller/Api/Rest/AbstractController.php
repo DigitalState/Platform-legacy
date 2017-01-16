@@ -104,19 +104,21 @@ abstract class AbstractController extends RestController
         }
 
         foreach ($fields as $field) {
-            $translations = $data[$field];
-            unset($data[$field]);
+            if (array_key_exists($field, $data)) {
+                $translations = $data[$field];
+                unset($data[$field]);
 
-            foreach ($translations as $formattingCode => $value) {
-                if ('default' == $formattingCode) {
-                    $data[$field]['values']['default'] = $value;
-                } else {
-                    $localization = $localizationRepository->findOneBy([ 'formattingCode' => $formattingCode ]);
-                    $data[$field]['values']['localizations'][$localization->getId()] = [
-                        'value' => $value,
-                        'use_fallback' => false,
-                        'fallback' => 'system'
-                    ];
+                foreach ($translations as $formattingCode => $value) {
+                    if ('default' == $formattingCode) {
+                        $data[$field]['values']['default'] = $value;
+                    } else {
+                        $localization = $localizationRepository->findOneBy(['formattingCode' => $formattingCode]);
+                        $data[$field]['values']['localizations'][$localization->getId()] = [
+                            'value' => $value,
+                            'use_fallback' => false,
+                            'fallback' => 'system'
+                        ];
+                    }
                 }
             }
         }
