@@ -129,4 +129,12 @@ class CaseController extends AbstractController
                 parent::transformEntityField($field, $value);
         }
     }
+
+    /**
+     * {@inheritdoc}
+     */
+    protected function getFallbackLocalizationFields()
+    {
+        return [ 'titles' ];
+    }
 }
