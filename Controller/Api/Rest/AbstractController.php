@@ -30,7 +30,7 @@ abstract class AbstractController extends RestController
     }
 
     /**
-     * Transform localized values to texts.
+     * Transform localized values to texts
      *
      * @param \Doctrine\Common\Collections\ArrayCollection $values
      * @return array
@@ -50,7 +50,7 @@ abstract class AbstractController extends RestController
     }
 
     /**
-     * Transform entity to id.
+     * Transform entity to id
      *
      * @param object $value
      * @return mixed
@@ -65,7 +65,7 @@ abstract class AbstractController extends RestController
     }
 
     /**
-     * Transform entities to ids.
+     * Transform entities to ids
      *
      * @param \Doctrine\Common\Collections\ArrayCollection $values
      * @return array
@@ -79,5 +79,48 @@ abstract class AbstractController extends RestController
         }
 
         return $array;
+    }
+
+    /**
+     * Get fallback localization fields
+     *
+     * @return array
+     */
+    protected function getFallbackLocalizationFields()
+    {
+        return [];
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    protected function fixFormData(array &$data, $entity)
+    {
+        $localizationRepository = $this->get('oro_locale.repository.localization');
+        $fields = $this->getFallbackLocalizationFields();
+
+        if (!$fields) {
+            return false;
+        }
+
+        foreach ($fields as $field) {
+            $translations = $data[$field];
+            unset($data[$field]);
+
+            foreach ($translations as $formattingCode => $value) {
+                if ('default' == $formattingCode) {
+                    $data[$field]['values']['default'] = $value;
+                } else {
+                    $localization = $localizationRepository->findOneBy([ 'formattingCode' => $formattingCode ]);
+                    $data[$field]['values']['localizations'][$localization->getId()] = [
+                        'value' => $value,
+                        'use_fallback' => false,
+                        'fallback' => 'system'
+                    ];
+                }
+            }
+        }
+
+        return true;
     }
 }
