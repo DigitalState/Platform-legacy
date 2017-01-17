@@ -1,6 +1,6 @@
 ds:
-    accountdashboard:
-        dashboard:
+    accountbpm:
+        task:
             page:
                 account:
                     index:

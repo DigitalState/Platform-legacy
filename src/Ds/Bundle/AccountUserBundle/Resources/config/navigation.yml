@@ -1,0 +1,9 @@
+oro_menu_config:
+    items:
+        ds_accountuser_account_user_logout:
+            label: ds.accountuser.user.page.account.logout.title
+            route: oro_user_security_logout
+    tree:
+        ds_account_menu:
+            children:
+                ds_accountuser_account_user_logout: ~

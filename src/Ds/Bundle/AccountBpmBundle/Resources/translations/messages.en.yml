@@ -1,0 +1,7 @@
+ds:
+    accountbpm:
+        task:
+            page:
+                account:
+                    index:
+                        title: My Tasks

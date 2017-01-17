@@ -1,6 +1,7 @@
 ds:
     accountdashboard:
-        page:
-            account:
-                index:
-                    title: Dashboard
+        dashboard:
+            page:
+                account:
+                    index:
+                        title: Dashboard

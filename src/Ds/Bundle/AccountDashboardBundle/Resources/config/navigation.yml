@@ -1,0 +1,9 @@
+oro_menu_config:
+    items:
+        ds_accountdashboard_account_dashboard_index:
+            label: ds.accountdashboard.dashboard.page.account.index.title
+            route: ds_accountdashboard_account_dashboard_index
+    tree:
+        ds_account_menu:
+            children:
+                ds_accountdashboard_account_dashboard_index: ~

@@ -1,0 +1,9 @@
+oro_menu_config:
+    items:
+        ds_portalnotification_portal_notification_index:
+            label: ds.portalnotification.notification.page.portal.index.title
+            route: ds_portalnotification_portal_notification_index
+    tree:
+        ds_portal_menu:
+            children:
+                ds_portalnotification_portal_notification_index: ~

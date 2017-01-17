@@ -1,0 +1,9 @@
+oro_menu_config:
+    items:
+        ds_accountuserpersona_account_persona_index:
+            label: ds.accountuserpersona.persona.page.account.index.title
+            route: ds_accountuserpersona_account_persona_index
+    tree:
+        ds_account_menu:
+            children:
+                ds_accountuserpersona_account_persona_index: ~

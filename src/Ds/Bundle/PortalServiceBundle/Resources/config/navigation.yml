@@ -1,0 +1,9 @@
+oro_menu_config:
+    items:
+        ds_portalservice_portal_service_index:
+            label: ds.portalservice.service.page.portal.index.title
+            route: ds_portalservice_portal_service_index
+    tree:
+        ds_portal_menu:
+            children:
+                ds_portalservice_portal_service_index: ~

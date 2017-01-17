@@ -1,0 +1,9 @@
+oro_menu_config:
+    items:
+        ds_accountbpm_account_task_index:
+            label: ds.accountbpm.task.page.account.index.title
+            route: ds_accountbpm_account_task_index
+    tree:
+        ds_account_menu:
+            children:
+                ds_accountbpm_account_task_index: ~

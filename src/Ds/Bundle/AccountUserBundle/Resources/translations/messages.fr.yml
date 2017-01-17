@@ -1,0 +1,7 @@
+ds:
+    accountuser:
+        user:
+            page:
+                account:
+                    logout:
+                        title: Se déconnecter
