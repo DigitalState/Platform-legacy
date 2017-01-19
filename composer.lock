@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "7eea51a88ac73fff7b6dfee2dbed291c",
-    "content-hash": "7c4ae0d1ba1327a3ebdffb2a5cfb9ebf",
+    "hash": "df291eeaeba498faafd7e845485f7af1",
+    "content-hash": "09a16c5922a6934b925d43cb3107c3f9",
     "packages": [
         {
             "name": "a2lix/translation-form-bundle",
@@ -290,6 +290,63 @@
                 "soap"
             ],
             "time": "2013-12-13 07:26:18"
+        },
+        {
+            "name": "camunda/camunda-bpm-php-sdk",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/camunda/camunda-bpm-php-sdk.git",
+                "reference": "be617b6f9d0eccf266a1f1f51406c0a28cae4c1f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/camunda/camunda-bpm-php-sdk/zipball/be617b6f9d0eccf266a1f1f51406c0a28cae4c1f",
+                "reference": "be617b6f9d0eccf266a1f1f51406c0a28cae4c1f",
+                "shasum": ""
+            },
+            "archive": {
+                "exclude": [
+                    "/procedual/test",
+                    "/procedual/test/*",
+                    "/oop/test",
+                    "/oop/test/*"
+                ]
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4.6.0"
+            },
+            "type": "library",
+            "autoload": {
+                "classmap": [
+                    "oop/main/",
+                    "procedual/main"
+                ]
+            },
+            "license": [
+                "Apache-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "Stefan Hentschel",
+                    "email": "stefan.hentschel@camunda.com"
+                }
+            ],
+            "description": "PHP SDK for camundaBPM process services",
+            "homepage": "http://camunda.org",
+            "keywords": [
+                "camunda",
+                "camunda bpm",
+                "sdk"
+            ],
+            "support": {
+                "source": "https://github.com/camunda/camunda-bpm-php-sdk/tree/master",
+                "issues": "https://github.com/camunda/camunda-bpm-php-sdk/issues"
+            },
+            "time": "2017-01-18 07:31:35"
         },
         {
             "name": "cboden/ratchet",
@@ -1044,19 +1101,20 @@
         },
         {
             "name": "digitalstate/platform-bpm-camunda-bundle",
-            "version": "0.1.1",
+            "version": "0.1.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/DigitalState/Platform-Bpm-Camunda-Bundle.git",
-                "reference": "e87841f5f84621a8f443e6667996a0d9c0d7cc92"
+                "reference": "88b2a2c41c0e537f4a4e7c296473be40fb907287"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/DigitalState/Platform-Bpm-Camunda-Bundle/zipball/e87841f5f84621a8f443e6667996a0d9c0d7cc92",
-                "reference": "e87841f5f84621a8f443e6667996a0d9c0d7cc92",
+                "url": "https://api.github.com/repos/DigitalState/Platform-Bpm-Camunda-Bundle/zipball/88b2a2c41c0e537f4a4e7c296473be40fb907287",
+                "reference": "88b2a2c41c0e537f4a4e7c296473be40fb907287",
                 "shasum": ""
             },
             "require": {
+                "camunda/camunda-bpm-php-sdk": "dev-master",
                 "digitalstate/platform-bpm-bundle": "~0.1.0",
                 "oro/platform": "1.10.*",
                 "php": ">=5.6"
@@ -1088,7 +1146,7 @@
                 "ORO",
                 "bpm"
             ],
-            "time": "2017-01-16 19:45:32"
+            "time": "2017-01-19 13:12:29"
         },
         {
             "name": "digitalstate/platform-bpm-pm-bundle",

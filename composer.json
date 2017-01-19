@@ -8,12 +8,12 @@
             "": "src/"
         }
     },
-    "repositories": {
-        "composer": {
+    "repositories": [
+        {
             "type": "composer",
             "url": "https://packagist.orocrm.com"
         }
-    },
+    ],
     "require": {
         "oro/platform": "1.10.*",
         "digitalstate/platform-admin-bundle" : "~0.1.0",
