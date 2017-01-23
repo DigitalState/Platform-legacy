@@ -1,6 +1,6 @@
 services:
-    ds.accountdashboard.widget.dashboard.welcome:
+    ds.accountdashboard.widget.account.dashboard.welcome:
         parent: ds.widget.widget.abstract
-        class: Ds\Bundle\AccountDashboardBundle\Widget\Dashboard\WelcomeWidget
+        class: Ds\Bundle\AccountDashboardBundle\Widget\Account\Dashboard\WelcomeWidget
         tags:
             - { name: ds.widget, position: ds_accountdashboard_dashboard }

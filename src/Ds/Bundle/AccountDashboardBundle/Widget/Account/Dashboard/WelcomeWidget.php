@@ -1,6 +1,6 @@
 <?php
 
-namespace Ds\Bundle\AccountDashboardBundle\Widget\Dashboard;
+namespace Ds\Bundle\AccountDashboardBundle\Widget\Account\Dashboard;
 
 use Ds\Bundle\WidgetBundle\Widget\Widget;
 
