@@ -3,6 +3,8 @@ oro_menu_config:
         ds_portalservice_portal_service_index:
             label: ds.portalservice.service.page.portal.index.title
             route: ds_portalservice_portal_service_index
+            extras:
+                position: 20
     tree:
         ds_portal_menu:
             children:
