@@ -3,6 +3,8 @@ oro_menu_config:
         ds_accountuserpersona_account_persona_index:
             label: ds.accountuserpersona.persona.page.account.index.title
             route: ds_accountuserpersona_account_persona_index
+            extras:
+                position: 40
     tree:
         ds_account_menu:
             children:
