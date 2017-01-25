@@ -86,6 +86,8 @@ ds:
                 placeholder: Select Service
                 id:
                     label: ID
+                title:
+                    label: Service
             owner:
                 label: Business Unit
                 description: ~

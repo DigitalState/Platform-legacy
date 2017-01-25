@@ -86,6 +86,8 @@ ds:
                 placeholder: Sélectionner un service
                 id:
                     label: Id
+                title:
+                    label: Service
             owner:
                 label: Unité d'affaires
                 description: ~

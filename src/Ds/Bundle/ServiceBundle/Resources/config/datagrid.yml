@@ -92,7 +92,6 @@ datagrid:
             query:
                 select:
                     - a.id
-                    - s.id as service_id
                     - u.username as user_username
                     - a.createdAt
                     - a.updatedAt
@@ -107,8 +106,13 @@ datagrid:
         columns:
             id:
                 label: ds.service.activation.id.label
-            service_id:
-                label: ds.service.activation.service.id.label
+            service_title:
+                label: ds.service.activation.service.title.label
+                type: twig
+                frontend_type: html
+                template: DsServiceBundle:Activation:datagrid/property/service_title.html.twig
+                context:
+                    entity_provider: @doctrine.orm.entity_manager
             user_username:
                 label: ds.service.activation.user.username.label
             createdAt:
@@ -138,8 +142,6 @@ datagrid:
             columns:
                 id:
                     data_name: a.id
-                service_id:
-                    data_name: s.id
                 user_username:
                     data_name: u.username
                 createdAt:
@@ -150,9 +152,6 @@ datagrid:
                 id: ASC
         filters:
             columns:
-                service_id:
-                    type: string
-                    data_name: s.id
                 user_username:
                     type: string
                     data_name: u.username

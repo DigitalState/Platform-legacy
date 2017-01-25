@@ -1,0 +1,3 @@
+{% set entity = entity_provider.find('DsServiceBundle:Activation', record.getValue('id')) %}
+{% set entity = entity_provider.find('DsServiceBundle:Service', entity.service.id) %}
+{{ entity.defaultTitle }}
