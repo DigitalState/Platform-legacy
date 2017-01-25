@@ -1,0 +1,3 @@
+{% set entity = entity_provider.find('DsCaseStatusBundle:Status', record.getValue('id')) %}
+{% set entity = entity_provider.find('DsCaseBundle:CaseEntity', entity.case.id) %}
+{{ entity.defaultTitle }}

@@ -24,8 +24,18 @@ datagrid:
                 label: ds.casestatus.status.id.label
             title:
                 label: ds.casestatus.status.title.label
+                type: twig
+                frontend_type: html
+                template: DsCaseStatusBundle:Status:datagrid/property/title.html.twig
+                context:
+                    entity_provider: @doctrine.orm.entity_manager
             case_title:
                 label: ds.casestatus.status.case.title.label
+                type: twig
+                frontend_type: html
+                template: DsCaseStatusBundle:Status:datagrid/property/case_title.html.twig
+                context:
+                    entity_provider: @doctrine.orm.entity_manager
             user_username:
                 label: ds.casestatus.status.user.username.label
             source:
