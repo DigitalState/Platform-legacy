@@ -16,8 +16,13 @@ datagrid:
         columns:
             id:
                 label: ds.record.id.label
-            title:
+            record_title:
                 label: ds.record.title.label
+                type: twig
+                frontend_type: html
+                template: DsRecordBundle:Record:datagrid/property/title.html.twig
+                context:
+                    entity_provider: @doctrine.orm.entity_manager
             createdAt:
                 label: ds.record.created_at.label
                 frontend_type: datetime
