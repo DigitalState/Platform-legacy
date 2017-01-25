@@ -21,6 +21,8 @@ datagrid:
                 type: twig
                 frontend_type: html
                 template: DsServiceBundle:Service:datagrid/property/title.html.twig
+                context:
+                    entity_provider: @doctrine.orm.entity_manager
             createdAt:
                 label: ds.service.created_at.label
                 frontend_type: datetime
