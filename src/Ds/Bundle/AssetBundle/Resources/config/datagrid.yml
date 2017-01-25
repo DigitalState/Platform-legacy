@@ -16,7 +16,7 @@ datagrid:
         columns:
             id:
                 label: ds.asset.id.label
-            asset_title:
+            title:
                 label: ds.asset.title.label
                 type: twig
                 frontend_type: html

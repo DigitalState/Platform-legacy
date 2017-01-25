@@ -16,7 +16,7 @@ datagrid:
         columns:
             id:
                 label: ds.service.id.label
-            service_title:
+            title:
                 label: ds.service.title.label
                 type: twig
                 frontend_type: html

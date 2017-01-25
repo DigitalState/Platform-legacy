@@ -16,7 +16,7 @@ datagrid:
         columns:
             id:
                 label: ds.record.id.label
-            record_title:
+            title:
                 label: ds.record.title.label
                 type: twig
                 frontend_type: html
