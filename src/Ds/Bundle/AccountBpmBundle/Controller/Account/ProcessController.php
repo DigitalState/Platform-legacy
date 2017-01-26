@@ -44,10 +44,12 @@ class ProcessController extends Controller
         $form = $this->get($form);
         $flow = null;
         $step = null;
+        $template = null;
 
         $user = $this->getUser();
 
         if ($form instanceof AbstractType) {
+            $template = $form->getTemplate();
             $form = $this->createForm($form, $data);
             $form->handleRequest($request);
 
@@ -70,6 +72,9 @@ class ProcessController extends Controller
             $util = $this->get('craue_formflow_util');
             $flow = $form;
             $flow->bind($data);
+            $type = $flow->getStep($flow->getCurrentStepNumber())->getFormType();
+            $type = new $type;
+            $template = $type->getTemplate();
             $form = $flow->createForm();
             $step = $this->generateUrl($request->attributes->get('_route'), $util->addRouteParameters(array_merge($request->query->all(), $request->attributes->get('_route_params')), $flow));
 
@@ -108,6 +113,7 @@ class ProcessController extends Controller
             'flow' => $flow,
             'step' => $step,
             'form' => $form->createView(),
+            'template' => $template,
             'data' => $data
         ];
     }

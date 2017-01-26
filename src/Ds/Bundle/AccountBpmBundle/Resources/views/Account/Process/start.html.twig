@@ -65,9 +65,5 @@
             </div>
         </div>
     {% endif %}
-    {% if flow %}
-        {% include 'DsAccountBpmBundle:Account:Bpm/Form/' ~ service.bpmId ~ '/' ~ flow.getCurrentStepLabel() ~ '.html.twig' with { flow: flow, form: form } %}
-    {% else %}
-        {% include 'DsAccountBpmBundle:Account:Bpm/Form/' ~ service.bpmId ~ '/start.html.twig' with { flow: flow, form: form } %}
-    {% endif %}
+    {% include template with { flow: flow, form: form } %}
 {% endblock %}
