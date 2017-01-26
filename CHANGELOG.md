@@ -7,3 +7,5 @@ This changelog references the relevant changes (new features, changes and bugs) 
   * Added new widget position on dashboard index page.
   * Fixed service sub-entities ownership bug.
   * Added localized title to datagrid.
+  * Remove hard-coded paths for bpm forms.
+  
