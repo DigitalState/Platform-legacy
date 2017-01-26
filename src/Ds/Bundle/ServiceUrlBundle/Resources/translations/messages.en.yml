@@ -3,6 +3,9 @@ ds:
         entity_label: Url Service
         url:
             label: Url
+        owner:
+            label: Business Unit
+            description: ~
         button:
             create: Url Service
         widget:

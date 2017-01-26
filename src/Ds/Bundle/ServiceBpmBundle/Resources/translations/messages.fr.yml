@@ -8,6 +8,9 @@ ds:
         bpm_id:
             label: Id de la définition du processus
             description: ~
+        owner:
+            label: Unité d'affaires
+            description: ~
         service:
             widget:
                 bpm: Bpm
