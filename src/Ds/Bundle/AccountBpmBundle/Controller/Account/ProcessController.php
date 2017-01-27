@@ -56,13 +56,17 @@ class ProcessController extends Controller
             if ($form->isSubmitted() && $form->isValid()) {
                 $data = $form->getData();
                 $variables = [
-                    'none_start_event_form_data' => $data,
-                    'user_id' => $user->getId(),
-                    'user_business_unit_id' => $user->getOwner()->getId(),
-                    'user_organization_id' => $user->getOrganization()->getId(),
-                    'service_id' => $service->getId(),
-                    'service_business_unit_id' => $service->getOwner()->getId(),
-                    'service_organization_id' => $service->getOrganization()->getId()
+                    'user' => [
+                        'id' => $user->getId(),
+                        'business_unit_id' => $user->getOwner()->getId(),
+                        'organization_id' => $user->getOrganization()->getId()
+                    ],
+                    'service' => [
+                        'id' => $service->getId(),
+                        'business_unit_id' => $service->getOwner()->getId(),
+                        'organization_id' => $service->getOrganization()->getId()
+                    ],
+                    'none_start_event_form_data' => $data
                 ];
                 $bpm->startInstance($service->getBpmId(), $variables);
 
@@ -92,13 +96,17 @@ class ProcessController extends Controller
                 } else {
                     $data = $form->getData();
                     $variables = [
-                        'none_start_event_form_data' => $data,
-                        'user_id' => $user->getId(),
-                        'user_business_unit_id' => $user->getOwner()->getId(),
-                        'user_organization_id' => $user->getOrganization()->getId(),
-                        'service_id' => $service->getId(),
-                        'service_business_unit_id' => $service->getOwner()->getId(),
-                        'service_organization_id' => $service->getOrganization()->getId()
+                        'user' => [
+                            'id' => $user->getId(),
+                            'business_unit_id' => $user->getOwner()->getId(),
+                            'organization_id' => $user->getOrganization()->getId()
+                        ],
+                        'service' => [
+                            'id' => $service->getId(),
+                            'business_unit_id' => $service->getOwner()->getId(),
+                            'organization_id' => $service->getOrganization()->getId()
+                        ],
+                        'none_start_event_form_data' => $data
                     ];
                     $bpm->startInstance($service->getBpmId(), $variables);
                     $flow->reset();
