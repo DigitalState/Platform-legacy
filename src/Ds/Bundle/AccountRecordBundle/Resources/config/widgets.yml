@@ -5,4 +5,4 @@ services:
         arguments:
             - @ds.record.manager.record
         tags:
-            - { name: ds.widget, position: ds_case_account_case_entity }
+            - { name: ds.widget, position: ds_accountcase_account_case_entity }

@@ -8,4 +8,5 @@ This changelog references the relevant changes (new features, changes and bugs) 
   * Fixed service sub-entities ownership bug.
   * Added localized title to datagrid.
   * Remove hard-coded paths for bpm forms.
+  * Fixed account record widget position bug.
   
