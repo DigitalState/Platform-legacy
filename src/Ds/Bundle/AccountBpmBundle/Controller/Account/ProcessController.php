@@ -25,6 +25,11 @@ class ProcessController extends Controller
      */
     public function startAction($id)
     {
+        $localeSettings = $this->get('oro_locale.settings');
+        $locale = $localeSettings->getLocale();
+        $localizationRepository = $this->get('oro_locale.repository.localization');
+        $localization = $localizationRepository->findOneBy([ 'formattingCode' => $locale ]);
+
         $manager = $this->get('ds.service.manager.service');
         $service = $manager->find($id);
 
@@ -66,6 +71,11 @@ class ProcessController extends Controller
                         'business_unit_id' => $service->getOwner()->getId(),
                         'organization_id' => $service->getOrganization()->getId()
                     ],
+                    'localization' => [
+                        'id' => $localization->getId(),
+                        'language_code' => $localization->getLanguageCode(),
+                        'formatting_code' => $localization->getFormattingCode()
+                    ],
                     'none_start_event_form_data' => $data
                 ];
                 $bpm->startInstance($service->getBpmId(), $variables);
@@ -105,6 +115,11 @@ class ProcessController extends Controller
                             'id' => $service->getId(),
                             'business_unit_id' => $service->getOwner()->getId(),
                             'organization_id' => $service->getOrganization()->getId()
+                        ],
+                        'localization' => [
+                            'id' => $localization->getId(),
+                            'language_code' => $localization->getLanguageCode(),
+                            'formatting_code' => $localization->getFormattingCode()
                         ],
                         'none_start_event_form_data' => $data
                     ];
