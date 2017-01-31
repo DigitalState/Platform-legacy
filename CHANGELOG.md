@@ -10,3 +10,4 @@ This changelog references the relevant changes (new features, changes and bugs) 
   * Remove hard-coded paths for bpm forms.
   * Fixed account record widget position bug.
   * Added bpm localization variables to process start event.
+  * Added locale to portal routes.
