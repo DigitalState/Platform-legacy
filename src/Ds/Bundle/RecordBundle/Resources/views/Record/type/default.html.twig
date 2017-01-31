@@ -13,77 +13,75 @@
         </p>
     </div>
     <div class="panel-body">
-        {% if record.data['formData'] is defined %}
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    <h4>
-                        Record Attributes
-                    </h4>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4>
+                    Record Attributes
+                </h4>
+            </div>
+            <div class="panel-body">
+                <div class="row">
+                    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
+                        <p class="text-right">
+                            <strong>Record Title</strong>
+                        </p>
+                    </div>
+                    <div class="col-lg-9 col-md-9 col-sm-6 col-xs-6">
+                        <p>
+                            {{ record.title }}
+                        </p>
+                    </div>
                 </div>
-                <div class="panel-body">
-                    <div class="row">
-                        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
-                            <p class="text-right">
-                                <strong>Record Title</strong>
-                            </p>
-                        </div>
-                        <div class="col-lg-9 col-md-9 col-sm-6 col-xs-6">
-                            <p>
-                                {{ record.title }}
-                            </p>
-                        </div>
+                <div class="row">
+                    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
+                        <p class="text-right">
+                            <strong>Related Service Request ID</strong>
+                        </p>
                     </div>
-                    <div class="row">
-                        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
-                            <p class="text-right">
-                                <strong>Related Service Request ID</strong>
-                            </p>
-                        </div>
-                        <div class="col-lg-9 col-md-9 col-sm-6 col-xs-6">
-                            <p>
-                                {{ record.case.id }}
-                            </p>
-                        </div>
+                    <div class="col-lg-9 col-md-9 col-sm-6 col-xs-6">
+                        <p>
+                            {{ record.case.id }}
+                        </p>
                     </div>
-                    <div class="row">
-                        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
-                            <p class="text-right">
-                                <strong>Related Service Title</strong>
-                            </p>
-                        </div>
-                        <div class="col-lg-9 col-md-9 col-sm-6 col-xs-6">
-                            <p>
-                                {{ record.case.service.title }}
-                            </p>
-                        </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
+                        <p class="text-right">
+                            <strong>Related Service Title</strong>
+                        </p>
                     </div>
-                    <div class="row">
-                        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
-                            <p class="text-right">
-                                <strong>Created At</strong>
-                            </p>
-                        </div>
-                        <div class="col-lg-9 col-md-9 col-sm-6 col-xs-6">
-                            <p>
-                                {{ record.createdAt|date('F jS, Y \\a\\t g:ia') }}
-                            </p>
-                        </div>
+                    <div class="col-lg-9 col-md-9 col-sm-6 col-xs-6">
+                        <p>
+                            {{ record.case.service.title }}
+                        </p>
                     </div>
-                    <div class="row">
-                        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
-                            <p class="text-right">
-                                <strong>Source</strong>
-                            </p>
-                        </div>
-                        <div class="col-lg-9 col-md-9 col-sm-6 col-xs-6">
-                            <p>
-                                {{ record.source }}
-                            </p>
-                        </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
+                        <p class="text-right">
+                            <strong>Created At</strong>
+                        </p>
+                    </div>
+                    <div class="col-lg-9 col-md-9 col-sm-6 col-xs-6">
+                        <p>
+                            {{ record.createdAt|date('F jS, Y \\a\\t g:ia') }}
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
+                        <p class="text-right">
+                            <strong>Source</strong>
+                        </p>
+                    </div>
+                    <div class="col-lg-9 col-md-9 col-sm-6 col-xs-6">
+                        <p>
+                            {{ record.source }}
+                        </p>
                     </div>
                 </div>
             </div>
-        {% endif %}
+        </div>
         {% if record.data['formData'] is defined %}
             <div class="panel panel-default">
                 <div class="panel-heading">

@@ -12,3 +12,4 @@ This changelog references the relevant changes (new features, changes and bugs) 
   * Added bpm localization variables to process start event.
   * Added locale to portal routes.
   * Added locale to account routes.
+  * Fixed bug related to record view template.
