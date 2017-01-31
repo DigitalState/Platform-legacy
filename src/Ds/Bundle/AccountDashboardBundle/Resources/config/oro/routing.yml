@@ -2,3 +2,7 @@ ds_accountdashboard_account:
     resource: @DsAccountDashboardBundle/Controller/Account
     type: annotation
     prefix: %ds.account.prefix%
+    requirements:
+        _locale: %ds.account.requirements.locale%
+    defaults:
+        _locale: %ds.account.defaults.locale%

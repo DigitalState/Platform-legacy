@@ -11,3 +11,4 @@ This changelog references the relevant changes (new features, changes and bugs) 
   * Fixed account record widget position bug.
   * Added bpm localization variables to process start event.
   * Added locale to portal routes.
+  * Added locale to account routes.
