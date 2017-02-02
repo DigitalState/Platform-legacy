@@ -6,6 +6,6 @@ oro_menu_config:
             extras:
                 position: 30
     tree:
-        ds_account_menu:
+        ds_account_main:
             children:
                 ds_accountbpm_account_task_index: ~

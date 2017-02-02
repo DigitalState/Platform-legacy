@@ -6,6 +6,6 @@ oro_menu_config:
             extras:
                 position: 40
     tree:
-        ds_account_menu:
+        ds_account_main:
             children:
                 ds_accountuserpersona_account_persona_index: ~
