@@ -7,6 +7,6 @@ oro_menu_config:
                 position: 30
                 showNonAuthorized: true
     tree:
-        ds_portal_menu:
+        ds_portal_main:
             children:
                 ds_portalnotification_portal_notification_index: ~
