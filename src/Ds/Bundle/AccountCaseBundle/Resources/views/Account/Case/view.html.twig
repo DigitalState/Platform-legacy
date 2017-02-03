@@ -32,14 +32,6 @@
                     <h1 class="pull-left">
                         {{ case.titles|localized_value }}
                     </h1>
-                    <p class="pull-right">
-                        <a href="" class="btn btn-default">
-                            <i class="fa fa-print"></i> Print
-                        </a>
-                        <a href="" class="btn btn-default">
-                            <i class="fa fa-file-pdf-o"></i> Download PDF
-                        </a>
-                    </p>
                 </div>
                 <div class="panel-body">
                     <div class="panel panel-default">
@@ -63,14 +55,6 @@
                                         </div>
                                         <div class="col-lg-8">
                                             <p class="lead">{{ case.id }}</p>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-lg-4">
-                                            <p class="lead"><strong>Gov Request ID</strong></p>
-                                        </div>
-                                        <div class="col-lg-8">
-                                            <p class="lead">2016-09-123</p>
                                         </div>
                                     </div>
                                     <div class="row">
@@ -131,28 +115,12 @@
                                     </div>
                                     <div class="row">
                                         <div class="col-lg-4">
-                                            <p class="lead"><strong>Source Channel</strong></p>
-                                        </div>
-                                        <div class="col-lg-8">
-                                            <p class="lead">Portal</p>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-lg-4">
                                             <p class="lead"><strong>Service used to create request</strong></p>
                                         </div>
                                         <div class="col-lg-8">
                                             {% if case.service %}
                                                 <p class="lead">{{ case.service.titles|localized_value }}</p>
                                             {% endif %}
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-lg-4">
-                                            <p class="lead"><strong>Transaction Type</strong></p>
-                                        </div>
-                                        <div class="col-lg-8">
-                                            <p class="lead">Apply</p>
                                         </div>
                                     </div>
                                 </div>
