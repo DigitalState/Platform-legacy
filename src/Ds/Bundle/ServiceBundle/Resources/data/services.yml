@@ -1,0 +1,48 @@
+services:
+#    -
+#        titles: -
+#        descriptions: -
+#        buttons: -
+#        presentations: -
+#        owner: -
+
+    -
+        titles:
+            -
+                text: Pet’s permit
+                localization: en
+            -
+                text: Permis animalier
+                localization: fr
+        buttons:
+            -
+                text: Activate
+                localization: en
+            -
+                text: Activer
+                localization: fr
+        descriptions:
+            -
+                text: All dogs and cats that live within Montréal’s city limits must obtain an annual permit. The permit is valid anywhere within Montréal’s city limits.
+                localization: en
+            -
+                text: Tous les propriétaires de chiens et de chats résidant sur le territoire de la Ville de Montréal doivent se procurer un permis annuel. Ce permis est valide sur l’ensemble du territoire de la Ville de Montréal.
+                localization: fr
+        slug: service-pets
+prototype:
+    titles:
+        - { fallback: ~, string: ~, text: ~, localization: en }
+        - { fallback: ~, string: ~, text: ~, localization: fr }
+    descriptions:
+        - { fallback: ~, string: ~, text: ~, localization: en }
+        - { fallback: ~, string: ~, text: ~, localization: fr }
+    buttons:
+        - { fallback: ~, string: ~, text: ~, localization: en }
+        - { fallback: ~, string: ~, text: ~, localization: fr }
+    presentations:
+        - { fallback: ~, string: ~, text: ~, localization: ~ }
+        - { fallback: ~, string: ~, text: ~, localization: ~ }
+    owner: main
+    organization: default
+    icon: fa-gg
+

@@ -1,0 +1,20 @@
+parameters:
+    ds.localization.repository: Oro\Bundle\LocaleBundle\Entity\Repository\LocalizationRepository
+services:
+     ds.service.migration.extension.service:
+        class: Ds\Bundle\ServiceBundle\Migration\Extension\ServiceExtension
+        arguments:
+            - @oro_locale.repository.localization
+     ds.service.bpm.migration.extension.service:
+        class: Ds\Bundle\ServiceBundle\Migration\Extension\ServiceBpmExtension
+        arguments:
+            - @oro_locale.repository.localization
+#        tags:
+#            - { name: oro_migration.extension, extension_name: role }
+
+#     ds.service.migration.extension.user:
+#        class: Ds\Bundle\ServiceBundle\Migration\Extension\UserExtension
+#        arguments:
+#            - @oro_user.manager
+#        tags:
+#            - { name: oro_migration.extension, extension_name: user }
