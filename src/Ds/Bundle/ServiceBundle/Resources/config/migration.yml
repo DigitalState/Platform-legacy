@@ -3,12 +3,3 @@ services:
         class: Ds\Bundle\ServiceBundle\Migration\Extension\ServiceExtension
         arguments:
             - @oro_locale.repository.localization
-#        tags:
-#            - { name: oro_migration.extension, extension_name: role }
-
-#     ds.service.migration.extension.user:
-#        class: Ds\Bundle\ServiceBundle\Migration\Extension\UserExtension
-#        arguments:
-#            - @oro_user.manager
-#        tags:
-#            - { name: oro_migration.extension, extension_name: user }

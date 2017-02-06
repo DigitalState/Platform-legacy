@@ -24,8 +24,8 @@
       <file leaf-file-name="ServiceExtension.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Migration/Extension/ServiceExtension.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="680">
-              <caret line="45" column="0" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
+            <state relative-caret-position="357">
+              <caret line="26" column="79" selection-start-line="26" selection-start-column="79" selection-end-line="26" selection-end-column="79" />
               <folding>
                 <element signature="e#1468#2875#0#PHP" expanded="false" />
                 <element signature="e#3300#3313#0#PHP" expanded="false" />
@@ -38,8 +38,8 @@
       <file leaf-file-name="migration.yml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Resources/config/migration.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+            <state relative-caret-position="68">
+              <caret line="4" column="49" selection-start-line="4" selection-start-column="49" selection-end-line="4" selection-end-column="49" />
               <folding />
             </state>
           </provider>
@@ -69,8 +69,8 @@
         <option value="$PROJECT_DIR$/Migrations/Data/ORM/LoadServiceData.php" />
         <option value="$PROJECT_DIR$/Migration/Extension/ServiceExtension.php" />
         <option value="$PROJECT_DIR$/Resources/data/services.yml" />
-        <option value="$PROJECT_DIR$/Resources/config/migration.yml" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/Resources/config/migration.yml" />
       </list>
     </option>
   </component>
@@ -278,12 +278,12 @@
       <option name="presentableId" value="Default" />
       <updated>1486387384581</updated>
       <workItem from="1486387386013" duration="877000" />
-      <workItem from="1486397505978" duration="2849000" />
+      <workItem from="1486397505978" duration="3465000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3726000" />
+    <option name="totallyTimeSpent" value="4342000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="23" y="4" width="1855" height="1033" extended-state="0" />
@@ -397,23 +397,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Resources/config/migration.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="49" selection-start-line="4" selection-start-column="49" selection-end-line="4" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Migration/Extension/ServiceExtension.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="680">
-          <caret line="45" column="0" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
+        <state relative-caret-position="357">
+          <caret line="26" column="79" selection-start-line="26" selection-start-column="79" selection-end-line="26" selection-end-column="79" />
           <folding>
             <element signature="e#1468#2875#0#PHP" expanded="false" />
             <element signature="e#3300#3313#0#PHP" expanded="false" />
             <element signature="e#3681#3701#0#PHP" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Resources/config/migration.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
