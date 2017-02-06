@@ -40,6 +40,7 @@ class ServiceExtension
         $data = Yaml::parse(file_get_contents($resource));
 
         foreach ($data['services'] as $item) {
+
             if (array_key_exists('prototype', $data)) {
                 $item += $data['prototype'];
             }
