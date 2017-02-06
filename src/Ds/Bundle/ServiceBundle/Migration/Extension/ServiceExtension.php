@@ -43,102 +43,46 @@ class ServiceExtension
             if (array_key_exists('prototype', $data)) {
                 $item += $data['prototype'];
             }
+
             $service = new Service();
 
-            #region TITLES
-            //Set default Locale value
-            $localized = new LocalizedFallbackValue();
-            $localized->setText($item['titles']['0']['text']);
-            $titles = new ArrayCollection([$localized]);
-
-            //Set all others location in .yml file
-            foreach ($item['titles'] as $localeValue) {
-                //If location for title exists in .yml file
-                if ($localeValue['localization']) {
-                    $locale = $localeValue['localization'];
-                    $localization = $this->localizationRepository->findOneBy([ 'formattingCode' => $locale ]);
-                    if ($localization) {
-                        $localized = new LocalizedFallbackValue();
-                        $localized->setText($localeValue['text']);
-                        $localized->setLocalization($localization);
-                        $titles->add($localized);
-                    }
+            //Get all localizations
+            $localizations = $this->localizationRepository->findAll();
+            foreach ($localizations as $localization) {
+                $locale = $localization->getLanguageCode();
+                if ($item['titles'][$locale]) {
+                    $localized = new LocalizedFallbackValue();
+                    $localized->setLocalization($localization);
+                    $localized->setText($item['titles'][$locale]);
+                    $service->addTitle($localized);
+                }
+                if ($item['descriptions'][$locale]) {
+                    $localized = new LocalizedFallbackValue();
+                    $localized->setLocalization($localization);
+                    $localized->setText($item['descriptions'][$locale]);
+                    $service->addDescription($localized);
+                }
+                if ($item['buttons'][$locale]) {
+                    $localized = new LocalizedFallbackValue();
+                    $localized->setLocalization($localization);
+                    $localized->setText($item['buttons'][$locale]);
+                    $service->addButton($localized);
+                }
+                if ($item['presentations'][$locale]) {
+                    $localized = new LocalizedFallbackValue();
+                    $localized->setLocalization($localization);
+                    $localized->setText($item['presentations'][$locale]);
+                    $service->addPresentation($localized);
                 }
             }
-            $service->setTitles($titles);
-            #endregion Titles
 
-            #region DESCRIPTIONS
             //Set default Locale value
-            $localized = new LocalizedFallbackValue();
-            $localized->setText($item['descriptions']['0']['text']);
-            $descriptions = new ArrayCollection([$localized]);
-
-            //Set all others location in .yml file
-            foreach ($item['descriptions'] as $localeValue) {
-                //If location for title exists in .yml file
-                if ($localeValue['localization']) {
-                    $locale = $localeValue['localization'];
-                    $localization = $this->localizationRepository->findOneBy([ 'formattingCode' => $locale ]);
-                    if ($localization) {
-                        $localized = new LocalizedFallbackValue();
-                        $localized->setText($localeValue['text']);
-                        $localized->setLocalization($localization);
-                        $descriptions->add($localized);
-                    }
-                }
-            }
-            $service->setDescriptions($descriptions);
-            #endregion DESCRIPTIONS
+            $service->setDefaultTitle(reset($item['titles']));
+            $service->setDefaultDescription(reset($item['descriptions']));
+            $service->setDefaultButton(reset($item['buttons']));
+            $service->setDefaultDescription(reset($item['descriptions']));
 
             $service->setIcon($item['icon']);
-
-            #region BUTTONS
-            //Set default Locale value
-            $localized = new LocalizedFallbackValue();
-            $localized->setText($item['buttons']['0']['text']);
-            $buttons = new ArrayCollection([$localized]);
-
-            //Set all others location in .yml file
-            foreach ($item['buttons'] as $localeValue) {
-                //If location for title exists in .yml file
-                if ($localeValue['localization']) {
-                    $locale = $localeValue['localization'];
-                    $localization = $this->localizationRepository->findOneBy([ 'formattingCode' => $locale ]);
-                    if ($localization) {
-                        $localized = new LocalizedFallbackValue();
-                        $localized->setText($localeValue['text']);
-                        $localized->setLocalization($localization);
-                        $buttons->add($localized);
-                    }
-                }
-            }
-            $service->setButtons($buttons);
-            #endregion BUTTONS
-
-            #region PRESENTATIONS
-            //Set default Locale value
-            $localized = new LocalizedFallbackValue();
-            $localized->setText($item['descriptions']['0']['text']);
-            $presentations = new ArrayCollection([$localized]);
-
-            //Set all others location in .yml file
-            foreach ($item['presentations'] as $localeValue) {
-                //If location for title exists in .yml file
-                if ($localeValue['localization']) {
-                    $locale = $localeValue['localization'];
-                    $localization = $this->localizationRepository->findOneBy([ 'formattingCode' => $locale ]);
-                    if ($localization) {
-                        $localized = new LocalizedFallbackValue();
-                        $localized->setText($localeValue['text']);
-                        $localized->setLocalization($localization);
-                        $presentations->add($localized);
-                    }
-                }
-            }
-            $service->setPresentations($presentations);
-            #endregion PRESENTATIONS
-
             $service->setSlug($item['slug']);
 
             #region OWNER
