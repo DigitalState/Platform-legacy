@@ -1,7 +1,7 @@
 oro_menu_config:
     items:
         ds_accountdashboard_account_dashboard_index:
-            label: ds.accountdashboard.dashboard.page.account.index.title
+            label: ds.accountdashboard.page.account.dashboard.index.title
             route: ds_accountdashboard_account_dashboard_index
             extras:
                 position: 10

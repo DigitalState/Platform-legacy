@@ -1,11 +1,10 @@
 ds:
     accountdashboard:
-        dashboard:
-            page:
-                account:
+        page:
+            account:
+                dashboard:
                     index:
                         title: Dashboard
-        page:
             portal:
                 home:
                     index:
