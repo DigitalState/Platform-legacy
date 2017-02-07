@@ -1,7 +1,7 @@
 ds:
     accountcase:
-        caseentity:
-            page:
-                account:
+        page:
+            account:
+                caseentity:
                     index:
                         title: Mes demandes de service
