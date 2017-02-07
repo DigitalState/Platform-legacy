@@ -58,9 +58,6 @@ ds:
                 title: Services
             view: ~
             edit: ~
-            portal:
-                index:
-                    title: Information and Services
         activation:
             entity_label: Activation
             entity_plural_label: Activations
