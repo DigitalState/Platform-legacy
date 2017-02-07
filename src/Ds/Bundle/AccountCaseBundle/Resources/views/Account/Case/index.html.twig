@@ -23,7 +23,7 @@
     <div class="row">
         <div class="col-lg-12">
             <h1>
-                My Service Requests
+                {% trans %}ds.accountcase.page.account.caseentity.index.title{% endtrans %}
             </h1>
         </div>
     </div>
@@ -32,7 +32,7 @@
             <div class="panel panel-default">
                 <div class="panel-body">
                     <form role="search">
-                        <input type="text" class="form-control" placeholder="Search Service Requests..." style="border-top: 0px; border-right: 0px; border-left: 0px; font-size: 24px;" data-plugin="filter" data-filter-row="#cases tbody tr" data-filter-data=".name a">
+                        <input type="text" class="form-control" placeholder="{% trans %}ds.accountcase.page.account.caseentity.index.search.placeholder{% endtrans %}" style="border-top: 0px; border-right: 0px; border-left: 0px; font-size: 24px;" data-plugin="filter" data-filter-row="#cases tbody tr" data-filter-data=".name a">
                     </form>
                 </div>
             </div>
@@ -46,22 +46,22 @@
                         <thead>
                             <tr>
                                 <th style="vertical-align:top">
-                                    Request ID
+                                    {% trans %}ds.accountcase.page.account.caseentity.index.grid.column.id{% endtrans %}
                                 </th>
                                 <th style="vertical-align:top">
-                                    Subject
+                                    {% trans %}ds.accountcase.page.account.caseentity.index.grid.column.title{% endtrans %}
                                 </th>
                                 <th style="vertical-align:top">
-                                    Created Date
+                                    {% trans %}ds.accountcase.page.account.caseentity.index.grid.column.created_at{% endtrans %}
                                 </th>
                                 <th style="vertical-align:top">
-                                    Closed Date
+                                    {% trans %}ds.accountcase.page.account.caseentity.index.grid.column.closed_at{% endtrans %}
                                 </th>
                                 <th style="vertical-align:top">
-                                    Service
+                                    {% trans %}ds.accountcase.page.account.caseentity.index.grid.column.service{% endtrans %}
                                 </th>
                                 <th style="vertical-align:top">
-                                    Latest Status
+                                    {% trans %}ds.accountcase.page.account.caseentity.index.grid.column.status{% endtrans %}
                                 </th>
                             </tr>
                         </thead>

@@ -5,3 +5,13 @@ ds:
                 caseentity:
                     index:
                         title: Mes demandes de service
+                        search:
+                            placeholder: Recherche de mes demandes de services...
+                        grid:
+                            column:
+                                id: ID de requête
+                                title: Sujet
+                                created_at: Date de création
+                                closed_at: Date de fermeture
+                                service: Service
+                                status: Dernier statut
