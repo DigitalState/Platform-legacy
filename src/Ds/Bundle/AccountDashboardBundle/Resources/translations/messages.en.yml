@@ -5,6 +5,7 @@ ds:
                 dashboard:
                     index:
                         title: Dashboard
+                        welcome: Welcome %firstName%
             portal:
                 home:
                     index:
