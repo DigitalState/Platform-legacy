@@ -5,3 +5,11 @@ ds:
                 account:
                     index:
                         title: Tableau de bord
+        page:
+            portal:
+                home:
+                    index:
+                        welcome:
+                            description: Connectez-vous pour accéder aux services.
+                            button:
+                                login: Se connecter

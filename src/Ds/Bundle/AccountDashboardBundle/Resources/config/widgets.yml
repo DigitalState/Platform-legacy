@@ -4,3 +4,8 @@ services:
         class: Ds\Bundle\AccountDashboardBundle\Widget\Account\Dashboard\WelcomeWidget
         tags:
             - { name: ds.widget, position: ds_accountdashboard_dashboard }
+    ds.accountdashboard.widget.portal.home.index.welcome.login:
+        parent: ds.widget.widget.abstract
+        class: Ds\Bundle\AccountDashboardBundle\Widget\Portal\Home\LoginWidget
+        tags:
+            - { name: ds.widget, position: ds_portal_portal_home_index_welcome }

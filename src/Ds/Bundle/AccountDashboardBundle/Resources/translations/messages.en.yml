@@ -5,3 +5,11 @@ ds:
                 account:
                     index:
                         title: Dashboard
+        page:
+            portal:
+                home:
+                    index:
+                        welcome:
+                            description: Sign in to access services.
+                            button:
+                                login: Sign In
