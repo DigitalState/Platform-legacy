@@ -1,6 +1,26 @@
 <?php
 
-namespace Ds\Bundle\ServiceBundle\Migration\Extension;
+/*
+ *  PROTOTYPE for services.yml file
+ *  services:
+ *   -
+ *     titles:
+ *        en: ~
+ *        fr: ~
+ *     descriptions:
+ *        en: ~
+ *        fr: ~
+ *     buttons:
+ *        en: ~
+ *        fr: ~
+ *     presentations:
+ *        en: ~
+ *        fr: ~
+ *     owner: ~
+ *     organization: default
+ *     icon: fa-gg
+ */
+namespace Montreal\Bundle\ServiceBundle\Migration\Extension;
 
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Persistence\ObjectManager;
@@ -40,51 +60,36 @@ class ServiceExtension
         $data = Yaml::parse(file_get_contents($resource));
 
         foreach ($data['services'] as $item) {
-
             if (array_key_exists('prototype', $data)) {
                 $item += $data['prototype'];
             }
 
             $service = new Service();
+            $values = [];
 
-            //Get all localizations
-            $localizations = $this->localizationRepository->findAll();
-            foreach ($localizations as $localization) {
-                $locale = $localization->getLanguageCode();
-                if ($item['titles'][$locale]) {
-                    $localized = new LocalizedFallbackValue();
-                    $localized->setLocalization($localization);
-                    $localized->setText($item['titles'][$locale]);
-                    $service->addTitle($localized);
+            #region TITLES DESCRIPTIONS BUTTONS PRESENTATIONS
+            foreach ([ 'titles', 'descriptions', 'buttons', 'presentations' ] as $field) {
+                //Set default Locale value
+                $localized = new LocalizedFallbackValue();
+                $localized->setText(current($item[$field]));
+                $values[$field] = new ArrayCollection([$localized]);
+
+                foreach ($item[$field] as $locale => $localeValue) {
+                    //If location for title exists in .yml file
+                    $localization = $this->localizationRepository->findOneBy([ 'formattingCode' => $locale ]);
+                    if ($localization) {
+                        $localized = new LocalizedFallbackValue();
+                        $localized->setText($localeValue);
+                        $localized->setLocalization($localization);
+                        $values[$field]->add($localized);
+                    }
                 }
-                if ($item['descriptions'][$locale]) {
-                    $localized = new LocalizedFallbackValue();
-                    $localized->setLocalization($localization);
-                    $localized->setText($item['descriptions'][$locale]);
-                    $service->addDescription($localized);
-                }
-                if ($item['buttons'][$locale]) {
-                    $localized = new LocalizedFallbackValue();
-                    $localized->setLocalization($localization);
-                    $localized->setText($item['buttons'][$locale]);
-                    $service->addButton($localized);
-                }
-                if ($item['presentations'][$locale]) {
-                    $localized = new LocalizedFallbackValue();
-                    $localized->setLocalization($localization);
-                    $localized->setText($item['presentations'][$locale]);
-                    $service->addPresentation($localized);
-                }
+                $service->{'set' . $field}($values[$field]);
             }
-
-            //Set default Locale value
-            $service->setDefaultTitle(reset($item['titles']));
-            $service->setDefaultDescription(reset($item['descriptions']));
-            $service->setDefaultButton(reset($item['buttons']));
-            $service->setDefaultDescription(reset($item['descriptions']));
 
             $service->setIcon($item['icon']);
             $service->setSlug($item['slug']);
+            #endregion
 
             #region OWNER
             $owner = $objectManager
