@@ -20,7 +20,7 @@
  *     organization: default
  *     icon: fa-gg
  */
-namespace Montreal\Bundle\ServiceBundle\Migration\Extension;
+namespace Ds\Bundle\ServiceBundle\Migration\Extension;
 
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Persistence\ObjectManager;
