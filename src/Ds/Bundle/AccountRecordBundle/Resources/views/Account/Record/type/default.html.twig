@@ -1,0 +1,125 @@
+<div class="panel panel-default">
+    <div class="panel-heading clearfix">
+        <h1 class="pull-left">
+            {{ record.title }}
+        </h1>
+    </div>
+    <div class="panel-body">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4>
+                    {% trans %}ds.accountrecord.page.account.record.view.attributes.title{% endtrans %}
+                </h4>
+            </div>
+            <div class="panel-body">
+                <div class="row">
+                    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
+                        <p class="text-right">
+                            <strong>{% trans %}ds.accountrecord.page.account.record.view.attributes.case.id{% endtrans %}</strong>
+                        </p>
+                    </div>
+                    <div class="col-lg-9 col-md-9 col-sm-6 col-xs-6">
+                        <p>
+                            {{ record.case.id }}
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
+                        <p class="text-right">
+                            <strong>{% trans %}ds.accountrecord.page.account.record.view.attributes.case.service.title{% endtrans %}</strong>
+                        </p>
+                    </div>
+                    <div class="col-lg-9 col-md-9 col-sm-6 col-xs-6">
+                        <p>
+                            {{ record.case.service.title }}
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
+                        <p class="text-right">
+                            <strong>{% trans %}ds.accountrecord.page.account.record.view.attributes.created_at{% endtrans %}</strong>
+                        </p>
+                    </div>
+                    <div class="col-lg-9 col-md-9 col-sm-6 col-xs-6">
+                        <p>
+                            {{ record.createdAt|date('F jS, Y \\a\\t g:ia') }}
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
+                        <p class="text-right">
+                            <strong>{% trans %}ds.accountrecord.page.account.record.view.attributes.source{% endtrans %}</strong>
+                        </p>
+                    </div>
+                    <div class="col-lg-9 col-md-9 col-sm-6 col-xs-6">
+                        <p>
+                            {{ record.source }}
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% if record.data['formData'] is defined %}
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4>
+                        {% trans %}ds.accountrecord.page.account.record.view.attributes.data.form_data{% endtrans %}
+                    </h4>
+                </div>
+                <div class="panel-body">
+                    {% for key, value in record.data['formData'] %}
+                        {% if value is iterable %}
+                            <div class="row">
+                                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
+                                    <p class="text-right">
+                                        <strong>{{ key|inflect }}</strong>
+                                    </p>
+                                </div>
+                                <div class="col-lg-9 col-md-9 col-sm-6 col-xs-6">
+                                    {% for value2 in value %}
+                                        {% if value2 is iterable %}
+                                            <div class="panel panel-default">
+                                                <div class="panel-body">
+                                                    {% for key3, value3 in value2 %}
+                                                        <div class="row">
+                                                            <div class="col-lg-3 col-md-9 col-sm-6 col-xs-6">
+                                                                <p class="text-right"><strong>{{ key3|inflect }}:</strong></p>
+                                                            </div>
+                                                            <div class="col-lg-3 col-md-9 col-sm-6 col-xs-6">
+                                                                <p>{{ value3|nl2br }}</p>
+                                                            </div>
+                                                        </div>
+                                                    {% endfor %}
+                                                </div>
+                                            </div>
+                                        {% else %}
+                                            <p>
+                                                {{ value2|nl2br }}
+                                            </p>
+                                        {% endif %}
+                                    {% endfor %}
+                                </div>
+                            </div>
+                        {% else %}
+                            <div class="row">
+                                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
+                                    <p class="text-right">
+                                        <strong>{{ key|inflect }}</strong>
+                                    </p>
+                                </div>
+                                <div class="col-lg-9 col-md-9 col-sm-6 col-xs-6">
+                                    <p>
+                                        {{ value|nl2br }}
+                                    </p>
+                                </div>
+                            </div>
+                        {% endif %}
+                    {% endfor %}
+                </div>
+            </div>
+        {% endif %}
+    </div>
+</div>

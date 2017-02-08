@@ -15,3 +15,21 @@ ds:
                                 closed_at: Closed Date
                                 service: Service
                                 status: Latest Status
+                            empty: No records found.
+                    view:
+                        attributes:
+                            title: Service Request Attributes
+                            subject: Subject
+                            id: Request ID
+                            created_at: Opened
+                            updated_at: Closed
+                            state: State
+                            states:
+                                active: Open
+                                inactive: Closed
+                            status:
+                                active: Active
+                                resolved: Resolved
+                                cancelled: Cancelled
+                            tags: Tags
+                            service: Service used to create request

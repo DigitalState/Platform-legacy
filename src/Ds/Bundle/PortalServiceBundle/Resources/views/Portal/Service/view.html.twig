@@ -5,12 +5,12 @@
         <li>
             <i class="fa fa-home"></i>
             <a href="{{ path('ds_portal_portal_home_index') }}">
-                {% trans %}ds.portal.home.page.portal.index.title{% endtrans %}
+                {% trans %}ds.portal.page.portal.home.index.title{% endtrans %}
             </a>
         </li>
         <li>
             <a href="{{ path('ds_portalservice_portal_service_index') }}">
-                {% trans %}ds.portalservice.service.page.portal.index.title{% endtrans %}
+                {% trans %}ds.portalservice.page.portal.service.index.title{% endtrans %}
             </a>
         </li>
         <li class="active">
@@ -44,9 +44,6 @@
                             <button class="btn btn-primary btn-lg">
                                 {{ service.buttons|localized_value }}
                             </button>
-                            {#<a href="{{ path('ds_service_portal_service_index') }}" class="btn btn-link btn-lg">#}
-                                {#Back#}
-                            {#</a>#}
                         </form>
                     </p>
                 </div>

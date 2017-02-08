@@ -1,7 +1,15 @@
 ds:
     portalnotification:
-        notification:
-            page:
-                portal:
+        page:
+            portal:
+                notification:
                     index:
                         title: Notifications
+                        search:
+                            placeholder: De quoi aimeriez-vous être informé?
+                        grid:
+                            empty: Aucun résultat trouvé.
+                    view:
+                        channels:
+                            title: Canals
+                            description: Sélectionnez les canals auxquelles vous souhaitez recevoir ces notifications.

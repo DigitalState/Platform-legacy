@@ -3,4 +3,25 @@ ds:
         case:
             record:
                 widget:
-                    entity: Mes enregistrements
+                    entity:
+                        title: Mes enregistrements
+                        grid:
+                            column:
+                                title: Titre de l'enregistrement
+                                created_at: Date de création
+        page:
+            account:
+                record:
+                    index:
+                        title: Mes enregistrements
+                    view:
+                        attributes:
+                            title: Attributs d'enregistrement
+                            case:
+                                id: ID de requête du service connexe
+                                service:
+                                    title: Titre du service connexe
+                            created_at: Créé le
+                            source: Source
+                            data:
+                                form_data: Données du formulaire

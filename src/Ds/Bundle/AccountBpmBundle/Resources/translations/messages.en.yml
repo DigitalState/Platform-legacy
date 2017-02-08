@@ -1,7 +1,26 @@
 ds:
     accountbpm:
-        task:
-            page:
-                account:
+        page:
+            account:
+                task:
                     index:
                         title: My Tasks
+                        search:
+                            placeholder: Search Tasks...
+                        grid:
+                            column:
+                                title: Task Title
+                                created_at: Created Date
+                                service:
+                                    title: Service Title
+                                case:
+                                    id: Service Request ID
+                            empty: No records found.
+                process:
+                    start:
+                        title: Start
+                    started:
+                        title: Confirmation
+                        description: Thank you for your submission, we have successfully received your request, and it is being processed.
+                        button:
+                            back: Return to dashboard

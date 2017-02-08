@@ -3,4 +3,25 @@ ds:
         case:
             record:
                 widget:
-                    entity: My Records
+                    entity:
+                        title: My Records
+                        grid:
+                            column:
+                                title: Record Title
+                                created_at: Created Date
+        page:
+            account:
+                record:
+                    index:
+                        title: My Records
+                    view:
+                        attributes:
+                            title: Record Attributes
+                            case:
+                                id: Related Service Request ID
+                                service:
+                                    title: Related Service Title
+                            created_at: Created At
+                            source: Source
+                            data:
+                                form_data: Form Data

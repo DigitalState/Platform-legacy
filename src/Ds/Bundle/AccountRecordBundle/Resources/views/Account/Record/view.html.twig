@@ -5,16 +5,16 @@
         <li>
             <i class="fa fa-home"></i>
             <a href="{{ path('ds_portal_portal_home_index') }}">
-                {% trans %}ds.portal.home.page.portal.index.title{% endtrans %}
+                {% trans %}ds.portal.page.portal.home.index.title{% endtrans %}
             </a>
         </li>
         <li>
             <a href="{{ path('ds_accountdashboard_account_dashboard_index') }}">
-                {% trans %}ds.account.home.page.account.index.title{% endtrans %}
+                {% trans %}ds.account.page.account.home.index.title{% endtrans %}
             </a>
         </li>
         <li>
-            {% trans %}ds.record.record.page.account.index.title{% endtrans %}
+            {% trans %}ds.accountrecord.page.account.record.index.title{% endtrans %}
         </li>
         <li class="active">
             {{ record.title }}
@@ -25,7 +25,7 @@
 {% block content %}
     <div class="row">
         <div class="col-lg-12">
-            {% include 'DsRecordBundle:Record:type/default.html.twig' with { record: record } %}
+            {% include 'DsAccountRecordBundle::Account/Record/type/default.html.twig' with { record: record } %}
         </div>
     </div>
 {% endblock %}

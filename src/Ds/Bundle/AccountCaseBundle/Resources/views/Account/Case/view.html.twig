@@ -5,17 +5,17 @@
         <li>
             <i class="fa fa-home"></i>
             <a href="{{ path('ds_portal_portal_home_index') }}">
-                {% trans %}ds.portal.home.page.portal.index.title{% endtrans %}
+                {% trans %}ds.portal.page.portal.home.index.title{% endtrans %}
             </a>
         </li>
         <li>
             <a href="{{ path('ds_accountdashboard_account_dashboard_index') }}">
-                {% trans %}ds.account.home.page.account.index.title{% endtrans %}
+                {% trans %}ds.account.page.account.home.index.title{% endtrans %}
             </a>
         </li>
         <li>
             <a href="{{ path('ds_accountcase_account_case_index') }}">
-                {% trans %}ds.accountcase.caseentity.page.account.index.title{% endtrans %}
+                {% trans %}ds.accountcase.page.account.caseentity.index.title{% endtrans %}
             </a>
         </li>
         <li class="active">
@@ -36,86 +36,97 @@
                 <div class="panel-body">
                     <div class="panel panel-default">
                         <div class="panel-heading">
-                            <h3>Service Request Attributes</h3>
+                            <h3>
+                                {% trans %}ds.accountcase.page.account.caseentity.view.attributes.title{% endtrans %}
+                            </h3>
                         </div>
                         <div class="panel-body">
                             <div class="row">
                                 <div class="col-lg-6">
                                     <div class="row">
                                         <div class="col-lg-4">
-                                            <p class="lead"><strong>Subject</strong></p>
+                                            <p class="lead">
+                                                <strong>{% trans %}ds.accountcase.page.account.caseentity.view.attributes.subject{% endtrans %}</strong>
+                                            </p>
                                         </div>
                                         <div class="col-lg-8">
-                                            <p class="lead">{{ case.titles|localized_value }}</p>
+                                            <p class="lead">
+                                                {{ case.titles|localized_value }}
+                                            </p>
                                         </div>
                                     </div>
                                     <div class="row">
                                         <div class="col-lg-4">
-                                            <p class="lead"><strong>Request ID</strong></p>
+                                            <p class="lead">
+                                                <strong>{% trans %}ds.accountcase.page.account.caseentity.view.attributes.id{% endtrans %}</strong>
+                                            </p>
                                         </div>
                                         <div class="col-lg-8">
-                                            <p class="lead">{{ case.id }}</p>
+                                            <p class="lead">
+                                                {{ case.id }}
+                                            </p>
                                         </div>
                                     </div>
                                     <div class="row">
                                         <div class="col-lg-4">
-                                            <p class="lead"><strong>Opened</strong></p>
+                                            <p class="lead">
+                                                <strong>{% trans %}ds.accountcase.page.account.caseentity.view.attributes.created_at{% endtrans %}</strong>
+                                            </p>
                                         </div>
                                         <div class="col-lg-8">
-                                            <p class="lead">{{ case.createdAt|date('F jS \\a\\t g:i:sa') }}</p>
+                                            <p class="lead">
+                                                {{ case.createdAt|date('F jS \\a\\t g:i:sa') }}
+                                            </p>
                                         </div>
                                     </div>
                                     {% if case.state == 'inactive' and case.status == 'resolved' %}
                                         <div class="row">
                                             <div class="col-lg-4">
-                                                <p class="lead"><strong>Closed</strong></p>
+                                                <p class="lead">
+                                                    <strong>{% trans %}ds.accountcase.page.account.caseentity.view.attributes.updated_at{% endtrans %}</strong>
+                                                </p>
                                             </div>
                                             <div class="col-lg-8">
-                                                <p class="lead">{{ case.updatedAt|date('F jS \\a\\t g:i:sa') }}</p>
+                                                <p class="lead">
+                                                    {{ case.updatedAt|date('F jS \\a\\t g:i:sa') }}
+                                                </p>
                                             </div>
                                         </div>
                                     {% endif %}
                                     <div class="row">
                                         <div class="col-lg-4">
-                                            <p class="lead"><strong>State</strong></p>
+                                            <p class="lead">
+                                                <strong>{% trans %}ds.accountcase.page.account.caseentity.view.attributes.state{% endtrans %}</strong>
+                                            </p>
                                         </div>
-                                        <div class="col-lg-4">
-                                            <ul class="list-group">
-                                                <li class="list-group-item">
-                                                    {% if case.state == 'active' %}
-                                                        Open
-                                                    {% elseif case.state == 'inactive' %}
-                                                        Closed
-                                                    {% endif %}
-                                                    <span class="badge">
-                                                        {% if case.status == 'active' %}
-                                                            Active
-                                                        {% elseif case.status == 'resolved' %}
-                                                            Resolved
-                                                        {% elseif case.status == 'cancelled' %}
-                                                            Cancelled
-                                                        {% endif %}
-                                                    </span>
-                                                </li>
-                                            </ul>
+                                        <div class="col-lg-8">
+                                            <p>
+                                                {{ ('ds.accountcase.page.account.caseentity.view.attributes.states.' ~ case.state)|trans }}
+                                                |
+                                                {{ ('ds.accountcase.page.account.caseentity.view.attributes.statuses.' ~ case.status)|trans }}
+                                            </p>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="row">
                                         <div class="col-lg-4">
-                                            <p class="lead"><strong>Tags</strong></p>
+                                            <p class="lead">
+                                                <strong>{% trans %}ds.accountcase.page.account.caseentity.view.attributes.tags{% endtrans %}</strong>
+                                            </p>
                                         </div>
                                         <div class="col-lg-8">
                                             <p class="lead">
-                                                <span class="label label-primary">Security</span>
-                                                <span class="label label-success">Access Request</span>
+                                                <span class="label label-primary">Tag 1</span>
+                                                <span class="label label-success">Tag 2</span>
                                             </p>
                                         </div>
                                     </div>
                                     <div class="row">
                                         <div class="col-lg-4">
-                                            <p class="lead"><strong>Service used to create request</strong></p>
+                                            <p class="lead">
+                                                <strong>{% trans %}ds.accountcase.page.account.caseentity.view.attributes.service{% endtrans %}</strong>
+                                            </p>
                                         </div>
                                         <div class="col-lg-8">
                                             {% if case.service %}

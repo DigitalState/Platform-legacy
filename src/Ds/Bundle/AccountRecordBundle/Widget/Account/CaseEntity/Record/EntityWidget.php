@@ -34,7 +34,7 @@ class EntityWidget extends Widget
      */
     public function getTitle()
     {
-        return 'ds.accountrecord.case.record.widget.entity';
+        return 'ds.accountrecord.case.record.widget.entity.title';
     }
 
     /**

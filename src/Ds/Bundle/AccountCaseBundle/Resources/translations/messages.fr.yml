@@ -15,3 +15,21 @@ ds:
                                 closed_at: Date de fermeture
                                 service: Service
                                 status: Dernier statut
+                            empty: Aucun résultat trouvé.
+                    view:
+                        attributes:
+                            title: Attributs de la demande de service
+                            subject: Sujet
+                            id: Id de requête
+                            created_at: Ouvert
+                            updated_at: Fermé
+                            state: Etat
+                            states:
+                                active: Ouvert
+                                inactive: Fermé
+                            statuses:
+                                active: Actif
+                                resolved: Résolu
+                                cancelled: Annulé
+                            tags: Mots clés
+                            service: Service utilisé pour créer la demande

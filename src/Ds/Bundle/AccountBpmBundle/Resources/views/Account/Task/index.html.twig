@@ -5,16 +5,16 @@
         <li>
             <i class="fa fa-home"></i>
             <a href="{{ path('ds_portal_portal_home_index') }}">
-                {% trans %}ds.portal.home.page.portal.index.title{% endtrans %}
+                {% trans %}ds.portal.page.portal.home.index.title{% endtrans %}
             </a>
         </li>
         <li>
             <a href="{{ path('ds_accountdashboard_account_dashboard_index') }}">
-                {% trans %}ds.account.home.page.account.index.title{% endtrans %}
+                {% trans %}ds.account.page.account.home.index.title{% endtrans %}
             </a>
         </li>
         <li class="active">
-            My Tasks
+            {% trans %}ds.accountbpm.page.account.task.index.title{% endtrans %}
         </li>
     </ul>
 {% endblock %}
@@ -23,7 +23,7 @@
     <div class="row">
         <div class="col-lg-12">
             <h1>
-                My Tasks
+                {% trans %}ds.accountbpm.page.account.task.index.title{% endtrans %}
             </h1>
         </div>
     </div>
@@ -32,7 +32,7 @@
             <div class="panel panel-default">
                 <div class="panel-body">
                     <form role="search">
-                        <input type="text" class="form-control" placeholder="Search Tasks..." style="border-top: 0px; border-right: 0px; border-left: 0px; font-size: 24px;" data-plugin="filter" data-filter-row="#tasks tbody tr" data-filter-data=".name">
+                        <input type="text" class="form-control" placeholder="{% trans %}ds.accountbpm.page.account.task.index.search.placeholder{% endtrans %}" style="border-top: 0px; border-right: 0px; border-left: 0px; font-size: 24px;" data-plugin="filter" data-filter-row="#tasks tbody tr" data-filter-data=".name">
                     </form>
                 </div>
             </div>
@@ -46,16 +46,16 @@
                         <thead>
                             <tr>
                                 <th>
-                                    Task Name
+                                    {% trans %}ds.accountbpm.page.account.task.index.grid.column.title{% endtrans %}
                                 </th>
                                 <th>
-                                    Created Date
+                                    {% trans %}ds.accountbpm.page.account.task.index.grid.column.created_at{% endtrans %}
                                 </th>
                                 <th>
-                                    Service Title
+                                    {% trans %}ds.accountbpm.page.account.task.index.grid.column.service.title{% endtrans %}
                                 </th>
                                 <th>
-                                    Service Request ID
+                                    {% trans %}ds.accountbpm.page.account.task.index.grid.column.case.id{% endtrans %}
                                 </th>
                             </tr>
                         </thead>
@@ -90,7 +90,7 @@
                             {% else %}
                                 <tr>
                                     <td colspan="4">
-                                        No records found.
+                                        {% trans %}ds.accountbpm.page.account.task.index.grid.empty{% endtrans %}
                                     </td>
                                 </tr>
                             {% endfor %}

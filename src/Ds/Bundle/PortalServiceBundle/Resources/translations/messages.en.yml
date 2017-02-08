@@ -1,7 +1,14 @@
 ds:
     portalservice:
-        service:
-            page:
-                portal:
+        page:
+            portal:
+                service:
                     index:
                         title: Information and Services
+                        search:
+                            placeholder: Search for Information and Services...
+                        grid:
+                            empty: No records found.
+                    view: ~
+                    activated:
+                        title: Activated

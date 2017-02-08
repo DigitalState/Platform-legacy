@@ -1,7 +1,7 @@
 oro_menu_config:
     items:
         ds_accountbpm_account_task_index:
-            label: ds.accountbpm.task.page.account.index.title
+            label: ds.accountbpm.page.account.task.index.title
             route: ds_accountbpm_account_task_index
             extras:
                 position: 30

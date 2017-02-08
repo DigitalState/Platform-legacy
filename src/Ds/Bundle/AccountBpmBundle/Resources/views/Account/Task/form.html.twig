@@ -9,17 +9,17 @@
         <li>
             <i class="fa fa-home"></i>
             <a href="{{ path('ds_portal_portal_home_index') }}">
-                {% trans %}ds.portal.home.page.portal.index.title{% endtrans %}
+                {% trans %}ds.portal.page.portal.home.index.title{% endtrans %}
             </a>
         </li>
         <li>
             <a href="{{ path('ds_accountdashboard_account_dashboard_index') }}">
-                {% trans %}ds.account.home.page.account.index.title{% endtrans %}
+                {% trans %}ds.account.page.account.home.index.title{% endtrans %}
             </a>
         </li>
         <li>
-            <a href="#">
-                My Tasks
+            <a href="{{ path('ds_accountbpm_account_task_index') }}">
+                {% trans %}ds.accountbpm.page.account.task.index.title{% endtrans %}
             </a>
         </li>
         <li class="active">

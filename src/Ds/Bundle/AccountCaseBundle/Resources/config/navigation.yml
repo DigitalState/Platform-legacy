@@ -1,7 +1,7 @@
 oro_menu_config:
     items:
         ds_accountcase_account_case_index:
-            label: ds.accountcase.caseentity.page.account.index.title
+            label: ds.accountcase.page.account.caseentity.index.title
             route: ds_accountcase_account_case_index
             extras:
                 position: 20

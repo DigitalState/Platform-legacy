@@ -1,7 +1,7 @@
 oro_menu_config:
     items:
         ds_portalnotification_portal_notification_index:
-            label: ds.portalnotification.notification.page.portal.index.title
+            label: ds.portalnotification.page.portal.notification.index.title
             route: ds_portalnotification_portal_notification_index
             extras:
                 position: 30

@@ -1,7 +1,26 @@
 ds:
     accountbpm:
-        task:
-            page:
-                account:
+        page:
+            account:
+                task:
                     index:
-                        title: Tableau de bord
+                        title: Mes tâches
+                        search:
+                            placeholder: Rechercher mes tâches...
+                        grid:
+                            column:
+                                title: Titre de la tâche
+                                created_at: Date de création
+                                service:
+                                    title: Titre du service
+                                case:
+                                    id: ID de demande de service
+                            empty: Aucun résultat trouvé.
+                process:
+                    start:
+                        title: Démarrer
+                    started:
+                        title: Confirmation
+                        description: Merci pour votre soumission, nous avons bien reçu votre demande et elle est en cours de traitement.
+                        button:
+                            back: Retour au tableau de bord

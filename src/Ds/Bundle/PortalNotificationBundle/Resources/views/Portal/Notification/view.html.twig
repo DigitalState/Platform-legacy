@@ -7,12 +7,12 @@
         <li>
             <i class="fa fa-home"></i>
             <a href="{{ path('ds_portal_portal_home_index') }}">
-                {% trans %}ds.portal.home.page.portal.index.title{% endtrans %}
+                {% trans %}ds.portal.page.portal.home.index.title{% endtrans %}
             </a>
         </li>
         <li>
             <a href="{{ path('ds_portalnotification_portal_notification_index') }}">
-                {% trans %}ds.portalnotification.notification.page.portal.index.title{% endtrans %}
+                {% trans %}ds.portalnotification.page.portal.notification.index.title{% endtrans %}
             </a>
         </li>
         <li class="active">
@@ -42,12 +42,12 @@
             <div class="panel panel-default">
                 <div class="panel-body">
                     <p>
-                        Select the channels you would like to receive these notifications
+                        {% trans %}ds.portalnotification.page.portal.notification.view.channels.description{% endtrans %}
                     </p>
                     {{ form_start(form, { action: path('ds_portalnotification_portal_subscription_edit', { id: notification.id }) }) }}
                     {{ form_errors(form) }}
                     <h4>
-                        Channels
+                        {% trans %}ds.portalnotification.page.portal.notification.view.channels.title{% endtrans %}
                     </h4>
                     <ul class="list-group">
                         {% for channel in notification.channels %}
