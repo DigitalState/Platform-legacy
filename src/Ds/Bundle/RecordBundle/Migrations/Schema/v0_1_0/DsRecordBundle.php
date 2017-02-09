@@ -1,39 +1,38 @@
 <?php
 
-namespace Ds\Bundle\AssetBundle\Migrations\Schema\v1_0;
+namespace Ds\Bundle\RecordBundle\Migrations\Schema\v0_1_0;
 
 use Oro\Bundle\MigrationBundle\Migration\Migration;
 use Doctrine\DBAL\Schema\Schema;
 use Oro\Bundle\MigrationBundle\Migration\QueryBag;
 
 /**
- * Class DsAssetBundle
+ * Class DsRecordBundle
  */
-class DsAssetBundle implements Migration
+class DsRecordBundle implements Migration
 {
     /**
      * {@inheritdoc}
      */
     public function up(Schema $schema, QueryBag $queries)
     {
-        $this->createAssetTable($schema);
-        $this->createAssetTitleTable($schema);
-        $this->addAssetForeignKeys($schema);
-        $this->addAssetTitleForeignKeys($schema);
+        $this->createRecordTable($schema);
+        $this->createRecordTitleTable($schema);
+        $this->addRecordForeignKeys($schema);
+        $this->addRecordTitleForeignKeys($schema);
     }
 
     /**
-     * Create asset table
+     * Create record table
      *
      * @param \Doctrine\DBAL\Schema\Schema $schema
      */
-    protected function createAssetTable(Schema $schema)
+    protected function createRecordTable(Schema $schema)
     {
-        $table = $schema->createTable('ds_asset');
+        $table = $schema->createTable('ds_record');
         $table->addColumn('id', 'integer', ['autoincrement' => true]);
         $table->addColumn('organization_id', 'integer', ['notnull' => false]);
         $table->addColumn('business_unit_owner_id', 'integer', ['notnull' => false]);
-        $table->addColumn('user_id', 'integer', ['notnull' => false]);
         $table->addColumn('case_id', 'integer', ['notnull' => false]);
         $table->addColumn('created_at', 'datetime', []);
         $table->addColumn('updated_at', 'datetime', []);
@@ -41,35 +40,34 @@ class DsAssetBundle implements Migration
         $table->addColumn('source', 'string', ['length' => 255]);
         $table->addColumn('data', 'json_array', ['comment' => '(DC2Type:json_array)']);
         $table->setPrimaryKey(['id']);
-        $table->addIndex(['user_id'], 'IDX_D556ACFDA76ED395', []);
-        $table->addIndex(['case_id'], 'IDX_D556ACFDCF10D4F5', []);
-        $table->addIndex(['business_unit_owner_id'], 'IDX_D556ACFD59294170', []);
-        $table->addIndex(['organization_id'], 'IDX_D556ACFD32C8A3DE', []);
+        $table->addIndex(['case_id'], 'IDX_3A32F519CF10D4F5', []);
+        $table->addIndex(['business_unit_owner_id'], 'IDX_3A32F51959294170', []);
+        $table->addIndex(['organization_id'], 'IDX_3A32F51932C8A3DE', []);
     }
 
     /**
-     * Create asset title table
+     * Create record title table
      *
      * @param \Doctrine\DBAL\Schema\Schema $schema
      */
-    protected function createAssetTitleTable(Schema $schema)
+    protected function createRecordTitleTable(Schema $schema)
     {
-        $table = $schema->createTable('ds_asset_title');
-        $table->addColumn('asset_id', 'integer', []);
+        $table = $schema->createTable('ds_record_title');
+        $table->addColumn('record_id', 'integer', []);
         $table->addColumn('localized_value_id', 'integer', []);
-        $table->setPrimaryKey(['asset_id', 'localized_value_id']);
-        $table->addUniqueIndex(['localized_value_id'], 'UNIQ_F0AB6E7CEB576E89');
-        $table->addIndex(['asset_id'], 'IDX_F0AB6E7CED5CA9E6', []);
+        $table->setPrimaryKey(['record_id', 'localized_value_id']);
+        $table->addUniqueIndex(['localized_value_id'], 'UNIQ_A5559B9BEB576E89');
+        $table->addIndex(['record_id'], 'IDX_A5559B9BED5CA9E6', []);
     }
 
     /**
-     * Add asset foreign keys.
+     * Add record foreign keys.
      *
      * @param \Doctrine\DBAL\Schema\Schema $schema
      */
-    protected function addAssetForeignKeys(Schema $schema)
+    protected function addRecordForeignKeys(Schema $schema)
     {
-        $table = $schema->getTable('ds_asset');
+        $table = $schema->getTable('ds_record');
         $table->addForeignKeyConstraint(
             $schema->getTable('oro_organization'),
             ['organization_id'],
@@ -83,12 +81,6 @@ class DsAssetBundle implements Migration
             ['onDelete' => 'SET NULL', 'onUpdate' => null]
         );
         $table->addForeignKeyConstraint(
-            $schema->getTable('oro_user'),
-            ['user_id'],
-            ['id'],
-            ['onDelete' => 'SET NULL', 'onUpdate' => null]
-        );
-        $table->addForeignKeyConstraint(
             $schema->getTable('ds_case'),
             ['case_id'],
             ['id'],
@@ -97,13 +89,13 @@ class DsAssetBundle implements Migration
     }
 
     /**
-     * Add asset title foreign keys.
+     * Add record title foreign keys.
      *
      * @param \Doctrine\DBAL\Schema\Schema $schema
      */
-    protected function addAssetTitleForeignKeys(Schema $schema)
+    protected function addRecordTitleForeignKeys(Schema $schema)
     {
-        $table = $schema->getTable('ds_asset_title');
+        $table = $schema->getTable('ds_record_title');
         $table->addForeignKeyConstraint(
             $schema->getTable('oro_fallback_localization_val'),
             ['localized_value_id'],
@@ -111,8 +103,8 @@ class DsAssetBundle implements Migration
             ['onDelete' => 'CASCADE', 'onUpdate' => null]
         );
         $table->addForeignKeyConstraint(
-            $schema->getTable('ds_asset'),
-            ['asset_id'],
+            $schema->getTable('ds_record'),
+            ['record_id'],
             ['id'],
             ['onDelete' => 'CASCADE', 'onUpdate' => null]
         );
