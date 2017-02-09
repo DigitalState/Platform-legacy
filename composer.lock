@@ -292,63 +292,6 @@
             "time": "2013-12-13 07:26:18"
         },
         {
-            "name": "camunda/camunda-bpm-php-sdk",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/camunda/camunda-bpm-php-sdk.git",
-                "reference": "be617b6f9d0eccf266a1f1f51406c0a28cae4c1f"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/camunda/camunda-bpm-php-sdk/zipball/be617b6f9d0eccf266a1f1f51406c0a28cae4c1f",
-                "reference": "be617b6f9d0eccf266a1f1f51406c0a28cae4c1f",
-                "shasum": ""
-            },
-            "archive": {
-                "exclude": [
-                    "/procedual/test",
-                    "/procedual/test/*",
-                    "/oop/test",
-                    "/oop/test/*"
-                ]
-            },
-            "require": {
-                "php": ">=5.3.0"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "~4.6.0"
-            },
-            "type": "library",
-            "autoload": {
-                "classmap": [
-                    "oop/main/",
-                    "procedual/main"
-                ]
-            },
-            "license": [
-                "Apache-2.0"
-            ],
-            "authors": [
-                {
-                    "name": "Stefan Hentschel",
-                    "email": "stefan.hentschel@camunda.com"
-                }
-            ],
-            "description": "PHP SDK for camundaBPM process services",
-            "homepage": "http://camunda.org",
-            "keywords": [
-                "camunda",
-                "camunda bpm",
-                "sdk"
-            ],
-            "support": {
-                "source": "https://github.com/camunda/camunda-bpm-php-sdk/tree/master",
-                "issues": "https://github.com/camunda/camunda-bpm-php-sdk/issues"
-            },
-            "time": "2017-01-18 07:31:35"
-        },
-        {
             "name": "cboden/ratchet",
             "version": "v0.2.8",
             "source": {
@@ -910,6 +853,52 @@
             "time": "2017-01-03 12:38:42"
         },
         {
+            "name": "digitalstate/bpm-camunda-sdk",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/DigitalState/Bpm-Camunda-Sdk.git",
+                "reference": "9ca1068ae3553520a84b0d8593c3809391a87f55"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/DigitalState/Bpm-Camunda-Sdk/zipball/9ca1068ae3553520a84b0d8593c3809391a87f55",
+                "reference": "9ca1068ae3553520a84b0d8593c3809391a87f55",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4.6.0"
+            },
+            "type": "library",
+            "autoload": {
+                "classmap": [
+                    "oop/main/",
+                    "procedual/main"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "Stefan Hentschel",
+                    "email": "stefan.hentschel@camunda.com"
+                }
+            ],
+            "description": "PHP SDK for camundaBPM process services",
+            "homepage": "http://camunda.org",
+            "keywords": [
+                "camunda",
+                "camunda bpm",
+                "sdk"
+            ],
+            "time": "2017-02-09 22:22:48"
+        },
+        {
             "name": "digitalstate/platform-account-bundle",
             "version": "0.2.0",
             "source": {
@@ -1105,16 +1094,16 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/DigitalState/Platform-Bpm-Camunda-Bundle.git",
-                "reference": "815875c7fec029e4281ce1c0a227c61aa686d80a"
+                "reference": "5f2633fdd566ceae528c9fe2a5076a136b17a895"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/DigitalState/Platform-Bpm-Camunda-Bundle/zipball/815875c7fec029e4281ce1c0a227c61aa686d80a",
-                "reference": "815875c7fec029e4281ce1c0a227c61aa686d80a",
+                "url": "https://api.github.com/repos/DigitalState/Platform-Bpm-Camunda-Bundle/zipball/5f2633fdd566ceae528c9fe2a5076a136b17a895",
+                "reference": "5f2633fdd566ceae528c9fe2a5076a136b17a895",
                 "shasum": ""
             },
             "require": {
-                "camunda/camunda-bpm-php-sdk": "dev-master",
+                "digitalstate/bpm-camunda-sdk": "dev-master",
                 "digitalstate/platform-bpm-bundle": "~0.2.0",
                 "oro/platform": "1.10.*",
                 "php": ">=5.6"
@@ -1141,7 +1130,7 @@
                 "ORO",
                 "bpm"
             ],
-            "time": "2017-02-09 21:53:18"
+            "time": "2017-02-09 22:32:17"
         },
         {
             "name": "digitalstate/platform-bpm-pm-bundle",
