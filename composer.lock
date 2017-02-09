@@ -1101,16 +1101,16 @@
         },
         {
             "name": "digitalstate/platform-bpm-camunda-bundle",
-            "version": "0.2.0",
+            "version": "0.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/DigitalState/Platform-Bpm-Camunda-Bundle.git",
-                "reference": "461be8ac77b32f96519802da3b711eeb8671063a"
+                "reference": "815875c7fec029e4281ce1c0a227c61aa686d80a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/DigitalState/Platform-Bpm-Camunda-Bundle/zipball/461be8ac77b32f96519802da3b711eeb8671063a",
-                "reference": "461be8ac77b32f96519802da3b711eeb8671063a",
+                "url": "https://api.github.com/repos/DigitalState/Platform-Bpm-Camunda-Bundle/zipball/815875c7fec029e4281ce1c0a227c61aa686d80a",
+                "reference": "815875c7fec029e4281ce1c0a227c61aa686d80a",
                 "shasum": ""
             },
             "require": {
@@ -1120,11 +1120,6 @@
                 "php": ">=5.6"
             },
             "type": "symfony-bundle",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "0.x-dev"
-                }
-            },
             "autoload": {
                 "psr-4": {
                     "Ds\\Bundle\\BpmCamundaBundle\\": ""
@@ -1146,7 +1141,7 @@
                 "ORO",
                 "bpm"
             ],
-            "time": "2017-02-09 14:39:55"
+            "time": "2017-02-09 21:53:18"
         },
         {
             "name": "digitalstate/platform-bpm-pm-bundle",
