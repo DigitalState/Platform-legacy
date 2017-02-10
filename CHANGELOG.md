@@ -3,6 +3,7 @@
 This changelog references the relevant changes (new features, changes and bugs) done in 0.2.1 version.
 
   * Updated composer dependency digitalstate/platform-bpm-camunda-bundle to version that uses forked version of camunda sdk.
+  * Added file attachment capability to the Asset entity.
 
 
 # CHANGELOG for 0.2.0
