@@ -1,0 +1,2 @@
+bundles:
+    - { name: Ds\Bundle\LocaleBundle\DsLocaleBundle, priority: 10 }
