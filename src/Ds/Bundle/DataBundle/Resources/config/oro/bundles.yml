@@ -1,0 +1,2 @@
+bundles:
+    - { name: Ds\Bundle\DataBundle\DsDataBundle, priority: 10 }
