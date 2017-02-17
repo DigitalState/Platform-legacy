@@ -1,0 +1,35 @@
+{% if app.user %}
+    <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                {% trans %}ds.account.page.account.home.index.title{% endtrans %} <span class="caret"></span>
+            </a>
+            {{ oro_menu_render('ds_account_main', { rootClass: 'dropdown-menu' }) }}
+        </li>
+    </ul>
+    <script>
+        $(document).ready(function() {
+            $('#logout').click(function() {
+                $.ajax({
+                    url: $(this).attr('href'),
+                    success: function() {
+                        window.location = '{{ path('ds_portal_portal_home_index') }}';
+                    },
+                    error: function() {
+                        window.location = '{{ path('ds_portal_portal_home_index') }}';
+                    }
+                });
+
+                return false;
+            });
+        });
+    </script>
+{% else %}
+    <ul class="nav navbar-nav navbar-right">
+        <li>
+            <a href="{{ path('ds_accountdashboard_account_dashboard_index') }}">
+                {% trans %}ds.account.page.account.home.index.title{% endtrans %}
+            </a>
+        </li>
+    </ul>
+{% endif %}
