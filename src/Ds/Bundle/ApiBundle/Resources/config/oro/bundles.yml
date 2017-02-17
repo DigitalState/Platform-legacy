@@ -1,0 +1,2 @@
+bundles:
+    - { name: Ds\Bundle\ApiBundle\DsApiBundle, priority: 10 }
