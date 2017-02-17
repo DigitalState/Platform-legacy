@@ -1,0 +1,15 @@
+ds:
+    communication:
+        criterion:
+            operand_1:
+                not_blank: Le premier opérande est requis.
+                length:
+                min: Le premier opérande doit avoir au moins {{ limit }} caractère.
+                max: Le premier opérande doit avoir au maximum {{ limit }} caractère.
+            operator:
+                not_blank: L'opérateur est requis.
+            operand_2:
+                not_blank: Le deuxième opérande est requis.
+                length:
+                min: Le deuxième opérande doit avoir au moins {{ limit }} caractère.
+                max: Le deuxième opérande doit avoir au maximum {{ limit }} caractère.

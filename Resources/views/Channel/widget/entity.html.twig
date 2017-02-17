@@ -1,0 +1,19 @@
+{% import 'OroUIBundle::macros.html.twig' as UI %}
+
+<div class="widget-content">
+    <div class="row-fluid form-horizontal">
+        <div class="responsive-block">
+            {{ UI.renderProperty('ds.communication.channel.id.label'|trans, entity.id) }}
+            {{ UI.renderProperty('ds.communication.channel.title.label'|trans, entity.defaultTitle) }}
+            {{ UI.renderProperty('ds.communication.channel.description.label'|trans, entity.defaultDescription) }}
+            {{ UI.renderProperty('ds.communication.channel.icon.label'|trans, entity.icon) }}
+        </div>
+        <div class="responsive-block">
+            {{ UI.renderProperty('ds.communication.channel.implementation.label'|trans, entity.implementation) }}
+            {{ UI.renderProperty('ds.communication.channel.default_to.label'|trans, entity.defaultTo) }}
+        </div>
+    </div>
+    {% for widget in ds_widgets({ position: 'ds_communication_channel_entity_channel', context: context }, { entity: entity }) %}
+        {{ widget.content|raw }}
+    {% endfor %}
+</div>

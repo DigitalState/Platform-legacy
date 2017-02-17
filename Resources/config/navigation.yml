@@ -1,0 +1,35 @@
+oro_menu_config:
+    items:
+        ds_communication_tab:
+            label: ds.communication.menu.tab.label
+            uri: '#'
+            extras:
+                position: 21
+        ds_channel_index:
+            label: ds.communication.channel.menu.index.label
+            route: ds_communication_channel_index
+        ds_communication_index:
+            label: ds.communication.menu.index.label
+            route: ds_communication_communication_index
+        ds_content_index:
+            label: ds.communication.content.menu.index.label
+            route: ds_communication_content_index
+        ds_criterion_index:
+            label: ds.communication.criterion.menu.index.label
+            route: ds_communication_criterion_index
+        ds_message_index:
+            label: ds.communication.message.menu.index.label
+            route: ds_communication_message_index
+        ds_template_index:
+            label: ds.communication.template.menu.index.label
+            route: ds_communication_template_index
+    tree:
+        application_menu:
+            children:
+                system_tab:
+                    children:
+                        ds_communication_tab:
+                            children:
+                                ds_communication_index: ~
+                                ds_channel_index: ~
+                                ds_template_index: ~

@@ -1,0 +1,37 @@
+services:
+    ds.communication.repository.channel:
+        class: Doctrine\Common\Persistence\ObjectRepository
+        factory_service: doctrine
+        factory_method: getRepository
+        arguments:
+            - Ds\Bundle\CommunicationBundle\Entity\Channel
+    ds.communication.repository.communication:
+        class: Doctrine\Common\Persistence\ObjectRepository
+        factory_service: doctrine
+        factory_method: getRepository
+        arguments:
+            - Ds\Bundle\CommunicationBundle\Entity\Communication
+    ds.communication.repository.content:
+        class: Doctrine\Common\Persistence\ObjectRepository
+        factory_service: doctrine
+        factory_method: getRepository
+        arguments:
+            - Ds\Bundle\CommunicationBundle\Entity\Content
+    ds.communication.repository.criterion:
+        class: Doctrine\Common\Persistence\ObjectRepository
+        factory_service: doctrine
+        factory_method: getRepository
+        arguments:
+            - Ds\Bundle\CommunicationBundle\Entity\Criterion
+    ds.communication.repository.message:
+        class: Doctrine\Common\Persistence\ObjectRepository
+        factory_service: doctrine
+        factory_method: getRepository
+        arguments:
+            - Ds\Bundle\CommunicationBundle\Entity\Message
+    ds.communication.repository.template:
+        class: Doctrine\Common\Persistence\ObjectRepository
+        factory_service: doctrine
+        factory_method: getRepository
+        arguments:
+            - Ds\Bundle\CommunicationBundle\Entity\Template

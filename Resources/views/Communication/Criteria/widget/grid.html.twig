@@ -1,0 +1,3 @@
+{% import 'OroDataGridBundle::macros.html.twig' as dataGrid %}
+
+{{ dataGrid.renderGrid('ds-communication-communication-criterion', { communication: entity.id }, { cssClass: 'inner-grid' }) }}
