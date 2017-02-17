@@ -1,0 +1,4 @@
+oro_api:
+    entities:
+        Ds\Bundle\NotificationBundle\Entity\Notification: ~
+        Ds\Bundle\NotificationBundle\Entity\Subscription: ~

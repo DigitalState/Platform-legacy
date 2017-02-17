@@ -1,0 +1,45 @@
+services:
+    ds.notification.form.type.notification:
+        class: Ds\Bundle\NotificationBundle\Form\Type\NotificationType
+        tags:
+            - { name: form.type, alias: ds_notification_notification }
+    ds.notification.form.type.api.notification:
+        class: Ds\Bundle\NotificationBundle\Form\Type\Api\NotificationType
+        tags:
+            - { name: form.type, alias: ds_notification_api_notification }
+    ds.notification.form.api.notification:
+        class: Symfony\Component\Form\Form
+        factory_method: createNamed
+        factory_service: form.factory
+        arguments:
+            - ~
+            - ds_notification_api_notification
+    ds.notification.form.handler.notification:
+        class: Ds\Bundle\NotificationBundle\Form\Handler\NotificationHandler
+        scope: request
+        arguments:
+            - @ds.notification.form.api.notification
+            - @request
+            - @doctrine.orm.entity_manager
+    ds.notification.form.type.subscription:
+        class: Ds\Bundle\NotificationBundle\Form\Type\SubscriptionType
+        tags:
+            - { name: form.type, alias: ds_notification_subscription }
+    ds.notification.form.type.api.subscription:
+        class: Ds\Bundle\NotificationBundle\Form\Type\Api\SubscriptionType
+        tags:
+            - { name: form.type, alias: ds_notification_api_subscription }
+    ds.notification.form.api.subscription:
+        class: Symfony\Component\Form\Form
+        factory_method: createNamed
+        factory_service: form.factory
+        arguments:
+            - ~
+            - ds_notification_api_subscription
+    ds.notification.form.handler.subscription:
+        class: Ds\Bundle\NotificationBundle\Form\Handler\SubscriptionHandler
+        scope: request
+        arguments:
+            - @ds.notification.form.api.subscription
+            - @request
+            - @doctrine.orm.entity_manager
