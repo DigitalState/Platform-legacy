@@ -1,0 +1,8 @@
+services:
+    ds.widget.twig.extension.widget:
+        class: Ds\Bundle\WidgetBundle\Twig\Extension\WidgetExtension
+        public: false
+        arguments:
+            - @ds.widget.collection.widget
+        tags:
+            - { name: twig.extension }
