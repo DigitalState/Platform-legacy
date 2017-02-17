@@ -1,0 +1,13 @@
+services:
+    ds.sso.oauth.user.provider.abstract:
+        abstract: true
+        class: Ds\Bundle\SSOBundle\Security\Core\User\AbstractOAuthUserProvider
+        arguments:
+            - @oro_user.manager
+            - @oro_config.global
+            - @event_dispatcher
+    ds.sso.oauth.user.provider:
+        parent: ds.sso.oauth.user.provider.abstract
+        class: Ds\Bundle\SSOBundle\Security\Core\User\OAuthUserProvider
+        arguments:
+            - @ds.sso.collection.oauth_user_provider

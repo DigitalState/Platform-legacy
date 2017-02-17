@@ -1,0 +1,6 @@
+security:
+    firewalls:
+        main:
+            oauth:
+                oauth_user_provider:
+                    service: ds.sso.oauth.user.provider
