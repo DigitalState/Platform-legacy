@@ -48,6 +48,11 @@ use Symfony\Component\Validator\Constraints as Assert;
  *          },
  *          "grid"={
  *              "default"="ds-record-record"
+ *          },
+ *          "attachment"={
+ *              "enabled"=true,
+ *              "maxsize"=8,
+ *              "auto_link_attachments"=false
  *          }
  *      }
  * )
