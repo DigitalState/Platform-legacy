@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "1c57ce66d4257580d0973fce8fe48fb2",
-    "content-hash": "ee66221c170fee3d8a071f2aea4ecf20",
+    "hash": "880b29141f9ec1c528af0b38882269b2",
+    "content-hash": "93f9fbd4052490e6e1580ccdcaf41fbf",
     "packages": [
         {
             "name": "a2lix/translation-form-bundle",
@@ -897,1205 +897,6 @@
                 "sdk"
             ],
             "time": "2017-02-09 22:22:48"
-        },
-        {
-            "name": "digitalstate/platform-account-bundle",
-            "version": "0.2.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/DigitalState/Platform-Account-Bundle.git",
-                "reference": "2996d20353c419d7c1b1bf88b8eb9d7d97a09146"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/DigitalState/Platform-Account-Bundle/zipball/2996d20353c419d7c1b1bf88b8eb9d7d97a09146",
-                "reference": "2996d20353c419d7c1b1bf88b8eb9d7d97a09146",
-                "shasum": ""
-            },
-            "require": {
-                "oro/platform": "1.10.*",
-                "php": ">=5.6"
-            },
-            "type": "symfony-bundle",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "0.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Ds\\Bundle\\AccountBundle\\": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "DigitalState, Inc",
-                    "homepage": "http://www.digitalstate.ca"
-                }
-            ],
-            "description": "DigitalState Account Bundle",
-            "homepage": "https://github.com/DigitalState/Platform-Account-Bundle.git",
-            "keywords": [
-                "ORO"
-            ],
-            "time": "2017-02-09 12:56:58"
-        },
-        {
-            "name": "digitalstate/platform-admin-bundle",
-            "version": "0.2.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/DigitalState/Platform-Admin-Bundle.git",
-                "reference": "519ead5cd9aaab4e961860f1a00e55aebdf26b8c"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/DigitalState/Platform-Admin-Bundle/zipball/519ead5cd9aaab4e961860f1a00e55aebdf26b8c",
-                "reference": "519ead5cd9aaab4e961860f1a00e55aebdf26b8c",
-                "shasum": ""
-            },
-            "require": {
-                "digitalstate/platform-entity-bundle": "~0.2.0",
-                "oro/platform": "1.10.*",
-                "php": ">=5.6"
-            },
-            "type": "symfony-bundle",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "0.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Ds\\Bundle\\AdminBundle\\": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Digital State, Inc",
-                    "homepage": "http://www.digitalstate.ca"
-                }
-            ],
-            "description": "DigitalState Platform Admin Bundle",
-            "homepage": "https://github.com/DigitalState/Platform-Admin-Bundle.git",
-            "keywords": [
-                "ORO",
-                "communication"
-            ],
-            "time": "2017-02-09 14:32:41"
-        },
-        {
-            "name": "digitalstate/platform-api-bundle",
-            "version": "0.2.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/DigitalState/Platform-Api-Bundle.git",
-                "reference": "506da7720db14920b526cd8d59f206a38790923c"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/DigitalState/Platform-Api-Bundle/zipball/506da7720db14920b526cd8d59f206a38790923c",
-                "reference": "506da7720db14920b526cd8d59f206a38790923c",
-                "shasum": ""
-            },
-            "require": {
-                "oro/platform": "1.10.*",
-                "php": ">=5.6"
-            },
-            "type": "symfony-bundle",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "0.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Ds\\Bundle\\ApiBundle\\": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "DigitalState, Inc",
-                    "homepage": "http://www.digitalstate.ca"
-                }
-            ],
-            "description": "DigitalState Api Bundle",
-            "homepage": "https://github.com/DigitalState/Platform-Api-Bundle.git",
-            "keywords": [
-                "ORO",
-                "api"
-            ],
-            "time": "2017-02-09 13:03:02"
-        },
-        {
-            "name": "digitalstate/platform-bpm-bundle",
-            "version": "0.2.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/DigitalState/Platform-Bpm-Bundle.git",
-                "reference": "181155886b9a6aa13e3ffd9d82c1dc22267753b3"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/DigitalState/Platform-Bpm-Bundle/zipball/181155886b9a6aa13e3ffd9d82c1dc22267753b3",
-                "reference": "181155886b9a6aa13e3ffd9d82c1dc22267753b3",
-                "shasum": ""
-            },
-            "require": {
-                "craue/formflow-bundle": "dev-master",
-                "digitalstate/platform-data-bundle": "~0.2.0",
-                "oro/platform": "1.10.*",
-                "php": ">=5.6"
-            },
-            "type": "symfony-bundle",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "0.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Ds\\Bundle\\BpmBundle\\": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "DigitalState, Inc",
-                    "homepage": "http://www.digitalstate.ca"
-                }
-            ],
-            "description": "DigitalState Bpm Bundle",
-            "homepage": "https://github.com/DigitalState/Platform-Bpm-Bundle.git",
-            "keywords": [
-                "ORO",
-                "bpm"
-            ],
-            "time": "2017-02-09 14:37:45"
-        },
-        {
-            "name": "digitalstate/platform-bpm-camunda-bundle",
-            "version": "0.2.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/DigitalState/Platform-Bpm-Camunda-Bundle.git",
-                "reference": "5f2633fdd566ceae528c9fe2a5076a136b17a895"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/DigitalState/Platform-Bpm-Camunda-Bundle/zipball/5f2633fdd566ceae528c9fe2a5076a136b17a895",
-                "reference": "5f2633fdd566ceae528c9fe2a5076a136b17a895",
-                "shasum": ""
-            },
-            "require": {
-                "digitalstate/bpm-camunda-sdk": "dev-master",
-                "digitalstate/platform-bpm-bundle": "~0.2.0",
-                "oro/platform": "1.10.*",
-                "php": ">=5.6"
-            },
-            "type": "symfony-bundle",
-            "autoload": {
-                "psr-4": {
-                    "Ds\\Bundle\\BpmCamundaBundle\\": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "DigitalState, Inc",
-                    "homepage": "http://www.digitalstate.ca"
-                }
-            ],
-            "description": "DigitalState Bpm Camunda Bundle",
-            "homepage": "https://github.com/DigitalState/Platform-Bpm-Camunda-Bundle.git",
-            "keywords": [
-                "ORO",
-                "bpm"
-            ],
-            "time": "2017-02-09 22:32:17"
-        },
-        {
-            "name": "digitalstate/platform-bpm-pm-bundle",
-            "version": "0.2.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/DigitalState/Platform-Bpm-Pm-Bundle.git",
-                "reference": "3f9bc949e8880b4534251eda8704eb697b1518f3"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/DigitalState/Platform-Bpm-Pm-Bundle/zipball/3f9bc949e8880b4534251eda8704eb697b1518f3",
-                "reference": "3f9bc949e8880b4534251eda8704eb697b1518f3",
-                "shasum": ""
-            },
-            "require": {
-                "digitalstate/platform-bpm-bundle": "~0.2.0",
-                "oro/platform": "1.10.*",
-                "php": ">=5.6"
-            },
-            "type": "symfony-bundle",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "0.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Ds\\Bundle\\BpmPmBundle\\": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "DigitalState, Inc",
-                    "homepage": "http://www.digitalstate.ca"
-                }
-            ],
-            "description": "DigitalState Bpm ProcessMaker Bundle",
-            "homepage": "https://github.com/DigitalState/Platform-Bpm-Pm-Bundle.git",
-            "keywords": [
-                "ORO",
-                "bpm"
-            ],
-            "time": "2017-02-09 14:41:48"
-        },
-        {
-            "name": "digitalstate/platform-communication-bundle",
-            "version": "0.2.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/DigitalState/Platform-Communication-Bundle.git",
-                "reference": "b4295632bb8107f91dabaac9d928887f1d0ec217"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/DigitalState/Platform-Communication-Bundle/zipball/b4295632bb8107f91dabaac9d928887f1d0ec217",
-                "reference": "b4295632bb8107f91dabaac9d928887f1d0ec217",
-                "shasum": ""
-            },
-            "require": {
-                "digitalstate/platform-admin-bundle": "~0.2.0",
-                "digitalstate/platform-api-bundle": "~0.2.0",
-                "digitalstate/platform-data-bundle": "~0.2.0",
-                "digitalstate/platform-entity-bundle": "~0.2.0",
-                "digitalstate/platform-transport-bundle": "~0.2.0",
-                "digitalstate/platform-user-bundle": "~0.2.0",
-                "digitalstate/platform-user-persona-bundle": "~0.2.0",
-                "digitalstate/platform-widget-bundle": "~0.2.0",
-                "oro/platform": "1.10.*",
-                "php": ">=5.6"
-            },
-            "type": "symfony-bundle",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "0.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Ds\\Bundle\\CommunicationBundle\\": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "DigitalState, Inc",
-                    "homepage": "http://www.digitalstate.ca"
-                }
-            ],
-            "description": "DigitalState Platform Communication Bundle",
-            "homepage": "https://github.com/DigitalState/Platform-Communication-Bundle.git",
-            "keywords": [
-                "ORO",
-                "communication"
-            ],
-            "time": "2017-02-09 14:43:59"
-        },
-        {
-            "name": "digitalstate/platform-console-bundle",
-            "version": "0.2.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/DigitalState/Platform-Console-Bundle.git",
-                "reference": "2bbba1424cdf75e08a430065838b60a714ca3efd"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/DigitalState/Platform-Console-Bundle/zipball/2bbba1424cdf75e08a430065838b60a714ca3efd",
-                "reference": "2bbba1424cdf75e08a430065838b60a714ca3efd",
-                "shasum": ""
-            },
-            "require": {
-                "oro/platform": "1.10.*",
-                "php": ">=5.6"
-            },
-            "type": "symfony-bundle",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "0.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Ds\\Bundle\\ConsoleBundle\\": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "DigitalState, Inc",
-                    "homepage": "http://www.digitalstate.ca"
-                }
-            ],
-            "description": "DigitalState Console Bundle",
-            "homepage": "https://github.com/DigitalState/Platform-Console-Bundle.git",
-            "keywords": [
-                "ORO",
-                "console"
-            ],
-            "time": "2017-02-09 13:38:14"
-        },
-        {
-            "name": "digitalstate/platform-data-bundle",
-            "version": "0.2.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/DigitalState/Platform-Data-Bundle.git",
-                "reference": "cef9dabfe2712a6e71a2c4558f860fab5564385d"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/DigitalState/Platform-Data-Bundle/zipball/cef9dabfe2712a6e71a2c4558f860fab5564385d",
-                "reference": "cef9dabfe2712a6e71a2c4558f860fab5564385d",
-                "shasum": ""
-            },
-            "require": {
-                "oro/platform": "1.10.*",
-                "php": ">=5.6"
-            },
-            "type": "symfony-bundle",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "0.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Ds\\Bundle\\DataBundle\\": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "DigitalState, Inc",
-                    "homepage": "http://www.digitalstate.ca"
-                }
-            ],
-            "description": "DigitalState Platform Data Bundle",
-            "homepage": "https://github.com/DigitalState/Platform-Data-Bundle.git",
-            "keywords": [
-                "ORO",
-                "communication"
-            ],
-            "time": "2017-02-09 14:25:48"
-        },
-        {
-            "name": "digitalstate/platform-datagrid-bundle",
-            "version": "0.2.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/DigitalState/Platform-DataGrid-Bundle.git",
-                "reference": "39704962a1071dce37293036256251d3e6aea17d"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/DigitalState/Platform-DataGrid-Bundle/zipball/39704962a1071dce37293036256251d3e6aea17d",
-                "reference": "39704962a1071dce37293036256251d3e6aea17d",
-                "shasum": ""
-            },
-            "require": {
-                "oro/platform": "1.10.*",
-                "php": ">=5.6"
-            },
-            "type": "symfony-bundle",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "0.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Ds\\Bundle\\DataGridBundle\\": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "DigitalState, Inc",
-                    "homepage": "http://www.digitalstate.ca"
-                }
-            ],
-            "description": "DigitalState DataGrid Bundle",
-            "homepage": "https://github.com/DigitalState/Platform-DataGrid-Bundle.git",
-            "keywords": [
-                "ORO"
-            ],
-            "time": "2017-02-09 14:51:09"
-        },
-        {
-            "name": "digitalstate/platform-entity-bundle",
-            "version": "0.2.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/DigitalState/Platform-Entity-Bundle.git",
-                "reference": "b7210cebf31718965158ed0db3b969fb5e096b69"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/DigitalState/Platform-Entity-Bundle/zipball/b7210cebf31718965158ed0db3b969fb5e096b69",
-                "reference": "b7210cebf31718965158ed0db3b969fb5e096b69",
-                "shasum": ""
-            },
-            "require": {
-                "digitalstate/platform-data-bundle": "~0.2.0",
-                "oro/platform": "1.10.*",
-                "php": ">=5.6"
-            },
-            "type": "symfony-bundle",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "0.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Ds\\Bundle\\EntityBundle\\": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "DigitalState, Inc",
-                    "homepage": "http://www.digitalstate.ca"
-                }
-            ],
-            "description": "DigitalState Platform Entity Bundle",
-            "homepage": "https://github.com/DigitalState/Platform-Entity-Bundle.git",
-            "keywords": [
-                "ORO",
-                "communication"
-            ],
-            "time": "2017-02-09 15:06:38"
-        },
-        {
-            "name": "digitalstate/platform-linkedin-bundle",
-            "version": "0.2.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/DigitalState/Platform-Linkedin-Bundle.git",
-                "reference": "f095bd6d87fda9b5e528c553a9ac88d3fe04d4ad"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/DigitalState/Platform-Linkedin-Bundle/zipball/f095bd6d87fda9b5e528c553a9ac88d3fe04d4ad",
-                "reference": "f095bd6d87fda9b5e528c553a9ac88d3fe04d4ad",
-                "shasum": ""
-            },
-            "require": {
-                "oro/platform": "1.10.*",
-                "php": ">=5.6"
-            },
-            "type": "symfony-bundle",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "0.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Ds\\Bundle\\LinkedinBundle\\": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "DigitalState, Inc",
-                    "homepage": "http://www.digitalstate.ca"
-                }
-            ],
-            "description": "DigitalState Linkedin Bundle",
-            "homepage": "https://github.com/DigitalState/Platform-Linkedin-Bundle.git",
-            "keywords": [
-                "ORO",
-                "linkedin"
-            ],
-            "time": "2017-02-09 15:10:28"
-        },
-        {
-            "name": "digitalstate/platform-locale-bundle",
-            "version": "0.2.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/DigitalState/Platform-Locale-Bundle.git",
-                "reference": "591a71f5bee1c903520beb7a2e985fab517a7ab8"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/DigitalState/Platform-Locale-Bundle/zipball/591a71f5bee1c903520beb7a2e985fab517a7ab8",
-                "reference": "591a71f5bee1c903520beb7a2e985fab517a7ab8",
-                "shasum": ""
-            },
-            "require": {
-                "oro/platform": "1.10.*",
-                "php": ">=5.6"
-            },
-            "type": "symfony-bundle",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "0.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Ds\\Bundle\\LocaleBundle\\": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "DigitalState, Inc",
-                    "homepage": "http://www.digitalstate.ca"
-                }
-            ],
-            "description": "DigitalState Locale Bundle",
-            "homepage": "https://github.com/DigitalState/Platform-Locale-Bundle.git",
-            "keywords": [
-                "ORO",
-                "linkedin"
-            ],
-            "time": "2017-02-09 15:12:55"
-        },
-        {
-            "name": "digitalstate/platform-notification-bundle",
-            "version": "0.2.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/DigitalState/Platform-Notification-Bundle.git",
-                "reference": "e8da76fa64332f464a45f56f92b9285e6d4e937a"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/DigitalState/Platform-Notification-Bundle/zipball/e8da76fa64332f464a45f56f92b9285e6d4e937a",
-                "reference": "e8da76fa64332f464a45f56f92b9285e6d4e937a",
-                "shasum": ""
-            },
-            "require": {
-                "digitalstate/platform-admin-bundle": "~0.2.0",
-                "digitalstate/platform-entity-bundle": "~0.2.0",
-                "digitalstate/platform-user-bundle": "~0.2.0",
-                "digitalstate/platform-widget-bundle": "~0.2.0",
-                "oro/platform": "1.10.*",
-                "php": ">=5.6"
-            },
-            "type": "symfony-bundle",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "0.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Ds\\Bundle\\NotificationBundle\\": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "DigitalState, Inc",
-                    "homepage": "http://www.digitalstate.ca"
-                }
-            ],
-            "description": "DigitalState Notifications Bundle",
-            "homepage": "https://github.com/DigitalState/Platform-Notification-Bundle.git",
-            "keywords": [
-                "ORO",
-                "notifications"
-            ],
-            "time": "2017-02-09 15:16:46"
-        },
-        {
-            "name": "digitalstate/platform-organization-bundle",
-            "version": "0.2.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/DigitalState/Platform-Organization-Bundle.git",
-                "reference": "b3a71fb8736b81feab972c85f117b353011b5333"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/DigitalState/Platform-Organization-Bundle/zipball/b3a71fb8736b81feab972c85f117b353011b5333",
-                "reference": "b3a71fb8736b81feab972c85f117b353011b5333",
-                "shasum": ""
-            },
-            "require": {
-                "oro/platform": "1.10.*",
-                "php": ">=5.6"
-            },
-            "type": "symfony-bundle",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "0.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Ds\\Bundle\\OrganizationBundle\\": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "DigitalState, Inc",
-                    "homepage": "http://www.digitalstate.ca"
-                }
-            ],
-            "description": "DigitalState Organization Bundle",
-            "homepage": "https://github.com/DigitalState/Platform-Organization-Bundle.git",
-            "keywords": [
-                "ORO"
-            ],
-            "time": "2017-02-09 15:30:52"
-        },
-        {
-            "name": "digitalstate/platform-portal-bundle",
-            "version": "0.2.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/DigitalState/Platform-Portal-Bundle.git",
-                "reference": "adac423ef9ac6b001f9d8b2c5475e62b1cba00a6"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/DigitalState/Platform-Portal-Bundle/zipball/adac423ef9ac6b001f9d8b2c5475e62b1cba00a6",
-                "reference": "adac423ef9ac6b001f9d8b2c5475e62b1cba00a6",
-                "shasum": ""
-            },
-            "require": {
-                "knplabs/knp-time-bundle": "dev-master",
-                "oro/platform": "1.10.*",
-                "php": ">=5.6"
-            },
-            "type": "symfony-bundle",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "0.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Ds\\Bundle\\PortalBundle\\": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "DigitalState, Inc",
-                    "homepage": "http://www.digitalstate.ca"
-                }
-            ],
-            "description": "DigitalState Portal Bundle",
-            "homepage": "https://github.com/DigitalState/Platform-Portal-Bundle.git",
-            "keywords": [
-                "ORO"
-            ],
-            "time": "2017-02-09 15:33:01"
-        },
-        {
-            "name": "digitalstate/platform-security-bundle",
-            "version": "0.2.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/DigitalState/Platform-Security-Bundle.git",
-                "reference": "31a05bc636bae4196f3eda36eaa6db1f986d8011"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/DigitalState/Platform-Security-Bundle/zipball/31a05bc636bae4196f3eda36eaa6db1f986d8011",
-                "reference": "31a05bc636bae4196f3eda36eaa6db1f986d8011",
-                "shasum": ""
-            },
-            "require": {
-                "oro/platform": "1.10.*",
-                "php": ">=5.6"
-            },
-            "type": "symfony-bundle",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "0.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Ds\\Bundle\\SecurityBundle\\": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "DigitalState, Inc",
-                    "homepage": "http://www.digitalstate.ca"
-                }
-            ],
-            "description": "DigitalState Security Bundle",
-            "homepage": "https://github.com/DigitalState/Platform-Security-Bundle.git",
-            "keywords": [
-                "ORO",
-                "notifications"
-            ],
-            "time": "2017-02-09 15:39:12"
-        },
-        {
-            "name": "digitalstate/platform-sso-bundle",
-            "version": "0.2.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/DigitalState/Platform-SSO-Bundle.git",
-                "reference": "e4f9e231a27604de26e680bf6567cb4652723a05"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/DigitalState/Platform-SSO-Bundle/zipball/e4f9e231a27604de26e680bf6567cb4652723a05",
-                "reference": "e4f9e231a27604de26e680bf6567cb4652723a05",
-                "shasum": ""
-            },
-            "require": {
-                "oro/platform": "1.10.*",
-                "php": ">=5.6"
-            },
-            "type": "symfony-bundle",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "0.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Ds\\Bundle\\SSOBundle\\": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "DigitalState, Inc",
-                    "homepage": "http://www.digitalstate.ca"
-                }
-            ],
-            "description": "DigitalState SSO Bundle",
-            "homepage": "https://github.com/DigitalState/Platform-SSO-Bundle.git",
-            "keywords": [
-                "ORO",
-                "SSO"
-            ],
-            "time": "2017-02-09 15:43:39"
-        },
-        {
-            "name": "digitalstate/platform-sso-linkedin-bundle",
-            "version": "0.2.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/DigitalState/Platform-SSO-Linkedin-Bundle.git",
-                "reference": "ca6b634d940bef03be53c9807e82b423c8becb13"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/DigitalState/Platform-SSO-Linkedin-Bundle/zipball/ca6b634d940bef03be53c9807e82b423c8becb13",
-                "reference": "ca6b634d940bef03be53c9807e82b423c8becb13",
-                "shasum": ""
-            },
-            "require": {
-                "digitalstate/platform-linkedin-bundle": "~0.2.0",
-                "digitalstate/platform-sso-bundle": "~0.2.0",
-                "oro/platform": "1.10.*",
-                "php": ">=5.6"
-            },
-            "type": "symfony-bundle",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "0.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Ds\\Bundle\\SSOLinkedinBundle\\": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "DigitalState, Inc",
-                    "homepage": "http://www.digitalstate.ca"
-                }
-            ],
-            "description": "DigitalState SSO Linkedin Bundle",
-            "homepage": "https://github.com/DigitalState/Platform-SSO-Linkedin-Bundle.git",
-            "keywords": [
-                "ORO",
-                "SSO",
-                "linkedin"
-            ],
-            "time": "2017-02-09 15:47:21"
-        },
-        {
-            "name": "digitalstate/platform-sso-twitter-bundle",
-            "version": "0.2.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/DigitalState/Platform-SSO-Twitter-Bundle.git",
-                "reference": "abd6ed0e8e3402f476656a6f95781e67870e4b3e"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/DigitalState/Platform-SSO-Twitter-Bundle/zipball/abd6ed0e8e3402f476656a6f95781e67870e4b3e",
-                "reference": "abd6ed0e8e3402f476656a6f95781e67870e4b3e",
-                "shasum": ""
-            },
-            "require": {
-                "digitalstate/platform-sso-bundle": "~0.2.0",
-                "digitalstate/platform-twitter-bundle": "~0.2.0",
-                "oro/platform": "1.10.*",
-                "php": ">=5.6"
-            },
-            "type": "symfony-bundle",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "0.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Ds\\Bundle\\SSOTwitterBundle\\": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "DigitalState, Inc",
-                    "homepage": "http://www.digitalstate.ca"
-                }
-            ],
-            "description": "DigitalState SSO Twitter Bundle",
-            "homepage": "https://github.com/DigitalState/Platform-SSO-Twitter-Bundle.git",
-            "keywords": [
-                "ORO",
-                "SSO",
-                "twitter"
-            ],
-            "time": "2017-02-09 15:50:33"
-        },
-        {
-            "name": "digitalstate/platform-transport-bundle",
-            "version": "0.2.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/DigitalState/Platform-Transport-Bundle.git",
-                "reference": "f377f2e88febfd97420287ef8d5385d04670ad9c"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/DigitalState/Platform-Transport-Bundle/zipball/f377f2e88febfd97420287ef8d5385d04670ad9c",
-                "reference": "f377f2e88febfd97420287ef8d5385d04670ad9c",
-                "shasum": ""
-            },
-            "require": {
-                "digitalstate/platform-admin-bundle": "~0.2.0",
-                "digitalstate/platform-entity-bundle": "~0.2.0",
-                "digitalstate/platform-widget-bundle": "~0.2.0",
-                "oro/platform": "1.10.*",
-                "php": ">=5.6"
-            },
-            "type": "symfony-bundle",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "0.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Ds\\Bundle\\TransportBundle\\": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "DigitalState, Inc",
-                    "homepage": "http://www.digitalstate.ca"
-                }
-            ],
-            "description": "DigitalState Transport Bundle",
-            "homepage": "https://github.com/DigitalState/Platform-Transport-Bundle.git",
-            "keywords": [
-                "ORO",
-                "communication"
-            ],
-            "time": "2017-02-09 15:55:48"
-        },
-        {
-            "name": "digitalstate/platform-twitter-bundle",
-            "version": "0.2.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/DigitalState/Platform-Twitter-Bundle.git",
-                "reference": "dcd090f95b06cb7bd085f43c0f97715b934d8351"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/DigitalState/Platform-Twitter-Bundle/zipball/dcd090f95b06cb7bd085f43c0f97715b934d8351",
-                "reference": "dcd090f95b06cb7bd085f43c0f97715b934d8351",
-                "shasum": ""
-            },
-            "require": {
-                "oro/platform": "1.10.*",
-                "php": ">=5.6"
-            },
-            "type": "symfony-bundle",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "0.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Ds\\Bundle\\TwitterBundle\\": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "DigitalState, Inc",
-                    "homepage": "http://www.digitalstate.ca"
-                }
-            ],
-            "description": "DigitalState Twitter Bundle",
-            "homepage": "https://github.com/DigitalState/Platform-Twitter-Bundle.git",
-            "keywords": [
-                "ORO",
-                "twitter"
-            ],
-            "time": "2017-02-09 16:00:48"
-        },
-        {
-            "name": "digitalstate/platform-user-bundle",
-            "version": "0.2.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/DigitalState/Platform-User-Bundle.git",
-                "reference": "952c6db416e89f48f9303f973431c554f3b41781"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/DigitalState/Platform-User-Bundle/zipball/952c6db416e89f48f9303f973431c554f3b41781",
-                "reference": "952c6db416e89f48f9303f973431c554f3b41781",
-                "shasum": ""
-            },
-            "require": {
-                "digitalstate/platform-data-bundle": "~0.2.0",
-                "oro/platform": "1.10.*",
-                "php": ">=5.6"
-            },
-            "type": "symfony-bundle",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "0.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Ds\\Bundle\\UserBundle\\": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "DigitalState, Inc",
-                    "homepage": "http://www.digitalstate.ca"
-                }
-            ],
-            "description": "DigitalState User Bundle",
-            "homepage": "https://github.com/DigitalState/Platform-User-Bundle.git",
-            "keywords": [
-                "ORO",
-                "communication"
-            ],
-            "time": "2017-02-09 16:03:47"
-        },
-        {
-            "name": "digitalstate/platform-user-persona-bundle",
-            "version": "0.2.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/DigitalState/Platform-User-Persona-Bundle.git",
-                "reference": "ccb38ebb6821de2b12195423d6a9a7584e000686"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/DigitalState/Platform-User-Persona-Bundle/zipball/ccb38ebb6821de2b12195423d6a9a7584e000686",
-                "reference": "ccb38ebb6821de2b12195423d6a9a7584e000686",
-                "shasum": ""
-            },
-            "require": {
-                "digitalstate/platform-admin-bundle": "~0.2.0",
-                "digitalstate/platform-entity-bundle": "~0.2.0",
-                "digitalstate/platform-widget-bundle": "~0.2.0",
-                "oro/platform": "1.10.*",
-                "php": ">=5.6"
-            },
-            "type": "symfony-bundle",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "0.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Ds\\Bundle\\UserPersonaBundle\\": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "DigitalState, Inc",
-                    "homepage": "http://www.digitalstate.ca"
-                }
-            ],
-            "description": "DigitalState User Persona Bundle",
-            "homepage": "https://github.com/DigitalState/Platform-User-Persona-Bundle.git",
-            "keywords": [
-                "ORO",
-                "communication"
-            ],
-            "time": "2017-02-09 16:33:38"
-        },
-        {
-            "name": "digitalstate/platform-widget-bundle",
-            "version": "0.2.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/DigitalState/Platform-Widget-Bundle.git",
-                "reference": "924cdf02608cc7a2ae8ec4135d1e2a05d003e63d"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/DigitalState/Platform-Widget-Bundle/zipball/924cdf02608cc7a2ae8ec4135d1e2a05d003e63d",
-                "reference": "924cdf02608cc7a2ae8ec4135d1e2a05d003e63d",
-                "shasum": ""
-            },
-            "require": {
-                "oro/platform": "1.10.*",
-                "php": ">=5.6"
-            },
-            "type": "symfony-bundle",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "0.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Ds\\Bundle\\WidgetBundle\\": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "DigitalState, Inc",
-                    "homepage": "http://www.digitalstate.ca"
-                }
-            ],
-            "description": "DigitalState Widget Bundle",
-            "homepage": "https://github.com/DigitalState/Platform-Widget-Bundle.git",
-            "keywords": [
-                "ORO",
-                "communication"
-            ],
-            "time": "2017-02-09 16:56:41"
         },
         {
             "name": "doctrine/annotations",
@@ -4696,12 +3497,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/KnpLabs/KnpTimeBundle.git",
-                "reference": "1a55df4806bcebc3b13a3ec8914284b6379b6029"
+                "reference": "bcc590eb5868a88d998c6024b9e073e5f5941ec4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/KnpLabs/KnpTimeBundle/zipball/1a55df4806bcebc3b13a3ec8914284b6379b6029",
-                "reference": "1a55df4806bcebc3b13a3ec8914284b6379b6029",
+                "url": "https://api.github.com/repos/KnpLabs/KnpTimeBundle/zipball/bcc590eb5868a88d998c6024b9e073e5f5941ec4",
+                "reference": "bcc590eb5868a88d998c6024b9e073e5f5941ec4",
                 "shasum": ""
             },
             "require": {
@@ -4752,7 +3553,7 @@
                 "knplabs",
                 "time"
             ],
-            "time": "2017-02-02 19:51:29"
+            "time": "2017-02-15 21:48:02"
         },
         {
             "name": "kriswallsmith/assetic",
@@ -5568,16 +4369,16 @@
         },
         {
             "name": "oro/doctrine-extensions",
-            "version": "1.0.13",
+            "version": "1.0.14",
             "source": {
                 "type": "git",
                 "url": "https://github.com/orocrm/doctrine-extensions.git",
-                "reference": "699bf2219950299af6a5d9204f009638271cee27"
+                "reference": "a4cd7bec625a3b1033acc7966372d5500cfa62cf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/orocrm/doctrine-extensions/zipball/699bf2219950299af6a5d9204f009638271cee27",
-                "reference": "699bf2219950299af6a5d9204f009638271cee27",
+                "url": "https://api.github.com/repos/orocrm/doctrine-extensions/zipball/a4cd7bec625a3b1033acc7966372d5500cfa62cf",
+                "reference": "a4cd7bec625a3b1033acc7966372d5500cfa62cf",
                 "shasum": ""
             },
             "require": {
@@ -5588,6 +4389,7 @@
                 "doctrine/data-fixtures": "^1.0",
                 "doctrine/orm": "<2.5.0",
                 "phpunit/phpunit": "4.*",
+                "squizlabs/php_codesniffer": "2.8.*",
                 "symfony/yaml": "2.*"
             },
             "type": "library",
@@ -5618,7 +4420,7 @@
                 "postgresql",
                 "type"
             ],
-            "time": "2016-11-11 15:11:11"
+            "time": "2017-02-17 16:37:53"
         },
         {
             "name": "oro/jsplumb",
@@ -6672,16 +5474,16 @@
         },
         {
             "name": "swiftmailer/swiftmailer",
-            "version": "v5.4.5",
+            "version": "v5.4.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/swiftmailer/swiftmailer.git",
-                "reference": "cd142238a339459b10da3d8234220963f392540c"
+                "reference": "81fdccfaf8bdc5d5d7a1ef6bb3a61bbb1a6c4a3e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/swiftmailer/swiftmailer/zipball/cd142238a339459b10da3d8234220963f392540c",
-                "reference": "cd142238a339459b10da3d8234220963f392540c",
+                "url": "https://api.github.com/repos/swiftmailer/swiftmailer/zipball/81fdccfaf8bdc5d5d7a1ef6bb3a61bbb1a6c4a3e",
+                "reference": "81fdccfaf8bdc5d5d7a1ef6bb3a61bbb1a6c4a3e",
                 "shasum": ""
             },
             "require": {
@@ -6722,7 +5524,7 @@
                 "mail",
                 "mailer"
             ],
-            "time": "2016-12-29 10:02:40"
+            "time": "2017-02-13 07:52:53"
         },
         {
             "name": "sylius/flow-bundle",
@@ -9002,23 +7804,21 @@
         },
         {
             "name": "johnkary/phpunit-speedtrap",
-            "version": "v1.0.1",
+            "version": "v1.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/johnkary/phpunit-speedtrap.git",
-                "reference": "76a26f8a903a9434608cdad2b41c40cd134ea326"
+                "reference": "ad242a6e84b0d63d2e50832babad77d6d545bc0a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/johnkary/phpunit-speedtrap/zipball/76a26f8a903a9434608cdad2b41c40cd134ea326",
-                "reference": "76a26f8a903a9434608cdad2b41c40cd134ea326",
+                "url": "https://api.github.com/repos/johnkary/phpunit-speedtrap/zipball/ad242a6e84b0d63d2e50832babad77d6d545bc0a",
+                "reference": "ad242a6e84b0d63d2e50832babad77d6d545bc0a",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.3.0"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "3.7.*|~4.0"
+                "php": ">=5.6",
+                "phpunit/phpunit": ">=4.7"
             },
             "type": "library",
             "extra": {
@@ -9048,7 +7848,7 @@
                 "profile",
                 "slow"
             ],
-            "time": "2015-09-13 19:01:00"
+            "time": "2017-02-13 15:22:35"
         },
         {
             "name": "mybuilder/phpunit-accelerator",
@@ -10285,7 +9085,11 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": [],
+    "stability-flags": {
+        "knplabs/knp-time-bundle": 20,
+        "craue/formflow-bundle": 20,
+        "digitalstate/bpm-camunda-sdk": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": [],
