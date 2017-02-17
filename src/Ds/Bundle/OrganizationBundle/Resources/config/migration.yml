@@ -1,0 +1,5 @@
+services:
+     ds.organization.migration.extension.business_unit:
+        class: Ds\Bundle\OrganizationBundle\Migration\Extension\BusinessUnitExtension
+#        tags:
+#            - { name: oro_migration.extension, extension_name: business_unit }
