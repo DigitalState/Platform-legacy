@@ -1,0 +1,8 @@
+placeholders:
+    oro_user_login_form:
+        items:
+            ds_sso_linkedin_oauth_login: ~
+
+items:
+    ds_sso_linkedin_oauth_login:
+        template: DsSSOLinkedinBundle:Security:oauth_login.html.twig

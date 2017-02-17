@@ -1,0 +1,2 @@
+parameters:
+    hwi_oauth.resource_owner.linkedin.class: Ds\Bundle\SSOLinkedinBundle\OAuth\ResourceOwner\LinkedinResourceOwner

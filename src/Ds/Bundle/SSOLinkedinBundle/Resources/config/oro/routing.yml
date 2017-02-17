@@ -1,0 +1,2 @@
+ds_sso_linkedin_login:
+    pattern: /login/check-linkedin
