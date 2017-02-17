@@ -1,0 +1,28 @@
+{
+    "name": "digitalstate/platform-api-bundle",
+    "type": "symfony-bundle",
+    "description": "DigitalState Api Bundle",
+    "homepage": "https://github.com/DigitalState/Platform-Api-Bundle.git",
+    "keywords": ["Oro", "Api"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "DigitalState, Inc",
+            "homepage": "http://www.digitalstate.ca"
+        }
+    ],
+    "require": {
+        "php": ">=5.6",
+        "oro/platform": "1.10.*"
+    },
+    "autoload": {
+        "psr-4": { "Ds\\Bundle\\ApiBundle\\": "" }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "extra": {
+        "branch-alias": {
+            "dev-master": "0.x-dev"
+        }
+    }
+}
