@@ -1,0 +1,28 @@
+{
+    "name": "digitalstate/platform-console-bundle",
+    "type": "symfony-bundle",
+    "description": "DigitalState Console Bundle",
+    "homepage": "https://github.com/DigitalState/Platform-Console-Bundle.git",
+    "keywords": ["Oro", "Console"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "DigitalState, Inc",
+            "homepage": "http://www.digitalstate.ca"
+        }
+    ],
+    "require": {
+        "php": ">=5.6",
+        "oro/platform": "1.10.*"
+    },
+    "autoload": {
+        "psr-4": { "Ds\\Bundle\\ConsoleBundle\\": "" }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "extra": {
+        "branch-alias": {
+            "dev-master": "0.x-dev"
+        }
+    }
+}
