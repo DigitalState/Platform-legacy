@@ -1,0 +1,13 @@
+ds:
+    linkedin:
+        system_configuration:
+            groups:
+                linkedin:
+                    title: Paramètres LinkedIn
+                linkedin_settings:
+                    title: Paramètres d'intégration de LinkedIn
+            fields:
+                client_id:
+                    label: Identité du client
+                client_secret:
+                    label: Secret du client

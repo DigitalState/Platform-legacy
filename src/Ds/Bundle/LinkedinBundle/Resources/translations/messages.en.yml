@@ -1,0 +1,13 @@
+ds:
+    linkedin:
+        system_configuration:
+            groups:
+                linkedin:
+                    title: LinkedIn settings
+                linkedin_settings:
+                    title: LinkedIn Integration Settings
+            fields:
+                client_id:
+                    label: Client ID
+                client_secret:
+                    label: Client Secret
