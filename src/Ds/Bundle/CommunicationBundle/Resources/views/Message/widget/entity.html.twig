@@ -1,0 +1,14 @@
+{% import 'OroUIBundle::macros.html.twig' as UI %}
+
+<div class="widget-content">
+    <div class="row-fluid form-horizontal">
+        <div class="responsive-block">
+            {{ UI.renderProperty('ds.communication.message.field.id.label'|trans, entity.id) }}
+            {{ UI.renderProperty('ds.communication.message.field.title.label'|trans, entity.title) }}
+            {{ UI.renderProperty('ds.communication.message.field.description.label'|trans, entity.description) }}
+        </div>
+    </div>
+    {% for widget in ds_widgets({ position: 'ds_communication_message_entity_message', context: context }, { entity: entity }) %}
+        {{ widget.content|raw }}
+    {% endfor %}
+</div>

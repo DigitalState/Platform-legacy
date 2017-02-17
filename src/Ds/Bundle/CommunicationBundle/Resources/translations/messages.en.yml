@@ -1,0 +1,340 @@
+ds:
+    communication:
+        entity_label: Communication
+        entity_plural_label: Communications
+        entity_description: The communication.
+        id:
+            label: ID
+            description: ~
+        created_at:
+            label: Created At
+            description: ~
+        updated_at:
+            label: Updated At
+            description: ~
+        title:
+            label: Title
+            description: ~
+        description:
+            label: Description
+            description: ~
+        contents:
+            label: Contenu
+            description: ~
+        owner:
+            label: Business Unit
+            description: ~
+        menu:
+            tab:
+                label: Communications
+            index:
+                label: Communications
+        page:
+            index:
+                title: Communications
+            view: ~
+            edit: ~
+        grid:
+            actions:
+                view: View
+                update: Edit
+                delete: Delete
+        button:
+            create: Create Communication
+            send: Send
+        action:
+            sent: Communication sent
+        widget:
+            entity: Communication
+            form: Communication
+            owner: Owner
+            contents:
+                form: Content
+                grid: Content
+            criteria:
+                form: Criteria
+                grid: Criteria
+            users:
+                grid: Recipients
+        channel:
+            entity_label: Channel
+            entity_plural_label: Channels
+            entity_description: The channel.
+            id:
+                label: ID
+                description: ~
+            created_at:
+                label: Created At
+                description: ~
+            updated_at:
+                label: Updated At
+                description: ~
+            title:
+                label: Title
+                description: ~
+            description:
+                label: Description
+                description: ~
+            icon:
+                label: Icon
+                description: ~
+            implementation:
+                label: Implementation
+                description: ~
+            default_to:
+                label: Default To
+                description: ~
+            owner:
+                label: Business Unit
+                description: ~
+            collection:
+                email: Email
+                portal: Portal
+                sms: Sms
+            menu:
+                tab:
+                    label: Channels
+                index:
+                    label: Channels
+            page:
+                index:
+                    title: Channels
+                view: ~
+                edit: ~
+            grid:
+                actions:
+                    view: View
+                    update: Edit
+                    delete: Delete
+            button:
+                create: Create Channel
+            widget:
+                entity: Channel
+                form: Channel
+                owner: Owner
+        content:
+            entity_label: Content
+            entity_plural_label: Contents
+            entity_description: The content.
+            id:
+                label: ID
+                description: ~
+            created_at:
+                label: Created At
+                description: ~
+            updated_at:
+                label: Updated At
+                description: ~
+            channel:
+                label: Channel
+                description: ~
+                placeholder: Select Channel
+                title:
+                    label: Channel
+            profile:
+                label: Profile
+                description: ~
+                placeholder: Select Profile
+                title:
+                    label: Profile
+            communication:
+                label: Communication
+                description: ~
+                placeholder: Select Communication
+                title:
+                    label: Communication
+            title:
+                label: Title
+                description: ~
+            presentation:
+                label: Presentation
+                description: ~
+            template:
+                label: Template
+                description: ~
+                placeholder: Select Template
+                none: Unassigned
+                title:
+                    label: Template
+            owner:
+                label: Business Unit
+                description: ~
+            menu:
+                tab:
+                    label: Contents
+                index:
+                    label: Contents
+            page:
+                index:
+                    title: Contents
+                view: ~
+                edit: ~
+            grid:
+                actions:
+                    view: View
+                    update: Edit
+                    delete: Delete
+            button:
+                create: Create Content
+            widget:
+                entity: Content
+                form: Content
+                owner: Owner
+        criterion:
+            entity_label: Criterion
+            entity_plural_label: Criteria
+            entity_description: The criterion.
+            id:
+                label: ID
+                description: ~
+            created_at:
+                label: Created At
+                description: ~
+            updated_at:
+                label: Updated At
+                description: ~
+            communication:
+                label: Communication
+                description: ~
+                placeholder: Select Communication
+                title:
+                    label: Communication
+            implementation:
+                label: Implementation
+                description: ~
+            operand_1:
+                label: Operand 1
+                description: ~
+            operator:
+                label: Operator
+                description: ~
+            operand_2:
+                label: Operand 2
+                description: ~
+            owner:
+                label: Business Unit
+                description: ~
+            collection:
+                column: Column
+            menu:
+                tab:
+                    label: Criteria
+                index:
+                    label: Criteria
+            page:
+                index:
+                    title: Criteria
+                view: ~
+                edit: ~
+            grid:
+                actions:
+                    view: View
+                    update: Edit
+                    delete: Delete
+            button:
+                create: Create Criterion
+            widget:
+                entity: Criterion
+                form: Criterion
+                owner: Owner
+        message:
+            entity_label: Message
+            entity_plural_label: Messages
+            entity_description: The message.
+            id:
+                label: ID
+                description: ~
+            created_at:
+                label: Created At
+                description: ~
+            updated_at:
+                label: Updated At
+                description: ~
+            title:
+                label: Title
+                description: ~
+            communication:
+                label: Communication
+                description: ~
+                placeholder: Select Communication
+            channel:
+                label: Channel
+                description: ~
+                placeholder: Select Channel
+            user:
+                label: User
+                description: ~
+                placeholder: Select User
+            presentation:
+                label: Presentation
+                description: ~
+            sent_at:
+                label: Sent At
+                description: ~
+            owner:
+                label: Business Unit
+                description: ~
+            menu:
+                tab:
+                    label: Messages
+                index:
+                    label: Messages
+            page:
+                index:
+                    title: Messages
+                view: ~
+                edit: ~
+            grid:
+                actions:
+                    view: View
+                    update: Edit
+                    delete: Delete
+            button:
+                create: Create Message
+            widget:
+                entity: Message
+                form: Message
+                owner: Owner
+        template:
+            entity_label: Template
+            entity_plural_label: Templates
+            entity_description: The template.
+            id:
+                label: ID
+                description: ~
+            created_at:
+                label: Created At
+                description: ~
+            updated_at:
+                label: Updated At
+                description: ~
+            title:
+                label: Title
+                description: ~
+            presentation:
+                label: Presentation
+                description: ~
+            owner:
+                label: Business Unit
+                description: ~
+            menu:
+                tab:
+                    label: Templates
+                index:
+                    label: Templates
+            page:
+                index:
+                    title: Templates
+                view: ~
+                edit: ~
+            grid:
+                actions:
+                    view: View
+                    update: Edit
+                    delete: Delete
+            button:
+                create: Create Template
+            widget:
+                entity: Template
+                form: Template
+                owner: Owner

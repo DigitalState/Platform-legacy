@@ -1,0 +1,23 @@
+ds_communication_api_rest_channel:
+    resource: Ds\Bundle\CommunicationBundle\Controller\Api\Rest\ChannelController
+    type: rest
+
+ds_communication_api_rest_communication:
+    resource: Ds\Bundle\CommunicationBundle\Controller\Api\Rest\CommunicationController
+    type: rest
+
+ds_communication_api_rest_content:
+    resource: Ds\Bundle\CommunicationBundle\Controller\Api\Rest\ContentController
+    type: rest
+
+ds_communication_api_rest_criterion:
+    resource: Ds\Bundle\CommunicationBundle\Controller\Api\Rest\CriterionController
+    type: rest
+
+ds_communication_api_rest_message:
+    resource: Ds\Bundle\CommunicationBundle\Controller\Api\Rest\MessageController
+    type: rest
+
+ds_communication_api_rest_template:
+    resource: Ds\Bundle\CommunicationBundle\Controller\Api\Rest\TemplateController
+    type: rest

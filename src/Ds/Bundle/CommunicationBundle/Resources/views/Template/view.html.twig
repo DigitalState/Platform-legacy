@@ -1,0 +1,47 @@
+{% extends 'OroUIBundle:actions:view.html.twig' %}
+
+{% import 'OroUIBundle::macros.html.twig' as UI %}
+
+{% block pageHeader %}
+    {% set breadcrumbs = {
+        entity: entity,
+        indexPath: path('ds_communication_template_index'),
+        indexLabel: 'ds.communication.template.menu.index.label'|trans,
+        entityTitle: 'ds.communication.template.entity_label'|trans ~ ' ' ~ entity.id
+    } %}
+    {{ parent() }}
+{% endblock pageHeader %}
+
+{% block navButtons %}
+    {% if resource_granted('ds.communication.template.edit', entity) %}
+        {{ UI.editButton({
+            path: path('ds_communication_template_edit', { id: entity.id }),
+            entity_label: 'ds.communication.template.entity_label'|trans
+        }) }}
+    {% endif %}
+    {% if resource_granted('ds.communication.template.delete', entity) %}
+        {{ UI.deleteButton({
+            dataUrl: path('ds_communication_api_rest_delete_template', { id: entity.id }),
+            dataRedirect: path('ds_communication_template_index'),
+            aCss: 'no-hash remove-button',
+            id: 'btn-remove-template',
+            dataId: entity.id,
+            entity_label: 'ds.communication.template.entity_label'|trans,
+        }) }}
+    {% endif %}
+{% endblock navButtons %}
+
+{% block content_data %}
+    {% set dataBlocks = [] %}
+    {% for widget in ds_widgets({ position: 'ds_communication_template_entity', context: context }, { entity: entity, context: context }) %}
+        {% set dataBlocks = dataBlocks|merge([ {
+            title: widget.title|trans,
+            subblocks: [ {
+                data : [ widget.content ]
+            } ]
+        } ]) %}
+    {% endfor %}
+    {% set id = 'template-view' %}
+    {% set data = { dataBlocks: dataBlocks } %}
+    {{ parent() }}
+{% endblock content_data %}

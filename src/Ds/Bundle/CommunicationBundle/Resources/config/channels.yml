@@ -1,0 +1,21 @@
+services:
+    ds.communication.channel.abstract:
+        abstract: true
+        arguments:
+            - @ds.userpersona.manager.persona
+            - @ds.data.data
+    ds.communication.channel.email:
+        parent: ds.communication.channel.abstract
+        class: Ds\Bundle\CommunicationBundle\Channel\EmailChannel
+        tags:
+            - { name: ds.communication.channel, implementation: email }
+    ds.communication.channel.portal:
+        parent: ds.communication.channel.abstract
+        class: Ds\Bundle\CommunicationBundle\Channel\PortalChannel
+        tags:
+            - { name: ds.communication.channel, implementation: portal }
+    ds.communication.channel.sms:
+        parent: ds.communication.channel.abstract
+        class: Ds\Bundle\CommunicationBundle\Channel\SmsChannel
+        tags:
+            - { name: ds.communication.channel, implementation: sms }
