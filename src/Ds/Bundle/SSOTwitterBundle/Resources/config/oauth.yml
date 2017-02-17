@@ -1,0 +1,6 @@
+services:
+    ds.ssotwitter.oauth.user.provider.twitter:
+        parent: ds.sso.oauth.user.provider.abstract
+        class: Ds\Bundle\SSOTwitterBundle\Security\Core\User\TwitterOAuthUserProvider
+        tags:
+            - { name: ds.oauth.user.provider, alias: twitter }

@@ -1,0 +1,2 @@
+bundles:
+    - { name: Ds\Bundle\SSOTwitterBundle\DsSSOTwitterBundle, priority: 20 }

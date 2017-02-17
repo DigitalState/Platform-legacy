@@ -1,0 +1,14 @@
+ds:
+    sso_twitter:
+        system_configuration:
+            groups:
+                sso_twitter_settings: Authentification unique Twitter
+            fields:
+                enabled: Activer
+                create_user: Autoriser la création de l'utilisateur lors de la connexion
+                associate_user: Autoriser l'association des utilisateurs lors de la connexion
+
+oro:
+    user:
+        twitter_id:
+            label: Id Twitter

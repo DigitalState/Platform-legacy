@@ -1,0 +1,2 @@
+parameters:
+    hwi_oauth.resource_owner.twitter.class: Ds\Bundle\SSOTwitterBundle\OAuth\ResourceOwner\TwitterResourceOwner

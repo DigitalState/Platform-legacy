@@ -1,0 +1,5 @@
+{% if oro_config_value('ds_sso_twitter.enable_sso') %}
+    <a href="{{ hwi_oauth_authorization_url('twitter') }}">
+        {% trans %}twitter{% endtrans %}
+    </a>
+{% endif %}

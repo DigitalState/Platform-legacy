@@ -1,0 +1,14 @@
+ds:
+    sso_twitter:
+        system_configuration:
+            groups:
+                sso_twitter_settings: Twitter Single Sign-On
+            fields:
+                enabled: Enable
+                create_user: Allow user creation on login
+                associate_user: Allow user association on login
+
+oro:
+    user:
+        twitter_id:
+            label: Twitter ID
