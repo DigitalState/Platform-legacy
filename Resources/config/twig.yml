@@ -1,0 +1,10 @@
+services:
+    ds.locale.twig.extension.locale:
+        class: Ds\Bundle\LocaleBundle\Twig\Extension\LocaleExtension
+        arguments:
+            - @oro_locale.repository.localization
+        calls:
+            - [ setRequest, [ @request_stack ] ]
+        public: false
+        tags:
+            - { name: twig.extension }
