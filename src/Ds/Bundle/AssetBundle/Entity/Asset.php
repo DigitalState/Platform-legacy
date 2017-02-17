@@ -49,6 +49,11 @@ use Symfony\Component\Validator\Constraints as Assert;
  *          },
  *          "grid"={
  *              "default"="ds-asset-asset"
+ *          },
+ *          "attachment"={
+ *              "enabled"=true,
+ *              "maxsize"=8,
+ *              "auto_link_attachments"=false
  *          }
  *      }
  * )
