@@ -1,0 +1,2 @@
+bundles:
+    - { name: Ds\Bundle\SSOBundle\DsSSOBundle, priority: 10 }

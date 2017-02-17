@@ -1,0 +1,3 @@
+services:
+    ds.sso.collection.oauth_user_provider:
+        class: Ds\Bundle\SSOBundle\Collection\OAuthUserProviderCollection

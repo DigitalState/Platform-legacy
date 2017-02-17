@@ -1,0 +1,5 @@
+{% if oro_config_value('oro_sso.enable_google_sso') %}
+    <a href="{{ hwi_oauth_authorization_url('google') }}">
+        {% trans %}google{% endtrans %}
+    </a>
+{% endif %}
