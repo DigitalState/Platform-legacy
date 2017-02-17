@@ -1,0 +1,45 @@
+oro_system_configuration:
+    groups:
+        ds_sso_twitter_settings:
+            title: ds.sso_twitter.system_configuration.groups.sso_twitter_settings
+    fields:
+        ds_sso_twitter.enabled:
+            data_type: boolean
+            type: oro_config_checkbox
+            options:
+                label: ds.sso_twitter.system_configuration.fields.enabled
+                tooltip: ~
+                required: false
+                resettable: false
+            priority: 3
+        ds_sso_twitter.create_user:
+            data_type: boolean
+            type: oro_config_checkbox
+            options:
+                label: ds.sso_twitter.system_configuration.fields.create_user
+                tooltip: ~
+                required: false
+                resettable: false
+            priority: 2
+        ds_sso_twitter.associate_user:
+            data_type: boolean
+            type: oro_config_checkbox
+            options:
+                label: ds.sso_twitter.system_configuration.fields.associate_user
+                tooltip: ~
+                required: false
+                resettable: false
+            priority: 1
+    tree:
+        system_configuration:
+            platform:
+                children:
+                    integrations:
+                        children:
+                            ds_twitter:
+                                children:
+                                    ds_sso_twitter_settings:
+                                        children:
+                                            - ds_sso_twitter.enabled
+                                            - ds_sso_twitter.create_user
+                                            - ds_sso_twitter.associate_user

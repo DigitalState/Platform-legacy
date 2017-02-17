@@ -1,0 +1,2 @@
+ds_sso_twitter_login:
+    pattern: /login/check-twitter

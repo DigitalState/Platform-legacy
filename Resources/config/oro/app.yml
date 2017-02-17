@@ -1,0 +1,15 @@
+hwi_oauth:
+    firewall_names: [ main ]
+    resource_owners:
+        twitter:
+            type: twitter
+            client_id: TwitterClientId
+            client_secret: TwitterClientSecret
+            scope: ~
+
+security:
+    firewalls:
+        main:
+            oauth:
+                resource_owners:
+                    twitter: /login/check-twitter
