@@ -1,0 +1,14 @@
+ds:
+    bpm_camunda:
+        system_configuration:
+            groups:
+                bpm_camunda_camunda:
+                    title: Camunda Settings
+                bpm_camunda_camunda_connection:
+                    title: Connection Settings
+            fields:
+                host:
+                    label: Host
+    bpm:
+        collection:
+            camunda: Camunda
