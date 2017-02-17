@@ -1,0 +1,4 @@
+oro_api:
+    entities:
+        Ds\Bundle\TransportBundle\Entity\Transport: ~
+        Ds\Bundle\TransportBundle\Entity\Profile: ~
