@@ -1,0 +1,11 @@
+services:
+    ds.portal.widget.portal.brand:
+        parent: ds.widget.widget.abstract
+        class: Ds\Bundle\PortalBundle\Widget\Portal\BrandWidget
+        tags:
+            - { name: ds.widget, position: ds_portal_portal_brand }
+    ds.portal.widget.portal.copyright:
+        parent: ds.widget.widget.abstract
+        class: Ds\Bundle\PortalBundle\Widget\Portal\CopyrightWidget
+        tags:
+            - { name: ds.widget, position: ds_portal_portal_footer }

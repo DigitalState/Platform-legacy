@@ -1,0 +1,8 @@
+ds_portal_portal:
+    resource: @DsPortalBundle/Controller/Portal
+    type: annotation
+    prefix: %ds.portal.prefix%
+    requirements:
+        _locale: %ds.portal.requirements.locale%
+    defaults:
+        _locale: %ds.portal.defaults.locale%

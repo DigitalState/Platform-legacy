@@ -1,0 +1,14 @@
+{% extends 'DsPortalBundle:Portal:base.html.twig' %}
+
+{% block title %}Portal{% endblock %}
+
+{% block main %}
+    <div class="jumbotron">
+        <h1>
+            {% trans with { '%portal%': oro_config_value('ds_portal.title') } %}ds.portal.page.portal.home.index.welcome.title{% endtrans %}
+        </h1>
+        {% for widget in ds_widgets({ position: 'ds_portal_portal_home_index_welcome' }) %}
+            {{ widget.content|raw }}
+        {% endfor %}
+    </div>
+{% endblock %}
