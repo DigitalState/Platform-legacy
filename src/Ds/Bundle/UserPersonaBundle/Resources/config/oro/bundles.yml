@@ -1,0 +1,2 @@
+bundles:
+    - { name: Ds\Bundle\UserPersonaBundle\DsUserPersonaBundle, priority: 30 }

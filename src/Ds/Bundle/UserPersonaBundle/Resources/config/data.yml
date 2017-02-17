@@ -1,0 +1,13 @@
+services:
+    ds.userpersona.data.resolver.definition:
+        class: Ds\Bundle\UserPersonaBundle\Data\Resolver\DefinitionResolver
+        arguments:
+            - @ds.userpersona.manager.definition
+        tags:
+            - { name: ds.data.resolver }
+    ds.userpersona.data.resolver.persona:
+        class: Ds\Bundle\UserPersonaBundle\Data\Resolver\PersonaResolver
+        arguments:
+            - @ds.userpersona.manager.persona
+        tags:
+            - { name: ds.data.resolver }

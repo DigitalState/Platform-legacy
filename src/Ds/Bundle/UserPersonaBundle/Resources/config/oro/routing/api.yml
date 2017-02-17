@@ -1,0 +1,7 @@
+ds_userpersona_api_rest_persona:
+    resource: Ds\Bundle\UserPersonaBundle\Controller\Api\Rest\PersonaController
+    type: rest
+
+ds_userpersona_api_rest_definition:
+    resource: Ds\Bundle\UserPersonaBundle\Controller\Api\Rest\DefinitionController
+    type: rest

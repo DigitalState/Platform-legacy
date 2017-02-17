@@ -1,0 +1,10 @@
+services:
+    ds.userpersona.twig.extension.persona:
+        class: Ds\Bundle\UserPersonaBundle\Twig\Extension\PersonaExtension
+        public: false
+        arguments:
+            - @security.context
+            - @ds.userpersona.manager.persona
+            - @ds.userpersona.manager.definition
+        tags:
+            - { name: twig.extension }

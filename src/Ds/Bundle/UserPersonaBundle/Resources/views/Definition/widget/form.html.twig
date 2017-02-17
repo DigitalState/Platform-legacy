@@ -1,0 +1,14 @@
+<div class="widget-content">
+    <div class="row-fluid form-horizontal">
+        <div class="responsive-block">
+            {{ form_row(form.title) }}
+            {{ form_row(form.data) }}
+        </div>
+        <div class="responsive-block">
+            {{ form_row(form.slug) }}
+        </div>
+    </div>
+    {% for widget in ds_widgets({ position: 'ds_userpersona_definition_form_definition', context: context }, { form: form }) %}
+        {{ widget.content|raw }}
+    {% endfor %}
+</div>

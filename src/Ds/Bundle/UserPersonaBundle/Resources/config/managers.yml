@@ -1,0 +1,13 @@
+services:
+    ds.userpersona.manager.definition:
+        class: Ds\Bundle\UserPersonaBundle\Manager\DefinitionManager
+        parent: oro_soap.manager.entity_manager.abstract
+        arguments:
+            - Ds\Bundle\UserPersonaBundle\Entity\Definition
+            - @doctrine.orm.entity_manager
+    ds.userpersona.manager.persona:
+        class: Ds\Bundle\UserPersonaBundle\Manager\PersonaManager
+        parent: oro_soap.manager.entity_manager.abstract
+        arguments:
+            - Ds\Bundle\UserPersonaBundle\Entity\Persona
+            - @doctrine.orm.entity_manager

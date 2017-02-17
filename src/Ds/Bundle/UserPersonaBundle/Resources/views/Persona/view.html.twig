@@ -1,0 +1,47 @@
+{% extends 'OroUIBundle:actions:view.html.twig' %}
+
+{% import 'OroUIBundle::macros.html.twig' as UI %}
+
+{% block pageHeader %}
+    {% set breadcrumbs = {
+        entity: entity,
+        indexPath: path('ds_userpersona_persona_index'),
+        indexLabel: 'ds.userpersona.persona.menu.index.label'|trans,
+        entityTitle: entity.definition.title
+    } %}
+    {{ parent() }}
+{% endblock pageHeader %}
+
+{% block navButtons %}
+    {% if resource_granted('ds.userpersona.persona.edit', entity) %}
+        {{ UI.editButton({
+            path: path('ds_userpersona_persona_edit', { id: entity.id }),
+            entity_label: 'ds.userpersona.persona.entity_label'|trans
+        }) }}
+    {% endif %}
+    {% if resource_granted('ds.userpersona.persona.delete', entity) %}
+        {{ UI.deleteButton({
+            dataUrl: path('ds_userpersona_api_rest_delete_persona', { id: entity.id }),
+            dataRedirect: path('ds_userpersona_persona_index'),
+            aCss: 'no-hash remove-button',
+            id: 'btn-remove-user-persona',
+            dataId: entity.id,
+            entity_label: 'ds.userpersona.persona.entity_label'|trans,
+        }) }}
+    {% endif %}
+{% endblock navButtons %}
+
+{% block content_data %}
+    {% set dataBlocks = [] %}
+    {% for widget in ds_widgets({ position: 'ds_userpersona_persona_entity', context: context }, { entity: entity, context: context }) %}
+        {% set dataBlocks = dataBlocks|merge([ {
+            title: widget.title|trans,
+            subblocks: [ {
+                data : [ widget.content ]
+            } ]
+        } ]) %}
+    {% endfor %}
+    {% set id = 'user-persona-view' %}
+    {% set data = { dataBlocks: dataBlocks } %}
+    {{ parent() }}
+{% endblock content_data %}

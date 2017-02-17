@@ -1,0 +1,49 @@
+services:
+    ds.userpersona.form.type.definition:
+        class: Ds\Bundle\UserPersonaBundle\Form\Type\DefinitionType
+        tags:
+            - { name: form.type, alias: ds_userpersona_definition }
+    ds.userpersona.form.type.api.definition:
+        class: Ds\Bundle\UserPersonaBundle\Form\Type\Api\DefinitionType
+        tags:
+            - { name: form.type, alias: ds_userpersona_api_definition }
+    ds.userpersona.form.api.definition:
+        class: Symfony\Component\Form\Form
+        factory_method: createNamed
+        factory_service: form.factory
+        arguments:
+            - ~
+            - ds_userpersona_api_definition
+    ds.userpersona.form.handler.definition:
+        class: Ds\Bundle\UserPersonaBundle\Form\Handler\DefinitionHandler
+        scope: request
+        arguments:
+            - @ds.userpersona.form.api.definition
+            - @request
+            - @doctrine.orm.entity_manager
+    ds.userpersona.form.type.persona:
+        class: Ds\Bundle\UserPersonaBundle\Form\Type\PersonaType
+        tags:
+            - { name: form.type, alias: ds_userpersona_persona }
+    ds.userpersona.form.type.api.persona:
+        class: Ds\Bundle\UserPersonaBundle\Form\Type\Api\PersonaType
+        tags:
+            - { name: form.type, alias: ds_userpersona_api_persona }
+    ds.userpersona.form.api.persona:
+        class: Symfony\Component\Form\Form
+        factory_method: createNamed
+        factory_service: form.factory
+        arguments:
+            - ~
+            - ds_userpersona_api_persona
+    ds.userpersona.form.handler.persona:
+        class: Ds\Bundle\UserPersonaBundle\Form\Handler\PersonaHandler
+        scope: request
+        arguments:
+            - @ds.userpersona.form.api.persona
+            - @request
+            - @doctrine.orm.entity_manager
+    ds.userpersona.form.type.persona.data:
+        class: Ds\Bundle\UserPersonaBundle\Form\Type\Persona\DataType
+        tags:
+            - { name: form.type, alias: ds_userpersona_persona_data }
