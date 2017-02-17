@@ -1,0 +1,96 @@
+ds:
+    transport:
+        entity_label: Transport
+        entity_plural_label: Transports
+        entity_description: Le transport.
+        id:
+            label: Id
+            description: ~
+        created_at:
+            label: Créé le
+            description: ~
+        updated_at:
+            label: Mis à jour le
+            description: ~
+        title:
+            label: Titre
+            description: ~
+        implementation:
+            label: Implémentation
+            description: ~
+        data:
+            label: Données
+            description: ~
+            collection:
+                email:
+                    mail: Courrier
+        owner:
+            label: Unité d'affaires
+            description: ~
+        menu:
+            tab:
+                label: Transports
+            index:
+                label: Transports
+        page:
+            index:
+                title: Transports
+            view: ~
+            edit: ~
+        grid:
+            actions:
+                view: Visionner
+                update: Editer
+                delete: Supprimer
+        button:
+            create: Créer un transport
+        widget:
+            entity: Transport
+            form: Transport
+            owner: Propriétaire
+        profile:
+            entity_label: Profil
+            entity_plural_label: Profils
+            entity_description: Le profil.
+            id:
+                label: ID
+                description: ~
+            created_at:
+                label: Créé le
+                description: ~
+            updated_at:
+                label: Mis à jour le
+                description: ~
+            title:
+                label: Titre
+                description: ~
+            data:
+                label: Données
+                description: ~
+            transport:
+                label: Transport
+                description: ~
+                title:
+                    label: Transport
+            owner:
+                label: Unité d'affaires
+                description: ~
+            menu:
+                index:
+                    label: Profils
+            page:
+                index:
+                    title: Profils
+                view: ~
+                edit: ~
+            grid:
+                actions:
+                    view: Visionner
+                    update: Editer
+                    delete: Supprimer
+            button:
+                create: Créer un profil
+            widget:
+                entity: Profil
+                form: Profil
+                owner: Propriétaire

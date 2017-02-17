@@ -1,0 +1,2 @@
+bundles:
+    - { name: Ds\Bundle\TransportBundle\DsTransportBundle, priority: 20 }

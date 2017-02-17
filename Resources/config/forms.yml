@@ -1,0 +1,47 @@
+services:
+    ds.transport.form.type.profile:
+        class: Ds\Bundle\TransportBundle\Form\Type\ProfileType
+        tags:
+            - { name: form.type, alias: ds_transport_profile }
+    ds.transport.form.type.api.profile:
+        class: Ds\Bundle\TransportBundle\Form\Type\Api\ProfileType
+        tags:
+            - { name: form.type, alias: ds_transport_api_profile }
+    ds.transport.form.api.profile:
+        class: Symfony\Component\Form\Form
+        factory_method: createNamed
+        factory_service: form.factory
+        arguments:
+            - ~
+            - ds_transport_api_profile
+    ds.transport.form.handler.profile:
+        class: Ds\Bundle\TransportBundle\Form\Handler\ProfileHandler
+        scope: request
+        arguments:
+            - @ds.transport.form.api.profile
+            - @request
+            - @doctrine.orm.entity_manager
+    ds.transport.form.type.transport:
+        class: Ds\Bundle\TransportBundle\Form\Type\TransportType
+        arguments:
+            - @ds.transport.collection.transport
+        tags:
+            - { name: form.type, alias: ds_transport_transport }
+    ds.transport.form.type.api.transport:
+        class: Ds\Bundle\TransportBundle\Form\Type\Api\TransportType
+        tags:
+            - { name: form.type, alias: ds_transport_api_transport }
+    ds.transport.form.api.transport:
+        class: Symfony\Component\Form\Form
+        factory_method: createNamed
+        factory_service: form.factory
+        arguments:
+            - ~
+            - ds_transport_api_transport
+    ds.transport.form.handler.transport:
+        class: Ds\Bundle\TransportBundle\Form\Handler\TransportHandler
+        scope: request
+        arguments:
+            - @ds.transport.form.api.transport
+            - @request
+            - @doctrine.orm.entity_manager
