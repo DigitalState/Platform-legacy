@@ -1,0 +1,4 @@
+parameters:
+    ds.account.prefix: /{_locale}/portal/account
+    ds.account.requirements.locale: ([a-z]+)
+    ds.account.defaults.locale: en

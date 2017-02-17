@@ -1,0 +1,14 @@
+services:
+    ds.account.event.listener.locale:
+        class: Ds\Bundle\AccountBundle\Event\Listener\LocaleListener
+        arguments:
+            - @request_stack
+            - @translator
+        tags:
+            - { name: kernel.event_listener, event: kernel.request }
+    ds.account.event.listener.navigation:
+        class: Ds\Bundle\AccountBundle\Event\Listener\NavigationListener
+        arguments:
+            - @request_stack
+        tags:
+            - { name: kernel.event_listener, event: oro_menu.configure.ds_account_main, method: onNavigationConfigure }
