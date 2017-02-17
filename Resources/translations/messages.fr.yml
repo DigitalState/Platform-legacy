@@ -1,0 +1,67 @@
+ds:
+    bpm:
+        system_configuration:
+            groups:
+                bpm:
+                    title: Bpm
+                bpm_variable:
+                    title: Paramètres de variables
+                bpm_variable_user:
+                    title: Variables usager
+                bpm_variable_service:
+                    title: Variables service
+                bpm_variable_localization:
+                    title: Variables localisation
+                bpm_variable_none_start_event:
+                    title: Variables événement de départ
+                bpm_variable_user_task:
+                    title: Variables tâche usager
+            fields:
+                variable_user:
+                    label: Object de l'usager
+                variable_user_id:
+                    label: Clé id
+                variable_user_business_unit_id:
+                    label: Clé id de l'unité d'affaires
+                variable_user_organization_id:
+                    label: Clé id de l'organisation
+                variable_service:
+                    label: Object du service
+                variable_service_id:
+                    label: Clé id
+                variable_service_business_unit_id:
+                    label: Clé id de l'unité d'affaires
+                variable_service_organization_id:
+                    label: Clé id de l'organisation
+                variable_localization:
+                    label: Object de localisation
+                variable_localization_id:
+                     label: Clé id
+                variable_localization_language_code:
+                     label: Clé code de langue
+                variable_localization_formatting_code:
+                     label: Clé code de mise en forme
+                variable_none_start_event_form_data:
+                    label: Object du formulaire de démarrage
+                variable_none_start_event_form_validation:
+                    label: Object de validation du formulaire de démarrage
+                variable_none_start_event_form_validation_valid:
+                    label: Clé Valid
+                variable_none_start_event_form_validation_message:
+                    label: Clé message
+                variable_user_task_form_data:
+                    label: Object du formulaire tâche usager
+        menu:
+            tab:
+                label: Bpm
+        task:
+            menu:
+                tab:
+                    label: Tâches
+                index:
+                    label: Tâches
+
+oro:
+    user:
+        bpm_id:
+            label: Id bpm

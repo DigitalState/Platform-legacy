@@ -1,0 +1,3 @@
+ds_bpm:
+    resource: @DsBpmBundle/Controller
+    type: annotation

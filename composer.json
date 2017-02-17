@@ -1,0 +1,30 @@
+{
+    "name": "digitalstate/platform-bpm-bundle",
+    "type": "symfony-bundle",
+    "description": "DigitalState Bpm Bundle",
+    "homepage": "https://github.com/DigitalState/Platform-Bpm-Bundle.git",
+    "keywords": ["Oro", "Bpm"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "DigitalState, Inc",
+            "homepage": "http://www.digitalstate.ca"
+        }
+    ],
+    "require": {
+        "php": ">=5.6",
+        "craue/formflow-bundle": "dev-master",
+        "oro/platform": "1.10.*",
+        "digitalstate/platform-data-bundle" : "~0.2.0"
+    },
+    "autoload": {
+        "psr-4": { "Ds\\Bundle\\BpmBundle\\": "" }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "extra": {
+        "branch-alias": {
+            "dev-master": "0.x-dev"
+        }
+    }
+}
