@@ -1,0 +1,27 @@
+{
+    "name": "digitalstate/platform-bpm-camunda-bundle",
+    "type": "symfony-bundle",
+    "description": "DigitalState Bpm Camunda Bundle",
+    "homepage": "https://github.com/DigitalState/Platform-Bpm-Camunda-Bundle.git",
+    "keywords": ["Oro", "Bpm"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "DigitalState, Inc",
+            "homepage": "http://www.digitalstate.ca"
+        }
+    ],
+    "require": {
+        "php": ">=5.6",
+        "oro/platform": "1.10.*",
+        "digitalstate/platform-bpm-bundle": "~0.2.0",
+        "digitalstate/bpm-camunda-sdk": "dev-master"
+    },
+    "autoload": {
+        "psr-4": { "Ds\\Bundle\\BpmCamundaBundle\\": "" }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "extra": {
+    }
+}
