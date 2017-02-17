@@ -1,0 +1,15 @@
+hwi_oauth:
+    firewall_names: [ main ]
+    resource_owners:
+        linkedin:
+            type: linkedin
+            client_id: LinkedInClientId
+            client_secret: LinkedInClientSecret
+            scope: "r_basicprofile r_emailaddress"
+
+security:
+    firewalls:
+        main:
+            oauth:
+                resource_owners:
+                    linkedin: /login/check-linkedin

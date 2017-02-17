@@ -1,0 +1,6 @@
+services:
+    ds.ssolinkedin.oauth.user.provider.linkedin:
+        parent: ds.sso.oauth.user.provider.abstract
+        class: Ds\Bundle\SSOLinkedinBundle\Security\Core\User\LinkedinOAuthUserProvider
+        tags:
+            - { name: ds.oauth.user.provider, alias: linkedin }
