@@ -1,0 +1,2 @@
+bundles:
+    - { name: Ds\Bundle\TwitterBundle\DsTwitterBundle, priority: 10 }
