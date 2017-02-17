@@ -1,0 +1,42 @@
+datagrid:
+    ds-bpm-task:
+        source:
+            type: repository
+            repository: @ds.bpm.repository.task
+        inline_editing:
+            enable: false
+        columns:
+            id:
+                label: id
+            name:
+                label: name
+            assignee:
+                label: Assignee
+            delegationState:
+                label: Delegation State
+            owner:
+                label: Owner
+            processDefinitionId:
+                label: Process Definition Id
+            processInstanceId:
+                label: Process Instance Id
+            formKey:
+                label: Form Key
+            created:
+                label: Created
+            due:
+                label: Due
+        sorters:
+            columns:
+                name:
+                    data_name: assignee
+        filters:
+            columns:
+                assignee:
+                    type: string
+                    data_name: assignee
+                candidateGroup:
+                    type: string
+                    data_name: candidateGroup
+        properties:
+        actions:

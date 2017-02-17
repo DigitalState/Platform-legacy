@@ -1,0 +1,5 @@
+services:
+    ds.bpm.form.bpm.type.empty:
+        class: Ds\Bundle\BpmBundle\Form\Bpm\Type\EmptyType
+        tags:
+            - { name: form.type, alias: ds_bpm_bpm_empty }
