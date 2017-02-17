@@ -1,0 +1,9 @@
+services:
+     ds.userpersona.migration.extension.definition:
+        class: Ds\Bundle\UserPersonaBundle\Migration\Extension\DefinitionExtension
+#        tags:
+#            - { name: oro_migration.extension, extension_name: definition }
+     ds.userpersona.migration.extension.persona:
+        class: Ds\Bundle\UserPersonaBundle\Migration\Extension\PersonaExtension
+#        tags:
+#            - { name: oro_migration.extension, extension_name: persona }

@@ -1,0 +1,82 @@
+ds:
+    userpersona:
+        persona:
+            entity_label: Persona
+            entity_plural_label: Personas
+            entity_description: The persona.
+            id:
+                label: ID
+                description: ~
+            created_at:
+                label: Created At
+                description: ~
+            updated_at:
+                label: Updated At
+                description: ~
+            user:
+                label: User
+                description: ~
+                placeholder: Select User
+                username:
+                    label: User
+            definition:
+                label: Definition
+                description: ~
+                placeholder: Select Definition
+            data:
+                label: Data
+                description: ~
+            owner:
+                label: Business Unit
+                description: ~
+            menu:
+                tab:
+                    label: Personas
+                index:
+                    label: Personas
+            button:
+                create: Create Persona
+            widget:
+                entity: Persona
+                form: Persona
+                owner: Owner
+            page:
+                index:
+                    title: Personas
+        definition:
+            entity_label: Definition
+            entity_plural_label: Definitions
+            entity_description: The definition.
+            id:
+                label: ID
+                description: ~
+            created_at:
+                label: Created At
+                description: ~
+            updated_at:
+                label: Updated At
+                description: ~
+            title:
+                label: Title
+                description: ~
+            slug:
+                label: Slug
+                description: ~
+            data:
+                label: Data
+                description: ~
+            owner:
+                label: Business Unit
+                description: ~
+            menu:
+                index:
+                    label: Definitions
+            button:
+                create: Create Definition
+            widget:
+                entity: Definition
+                form: Definition
+                owner: Owner
+            page:
+                index:
+                    title: Definitions

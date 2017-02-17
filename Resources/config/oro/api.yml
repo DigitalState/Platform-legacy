@@ -1,0 +1,4 @@
+oro_api:
+    entities:
+        Ds\Bundle\UserPersonaBundle\Entity\Persona: ~
+        Ds\Bundle\UserPersonaBundle\Entity\Definition: ~

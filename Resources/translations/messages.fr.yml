@@ -1,0 +1,82 @@
+ds:
+    userpersona:
+        persona:
+            entity_label: Personnage
+            entity_plural_label: Personnages
+            entity_description: Le personnage.
+            id:
+                label: id
+                description: ~
+            created_at:
+                label: Créé le
+                description: ~
+            updated_at:
+                label: Mis à jour le
+                description: ~
+            user:
+                label: Usager
+                description: ~
+                placeholder: Sélectionner un usager
+                username:
+                    label: Usager
+            definition:
+                label: Définition
+                description: ~
+                placeholder: Sélectionner une définition
+            data:
+                label: Données
+                description: ~
+            owner:
+                label: Unité d'affaires
+                description: ~
+            menu:
+                tab:
+                    label: Personnages
+                index:
+                    label: Personnages
+            button:
+                create: Créer un personnage
+            widget:
+                entity: Personnage
+                form: Personnage
+                owner: Propriétaire
+            page:
+                index:
+                    title: Personnages
+        definition:
+            entity_label: Définition
+            entity_plural_label: Définitions
+            entity_description: La définition.
+            id:
+                label: id
+                description: ~
+            created_at:
+                label: Créé le
+                description: ~
+            updated_at:
+                label: Mis à jour le
+                description: ~
+            title:
+                label: Titre
+                description: ~
+            slug:
+                label: Jeton
+                description: ~
+            data:
+                label: Données
+                description: ~
+            owner:
+                label: Unité d'affaires
+                description: ~
+            menu:
+                index:
+                    label: Définitions
+            button:
+                create: Créer une définition
+            widget:
+                entity: Définition
+                form: Définition
+                owner: Propriétaire
+            page:
+                index:
+                    title: Définitions

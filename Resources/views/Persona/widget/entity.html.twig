@@ -1,0 +1,18 @@
+{% import 'OroUIBundle::macros.html.twig' as UI %}
+
+<div class="widget-content">
+    <div class="row-fluid form-horizontal">
+        <div class="responsive-block">
+            {{ UI.renderProperty('ds.userpersona.persona.id.label'|trans, entity.id) }}
+            {% if entity.user %}
+                {{ UI.renderHtmlProperty('ds.userpersona.persona.user.label'|trans, '<a href="' ~ path('oro_user_view', { id: entity.user.id }) ~ '">' ~ entity.user.username ~ '</a>') }}
+            {% else %}
+                {{ UI.renderProperty('ds.userpersona.persona.user.label'|trans, 'ds.userpersona.persona.user.none'|trans) }}
+            {% endif %}
+            {{ UI.renderHtmlProperty('ds.userpersona.persona.definition.label'|trans, '<a href="' ~ path('ds_userpersona_definition_view', { id: entity.definition.id }) ~ '">' ~ entity.definition.title ~ '</a>') }}
+        </div>
+    </div>
+    {% for widget in ds_widgets({ position: 'ds_userpersona_persona_entity_persona', context: context }, { entity: entity }) %}
+        {{ widget.content|raw }}
+    {% endfor %}
+</div>
