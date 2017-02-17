@@ -1,0 +1,8 @@
+services:
+    ds.user.twig.extension.user:
+        class: Ds\Bundle\UserBundle\Twig\Extension\UserExtension
+        public: false
+        arguments:
+            - @security.context
+        tags:
+            - { name: twig.extension }

@@ -1,0 +1,15 @@
+services:
+     ds.user.migration.extension.group:
+        class: Ds\Bundle\UserBundle\Migration\Extension\GroupExtension
+#        tags:
+#            - { name: oro_migration.extension, extension_name: group }
+     ds.user.migration.extension.role:
+        class: Ds\Bundle\UserBundle\Migration\Extension\RoleExtension
+#        tags:
+#            - { name: oro_migration.extension, extension_name: role }
+     ds.user.migration.extension.user:
+        class: Ds\Bundle\UserBundle\Migration\Extension\UserExtension
+        arguments:
+            - @oro_user.manager
+#        tags:
+#            - { name: oro_migration.extension, extension_name: user }
