@@ -1,0 +1,29 @@
+{
+    "name": "digitalstate/platform-admin-bundle",
+    "type": "symfony-bundle",
+    "description": "DigitalState Platform Admin Bundle",
+    "homepage": "https://github.com/DigitalState/Platform-Admin-Bundle.git",
+    "keywords": ["Oro", "Communication"],
+    "license": "MIT",
+    "authors": [
+        {
+          "name": "Digital State, Inc",
+          "homepage": "http://www.digitalstate.ca"
+        }
+    ],
+    "require": {
+        "php": ">=5.6",
+        "oro/platform": "1.10.*",
+        "digitalstate/platform-entity-bundle" : "~0.2.0"
+    },
+    "autoload": {
+        "psr-4": { "Ds\\Bundle\\AdminBundle\\": "" }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "extra": {
+        "branch-alias": {
+            "dev-master": "0.x-dev"
+        }
+    }
+}
