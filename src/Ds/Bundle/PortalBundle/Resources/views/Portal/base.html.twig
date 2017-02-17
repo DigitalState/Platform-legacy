@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html{% block html_tag %}{% endblock %}>
+    <head{% block head_tag %}{% endblock %}>
+        {% block head %}
+            <title>
+                {% block title %}{{ oro_config_value('ds_portal.meta_title') }}{% endblock %}
+            </title>
+            {% block meta %}
+                <meta charset="utf-8">
+                <meta http-equiv="X-UA-Compatible" content="IE=edge">
+                <meta name="viewport" content="width=device-width, initial-scale=1">
+                <meta name="description" content="{{ oro_config_value('ds_portal.meta_description') }}">
+                <meta name="keywords" content="{{ oro_config_value('ds_portal.meta_keywords') }}">
+                <meta name="author" content="{{ oro_config_value('ds_portal.meta_author') }}">
+            {% endblock %}
+            {% block stylesheets %}
+                <link rel="stylesheet" href="/bundles/dsportal/vendor/bootstrap/css/bootstrap.min.css">
+                <link rel="stylesheet" href="/bundles/dsportal/vendor/bootstrap-toggle/css/bootstrap-toggle.min.css">
+                <link rel="stylesheet" href="/bundles/dsportal/vendor/bootswatch/flatly-custom/bootstrap.css">
+                <link rel="stylesheet" href="/bundles/dsportal/vendor/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css">
+                <link rel="stylesheet" href="/bundles/dsportal/vendor/font-awesome/css/font-awesome.min.css">
+                <link rel="stylesheet" href="/bundles/dsportal/css/base.css">
+            {% endblock %}
+            {% block scripts %}
+                <script src="/bundles/dsportal/vendor/jquery/jquery.min.js"></script>
+                <script src="/bundles/dsportal/vendor/jquery-form/jquery.form.min.js"></script>
+                <script src="/bundles/dsportal/vendor/bootstrap/js/bootstrap.min.js"></script>
+                <script src="/bundles/dsportal/vendor/bootstrap-toggle/js/bootstrap-toggle.min.js"></script>
+                <script src="/bundles/dsportal/vendor/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
+                <script src="/bundles/dsportal/js/base.js"></script>
+            {% endblock %}
+        {% endblock %}
+    </head>
+    <body{% block body_tag %}{% endblock %}>
+        {% block body %}
+            <div class="container">
+                <header{% block header_tag %} class="clearfix"{% endblock %}>
+                    {% block header %}
+                        <nav class="navbar navbar-default">
+                            <div class="container-fluid">
+                                <div class="navbar-header">
+                                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#ds-portal-menu">
+                                        <span class="sr-only">Toggle navigation</span>
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                    </button>
+                                    <a class="navbar-brand" href="#">
+                                        {% for widget in ds_widgets({ position: 'ds_portal_portal_brand' }) %}
+                                            {{ widget.content|raw }}
+                                        {% endfor %}
+
+                                    </a>
+                                </div>
+                                <div class="collapse navbar-collapse" id="ds-portal-menu">
+                                    {% for widget in ds_widgets({ position: 'ds_portal_portal_navigation' }) %}
+                                        {{ widget.content|raw }}
+                                    {% endfor %}
+                                    {{ oro_menu_render('ds_portal_main', { rootClass: 'nav navbar-nav navbar-right' }) }}
+                                </div>
+                            </div>
+                        </nav>
+                    {% endblock %}
+                </header>
+                <main{% block main_tag %}{% endblock %}>
+                    {% block main %}
+                        {% block breadcrumb %}
+                        {% endblock %}
+                        {% block content %}
+                        {% endblock %}
+                    {% endblock %}
+                </main>
+            </div>
+            <footer{% block footer_tag %} class="clearfix"{% endblock %}>
+                {% block footer %}
+                    {% for widget in ds_widgets({ position: 'ds_portal_portal_footer' }) %}
+                        {{ widget.content|raw }}
+                    {% endfor %}
+                {% endblock %}
+            </footer>
+        {% endblock %}
+    </body>
+</html>

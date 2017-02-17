@@ -1,0 +1,4 @@
+parameters:
+    ds.portal.prefix: /{_locale}/portal
+    ds.portal.requirements.locale: ([a-z]+)
+    ds.portal.defaults.locale: en
