@@ -1,0 +1,13 @@
+services:
+    ds.notification.data.resolver.notification:
+        class: Ds\Bundle\NotificationBundle\Data\Resolver\NotificationResolver
+        arguments:
+            - @ds.notification.manager.notification
+        tags:
+            - { name: ds.data.resolver }
+    ds.notification.data.resolver.subscription:
+        class: Ds\Bundle\NotificationBundle\Data\Resolver\SubscriptionResolver
+        arguments:
+            - @ds.notification.manager.subscription
+        tags:
+            - { name: ds.data.resolver }

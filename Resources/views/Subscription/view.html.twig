@@ -1,0 +1,47 @@
+{% extends 'OroUIBundle:actions:view.html.twig' %}
+
+{% import 'OroUIBundle::macros.html.twig' as UI %}
+
+{% block pageHeader %}
+    {% set breadcrumbs = {
+        entity: entity,
+        indexPath: path('ds_notification_subscription_index'),
+        indexLabel: 'ds.notification.subscription.menu.index.label'|trans,
+        entityTitle: 'ds.notification.subscription.entity_label'|trans ~ ' ' ~ entity.id
+    } %}
+    {{ parent() }}
+{% endblock pageHeader %}
+
+{% block navButtons %}
+    {% if resource_granted('ds.notification.subscription.edit', entity) %}
+        {{ UI.editButton({
+            path: path('ds_notification_subscription_edit', { id: entity.id }),
+            entity_label: 'ds.notification.subscription.entity_label'|trans
+        }) }}
+    {% endif %}
+    {% if resource_granted('ds.notification.subscription.delete', entity) %}
+        {{ UI.deleteButton({
+            dataUrl: path('ds_notification_api_rest_delete_subscription', { id: entity.id }),
+            dataRedirect: path('ds_notification_subscription_index'),
+            aCss: 'no-hash remove-button',
+            id: 'btn-remove-notification',
+            dataId: entity.id,
+            entity_label: 'ds.notification.subscription.entity_label'|trans,
+        }) }}
+    {% endif %}
+{% endblock navButtons %}
+
+{% block content_data %}
+    {% set dataBlocks = [] %}
+    {% for widget in ds_widgets({ position: 'ds_notification_subscription_entity', context: context }, { entity: entity, context: context }) %}
+        {% set dataBlocks = dataBlocks|merge([ {
+            title: widget.title|trans,
+            subblocks: [ {
+                data : [ widget.content ]
+            } ]
+        } ]) %}
+    {% endfor %}
+    {% set id = 'subscription-view' %}
+    {% set data = { dataBlocks: dataBlocks } %}
+    {{ parent() }}
+{% endblock content_data %}

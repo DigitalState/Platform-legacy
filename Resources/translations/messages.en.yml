@@ -1,0 +1,116 @@
+ds:
+    notification:
+        entity_label: Notification
+        entity_plural_label: Notifications
+        entity_description: The notification.
+        id:
+            label: ID
+            description: ~
+        created_at:
+            label: Created At
+            description: ~
+        updated_at:
+            label: Updated At
+            description: ~
+        title:
+            label: Title
+            description: ~
+        slug:
+            label: Url Token
+            description: ~
+        description:
+            label: Description
+            description: ~
+        icon:
+            label: Icon
+            description: ~
+        presentation:
+            label: Presentation
+            description: ~
+        channels:
+            label: Channels
+            description: ~
+        owner:
+            label: Business Unit
+            description: ~
+        menu:
+            tab:
+                label: Notifications
+            index:
+                label: Notifications
+        grid:
+            actions:
+                view: View
+                update: Edit
+                delete: Delete
+        button:
+            create: Create Notification
+        widget:
+            entity: Notification
+            form: Notification
+            owner: Owner
+            subscriptions:
+                grid: Subscriptions
+        page:
+            index:
+                title: Notifications
+            view: ~
+            edit: ~
+            portal:
+                index:
+                    title: Notifications
+
+        subscription:
+            entity_label: Subscription
+            entity_plural_label: Subscriptions
+            entity_description: The subscription.
+            id:
+                label: ID
+                description: ~
+            created_at:
+                label: Created At
+                description: ~
+            updated_at:
+                label: Updated At
+                description: ~
+            user:
+                label: User
+                description: ~
+                placeholder: Select user
+                username:
+                    label: Username
+            notification:
+                label: Notification
+                description: ~
+                placeholder: Select Notification
+                title:
+                    label: Notification
+            channels:
+                label: Channels
+                description: ~
+            owner:
+                label: Business Unit
+                description: ~
+            menu:
+                index:
+                    label: Subscriptions
+            grid:
+                actions:
+                    view: View
+                    update: Edit
+                    delete: Delete
+            button:
+                create: Create Subscription
+            widget:
+                entity: Subscription
+                form: Subscription
+                owner: Owner
+            page:
+                index:
+                    title: Subscriptions
+                view: ~
+                edit: ~
+    communication:
+        criterion:
+            collection:
+                notification: Notification
