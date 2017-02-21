@@ -1,0 +1,40 @@
+acls:
+    ds.userpersona.definition.view:
+        type: entity
+        class: DsUserPersonaBundle:Definition
+        permission: VIEW
+
+    ds.userpersona.definition.create:
+        type: entity
+        class: DsUserPersonaBundle:Definition
+        permission: CREATE
+
+    ds.userpersona.definition.edit:
+        type: entity
+        class: DsUserPersonaBundle:Definition
+        permission: EDIT
+
+    ds.userpersona.definition.delete:
+        type: entity
+        class: DsUserPersonaBundle:Definition
+        permission: DELETE
+
+    ds.userpersona.persona.view:
+        type: entity
+        class: DsUserPersonaBundle:Persona
+        permission: VIEW
+
+    ds.userpersona.persona.create:
+        type: entity
+        class: DsUserPersonaBundle:Persona
+        permission: CREATE
+
+    ds.userpersona.persona.edit:
+        type: entity
+        class: DsUserPersonaBundle:Persona
+        permission: EDIT
+
+    ds.userpersona.persona.delete:
+        type: entity
+        class: DsUserPersonaBundle:Persona
+        permission: DELETE

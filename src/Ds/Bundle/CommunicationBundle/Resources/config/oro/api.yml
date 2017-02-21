@@ -1,4 +1,4 @@
-oro_api:
+api:
     entities:
         Ds\Bundle\CommunicationBundle\Entity\Channel: ~
         Ds\Bundle\CommunicationBundle\Entity\Communication: ~

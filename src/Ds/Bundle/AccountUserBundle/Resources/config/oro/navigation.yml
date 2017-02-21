@@ -1,0 +1,12 @@
+navigation:
+    menu_config:
+        items:
+            ds_accountuser_account_user_logout:
+                label: ds.accountuser.user.page.account.logout.title
+                route: oro_user_security_logout
+                extras:
+                    position: 50
+        tree:
+            ds_account_main:
+                children:
+                    ds_accountuser_account_user_logout: ~

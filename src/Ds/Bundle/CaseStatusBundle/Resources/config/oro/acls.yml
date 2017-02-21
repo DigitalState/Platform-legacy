@@ -1,0 +1,20 @@
+acls:
+    ds.casestatus.status.view:
+        type: entity
+        class: DsCaseStatusBundle:Status
+        permission: VIEW
+
+    ds.casestatus.status.create:
+        type: entity
+        class: DsCaseStatusBundle:Status
+        permission: CREATE
+
+    ds.casestatus.status.edit:
+        type: entity
+        class: DsCaseStatusBundle:Status
+        permission: EDIT
+
+    ds.casestatus.status.delete:
+        type: entity
+        class: DsCaseStatusBundle:Status
+        permission: DELETE

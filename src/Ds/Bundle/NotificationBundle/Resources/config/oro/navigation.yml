@@ -1,0 +1,23 @@
+navigation:
+    menu_config:
+        items:
+            ds_notification_tab:
+                label: ds.notification.menu.tab.label
+                uri: '#'
+                extras:
+                    position: 21
+            ds_notification_index:
+                label: ds.notification.menu.index.label
+                route: ds_notification_notification_index
+            ds_subscription_index:
+                label: ds.notification.subscription.menu.index.label
+                route: ds_notification_subscription_index
+        tree:
+            application_menu:
+                children:
+                    system_tab:
+                        children:
+                            ds_notification_tab:
+                                children:
+                                    ds_notification_index: ~
+                                    ds_subscription_index: ~

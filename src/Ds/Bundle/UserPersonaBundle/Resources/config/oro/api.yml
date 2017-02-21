@@ -1,4 +1,4 @@
-oro_api:
+api:
     entities:
         Ds\Bundle\UserPersonaBundle\Entity\Persona: ~
         Ds\Bundle\UserPersonaBundle\Entity\Definition: ~

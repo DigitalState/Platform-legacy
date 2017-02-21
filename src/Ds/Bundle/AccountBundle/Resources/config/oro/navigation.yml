@@ -1,0 +1,10 @@
+navigation:
+    menu_config:
+        templates:
+            ds_account_main:
+                template: DsAccountBundle:Account:menu/main.html.twig
+                current_class: active
+                ancestor_class: active
+        tree:
+            ds_account_main:
+                type: ds_account_main

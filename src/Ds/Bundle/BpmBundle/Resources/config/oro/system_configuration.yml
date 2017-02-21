@@ -1,0 +1,174 @@
+system_configuration:
+    groups:
+        ds_bpm:
+            title: ds.bpm.system_configuration.groups.bpm.title
+        ds_bpm_variable:
+            title: ds.bpm.system_configuration.groups.bpm_variable.title
+            icon: icon-wrench
+        ds_bpm_variable_user:
+            title: ds.bpm.system_configuration.groups.bpm_variable_user.title
+        ds_bpm_variable_service:
+            title: ds.bpm.system_configuration.groups.bpm_variable_service.title
+        ds_bpm_variable_localization:
+            title: ds.bpm.system_configuration.groups.bpm_variable_localization.title
+        ds_bpm_variable_none_start_event:
+            title: ds.bpm.system_configuration.groups.bpm_variable_none_start_event.title
+        ds_bpm_variable_none_start_event_validation:
+            title: ds.bpm.system_configuration.groups.bpm_variable_none_start_event_validation.title
+        ds_bpm_variable_user_task:
+            title: ds.bpm.system_configuration.groups.bpm_variable_user_task.title
+    fields:
+        ds_bpm.variable_user:
+            data_type: string
+            type: text
+            options:
+                label: ds.bpm.system_configuration.fields.variable_user.label
+                tooltip: ~
+            priority: 4
+        ds_bpm.variable_user_id:
+            data_type: string
+            type: text
+            options:
+                label: ds.bpm.system_configuration.fields.variable_user_id.label
+                tooltip: ~
+            priority: 3
+        ds_bpm.variable_user_business_unit_id:
+            data_type: string
+            type: text
+            options:
+                label: ds.bpm.system_configuration.fields.variable_user_business_unit_id.label
+                tooltip: ~
+            priority: 2
+        ds_bpm.variable_user_organization_id:
+            data_type: string
+            type: text
+            options:
+                label: ds.bpm.system_configuration.fields.variable_user_organization_id.label
+                tooltip: ~
+            priority: 1
+        ds_bpm.variable_service:
+            data_type: string
+            type: text
+            options:
+                label: ds.bpm.system_configuration.fields.variable_service.label
+                tooltip: ~
+            priority: 4
+        ds_bpm.variable_service_id:
+            data_type: string
+            type: text
+            options:
+                label: ds.bpm.system_configuration.fields.variable_service_id.label
+                tooltip: ~
+            priority: 3
+        ds_bpm.variable_service_business_unit_id:
+            data_type: string
+            type: text
+            options:
+                label: ds.bpm.system_configuration.fields.variable_service_business_unit_id.label
+                tooltip: ~
+            priority: 2
+        ds_bpm.variable_service_organization_id:
+            data_type: string
+            type: text
+            options:
+                label: ds.bpm.system_configuration.fields.variable_service_organization_id.label
+                tooltip: ~
+            priority: 1
+        ds_bpm.variable_localization:
+            data_type: string
+            type: text
+            options:
+                label: ds.bpm.system_configuration.fields.variable_localization.label
+                tooltip: ~
+            priority: 4
+        ds_bpm.variable_localization_id:
+            data_type: string
+            type: text
+            options:
+                label: ds.bpm.system_configuration.fields.variable_localization_id.label
+                tooltip: ~
+            priority: 3
+        ds_bpm.variable_localization_language_code:
+            data_type: string
+            type: text
+            options:
+                label: ds.bpm.system_configuration.fields.variable_localization_language_code.label
+                tooltip: ~
+            priority: 2
+        ds_bpm.variable_localization_formatting_code:
+            data_type: string
+            type: text
+            options:
+                label: ds.bpm.system_configuration.fields.variable_localization_formatting_code.label
+                tooltip: ~
+            priority: 1
+        ds_bpm.variable_none_start_event_form_data:
+            data_type: string
+            type: text
+            options:
+                label: ds.bpm.system_configuration.fields.variable_none_start_event_form_data.label
+                tooltip: ~
+            priority: 4
+        ds_bpm.variable_none_start_event_form_validation:
+            data_type: string
+            type: text
+            options:
+                label: ds.bpm.system_configuration.fields.variable_none_start_event_form_validation.label
+                tooltip: ~
+            priority: 3
+        ds_bpm.variable_none_start_event_form_validation_valid:
+            data_type: string
+            type: text
+            options:
+                label: ds.bpm.system_configuration.fields.variable_none_start_event_form_validation_valid.label
+                tooltip: ~
+            priority: 2
+        ds_bpm.variable_none_start_event_form_validation_message:
+            data_type: string
+            type: text
+            options:
+                label: ds.bpm.system_configuration.fields.variable_none_start_event_form_validation_message.label
+                tooltip: ~
+            priority: 1
+        ds_bpm.variable_user_task_form_data:
+            data_type: string
+            type: text
+            options:
+                label: ds.bpm.system_configuration.fields.variable_user_task_form_data.label
+                tooltip: ~
+            priority: 1
+    tree:
+        system_configuration:
+            platform:
+                children:
+                    ds_bpm:
+                        children:
+                            ds_bpm_variable:
+                                children:
+                                    ds_bpm_variable_user:
+                                        children:
+                                            - ds_bpm.variable_user
+                                            - ds_bpm.variable_user_id
+                                            - ds_bpm.variable_user_business_unit_id
+                                            - ds_bpm.variable_user_organization_id
+                                    ds_bpm_variable_service:
+                                        children:
+                                            - ds_bpm.variable_service
+                                            - ds_bpm.variable_service_id
+                                            - ds_bpm.variable_service_business_unit_id
+                                            - ds_bpm.variable_service_organization_id
+                                    ds_bpm_variable_localization:
+                                        children:
+                                            - ds_bpm.variable_localization
+                                            - ds_bpm.variable_localization_id
+                                            - ds_bpm.variable_localization_language_code
+                                            - ds_bpm.variable_localization_formatting_code
+                                    ds_bpm_variable_none_start_event:
+                                        children:
+                                            - ds_bpm.variable_none_start_event_form_data
+                                            - ds_bpm.variable_none_start_event_form_validation
+                                            - ds_bpm.variable_none_start_event_form_validation_valid
+                                            - ds_bpm.variable_none_start_event_form_validation_message
+                                    ds_bpm_variable_user_task:
+                                        children:
+                                            - ds_bpm.variable_user_task_form_data

@@ -1,0 +1,19 @@
+navigation:
+    menu_config:
+        templates:
+            ds_portal_main:
+                template: DsPortalBundle:Portal:menu/main.html.twig
+                current_class: active
+                ancestor_class: active
+        items:
+            ds_portal_portal_home_index:
+                label: ds.portal.page.portal.home.index.title
+                route: ds_portal_portal_home_index
+                extras:
+                    position: 10
+                    showNon_authorized: true
+        tree:
+            ds_portal_main:
+                type: ds_portal_main
+                children:
+                    ds_portal_portal_home_index: ~

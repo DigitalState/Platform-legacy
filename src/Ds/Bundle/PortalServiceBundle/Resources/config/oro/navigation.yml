@@ -1,0 +1,13 @@
+navigation:
+    menu_config:
+        items:
+            ds_portalservice_portal_service_index:
+                label: ds.portalservice.page.portal.service.index.title
+                route: ds_portalservice_portal_service_index
+                extras:
+                    position: 20
+                    show_non_authorized: true
+        tree:
+            ds_portal_main:
+                children:
+                    ds_portalservice_portal_service_index: ~

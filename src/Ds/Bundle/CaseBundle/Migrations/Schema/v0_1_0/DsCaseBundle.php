@@ -3,8 +3,6 @@
 namespace Ds\Bundle\CaseBundle\Migrations\Schema\v0_1_0;
 
 use Oro\Bundle\MigrationBundle\Migration\Migration;
-use Oro\Bundle\NoteBundle\Migration\Extension\NoteExtensionAwareInterface;
-use Oro\Bundle\NoteBundle\Migration\Extension\NoteExtension;
 use Ds\Bundle\AssetBundle\Migration\Extension\AssetExtensionAwareInterface;
 use Ds\Bundle\AssetBundle\Migration\Extension\AssetExtensionAwareTrait;
 use Doctrine\DBAL\Schema\Schema;
@@ -13,24 +11,9 @@ use Oro\Bundle\MigrationBundle\Migration\QueryBag;
 /**
  * Class DsCaseBundle
  */
-class DsCaseBundle implements Migration, NoteExtensionAwareInterface, AssetExtensionAwareInterface
+class DsCaseBundle implements Migration, AssetExtensionAwareInterface
 {
     use AssetExtensionAwareTrait;
-
-    /**
-     * @var \Oro\Bundle\NoteBundle\Migration\Extension\NoteExtension
-     */
-    protected $noteExtension; # region accessors
-
-    /**
-     * {@inheritdoc}
-     */
-    public function setNoteExtension(NoteExtension $noteExtension)
-    {
-        $this->noteExtension = $noteExtension;
-    }
-
-    # endregion
 
     /**
      * {@inheritdoc}
@@ -41,8 +24,6 @@ class DsCaseBundle implements Migration, NoteExtensionAwareInterface, AssetExten
         $this->createCaseTitleTable($schema);
         $this->addCaseForeignKeys($schema);
         $this->addCaseTitleForeignKeys($schema);
-        //$this->noteExtension->addNoteAssociation($schema, 'ds_case');
-        //$this->assetExtension->addAssetAssociation($schema, 'ds_case');
     }
 
     /**
