@@ -2,7 +2,7 @@ system_configuration:
     groups:
         ds_bpm_camunda_camunda:
             title: ds.bpm_camunda.system_configuration.groups.bpm_camunda_camunda.title
-            icon: icon-wrench
+            icon: fa-wrench
         ds_bpm_camunda_camunda_connection:
             title: ds.bpm_camunda.system_configuration.groups.bpm_camunda_camunda_connection.title
     fields:
