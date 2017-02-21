@@ -4,7 +4,7 @@ system_configuration:
             title: ds.bpm.system_configuration.groups.bpm.title
         ds_bpm_variable:
             title: ds.bpm.system_configuration.groups.bpm_variable.title
-            icon: icon-wrench
+            icon: fa-wrench
         ds_bpm_variable_user:
             title: ds.bpm.system_configuration.groups.bpm_variable_user.title
         ds_bpm_variable_service:

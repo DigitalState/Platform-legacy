@@ -5,6 +5,7 @@ This changelog references the relevant changes (new features, changes and bugs) 
   * Upgraded Oro Platform to 2.0.
   * Upgraded bundle and files to be 2.0 compatible.
   * Removed duplicate navigation menu entries since they are no longer compatible with 2.0.
+  * Fixed system configuration icons.
 
 
 # CHANGELOG for 0.2.0
