@@ -4,6 +4,7 @@ This changelog references the relevant changes (new features, changes and bugs) 
 
   * Upgraded Oro Platform to 2.0.
   * Upgraded bundle and files to be 2.0 compatible.
+  * Added Platform bundle.
 
 
 # CHANGELOG for 0.2.1
