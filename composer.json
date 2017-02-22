@@ -1,10 +1,11 @@
 {
-    "name": "oro/platform-application",
-    "description": "Oro Platform Empty Application",
-    "homepage": "https://github.com/orocrm/platform-application.git",
+    "name": "digitalstate/platform",
+    "description": "DigitalState Platform",
+    "homepage": "https://github.com/DigitalState/Platform.git",
+    "keywords": ["DigitalState"],
     "license": "MIT",
     "autoload": {
-        "psr-0": {
+        "psr-4": {
             "": "src/"
         }
     },
