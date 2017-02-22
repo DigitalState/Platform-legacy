@@ -1,0 +1,2 @@
+exclude_paths:
+- "src/Ds/Bundle/PortalBundle/Resources/public/vendor/"
