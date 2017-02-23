@@ -3,6 +3,7 @@
 This changelog references the relevant changes (new features, changes and bugs) done in 0.4.0 version.
 
   * Fixed accessor typo in Enabled entity attribute.
+  * Added Published entity attribute.
 
 
 # CHANGELOG for 0.3.0

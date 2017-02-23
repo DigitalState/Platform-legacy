@@ -5,6 +5,7 @@ This changelog references the relevant changes (new features, changes and bugs) 
   * Added .codeclimate.yml file.
   * Added definition bundle.
   * Fixed accessor typo in Enabled entity attribute.
+  * Added Published entity attribute.
 
 
 # CHANGELOG for 0.3.0
