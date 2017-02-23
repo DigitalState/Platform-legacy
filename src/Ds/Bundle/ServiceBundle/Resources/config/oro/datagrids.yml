@@ -9,6 +9,7 @@ datagrids:
                     - s.id
                     - s.createdAt
                     - s.updatedAt
+                    - s.enabled
                 from:
                     - { table: DsServiceBundle:Service, alias: s }
         inline_editing:
@@ -29,6 +30,12 @@ datagrids:
             updatedAt:
                 label: ds.service.created_at.label
                 frontend_type: datetime
+            enabled:
+                label: ds.service.enabled.label
+                frontend_type: select
+                choices:
+                    1: ds.service.enabled.choice.1.label
+                    0: ds.service.enabled.choice.0.label
         properties:
             id: ~
             update_link:
@@ -54,6 +61,8 @@ datagrids:
                     data_name: s.createdAt
                 updatedAt:
                     data_name: s.updatedAt
+                enabled:
+                    data_name: s.enabled
             default:
                 id: ASC
         filters:
@@ -64,6 +73,14 @@ datagrids:
                 updatedAt:
                     type: datetime
                     data_name: s.updatedAt
+                enabled:
+                    type: boolean
+                    data_name: s.enabled
+                    options:
+                        field_options:
+                            choices:
+                                1: ds.service.enabled.choice.1.label
+                                0: ds.service.enabled.choice.0.label
         actions:
             view:
                 type: navigate
