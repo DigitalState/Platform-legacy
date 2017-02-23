@@ -7097,7 +7097,7 @@ body {
 }
 
 header .navbar-default {
-    min-height: 110px;
+    min-height: 100px;
     background-color: #ffffff;
     -webkit-box-shadow: 0 4px 4px -2px #dddddd;
     -moz-box-shadow: 0 4px 4px -2px #dddddd;
@@ -7196,11 +7196,11 @@ footer p {
     }
 
     header .navbar-default .navbar-collapse {
-        margin-top: 10px;
+        margin-top: 0px;
     }
 
     main {
-        margin-top: 110px;
+        margin-top: 100px;
     }
 }
 
