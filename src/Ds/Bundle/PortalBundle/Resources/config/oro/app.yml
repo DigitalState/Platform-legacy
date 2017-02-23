@@ -1,7 +1,7 @@
-security:
-    firewalls:
-        portal:
-            pattern: ^/([a-z]+)/portal/?$
-            anonymous: ~
-    access_control:
-        - { path: ^/([a-z]+)/portal, roles: IS_AUTHENTICATED_ANONYMOUSLY }
+#security:
+#    firewalls:
+#        portal:
+#            pattern: ^/([a-z]+)/portal/?$
+#            anonymous: ~
+#    access_control:
+#        - { path: ^/([a-z]+)/portal, roles: ROLE_USER }
