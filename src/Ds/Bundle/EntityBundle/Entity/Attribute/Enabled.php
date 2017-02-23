@@ -22,7 +22,7 @@ trait Enabled
      * @param boolean $enabled
      * @return object
      */
-    public function setSent($enabled)
+    public function setEnabled($enabled)
     {
         $this->enabled = $enabled;
 
