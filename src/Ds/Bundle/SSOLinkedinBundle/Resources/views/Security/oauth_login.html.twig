@@ -1,7 +1,7 @@
-{% if oro_config_value('ds_sso_linkedin.enable_sso') %}
+{% if oro_config_value('ds_sso_linkedin.enabled') %}
     <a href="{{ hwi_oauth_authorization_url('linkedin') }}">
         {% image '@DsSSOLinkedinBundle/Resources/public/img/button/sso/non-retina/small-default.png' %}
-            <img src="{{ asset_url }}" alt="Example" />
+            <img src="{{ asset_url }}" />
         {% endimage %}
     </a>
 {% endif %}

@@ -8,6 +8,7 @@ This changelog references the relevant changes (new features, changes and bugs) 
   * Added Published entity attribute.
   * Restructured navigation menu.
   * Added Published entity attribute to Service entity.
+  * Fixed linkedin oauth login display condition.
 
 
 # CHANGELOG for 0.3.0
