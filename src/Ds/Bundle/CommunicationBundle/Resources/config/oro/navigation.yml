@@ -5,7 +5,7 @@ navigation:
                 label: ds.communication.menu.tab.label
                 uri: '#'
                 extras:
-                    position: 21
+                    position: 20
             ds_channel_index:
                 label: ds.communication.channel.menu.index.label
                 route: ds_communication_channel_index
@@ -27,10 +27,8 @@ navigation:
         tree:
             application_menu:
                 children:
-                    system_tab:
+                    ds_communication_tab:
                         children:
-                            ds_communication_tab:
-                                children:
-                                    ds_communication_index: ~
-                                    ds_channel_index: ~
-                                    ds_template_index: ~
+                            ds_communication_index: ~
+                            ds_channel_index: ~
+                            ds_template_index: ~

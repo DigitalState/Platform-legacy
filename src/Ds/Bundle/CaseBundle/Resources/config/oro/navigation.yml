@@ -9,9 +9,13 @@ navigation:
             ds_case_index:
                 label: ds.case.caseentity.menu.index.label
                 route: ds_case_case_index
+            ds_case_create:
+                label: ds.case.caseentity.menu.create.label
+                route: ds_case_case_create
         tree:
             application_menu:
                 children:
                     ds_case_tab:
                         children:
                             ds_case_index: ~
+                            ds_case_create: ~

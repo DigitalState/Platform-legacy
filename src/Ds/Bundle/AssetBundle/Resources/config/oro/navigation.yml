@@ -9,11 +9,3 @@ navigation:
             ds_asset_index:
                 label: ds.asset.menu.index.label
                 route: ds_asset_asset_index
-        tree:
-            application_menu:
-                children:
-                    system_tab:
-                        children:
-                            ds_asset_tab:
-                                children:
-                                    ds_asset_index: ~

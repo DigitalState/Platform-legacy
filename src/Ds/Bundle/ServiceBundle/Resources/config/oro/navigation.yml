@@ -5,7 +5,7 @@ navigation:
                 label: ds.service.menu.tab.label
                 uri: '#'
                 extras:
-                    position: 21
+                    position: 25
             ds_service_index:
                 label: ds.service.menu.index.label
                 route: ds_service_service_index
@@ -15,9 +15,7 @@ navigation:
         tree:
             application_menu:
                 children:
-                    system_tab:
+                    ds_service_tab:
                         children:
-                            ds_service_tab:
-                                children:
-                                    ds_service_index: ~
-                                    ds_activation_index: ~
+                            ds_service_index: ~
+                            ds_activation_index: ~

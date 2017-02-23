@@ -51,15 +51,14 @@ ds:
                     label: Message Key
                 variable_user_task_form_data:
                     label: Form Data Object
-        menu:
-            tab:
-                label: Bpm
         task:
             menu:
                 tab:
                     label: Tasks
                 index:
                     label: Tasks
+                claim:
+                    label: Claim Task
 
 oro:
     user:

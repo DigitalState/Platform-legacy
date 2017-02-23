@@ -5,7 +5,7 @@ navigation:
                 label: ds.transport.menu.tab.label
                 uri: '#'
                 extras:
-                    position: 21
+                    position: 90
             ds_transport_index:
                 label: ds.transport.menu.index.label
                 route: ds_transport_transport_index

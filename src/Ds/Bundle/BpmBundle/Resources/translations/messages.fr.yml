@@ -51,15 +51,14 @@ ds:
                     label: Clé message
                 variable_user_task_form_data:
                     label: Object du formulaire tâche usager
-        menu:
-            tab:
-                label: Bpm
         task:
             menu:
                 tab:
                     label: Tâches
                 index:
                     label: Tâches
+                claim:
+                    label: Réclamer une tâche
 
 oro:
     user:

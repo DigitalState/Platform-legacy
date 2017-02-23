@@ -55,6 +55,8 @@ ds:
                     label: Cas
                 index:
                     label: Cas
+                create:
+                    label: Créer un cas
             page:
                 index:
                     title: Cas

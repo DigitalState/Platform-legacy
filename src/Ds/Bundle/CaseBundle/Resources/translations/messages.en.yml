@@ -55,6 +55,8 @@ ds:
                     label: Cases
                 index:
                     label: Cases
+                create:
+                    label: Create Case
             page:
                 index:
                     title: Cases

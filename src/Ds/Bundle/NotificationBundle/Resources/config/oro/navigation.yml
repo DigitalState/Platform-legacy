@@ -5,7 +5,7 @@ navigation:
                 label: ds.notification.menu.tab.label
                 uri: '#'
                 extras:
-                    position: 21
+                    position: 26
             ds_notification_index:
                 label: ds.notification.menu.index.label
                 route: ds_notification_notification_index
@@ -15,9 +15,7 @@ navigation:
         tree:
             application_menu:
                 children:
-                    system_tab:
+                    ds_notification_tab:
                         children:
-                            ds_notification_tab:
-                                children:
-                                    ds_notification_index: ~
-                                    ds_subscription_index: ~
+                            ds_notification_index: ~
+                            ds_subscription_index: ~

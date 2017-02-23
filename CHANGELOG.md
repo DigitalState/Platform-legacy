@@ -6,6 +6,7 @@ This changelog references the relevant changes (new features, changes and bugs) 
   * Added definition bundle.
   * Fixed accessor typo in Enabled entity attribute.
   * Added Published entity attribute.
+  * Restructured navigation menu.
 
 
 # CHANGELOG for 0.3.0
