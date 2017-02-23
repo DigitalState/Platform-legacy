@@ -50,6 +50,10 @@ class ServiceType extends AbstractType
             'required' => false
         ]);
 
+        $builder->add('enabled', 'checkbox', [
+            'label' => 'ds.service.enabled.label'
+        ]);
+
         $builder->add('owner', 'oro_business_unit_select', [
             'label' => 'ds.service.owner.label'
         ]);

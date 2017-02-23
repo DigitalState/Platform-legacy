@@ -27,6 +27,7 @@ class ServiceTest extends PHPUnit_Framework_TestCase
         $this->assertNull($entity->getIcon(), 'New instance property "icon" is null');
         $this->assertEquals(new ArrayCollection, $entity->getButtons(), 'New instance property "buttons" is empty collection');
         $this->assertEquals(new ArrayCollection, $entity->getPresentations(), 'New instance property "presentations" is empty collection');
+        $this->assertFalse($entity->getEnabled(), 'New instance property "enabled" is false');
     }
 
     /**
@@ -43,6 +44,7 @@ class ServiceTest extends PHPUnit_Framework_TestCase
         $icon = 'Icon test';
         $buttons = new ArrayCollection;
         $presentations = new ArrayCollection;
+        $enabled = true;
         $this->assertInstanceOf('Ds\Bundle\ServiceBundle\Entity\Service', $entity->setCreatedAt($createdAt), 'A fluent interface');
         $this->assertEquals($createdAt, $entity->getCreatedAt(), 'Set value matches get value.');
         $this->assertInstanceOf('Ds\Bundle\ServiceBundle\Entity\Service', $entity->setUpdatedAt($updatedAt), 'A fluent interface');
@@ -59,5 +61,7 @@ class ServiceTest extends PHPUnit_Framework_TestCase
         $this->assertEquals($buttons, $entity->getButtons(), 'Set value matches get value.');
         $this->assertInstanceOf('Ds\Bundle\ServiceBundle\Entity\Service', $entity->setPresentations($presentations), 'A fluent interface');
         $this->assertEquals($presentations, $entity->getPresentations(), 'Set value matches get value.');
+        $this->assertInstanceOf('Ds\Bundle\ServiceBundle\Entity\Service', $entity->setEnabled($enabled), 'A fluent interface');
+        $this->assertEquals($enabled, $entity->getEnabled(), 'Set value matches get value.');
     }
 }

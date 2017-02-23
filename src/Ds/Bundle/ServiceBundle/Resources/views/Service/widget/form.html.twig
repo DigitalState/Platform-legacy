@@ -9,6 +9,7 @@
         </div>
         <div class="responsive-block">
             {{ form_row(form.slug) }}
+            {{ form_row(form.enabled) }}
         </div>
     </div>
     {% for widget in ds_widgets({ position: 'ds_service_service_form_service', context: context }, { form: form }) %}

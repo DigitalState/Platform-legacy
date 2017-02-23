@@ -67,6 +67,7 @@ class Service
     use Attribute\Icon;
     use Attribute\Localized\Button;
     use Attribute\Localized\Presentation;
+    use Attribute\Enabled;
 
     use Ownership\BusinessUnitAwareTrait;
 
@@ -141,5 +142,6 @@ class Service
         $this->descriptions = new ArrayCollection;
         $this->buttons = new ArrayCollection;
         $this->presentations = new ArrayCollection;
+        $this->enabled = false;
     }
 }

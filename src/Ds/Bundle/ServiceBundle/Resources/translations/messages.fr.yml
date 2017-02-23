@@ -34,6 +34,14 @@ ds:
         presentation:
             label: Présentation
             description: ~
+        enabled:
+            label: Activé
+            description: ~
+            choice:
+                0:
+                    label: Non
+                1:
+                    label: Oui
         owner:
             label: Unité d'affaires
             description: ~

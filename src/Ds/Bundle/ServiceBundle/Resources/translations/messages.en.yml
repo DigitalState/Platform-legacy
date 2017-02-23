@@ -34,6 +34,14 @@ ds:
         presentation:
             label: Presentation
             description: ~
+        enabled:
+            label: Enabled
+            description: ~
+            choice:
+                0:
+                    label: No
+                1:
+                    label: Yes
         owner:
             label: Business Unit
             description: ~
