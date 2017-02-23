@@ -19,7 +19,7 @@ class LinkedinOAuthUserProvider extends AbstractOAuthUserProvider
      */
     public function loadUserByOAuthUserResponse(UserResponseInterface $response)
     {
-        if (!$this->configManager->get('ds_sso_linkedin.enable_sso')) {
+        if (!$this->configManager->get('ds_sso_linkedin.enabled')) {
             throw new RuntimeException('Linkedin single sign-on is not enabled.');
         }
 
