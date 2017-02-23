@@ -11,6 +11,7 @@ This changelog references the relevant changes (new features, changes and bugs) 
   * Fixed linkedin oauth login display condition.
   * Fixed linkedin security enabled condition.
   * Fixed flatly-custom theme padding issue in navigation.
+  * Fixed locale listener translator argument type hinting.
 
 
 # CHANGELOG for 0.3.0

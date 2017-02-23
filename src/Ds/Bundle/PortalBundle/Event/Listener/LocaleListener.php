@@ -3,7 +3,7 @@
 namespace Ds\Bundle\PortalBundle\Event\Listener;
 
 use Symfony\Component\HttpFoundation\RequestStack;
-use Symfony\Component\Translation\DataCollectorTranslator;
+use Symfony\Component\Translation\TranslatorInterface;
 use Symfony\Bundle\FrameworkBundle\Routing\Router;
 use Symfony\Component\HttpKernel\Event\GetResponseEvent;
 
@@ -18,7 +18,7 @@ class LocaleListener
     protected $stack;
 
     /**
-     * @var \Symfony\Component\Translation\DataCollectorTranslator
+     * @var \Symfony\Component\Translation\TranslatorInterface
      */
     protected $translator;
 
@@ -26,9 +26,9 @@ class LocaleListener
      * Constructor
      *
      * @param \Symfony\Component\HttpFoundation\RequestStack $stack
-     * @param \Symfony\Component\Translation\DataCollectorTranslator $translator
+     * @param \Symfony\Component\Translation\TranslatorInterface $translator
      */
-    public function __construct(RequestStack $stack, DataCollectorTranslator $translator)
+    public function __construct(RequestStack $stack, TranslatorInterface $translator)
     {
         $this->stack = $stack;
         $this->translator = $translator;
