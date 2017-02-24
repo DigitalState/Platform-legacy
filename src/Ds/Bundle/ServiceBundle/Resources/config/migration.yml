@@ -1,0 +1,5 @@
+services:
+     ds.service.migration.extension.service:
+        class: Ds\Bundle\ServiceBundle\Migration\Extension\ServiceExtension
+        arguments:
+            - @oro_locale.repository.localization
