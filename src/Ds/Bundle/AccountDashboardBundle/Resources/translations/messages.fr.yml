@@ -5,7 +5,7 @@ ds:
                 dashboard:
                     index:
                         title: Tableau de bord
-                        welcome: Bienvenue %firstName%
+                        welcome: Bienvenue
             portal:
                 home:
                     index:
