@@ -86,7 +86,7 @@ class Configuration implements ConfigurationInterface
             ],
             'variable_user_task_form_data' => [
                 'type' => 'string',
-                'value' => '_{id}_form_data'
+                'value' => '_{id}_task_form_data'
             ]
         ]);
 
