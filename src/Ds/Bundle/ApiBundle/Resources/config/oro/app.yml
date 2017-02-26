@@ -2,6 +2,5 @@ security:
     firewalls:
         proxy:
             pattern: ^/proxy
-            anonymous: ~
-    access_control:
-        - { path: ^/proxy, roles: IS_AUTHENTICATED_ANONYMOUSLY }
+            provider: chain_provider
+            anonymous: true

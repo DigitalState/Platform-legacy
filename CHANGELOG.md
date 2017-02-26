@@ -12,6 +12,7 @@ This changelog references the relevant changes (new features, changes and bugs) 
   * Fixed linkedin security enabled condition.
   * Fixed flatly-custom theme padding issue in navigation.
   * Fixed locale listener translator argument type hinting.
+  * Fixed firewall to align with Oro 2.0 anonymous firewall configs.
 
 
 # CHANGELOG for 0.3.0

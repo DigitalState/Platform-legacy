@@ -1,7 +1,6 @@
-#security:
-#    firewalls:
-#        portal:
-#            pattern: ^/([a-z]+)/portal/?$
-#            anonymous: ~
-#    access_control:
-#        - { path: ^/([a-z]+)/portal, roles: ROLE_USER }
+security:
+    firewalls:
+        portal:
+            pattern: ^/([a-z]+)/portal/?$
+            provider: chain_provider
+            anonymous: true
