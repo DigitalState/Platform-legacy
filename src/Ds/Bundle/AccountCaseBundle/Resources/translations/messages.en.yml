@@ -27,7 +27,7 @@ ds:
                             states:
                                 active: Open
                                 inactive: Closed
-                            status:
+                            statuses:
                                 active: Active
                                 resolved: Resolved
                                 cancelled: Cancelled
