@@ -3,6 +3,7 @@
 This changelog references the relevant changes (new features, changes and bugs) done in 0.4.0 version.
 
   * Restructured navigation menu.
+  * Fixed bpm user task variable name.
 
 
 # CHANGELOG for 0.3.0
