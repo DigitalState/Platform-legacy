@@ -100,8 +100,14 @@ class SessionResolver implements Resolver
 
             foreach ($this->personaManager->getList(null, null, [ 'user' => $this->user ]) as $persona) {
                 foreach ($criteria as $key => $value) {
-                    if ($persona->{'get' . ucfirst($key)}() != $value) {
-                        continue 2;
+                    if ('definition' == $key) {
+                        if ($persona->getDefinition()->getId() != $value) {
+                            continue 2;
+                        }
+                    } else {
+                        if ($persona->{'get' . ucfirst($key)}() != $value) {
+                            continue 2;
+                        }
                     }
                 }
 
