@@ -15,6 +15,7 @@ This changelog references the relevant changes (new features, changes and bugs) 
   * Fixed firewall to align with Oro 2.0 anonymous firewall configs.
   * Fixed bpm user task variable name.
   * Updated account user persona page to use definition title.
+  * Updated flatly-custom theme.
 
 
 # CHANGELOG for 0.3.0

@@ -7110,6 +7110,10 @@ header .navbar-default .navbar-nav .open .dropdown-menu > li > a {
     color: #203374;
 }
 
+header .navbar-default .navbar-nav .open .dropdown-menu > li.active > a {
+    color: #ffffff;
+}
+
 header .navbar-default .navbar-header {
 
 }
