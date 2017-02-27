@@ -29,10 +29,7 @@ class DsServiceBundle implements Migration
         $table = $schema->getTable('ds_service');
         $table->addColumn(
             'enabled',
-            'tinyint',
-            [
-                'notnull' => true
-            ]
+            'boolean'
         );
     }
 }
