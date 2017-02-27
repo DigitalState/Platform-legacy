@@ -35,8 +35,8 @@
                     <div class="panel panel-default">
                         <div class="panel-body">
                             <h4>
-                                <a href="{{ path('ds_accountuserpersona_account_persona_view', { type: persona.type }) }}">
-                                    {{ persona.type }}
+                                <a href="{{ path('ds_accountuserpersona_account_persona_view', { slug: persona.definition.slug }) }}">
+                                    {{ persona.definition.title }}
                                 </a>
                             </h4>
                         </div>
