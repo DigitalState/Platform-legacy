@@ -2,7 +2,7 @@ navigation:
     menu_config:
         items:
             ds_accountuserpersona_account_persona_index:
-                label: ds.accountuserpersona.persona.page.account.index.title
+                label: ds.accountuserpersona.page.account.persona.index.title
                 route: ds_accountuserpersona_account_persona_index
                 extras:
                     position: 40

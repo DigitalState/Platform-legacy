@@ -1,8 +1,8 @@
 ds:
     accountuserpersona:
-        persona:
-            page:
-                account:
+        page:
+            account:
+                persona:
                     index:
                         title: Mes personnages
                     view:
