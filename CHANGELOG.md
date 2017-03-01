@@ -16,6 +16,7 @@ This changelog references the relevant changes (new features, changes and bugs) 
   * Fixed bpm user task variable name.
   * Updated account user persona page to use definition title.
   * Updated flatly-custom theme.
+  * Updated copyright widget year.
 
 
 # CHANGELOG for 0.3.0

@@ -6,6 +6,7 @@ This changelog references the relevant changes (new features, changes and bugs) 
   * Fixed flatly-custom theme padding issue in navigation.
   * Fixed locale listener translator argument type hinting.
   * Fixed firewall to align with Oro 2.0 anonymous firewall configs.
+  * Updated copyright widget year.
 
 
 # CHANGELOG for 0.3.0
