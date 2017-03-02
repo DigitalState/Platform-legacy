@@ -1,0 +1,2 @@
+bundles:
+    - { name: Ds\Bundle\PortalApiBundle\DsPortalApiBundle, priority: 30 }
