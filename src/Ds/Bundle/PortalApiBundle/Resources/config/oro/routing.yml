@@ -1,0 +1,9 @@
+ds_portalapi_portal_api_rest:
+    resource: @DsPortalApiBundle/Resources/config/oro/routing/api.yml
+    type: rest
+    prefix: %ds.portalapi.portal.api.rest.prefix%
+    requirements:
+        version: %ds.portalapi.portal.api.rest.requirements.version%
+        _format: json
+    defaults:
+        version: %ds.portalapi.portal.api.rest.defaults.version%

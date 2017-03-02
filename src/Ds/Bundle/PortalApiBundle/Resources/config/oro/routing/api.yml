@@ -1,0 +1,3 @@
+ds_portalapi_portal_api_rest_service:
+    resource: Ds\Bundle\PortalApiBundle\Controller\Portal\Api\Rest\ServiceController
+    type: rest

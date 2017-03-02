@@ -1,0 +1,6 @@
+security:
+    firewalls:
+        portal_api:
+            pattern: ^/([a-z]+)/portal/api/rest
+            provider: chain_provider
+            anonymous: true

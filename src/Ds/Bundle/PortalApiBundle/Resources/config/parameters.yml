@@ -1,0 +1,4 @@
+parameters:
+    ds.portalapi.portal.api.rest.prefix: %ds.portal.prefix%/api/rest/{version}
+    ds.portalapi.portal.api.rest.requirements.version: latest|v1
+    ds.portalapi.portal.api.rest.defaults.version: latest
