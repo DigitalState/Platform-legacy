@@ -3,7 +3,6 @@
 namespace Ds\Bundle\ApiBundle\Controller\Api\Rest;
 
 use Oro\Bundle\SoapBundle\Controller\Api\Rest\RestController;
-use Doctrine\Common\Collections\ArrayCollection;
 use Oro\Bundle\LocaleBundle\Entity\FallbackTrait;
 
 /**
