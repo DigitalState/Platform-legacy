@@ -1,22 +1,376 @@
-<div class="row">
-    <div class="col-lg-3">
-        <p class="lead">
-            <strong>First Name:</strong>
-        </p>
+<div class="panel panel-default">
+    <div class="panel-heading">
+        Personal Details
     </div>
-    <div class="col-lg-3">
-        <p class="lead">
-            {{ persona.data.firstName }}
-        </p>
+    <div class="panel-body">
+        <div class="row">
+            <div class="col-lg-3">
+                <p class="lead">
+                    <strong>First Name:</strong>
+                </p>
+            </div>
+            <div class="col-lg-9">
+                <p class="lead">
+                    {{ persona.data.firstName }}
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-3">
+                <p class="lead">
+                    <strong>Last Name:</strong>
+                </p>
+            </div>
+            <div class="col-lg-9">
+                <p class="lead">
+                    {{ persona.data.lastName }}
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-3">
+                <p class="lead">
+                    <strong>Other Names:</strong>
+                </p>
+            </div>
+            <div class="col-lg-9">
+                <p class="lead">
+                    {{ persona.data.otherNames }}
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-3">
+                <p class="lead">
+                    <strong>Preferred Name:</strong>
+                </p>
+            </div>
+            <div class="col-lg-9">
+                <p class="lead">
+                    {{ persona.data.preferredName }}
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-3">
+                <p class="lead">
+                    <strong>Gender:</strong>
+                </p>
+            </div>
+            <div class="col-lg-9">
+                <p class="lead">
+                    {{ persona.data.gender }}
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-3">
+                <p class="lead">
+                    <strong>Date Of Birth:</strong>
+                </p>
+            </div>
+            <div class="col-lg-9">
+                <p class="lead">
+                    {{ persona.data.dateOfBirth }}
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-3">
+                <p class="lead">
+                    <strong>Town Of Birth:</strong>
+                </p>
+            </div>
+            <div class="col-lg-9">
+                <p class="lead">
+                    {{ persona.data.townOfBirth }}
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-3">
+                <p class="lead">
+                    <strong>Country Of Birth:</strong>
+                </p>
+            </div>
+            <div class="col-lg-9">
+                <p class="lead">
+                    {{ persona.data.countryOfBirth }}
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-3">
+                <p class="lead">
+                    <strong>Residency Status:</strong>
+                </p>
+            </div>
+            <div class="col-lg-9">
+                <p class="lead">
+                    {{ persona.data.residencyStatus }}
+                </p>
+            </div>
+        </div>
     </div>
-    <div class="col-lg-3">
-        <p class="lead">
-            <strong>Last Name:</strong>
-        </p>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading">
+        Residential Address
     </div>
-    <div class="col-lg-3">
-        <p class="lead">
-            {{ persona.data.lastName }}
-        </p>
+    <div class="panel-body">
+        <div class="row">
+            <div class="col-lg-3">
+                <p class="lead">
+                    <strong>Residential Unit:</strong>
+                </p>
+            </div>
+            <div class="col-lg-9">
+                <p class="lead">
+                    {{ persona.data.residentialUnit }}
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-3">
+                <p class="lead">
+                    <strong>Residential Street Number:</strong>
+                </p>
+            </div>
+            <div class="col-lg-9">
+                <p class="lead">
+                    {{ persona.data.residentialStreetNumber }}
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-3">
+                <p class="lead">
+                    <strong>Residential Street Name:</strong>
+                </p>
+            </div>
+            <div class="col-lg-9">
+                <p class="lead">
+                    {{ persona.data.residentialStreetName }}
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-3">
+                <p class="lead">
+                    <strong>Residential Suburb:</strong>
+                </p>
+            </div>
+            <div class="col-lg-9">
+                <p class="lead">
+                    {{ persona.data.residentialSuburb }}
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-3">
+                <p class="lead">
+                    <strong>Residential Postcode:</strong>
+                </p>
+            </div>
+            <div class="col-lg-9">
+                <p class="lead">
+                    {{ persona.data.residentialPostcode }}
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-3">
+                <p class="lead">
+                    <strong>Residential State:</strong>
+                </p>
+            </div>
+            <div class="col-lg-9">
+                <p class="lead">
+                    {{ persona.data.residentialState }}
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-3">
+                <p class="lead">
+                    <strong>Residential Country:</strong>
+                </p>
+            </div>
+            <div class="col-lg-9">
+                <p class="lead">
+                    {{ persona.data.residentialCountry }}
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading">
+        Postal Address
+    </div>
+    <div class="panel-body">
+        <div class="row">
+            <div class="col-lg-3">
+                <p class="lead">
+                    <strong>Postal Unit:</strong>
+                </p>
+            </div>
+            <div class="col-lg-9">
+                <p class="lead">
+                    {{ persona.data.postalUnit }}
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-3">
+                <p class="lead">
+                    <strong>Postal Street Number:</strong>
+                </p>
+            </div>
+            <div class="col-lg-9">
+                <p class="lead">
+                    {{ persona.data.postalStreetNumber }}
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-3">
+                <p class="lead">
+                    <strong>Postal Street Name:</strong>
+                </p>
+            </div>
+            <div class="col-lg-9">
+                <p class="lead">
+                    {{ persona.data.postalStreetName }}
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-3">
+                <p class="lead">
+                    <strong>Postal Suburb:</strong>
+                </p>
+            </div>
+            <div class="col-lg-9">
+                <p class="lead">
+                    {{ persona.data.postalSuburb }}
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-3">
+                <p class="lead">
+                    <strong>Postal Postcode:</strong>
+                </p>
+            </div>
+            <div class="col-lg-9">
+                <p class="lead">
+                    {{ persona.data.postalPostcode }}
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-3">
+                <p class="lead">
+                    <strong>Postal State:</strong>
+                </p>
+            </div>
+            <div class="col-lg-9">
+                <p class="lead">
+                    {{ persona.data.postalState }}
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-3">
+                <p class="lead">
+                    <strong>Postal Country:</strong>
+                </p>
+            </div>
+            <div class="col-lg-9">
+                <p class="lead">
+                    {{ persona.data.postalCountry }}
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading">
+        Other Contact Details
+    </div>
+    <div class="panel-body">
+        <div class="row">
+            <div class="col-lg-3">
+                <p class="lead">
+                    <strong>Email Address:</strong>
+                </p>
+            </div>
+            <div class="col-lg-9">
+                <p class="lead">
+                    {{ persona.data.emailAddress }}
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-3">
+                <p class="lead">
+                    <strong>Work Phone Number:</strong>
+                </p>
+            </div>
+            <div class="col-lg-9">
+                <p class="lead">
+                    {{ persona.data.workPhoneNumber }}
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-3">
+                <p class="lead">
+                    <strong>Home Phone Number:</strong>
+                </p>
+            </div>
+            <div class="col-lg-9">
+                <p class="lead">
+                    {{ persona.data.homePhoneNumber }}
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-3">
+                <p class="lead">
+                    <strong>Mobile Phone Number:</strong>
+                </p>
+            </div>
+            <div class="col-lg-9">
+                <p class="lead">
+                    {{ persona.data.mobilePhoneNumber }}
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-3">
+                <p class="lead">
+                    <strong>Preferred Contact Method:</strong>
+                </p>
+            </div>
+            <div class="col-lg-9">
+                <p class="lead">
+                    {{ persona.data.preferredContactMethod }}
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-3">
+                <p class="lead">
+                    <strong>Preferred Delivery Method:</strong>
+                </p>
+            </div>
+            <div class="col-lg-9">
+                <p class="lead">
+                    {{ persona.data.preferredDeliveryMethod }}
+                </p>
+            </div>
+        </div>
     </div>
 </div>

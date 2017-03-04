@@ -1,0 +1,383 @@
+{{ form_start(form) }}
+    {{ form_errors(form) }}
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            Personal Details
+        </div>
+        <div class="panel-body">
+            <div class="row">
+                <div class="col-lg-3">
+                    <p class="lead">
+                        <strong>{{ form_label(form.firstName) }}</strong>
+                    </p>
+                </div>
+                <div class="col-lg-9">
+                    <p class="lead">
+                        {{ form_widget(form.firstName) }}
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-3">
+                    <p class="lead">
+                        <strong>{{ form_label(form.lastName) }}</strong>
+                    </p>
+                </div>
+                <div class="col-lg-9">
+                    <p class="lead">
+                        {{ form_widget(form.lastName) }}
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-3">
+                    <p class="lead">
+                        <strong>{{ form_label(form.otherNames) }}</strong>
+                    </p>
+                </div>
+                <div class="col-lg-9">
+                    <p class="lead">
+                        {{ form_widget(form.otherNames) }}
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-3">
+                    <p class="lead">
+                        <strong>{{ form_label(form.preferredName) }}
+                    </p>
+                </div>
+                <div class="col-lg-9">
+                    <p class="lead">
+                        {{ form_widget(form.preferredName) }}
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-3">
+                    <p class="lead">
+                        <strong>{{ form_label(form.gender) }}</strong>
+                    </p>
+                </div>
+                <div class="col-lg-9">
+                    <p class="lead">
+                        {{ form_widget(form.gender) }}
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-3">
+                    <p class="lead">
+                        <strong>{{ form_label(form.dateOfBirth) }}</strong>
+                    </p>
+                </div>
+                <div class="col-lg-9">
+                    <p class="lead">
+                        {{ form_widget(form.dateOfBirth) }}
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-3">
+                    <p class="lead">
+                        <strong>{{ form_label(form.townOfBirth) }}</strong>
+                    </p>
+                </div>
+                <div class="col-lg-9">
+                    <p class="lead">
+                        {{ form_widget(form.townOfBirth) }}
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-3">
+                    <p class="lead">
+                        <strong>{{ form_label(form.countryOfBirth) }}</strong>
+                    </p>
+                </div>
+                <div class="col-lg-9">
+                    <p class="lead">
+                        {{ form_widget(form.countryOfBirth) }}
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-3">
+                    <p class="lead">
+                        <strong>{{ form_label(form.residencyStatus) }}</strong>
+                    </p>
+                </div>
+                <div class="col-lg-9">
+                    <p class="lead">
+                        {{ form_widget(form.residencyStatus) }}
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            Residential Address
+        </div>
+        <div class="panel-body">
+            <div class="row">
+                <div class="col-lg-3">
+                    <p class="lead">
+                        <strong>{{ form_label(form.residentialUnit) }}</strong>
+                    </p>
+                </div>
+                <div class="col-lg-9">
+                    <p class="lead">
+                        {{ form_widget(form.residentialUnit) }}
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-3">
+                    <p class="lead">
+                        <strong>{{ form_label(form.residentialStreetNumber) }}</strong>
+                    </p>
+                </div>
+                <div class="col-lg-9">
+                    <p class="lead">
+                        {{ form_widget(form.residentialStreetNumber) }}
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-3">
+                    <p class="lead">
+                        <strong>{{ form_label(form.residentialStreetName) }}</strong>
+                    </p>
+                </div>
+                <div class="col-lg-9">
+                    <p class="lead">
+                        {{ form_widget(form.residentialStreetName) }}
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-3">
+                    <p class="lead">
+                        <strong>{{ form_label(form.residentialSuburb) }}</strong>
+                    </p>
+                </div>
+                <div class="col-lg-9">
+                    <p class="lead">
+                        {{ form_widget(form.residentialSuburb) }}
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-3">
+                    <p class="lead">
+                        <strong>{{ form_label(form.residentialPostcode) }}</strong>
+                    </p>
+                </div>
+                <div class="col-lg-9">
+                    <p class="lead">
+                        {{ form_widget(form.residentialPostcode) }}
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-3">
+                    <p class="lead">
+                        <strong>{{ form_label(form.residentialState) }}</strong>
+                    </p>
+                </div>
+                <div class="col-lg-9">
+                    <p class="lead">
+                        {{ form_widget(form.residentialState) }}
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-3">
+                    <p class="lead">
+                        <strong>{{ form_label(form.residentialCountry) }}</strong>
+                    </p>
+                </div>
+                <div class="col-lg-9">
+                    <p class="lead">
+                        {{ form_widget(form.residentialCountry) }}
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            Postal Address
+        </div>
+        <div class="panel-body">
+            <div class="row">
+                <div class="col-lg-3">
+                    <p class="lead">
+                        <strong>{{ form_label(form.postalUnit) }}</strong>
+                    </p>
+                </div>
+                <div class="col-lg-9">
+                    <p class="lead">
+                        {{ form_widget(form.postalUnit) }}
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-3">
+                    <p class="lead">
+                        <strong>{{ form_label(form.postalStreetNumber) }}</strong>
+                    </p>
+                </div>
+                <div class="col-lg-9">
+                    <p class="lead">
+                        {{ form_widget(form.postalStreetNumber) }}
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-3">
+                    <p class="lead">
+                        <strong>{{ form_label(form.postalStreetName) }}</strong>
+                    </p>
+                </div>
+                <div class="col-lg-9">
+                    <p class="lead">
+                        {{ form_widget(form.postalStreetName) }}
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-3">
+                    <p class="lead">
+                        <strong>{{ form_label(form.postalSuburb) }}</strong>
+                    </p>
+                </div>
+                <div class="col-lg-9">
+                    <p class="lead">
+                        {{ form_widget(form.postalSuburb) }}
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-3">
+                    <p class="lead">
+                        <strong>{{ form_label(form.postalPostcode) }}</strong>
+                    </p>
+                </div>
+                <div class="col-lg-9">
+                    <p class="lead">
+                        {{ form_widget(form.postalPostcode) }}
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-3">
+                    <p class="lead">
+                        <strong>{{ form_label(form.postalState) }}</strong>
+                    </p>
+                </div>
+                <div class="col-lg-9">
+                    <p class="lead">
+                        {{ form_widget(form.postalState) }}
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-3">
+                    <p class="lead">
+                        <strong>{{ form_label(form.postalCountry) }}</strong>
+                    </p>
+                </div>
+                <div class="col-lg-9">
+                    <p class="lead">
+                        {{ form_widget(form.postalCountry) }}
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            Other Contact Details
+        </div>
+        <div class="panel-body">
+            <div class="row">
+                <div class="col-lg-3">
+                    <p class="lead">
+                        <strong>{{ form_label(form.emailAddress) }}</strong>
+                    </p>
+                </div>
+                <div class="col-lg-9">
+                    <p class="lead">
+                        {{ form_widget(form.emailAddress) }}
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-3">
+                    <p class="lead">
+                        <strong>{{ form_label(form.workPhoneNumber) }}</strong>
+                    </p>
+                </div>
+                <div class="col-lg-9">
+                    <p class="lead">
+                        {{ form_widget(form.workPhoneNumber) }}
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-3">
+                    <p class="lead">
+                        <strong>{{ form_label(form.homePhoneNumber) }}</strong>
+                    </p>
+                </div>
+                <div class="col-lg-9">
+                    <p class="lead">
+                        {{ form_widget(form.homePhoneNumber) }}
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-3">
+                    <p class="lead">
+                        <strong>{{ form_label(form.mobilePhoneNumber) }}</strong>
+                    </p>
+                </div>
+                <div class="col-lg-9">
+                    <p class="lead">
+                        {{ form_widget(form.mobilePhoneNumber) }}
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-3">
+                    <p class="lead">
+                        <strong>{{ form_label(form.preferredContactMethod) }}</strong>
+                    </p>
+                </div>
+                <div class="col-lg-9">
+                    <p class="lead">
+                        {{ form_widget(form.preferredContactMethod) }}
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-3">
+                    <p class="lead">
+                        <strong>{{ form_label(form.preferredDeliveryMethod) }}</strong>
+                    </p>
+                </div>
+                <div class="col-lg-9">
+                    <p class="lead">
+                        {{ form_widget(form.preferredDeliveryMethod) }}
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <button type="submit" class="btn btn-primary">
+        Save
+    </button>
+    {{ form_rest(form) }}
+{{ form_end(form) }}
