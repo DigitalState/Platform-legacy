@@ -53,12 +53,8 @@ class PersonaController extends Controller
         $personas = $manager->getList(1, 1, [ 'user' => $user, 'definition' => $definition ]);
         $persona = array_shift($personas);
 
-        $manager = $this->get('ds.asset.manager.asset');
-        $assets = $manager->getList(null, null, [ 'user' => $user ]);
-
         return [
-            'persona' => $persona,
-            'assets' => $assets
+            'persona' => $persona
         ];
     }
 
