@@ -7175,10 +7175,19 @@ footer p {
 }
 
 @media (min-width:768px) {
-
-
     header .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover {
         color: #ffffff;
+    }
+
+    footer {
+        position: fixed;
+        bottom: 0px;
+        left: 0px;
+        width: 100%;
+    }
+
+    .container {
+        margin-bottom: 100px;
     }
 }
 
