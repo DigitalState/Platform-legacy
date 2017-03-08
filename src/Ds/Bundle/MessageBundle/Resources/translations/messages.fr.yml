@@ -1,0 +1,329 @@
+ds:
+    communication:
+        entity_label: Communication
+        entity_plural_label: Communications
+        entity_description: La communication.
+        id:
+            label: Id
+            description: ~
+        created_at:
+            label: Créé le
+            description: ~
+        updated_at:
+            label: Mis à jour le
+            description: ~
+        title:
+            label: Titre
+            description: ~
+        description:
+            label: Description
+            description: ~
+        contents:
+            label: Contenu
+            description: ~
+        owner:
+            label: Unité d'affaires
+            description: ~
+        menu:
+            tab:
+                label: Communications
+            index:
+                label: Communications
+        page:
+            index:
+                title: Communications
+            view: ~
+            edit: ~
+        grid:
+            actions:
+                view: Visionner
+                update: Editer
+                delete: Supprimer
+        button:
+            create: Créer une communication
+            send: Envoyer
+        action:
+            sent: Communication Envoyée
+        widget:
+            entity: Communication
+            form: Communication
+            owner: Propriétaire
+            contents:
+                form: Contenu
+                grid: Contenu
+            criteria:
+                grid: Critères
+            users:
+                grid: Destinataires
+        channel:
+            entity_label: Canal
+            entity_plural_label: Canals
+            entity_description: Le canal.
+            id:
+                label: Id
+                description: ~
+            created_at:
+                label: Créé le
+                description: ~
+            updated_at:
+                label: Mis à jour le
+                description: ~
+            title:
+                label: Titre
+                description: ~
+            description:
+                label: Description
+                description: ~
+            icon:
+                label: Icône
+                description: ~
+            implementation:
+                label: Implémentation
+                description: ~
+            default_to:
+                label: À par défaut
+                description: ~
+            owner:
+                label: Unité d'affaires
+                description: ~
+            collection:
+                email: Courriel
+                portal: Portail
+                sms: Sms
+            menu:
+                index:
+                    label: Canals
+            page:
+                index:
+                    title: Canals
+                view: ~
+                edit: ~
+            grid:
+                actions:
+                    view: Visionner
+                    update: Editer
+                    delete: Supprimer
+            button:
+                create: Créer un canal
+            widget:
+                entity: Canal
+                form: Canal
+                owner: Propriétaire
+        content:
+            entity_label: Contenu
+            entity_plural_label: Contenus
+            entity_description: Le contenu.
+            id:
+                label: Id
+                description: ~
+            created_at:
+                label: Créé le
+                description: ~
+            updated_at:
+                label: Mis à jour le
+                description: ~
+            channel:
+                label: Canal
+                description: ~
+                placeholder: Sélectionner un canal
+                title:
+                    label: Canal
+            profile:
+                label: Profil
+                description: ~
+                placeholder: Select Profil
+                title:
+                    label: Profil
+            communication:
+                label: Communication
+                description: ~
+                placeholder: Sélectionner une communication
+                title:
+                    label: Communication
+            title:
+                label: Titre
+                description: ~
+            presentation:
+                label: Présentation
+                description: ~
+            template:
+                label: Modèle
+                description: ~
+                placeholder: Sélectionner un modèle
+                none: Non-assigné
+                title:
+                    label: Modèle
+            owner:
+                label: Unité d'affaires
+                description: ~
+            menu:
+                index:
+                    label: Contenus
+            page:
+                index:
+                    title: Contenus
+                view: ~
+                edit: ~
+            grid:
+                actions:
+                    view: Visionner
+                    update: Editer
+                    delete: Supprimer
+            button:
+                create: Créer un contenu
+            widget:
+                entity: Contenu
+                form: Contenu
+                owner: Propriétaire
+        criterion:
+            entity_label: Critère
+            entity_plural_label: Critères
+            entity_description: Le critère.
+            id:
+                label: Id
+                description: ~
+            created_at:
+                label: Créé le
+                description: ~
+            updated_at:
+                label: Mis à jour le
+                description: ~
+            communication:
+                label: Communication
+                description: ~
+                placeholder: Select Communication
+                title:
+                    label: Communication
+            implementation:
+                label: Implémentation
+                description: ~
+            operand_1:
+                label: Opérande 1
+                description: ~
+            operator:
+                label: Operateur
+                description: ~
+            operand_2:
+                label: Opérande 2
+                description: ~
+            owner:
+                label: Unité d'affaires
+                description: ~
+            collection:
+                column: Colonne
+            menu:
+                index:
+                    label: Critères
+            page:
+                index:
+                    title: Critères
+                view: ~
+                edit: ~
+            grid:
+                actions:
+                    view: Visionner
+                    update: Editer
+                    delete: Supprimer
+            button:
+                create: Créer un critère
+            widget:
+                entity: Critère
+                form: Critère
+                owner: Propriétaire
+        message:
+            entity_label: Message
+            entity_plural_label: Messages
+            entity_description: Le message.
+            id:
+                label: Id
+                description: ~
+            created_at:
+                label: Créé le
+                description: ~
+            updated_at:
+                label: Mis à jour le
+                description: ~
+            title:
+                label: Titre
+                description: ~
+            communication:
+                label: Communication
+                description: ~
+                placeholder: Sélectionner une communication
+            channel:
+                label: Canal
+                description: ~
+                placeholder: Sélectionner un canal
+            user:
+                label: Usager
+                description: ~
+                placeholder: Sélectionner un usager
+            presentation:
+                label: Présentation
+                description: ~
+            sent_at:
+                label: Envoyé le
+                description: ~
+            owner:
+                label: Unité d'affaires
+                description: ~
+            menu:
+                index:
+                    label: Messages
+            page:
+                index:
+                    title: Messages
+                view: ~
+                edit: ~
+            grid:
+                actions:
+                    view: Visionner
+                    update: Editer
+                    delete: Supprimer
+            button:
+                create: Créer un message
+            widget:
+                entity: Message
+                form: Message
+                owner: Propriétaire
+        template:
+            entity_label: Modèle
+            entity_plural_label: Modèles
+            entity_description: The modèle.
+            id:
+                label: Id
+                description: ~
+            created_at:
+                label: Créé le
+                description: ~
+            updated_at:
+                label: Mis à jour le
+                description: ~
+            title:
+                label: Titre
+                description: ~
+            presentation:
+                label: Présentation
+                description: ~
+            owner:
+                label: Unité d'affaires
+                description: ~
+            menu:
+                index:
+                    label: Modèles
+            page:
+                index:
+                    title: Modèles
+                view: ~
+                edit: ~
+            grid:
+                actions:
+                    view: Visionner
+                    update: Editer
+                    delete: Supprimer
+            button:
+                create: Créer un modèle
+            widget:
+                entity: Modèle
+                form: Modèle
+                owner: Propriétaire
