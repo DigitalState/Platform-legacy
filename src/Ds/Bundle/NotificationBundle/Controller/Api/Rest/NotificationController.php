@@ -1,6 +1,6 @@
 <?php
 
-namespace Ds\Bundle\TopicBundle\Controller\Api\Rest;
+namespace Ds\Bundle\NotificationBundle\Controller\Api\Rest;
 
 use Ds\Bundle\ApiBundle\Controller\Api\Rest\AbstractController;
 
@@ -10,12 +10,12 @@ use FOS\RestBundle\Controller\Annotations\QueryParam;
 use Oro\Bundle\SecurityBundle\Annotation\AclAncestor;
 
 /**
- * Class TopicController
+ * Class NotificationController
  *
  * @RouteResource("notification")
  * @NamePrefix("ds_notification_api_rest_")
  */
-class TopicController extends AbstractController
+class NotificationController extends AbstractController
 {
     /**
      * Get collection action
