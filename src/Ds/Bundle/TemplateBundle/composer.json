@@ -1,0 +1,29 @@
+{
+    "name": "digitalstate/platform-template-bundle",
+    "type": "symfony-bundle",
+    "description": "DigitalState Template Bundle",
+    "homepage": "https://github.com/DigitalState/Platform-Template-Bundle.git",
+    "keywords": ["Oro", "Linkedin"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "DigitalState, Inc",
+            "homepage": "http://www.digitalstate.ca"
+        }
+    ],
+    "require": {
+        "php": ">=5.6",
+        "oro/platform": "2.0.*",
+        "oro/platform-serialised-fields": "2.0.*"
+    },
+    "autoload": {
+        "psr-4": { "Ds\\Bundle\\TemplateBundle\\": "" }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "extra": {
+        "branch-alias": {
+            "dev-master": "0.x-dev"
+        }
+    }
+}

@@ -1,0 +1,2 @@
+bundles:
+    - { name: Ds\Bundle\MessageBundle\DsMessageBundle, priority: 21 }
