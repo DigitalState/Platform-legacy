@@ -1,6 +1,6 @@
 <?php
 
-namespace Ds\Bundle\NotificationBundle\Controller\Api\Rest;
+namespace Ds\Bundle\TopicBundle\Controller\Api\Rest;
 
 use Ds\Bundle\ApiBundle\Controller\Api\Rest\AbstractController;
 
@@ -10,18 +10,18 @@ use FOS\RestBundle\Controller\Annotations\QueryParam;
 use Oro\Bundle\SecurityBundle\Annotation\AclAncestor;
 
 /**
- * Class NotificationController
+ * Class TopicController
  *
- * @RouteResource("notification")
- * @NamePrefix("ds_notification_api_rest_")
+ * @RouteResource("topic")
+ * @NamePrefix("ds_topic_api_rest_")
  */
-class NotificationController extends AbstractController
+class TopicController extends AbstractController
 {
     /**
      * Get collection action
      *
      * @return \Symfony\Component\HttpFoundation\Response
-     * @AclAncestor("ds.notification.notification.view")
+     * @AclAncestor("ds.topic.topic.view")
      * @QueryParam(name="page", requirements="\d+", nullable=true)
      * @QueryParam(name="limit", requirements="\d+", nullable=true)
      */
@@ -40,7 +40,7 @@ class NotificationController extends AbstractController
      *
      * @param integer $id
      * @return \Symfony\Component\HttpFoundation\Response
-     * @AclAncestor("ds.notification.notification.view")
+     * @AclAncestor("ds.topic.topic.view")
      */
     public function getAction($id)
     {
@@ -52,7 +52,7 @@ class NotificationController extends AbstractController
      *
      * @param integer $id
      * @return \Symfony\Component\HttpFoundation\Response
-     * @AclAncestor("ds.notification.notification.edit")
+     * @AclAncestor("ds.topic.topic.edit")
      */
     public function putAction($id)
     {
@@ -63,7 +63,7 @@ class NotificationController extends AbstractController
      * Post action
      *
      * @return \Symfony\Component\HttpFoundation\Response
-     * @AclAncestor("ds.notification.notification.create")
+     * @AclAncestor("ds.topic.topic.create")
      */
     public function postAction()
     {
@@ -75,7 +75,7 @@ class NotificationController extends AbstractController
      *
      * @param integer $id
      * @return \Symfony\Component\HttpFoundation\Response
-     * @AclAncestor("ds.notification.notification.delete")
+     * @AclAncestor("ds.topic.topic.delete")
      */
     public function deleteAction($id)
     {
@@ -87,7 +87,7 @@ class NotificationController extends AbstractController
      */
     public function getForm()
     {
-        return $this->get('ds.notification.form.api.notification');
+        return $this->get('ds.topic.form.api.topic');
     }
 
     /**
@@ -95,7 +95,7 @@ class NotificationController extends AbstractController
      */
     public function getFormHandler()
     {
-        return $this->get('ds.notification.form.handler.notification');
+        return $this->get('ds.topic.form.handler.topic');
     }
 
     /**
@@ -103,7 +103,7 @@ class NotificationController extends AbstractController
      */
     public function getManager()
     {
-        return $this->get('ds.notification.manager.notification');
+        return $this->get('ds.topic.manager.topic');
     }
 
     /**

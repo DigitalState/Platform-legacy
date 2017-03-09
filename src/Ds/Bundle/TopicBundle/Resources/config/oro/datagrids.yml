@@ -1,0 +1,280 @@
+datagrids:
+    ds-topic-topic:
+        extended_entity_name: Ds\Bundle\TopicBundle\Entity\Topic
+        source:
+            acl_resource: ds.topic.topic.view
+            type: orm
+            query:
+                select:
+                    - t.id
+                    - t.createdAt
+                    - t.updatedAt
+                from:
+                    - { table: DsTopicBundle:Topic, alias: t }
+        inline_editing:
+            enable: true
+        columns:
+            id:
+                label: ds.topic.id.label
+            title:
+                label: ds.topic.title.label
+                type: twig
+                frontend_type: html
+                template: DsTopicBundle:Topic:datagrid/property/title.html.twig
+                context:
+                    entity_provider: @doctrine.orm.entity_manager
+            createdAt:
+                label: ds.topic.created_at.label
+                frontend_type: datetime
+            updatedAt:
+                label: ds.topic.created_at.label
+                frontend_type: datetime
+        properties:
+            id: ~
+            update_link:
+                type: url
+                route: ds_topic_topic_edit
+                params:
+                    - id
+            view_link:
+                type: url
+                route: ds_topic_topic_view
+                params:
+                    - id
+            delete_link:
+                type: url
+                route: ds_topic_api_rest_delete_topic
+                params:
+                    - id
+        sorters:
+            columns:
+                id:
+                    data_name: t.id
+                createdAt:
+                    data_name: t.createdAt
+                updatedAt:
+                    data_name: t.updatedAt
+            default:
+                id: ASC
+        filters:
+            columns:
+                createdAt:
+                    type: datetime
+                    data_name: t.createdAt
+                updatedAt:
+                    type: datetime
+                    data_name: t.updatedAt
+        actions:
+            view:
+                type: navigate
+                label: ds.topic.grid.actions.view
+                link: view_link
+                icon: eye
+                acl_resource: ds.topic.topic.view
+                rowAction: true
+            update:
+                type: navigate
+                label: ds.topic.grid.actions.update
+                link: update_link
+                icon: edit
+                acl_resource: ds.topic.topic.edit
+            delete:
+                type: delete
+                label: ds.topic.grid.actions.delete
+                link: delete_link
+                icon: trash
+                acl_resource: ds.topic.topic.delete
+    ds-topic-topic-subscription:
+        extends: ds-topic-subscription
+        source:
+            query:
+                where:
+                    and:
+                        - s.topic = :topic
+            bind_parameters:
+                - topic
+        columns:
+            title:
+                renderable: false
+    ds-topic-subscription:
+        extended_entity_name: Ds\Bundle\TopicBundle\Entity\Subscription
+        source:
+            acl_resource: ds.topic.subscription.view
+            type: orm
+            query:
+                select:
+                    - s.id
+                    - s.createdAt
+                    - s.updatedAt
+                    - u.username
+                from:
+                    - { table: DsTopicBundle:Subscription, alias: s }
+                join:
+                    left:
+                        - { join: s.topic, alias: t }
+                        - { join: s.user, alias: u }
+        inline_editing:
+            enable: true
+        columns:
+            id:
+                label: ds.topic.subscription.id.label
+            topic_title:
+                label: ds.topic.subscription.topic.title.label
+                type: twig
+                frontend_type: html
+                template: DsTopicBundle:Subscription:datagrid/property/topic_title.html.twig
+                context:
+                    entity_provider: @doctrine.orm.entity_manager
+            username:
+                label: ds.topic.subscription.user.username.label
+            createdAt:
+                label: ds.topic.subscription.created_at.label
+                frontend_type: datetime
+            updatedAt:
+                label: ds.topic.subscription.updated_at.label
+                frontend_type: datetime
+        properties:
+            id: ~
+            update_link:
+                type: url
+                route: ds_topic_subscription_edit
+                params:
+                    - id
+            view_link:
+                type: url
+                route: ds_topic_subscription_view
+                params:
+                    - id
+            delete_link:
+                type: url
+                route: ds_topic_api_rest_delete_subscription
+                params:
+                    - id
+        sorters:
+            columns:
+                id:
+                    data_name: s.id
+                username:
+                    data_name: u.username
+                createdAt:
+                    data_name: s.createdAt
+                updatedAt:
+                    data_name: s.updatedAt
+            default:
+                id: ASC
+        filters:
+            columns:
+                username:
+                    type: string
+                    data_name: u.username
+                createdAt:
+                    type: datetime
+                    data_name: s.createdAt
+                updatedAt:
+                    type: datetime
+                    data_name: s.updatedAt
+        actions:
+            view:
+                type: navigate
+                label: ds.topic.subscription.grid.actions.view
+                link: view_link
+                icon: eye
+                acl_resource: ds.topic.subscription.view
+                rowAction: true
+            update:
+                type: navigate
+                label: ds.topic.subscription.grid.actions.update
+                link: update_link
+                icon: edit
+                acl_resource: ds.topic.subscription.edit
+            delete:
+                type: delete
+                label: ds.topic.subscription.grid.actions.delete
+                link: delete_link
+                icon: trash
+                acl_resource: ds.topic.subscription.delete
+    ds-topic-channel:
+        extended_entity_name: Ds\Bundle\TopicBundle\Entity\Channel
+        source:
+            acl_resource: ds.topic.channel.view
+            type: orm
+            query:
+                select:
+                    - c.id
+                    - c.createdAt
+                    - c.updatedAt
+                from:
+                    - { table: DsTopicBundle:Channel, alias: c }
+        inline_editing:
+            enable: true
+        columns:
+            id:
+                label: ds.topic.channel.id.label
+            title:
+                label: ds.topic.channel.title.label
+                type: twig
+                frontend_type: html
+                template: DsTopicBundle:Channel:datagrid/property/title.html.twig
+                context:
+                    entity_provider: @doctrine.orm.entity_manager
+            createdAt:
+                label: ds.topic.channel.created_at.label
+                frontend_type: datetime
+            updatedAt:
+                label: ds.topic.channel.updated_at.label
+                frontend_type: datetime
+        properties:
+            id: ~
+            update_link:
+                type: url
+                route: ds_topic_channel_edit
+                params:
+                    - id
+            view_link:
+                type: url
+                route: ds_topic_channel_view
+                params:
+                    - id
+            delete_link:
+                type: url
+                route: ds_topic_api_rest_delete_channel
+                params:
+                    - id
+        sorters:
+            columns:
+                id:
+                    data_name: c.id
+                createdAt:
+                    data_name: c.createdAt
+                updatedAt:
+                    data_name: c.updatedAt
+            default:
+                id: ASC
+        filters:
+            columns:
+                createdAt:
+                    type: datetime
+                    data_name: c.createdAt
+                updatedAt:
+                    type: datetime
+                    data_name: c.updatedAt
+        actions:
+            view:
+                type: navigate
+                label: ds.topic.channel.grid.actions.view
+                link: view_link
+                icon: eye
+                acl_resource: ds.topic.channel.view
+                rowAction: true
+            update:
+                type: navigate
+                label: ds.topic.channel.grid.actions.update
+                link: update_link
+                icon: edit
+                acl_resource: ds.topic.channel.edit
+            delete:
+                type: delete
+                label: ds.topic.channel.grid.actions.delete
+                link: delete_link
+                icon: trash
+                acl_resource: ds.topic.channel.delete

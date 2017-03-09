@@ -1,0 +1,19 @@
+services:
+    ds.topic.data.resolver.topic:
+        class: Ds\Bundle\TopicBundle\Data\Resolver\TopicResolver
+        arguments:
+            - @ds.topic.manager.topic
+        tags:
+            - { name: ds.data.resolver }
+    ds.topic.data.resolver.subscription:
+        class: Ds\Bundle\TopicBundle\Data\Resolver\SubscriptionResolver
+        arguments:
+            - @ds.topic.manager.subscription
+        tags:
+            - { name: ds.data.resolver }
+    ds.topic.data.resolver.channel:
+        class: Ds\Bundle\TopicBundle\Data\Resolver\ChannelResolver
+        arguments:
+            - @ds.topic.manager.channel
+        tags:
+            - { name: ds.data.resolver }

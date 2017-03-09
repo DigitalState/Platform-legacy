@@ -1,0 +1,3 @@
+{% set entity = entity_provider.find('DsTopicBundle:Subscription', record.getValue('id')) %}
+{% set entity = entity_provider.find('DsTopicBundle:Topic', entity.topic.id) %}
+{{ entity.defaultTitle }}

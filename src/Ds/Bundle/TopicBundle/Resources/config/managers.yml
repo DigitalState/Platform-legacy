@@ -1,0 +1,19 @@
+services:
+    ds.topic.manager.topic:
+        class: Ds\Bundle\TopicBundle\Manager\TopicManager
+        parent: oro_soap.manager.entity_manager.abstract
+        arguments:
+            - Ds\Bundle\TopicBundle\Entity\Topic
+            - @doctrine.orm.entity_manager
+    ds.topic.manager.subscription:
+        class: Ds\Bundle\TopicBundle\Manager\SubscriptionManager
+        parent: oro_soap.manager.entity_manager.abstract
+        arguments:
+            - Ds\Bundle\TopicBundle\Entity\Subscription
+            - @doctrine.orm.entity_manager
+    ds.topic.manager.channel:
+        class: Ds\Bundle\TopicBundle\Manager\ChannelManager
+        parent: oro_soap.manager.entity_manager.abstract
+        arguments:
+            - Ds\Bundle\TopicBundle\Entity\Channel
+            - @doctrine.orm.entity_manager

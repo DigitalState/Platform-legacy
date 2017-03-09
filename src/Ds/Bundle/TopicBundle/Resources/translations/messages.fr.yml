@@ -1,0 +1,161 @@
+ds:
+    topic:
+        entity_label: Topic
+        entity_plural_label: Topics
+        entity_description: La topic.
+        id:
+            label: Id
+            description: ~
+        created_at:
+            label: Créé le
+            description: ~
+        updated_at:
+            label: Mis à jour le
+            description: ~
+        title:
+            label: Titre
+            description: ~
+        slug:
+            label: Jeton url
+            description: ~
+        description:
+            label: Description
+            description: ~
+        icon:
+            label: Icône
+            description: ~
+        presentation:
+            label: Présentation
+            description: ~
+        owner:
+            label: Unité d'affaires
+            description: ~
+        menu:
+            tab:
+                label: Topics
+            index:
+                label: Topics
+        grid:
+            actions:
+                view: Visionner
+                update: Editer
+                delete: Supprimer
+        button:
+            create: Créer une topic
+        widget:
+            entity: Topic
+            form: Topic
+            owner: Propriétaire
+            subscriptions:
+                grid: Souscriptions
+        page:
+            index:
+                title: Topics
+            view: ~
+            edit: ~
+            portal:
+                index:
+                    title: Topics
+
+        subscription:
+            entity_label: Souscription
+            entity_plural_label: Souscriptions
+            entity_description: La souscription.
+            id:
+                label: Id
+                description: Le champ id.
+            created_at:
+                label: Créé le
+                description: Le champ créé le.
+            updated_at:
+                label: Mis à jour le
+                description: Le champ mis à jour le.
+            user:
+                label: Usager
+                description: Le champ usager.
+                placeholder: Sélectionner un usager
+                username:
+                    label: Nom de l'usager
+            topic:
+                label: Topic
+                description: Le champ topic.
+                placeholder: Sélectionner un topic
+                title:
+                    label: Topic
+            channels:
+                label: Canals
+                description: Le champ canals.
+            menu:
+                index:
+                    label: Souscriptions
+            grid:
+                actions:
+                    view: Visionner
+                    update: Editer
+                    delete: Supprimer
+            button:
+                create: Créer une souscription
+            widget:
+                entity: Souscription
+                form: Souscription
+                owner: Propriétaire
+            page:
+                index:
+                    title: Souscriptions
+                view: ~
+                edit: ~
+
+        channel:
+            entity_label: Canal
+            entity_plural_label: Canals
+            entity_description: Le canal.
+            id:
+                label: Id
+                description: ~
+            created_at:
+                label: Créé le
+                description: ~
+            updated_at:
+                label: Mis à jour le
+                description: ~
+            title:
+                label: Titre
+                description: ~
+            description:
+                label: Description
+                description: ~
+            icon:
+                label: Icône
+                description: ~
+            implementation:
+                label: Implémentation
+                description: ~
+            default_to:
+                label: À par défaut
+                description: ~
+            owner:
+                label: Unité d'affaires
+                description: ~
+            collection:
+                email: Courriel
+                portal: Portail
+                sms: Sms
+            menu:
+                index:
+                    label: Canals
+            page:
+                index:
+                    title: Canals
+                view: ~
+                edit: ~
+            grid:
+                actions:
+                    view: Visionner
+                    update: Editer
+                    delete: Supprimer
+            button:
+                create: Créer un canal
+            widget:
+                entity: Canal
+                form: Canal
+                owner: Propriétaire

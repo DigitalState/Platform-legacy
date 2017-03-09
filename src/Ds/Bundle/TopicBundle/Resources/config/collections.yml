@@ -1,0 +1,3 @@
+services:
+    ds.topic.collection.channel:
+        class: Ds\Bundle\TopicBundle\Collection\ChannelCollection

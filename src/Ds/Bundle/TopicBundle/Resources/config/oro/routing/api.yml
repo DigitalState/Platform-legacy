@@ -1,0 +1,11 @@
+ds_topic_api_rest_topic:
+    resource: Ds\Bundle\TopicBundle\Controller\Api\Rest\TopicController
+    type: rest
+
+ds_topic_api_rest_subscription:
+    resource: Ds\Bundle\TopicBundle\Controller\Api\Rest\SubscriptionController
+    type: rest
+
+ds_topic_api_rest_channel:
+    resource: Ds\Bundle\TopicBundle\Controller\Api\Rest\ChannelController
+    type: rest

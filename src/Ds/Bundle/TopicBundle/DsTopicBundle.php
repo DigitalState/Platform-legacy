@@ -1,12 +1,12 @@
 <?php
 
-namespace Ds\Bundle\TemplateBundle;
+namespace Ds\Bundle\TopicBundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
 /**
- * Class DsTemplateBundle
+ * Class DsTopicBundle
  */
-class DsTemplateBundle extends Bundle
+class DsTopicBundle extends Bundle
 {
 }

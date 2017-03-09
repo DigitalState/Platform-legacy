@@ -1,0 +1,25 @@
+navigation:
+    menu_config:
+        items:
+            ds_topic_topic_tab:
+                label: ds.topic.menu.tab.label
+                uri: '#'
+                extras:
+                    position: 26
+            ds_topic_topic_index:
+                label: ds.topic.menu.index.label
+                route: ds_topic_topic_index
+            ds_topic_subscription_index:
+                label: ds.topic.subscription.menu.index.label
+                route: ds_topic_subscription_index
+            ds_topic_channel_index:
+                label: ds.topic.channel.menu.index.label
+                route: ds_topic_channel_index
+        tree:
+            application_menu:
+                children:
+                    ds_topic_topic_tab:
+                        children:
+                            ds_topic_topic_index: ~
+                            ds_topic_subscription_index: ~
+                            ds_topic_channel_index: ~

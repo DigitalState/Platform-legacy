@@ -1,0 +1,50 @@
+acls:
+    ds.topic.topic.view:
+        type: entity
+        class: DsTopicBundle:Topic
+        permission: VIEW
+    ds.topic.topic.create:
+        type: entity
+        class: DsTopicBundle:Topic
+        permission: CREATE
+    ds.topic.topic.edit:
+        type: entity
+        class: DsTopicBundle:Topic
+        permission: EDIT
+    ds.topic.topic.delete:
+        type: entity
+        class: DsTopicBundle:Topic
+        permission: DELETE
+    ds.topic.subscription.view:
+        type: entity
+        class: DsTopicBundle:Subscription
+        permission: VIEW
+    ds.topic.subscription.create:
+        type: entity
+        class: DsTopicBundle:Subscription
+        permission: CREATE
+    ds.topic.subscription.edit:
+        type: entity
+        class: DsTopicBundle:Subscription
+        permission: EDIT
+    ds.topic.subscription.delete:
+        type: entity
+        class: DsTopicBundle:Subscription
+        permission: DELETE
+    ds.topic.channel.view:
+        type: entity
+        class: DsTopicBundle:Channel
+        permission: VIEW
+    ds.topic.channel.create:
+        type: entity
+        class: DsTopicBundle:Channel
+        permission: CREATE
+    ds.topic.channel.edit:
+        type: entity
+        class: DsTopicBundle:Channel
+        permission: EDIT
+    ds.topic.channel.delete:
+        type: entity
+        class: DsTopicBundle:Channel
+        permission: DELETE
+

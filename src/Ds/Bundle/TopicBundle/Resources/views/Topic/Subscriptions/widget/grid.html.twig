@@ -1,0 +1,3 @@
+{% import 'OroDataGridBundle::macros.html.twig' as dataGrid %}
+
+{{ dataGrid.renderGrid('ds-topic-topic-subscription', { topic: entity.id }, { cssClass: 'inner-grid' }) }}

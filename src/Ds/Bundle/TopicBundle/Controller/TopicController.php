@@ -3,25 +3,25 @@
 namespace Ds\Bundle\TopicBundle\Controller;
 
 use Ds\Bundle\AdminBundle\Controller\BreadController;
-use Ds\Bundle\TopicBundle\Entity\Subscription;
+use Ds\Bundle\TopicBundle\Entity\Topic;
 
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 use Oro\Bundle\SecurityBundle\Annotation\AclAncestor;
 
 /**
- * Class SubscriptionController
+ * Class TopicController
  *
- * @Route("/topic/subscription")
+ * @Route("/topic")
  */
-class SubscriptionController extends BreadController
+class TopicController extends BreadController
 {
     /**
      * Constructor
      */
     public function __construct()
     {
-        parent::__construct('topic_subscription');
+        parent::__construct('topic');
     }
 
     /**
@@ -29,7 +29,7 @@ class SubscriptionController extends BreadController
      *
      * @Route("/")
      * @Template()
-     * @AclAncestor("ds.topic.subscription.view")
+     * @AclAncestor("ds.topic.topic.view")
      */
     public function indexAction()
     {
@@ -39,13 +39,13 @@ class SubscriptionController extends BreadController
     /**
      * View action
      *
-     * @param \Ds\Bundle\TopicBundle\Entity\Subscription $entity
+     * @param \Ds\Bundle\TopicBundle\Entity\Topic $entity
      * @return array
      * @Route("/view/{id}", requirements={"id"="\d+"})
      * @Template()
-     * @AclAncestor("ds.topic.subscription.view")
+     * @AclAncestor("ds.topic.topic.view")
      */
-    public function viewAction(Subscription $entity)
+    public function viewAction(Topic $entity)
     {
         return $this->handleView($entity);
     }
@@ -56,8 +56,8 @@ class SubscriptionController extends BreadController
      * @param string $alias
      * @return array
      * @Route("/create/{alias}", requirements={"alias":"[a-z]*"}, defaults={"alias":""})
-     * @Template("DsTopicBundle:Subscription:edit.html.twig")
-     * @AclAncestor("ds.topic.subscription.create")
+     * @Template("DsTopicBundle:Topic:edit.html.twig")
+     * @AclAncestor("ds.topic.topic.create")
      */
     public function createAction($alias)
     {
@@ -67,13 +67,13 @@ class SubscriptionController extends BreadController
     /**
      * Edit action
      *
-     * @param \Ds\Bundle\TopicBundle\Entity\Subscription $entity
+     * @param \Ds\Bundle\TopicBundle\Entity\Topic $entity
      * @return array
      * @Route("/update/{id}", requirements={"id":"\d+"}, defaults={"id":0})
      * @Template()
-     * @AclAncestor("ds.topic.subscription.edit")
+     * @AclAncestor("ds.topic.topic.edit")
      */
-    public function editAction(Subscription $entity)
+    public function editAction(Topic $entity)
     {
         return $this->handleEdit($entity);
     }

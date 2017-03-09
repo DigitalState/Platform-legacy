@@ -1,0 +1,5 @@
+api:
+    entities:
+        Ds\Bundle\TopicBundle\Entity\Topic: ~
+        Ds\Bundle\TopicBundle\Entity\Subscription: ~
+        Ds\Bundle\TopicBundle\Entity\Channel: ~

@@ -1,0 +1,69 @@
+services:
+    ds.topic.form.type.topic:
+        class: Ds\Bundle\TopicBundle\Form\Type\TopicType
+        tags:
+            - { name: form.type, alias: ds_topic_topic }
+    ds.topic.form.type.api.topic:
+        class: Ds\Bundle\TopicBundle\Form\Type\Api\TopicType
+        tags:
+            - { name: form.type, alias: ds_topic_api_topic }
+    ds.topic.form.api.topic:
+        class: Symfony\Component\Form\Form
+        factory_method: createNamed
+        factory_service: form.factory
+        arguments:
+            - ~
+            - ds_topic_api_topic
+    ds.topic.form.handler.topic:
+        class: Ds\Bundle\TopicBundle\Form\Handler\TopicHandler
+        scope: request
+        arguments:
+            - @ds.topic.form.api.topic
+            - @request
+            - @doctrine.orm.entity_manager
+    ds.topic.form.type.subscription:
+        class: Ds\Bundle\TopicBundle\Form\Type\SubscriptionType
+        tags:
+            - { name: form.type, alias: ds_topic_subscription }
+    ds.topic.form.type.api.subscription:
+        class: Ds\Bundle\TopicBundle\Form\Type\Api\SubscriptionType
+        tags:
+            - { name: form.type, alias: ds_topic_api_subscription }
+    ds.topic.form.api.subscription:
+        class: Symfony\Component\Form\Form
+        factory_method: createNamed
+        factory_service: form.factory
+        arguments:
+            - ~
+            - ds_topic_api_subscription
+    ds.topic.form.handler.subscription:
+        class: Ds\Bundle\TopicBundle\Form\Handler\SubscriptionHandler
+        scope: request
+        arguments:
+            - @ds.topic.form.api.subscription
+            - @request
+            - @doctrine.orm.entity_manager
+    ds.topic.form.type.channel:
+        class: Ds\Bundle\TopicBundle\Form\Type\ChannelType
+        arguments:
+            - @ds.topic.collection.channel
+        tags:
+            - { name: form.type, alias: ds_topic_channel }
+    ds.topic.form.type.api.channel:
+        class: Ds\Bundle\TopicBundle\Form\Type\Api\ChannelType
+        tags:
+            - { name: form.type, alias: ds_topic_api_channel }
+    ds.topic.form.api.channel:
+        class: Symfony\Component\Form\Form
+        factory_method: createNamed
+        factory_service: form.factory
+        arguments:
+            - ~
+            - ds_topic_api_channel
+    ds.topic.form.handler.channel:
+        class: Ds\Bundle\TopicBundle\Form\Handler\ChannelHandler
+        scope: request
+        arguments:
+            - @ds.topic.form.api.channel
+            - @request
+            - @doctrine.orm.entity_manager

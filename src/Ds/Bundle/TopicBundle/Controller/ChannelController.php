@@ -1,27 +1,27 @@
 <?php
 
-namespace Ds\Bundle\NotificationBundle\Controller;
+namespace Ds\Bundle\TopicBundle\Controller;
 
 use Ds\Bundle\AdminBundle\Controller\BreadController;
-use Ds\Bundle\NotificationBundle\Entity\Notification;
+use Ds\Bundle\TopicBundle\Entity\Channel;
 
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 use Oro\Bundle\SecurityBundle\Annotation\AclAncestor;
 
 /**
- * Class NotificationController
+ * Class ChannelController
  *
- * @Route("/notification")
+ * @Route("/topic/channel")
  */
-class NotificationController extends BreadController
+class ChannelController extends BreadController
 {
     /**
      * Constructor
      */
     public function __construct()
     {
-        parent::__construct('notification');
+        parent::__construct('topic_channel');
     }
 
     /**
@@ -29,7 +29,7 @@ class NotificationController extends BreadController
      *
      * @Route("/")
      * @Template()
-     * @AclAncestor("ds.notification.notification.view")
+     * @AclAncestor("ds.topic.channel.view")
      */
     public function indexAction()
     {
@@ -39,13 +39,13 @@ class NotificationController extends BreadController
     /**
      * View action
      *
-     * @param \Ds\Bundle\NotificationBundle\Entity\Notification $entity
+     * @param \Ds\Bundle\TopicBundle\Entity\Channel $entity
      * @return array
      * @Route("/view/{id}", requirements={"id"="\d+"})
      * @Template()
-     * @AclAncestor("ds.notification.notification.view")
+     * @AclAncestor("ds.topic.channel.view")
      */
-    public function viewAction(Notification $entity)
+    public function viewAction(Channel $entity)
     {
         return $this->handleView($entity);
     }
@@ -56,8 +56,8 @@ class NotificationController extends BreadController
      * @param string $alias
      * @return array
      * @Route("/create/{alias}", requirements={"alias":"[a-z]*"}, defaults={"alias":""})
-     * @Template("DsNotificationBundle:Notification:edit.html.twig")
-     * @AclAncestor("ds.notification.notification.create")
+     * @Template("DsTopicBundle:Channel:edit.html.twig")
+     * @AclAncestor("ds.topic.channel.create")
      */
     public function createAction($alias)
     {
@@ -67,13 +67,13 @@ class NotificationController extends BreadController
     /**
      * Edit action
      *
-     * @param \Ds\Bundle\NotificationBundle\Entity\Notification $entity
+     * @param \Ds\Bundle\TopicBundle\Entity\Channel $entity
      * @return array
      * @Route("/update/{id}", requirements={"id":"\d+"}, defaults={"id":0})
      * @Template()
-     * @AclAncestor("ds.notification.notification.edit")
+     * @AclAncestor("ds.topic.channel.edit")
      */
-    public function editAction(Notification $entity)
+    public function editAction(Channel $entity)
     {
         return $this->handleEdit($entity);
     }

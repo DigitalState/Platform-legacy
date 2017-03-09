@@ -1,0 +1,51 @@
+services:
+    ds.topic.widget.topic.entity:
+        parent: ds.widget.widget.abstract
+        class: Ds\Bundle\TopicBundle\Widget\Topic\EntityWidget
+        tags:
+            - { name: ds.widget, position: ds_topic_topic_entity }
+    ds.topic.widget.topic.form:
+        parent: ds.widget.widget.abstract
+        class: Ds\Bundle\TopicBundle\Widget\Topic\FormWidget
+        tags:
+            - { name: ds.widget, position: ds_topic_topic_form }
+    ds.topic.widget.topic.owner:
+        parent: ds.widget.widget.abstract
+        class: Ds\Bundle\TopicBundle\Widget\Topic\OwnerWidget
+        tags:
+            - { name: ds.widget, position: ds_topic_topic_form }
+    ds.topic.widget.topic.subscriptions.grid:
+        parent: ds.widget.widget.abstract
+        class: Ds\Bundle\TopicBundle\Widget\Topic\Subscriptions\GridWidget
+        tags:
+            - { name: ds.widget, position: ds_topic_topic_entity }
+    ds.topic.widget.subscription.entity:
+        parent: ds.widget.widget.abstract
+        class: Ds\Bundle\TopicBundle\Widget\Subscription\EntityWidget
+        tags:
+            - { name: ds.widget, position: ds_topic_subscription_entity }
+    ds.topic.widget.subscription.form:
+        parent: ds.widget.widget.abstract
+        class: Ds\Bundle\TopicBundle\Widget\Subscription\FormWidget
+        tags:
+            - { name: ds.widget, position: ds_topic_subscription_form }
+    ds.topic.widget.subscription.owner:
+        parent: ds.widget.widget.abstract
+        class: Ds\Bundle\TopicBundle\Widget\Subscription\OwnerWidget
+        tags:
+            - { name: ds.widget, position: ds_topic_subscription_form }
+    ds.topic.widget.channel.entity:
+        parent: ds.widget.widget.abstract
+        class: Ds\Bundle\TopicBundle\Widget\Channel\EntityWidget
+        tags:
+            - { name: ds.widget, position: ds_topic_channel_entity }
+    ds.topic.widget.channel.form:
+        parent: ds.widget.widget.abstract
+        class: Ds\Bundle\TopicBundle\Widget\Channel\FormWidget
+        tags:
+            - { name: ds.widget, position: ds_topic_channel_form }
+    ds.topic.widget.channel.owner:
+        parent: ds.widget.widget.abstract
+        class: Ds\Bundle\TopicBundle\Widget\Channel\OwnerWidget
+        tags:
+            - { name: ds.widget, position: ds_topic_channel_form }

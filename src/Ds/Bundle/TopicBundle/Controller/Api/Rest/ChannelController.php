@@ -11,19 +11,19 @@ use FOS\RestBundle\Controller\Annotations\QueryParam;
 use Oro\Bundle\SecurityBundle\Annotation\AclAncestor;
 
 /**
- * Class SubscriptionController
+ * Class ChannelController
  *
- * @RouteResource("subscription")
+ * @RouteResource("channel")
  * @Route("/topic")
  * @NamePrefix("ds_topic_api_rest_")
  */
-class SubscriptionController extends AbstractController
+class ChannelController extends AbstractController
 {
     /**
      * Get collection action
      *
      * @return \Symfony\Component\HttpFoundation\Response
-     * @AclAncestor("ds.topic.subscription.view")
+     * @AclAncestor("ds.topic.channel.view")
      * @QueryParam(name="page", requirements="\d+", nullable=true)
      * @QueryParam(name="limit", requirements="\d+", nullable=true)
      */
@@ -42,7 +42,7 @@ class SubscriptionController extends AbstractController
      *
      * @param integer $id
      * @return \Symfony\Component\HttpFoundation\Response
-     * @AclAncestor("ds.topic.subscription.view")
+     * @AclAncestor("ds.topic.channel.view")
      */
     public function getAction($id)
     {
@@ -54,7 +54,7 @@ class SubscriptionController extends AbstractController
      *
      * @param integer $id
      * @return \Symfony\Component\HttpFoundation\Response
-     * @AclAncestor("ds.topic.subscription.edit")
+     * @AclAncestor("ds.topic.channel.edit")
      */
     public function putAction($id)
     {
@@ -65,7 +65,7 @@ class SubscriptionController extends AbstractController
      * Post action
      *
      * @return \Symfony\Component\HttpFoundation\Response
-     * @AclAncestor("ds.topic.subscription.create")
+     * @AclAncestor("ds.topic.channel.create")
      */
     public function postAction()
     {
@@ -77,7 +77,7 @@ class SubscriptionController extends AbstractController
      *
      * @param integer $id
      * @return \Symfony\Component\HttpFoundation\Response
-     * @AclAncestor("ds.topic.subscription.delete")
+     * @AclAncestor("ds.topic.channel.delete")
      */
     public function deleteAction($id)
     {
@@ -89,7 +89,7 @@ class SubscriptionController extends AbstractController
      */
     public function getForm()
     {
-        return $this->get('ds.topic.form.api.subscription');
+        return $this->get('ds.topic.form.api.channel');
     }
 
     /**
@@ -97,7 +97,7 @@ class SubscriptionController extends AbstractController
      */
     public function getFormHandler()
     {
-        return $this->get('ds.topic.form.handler.subscription');
+        return $this->get('ds.topic.form.handler.channel');
     }
 
     /**
@@ -105,7 +105,7 @@ class SubscriptionController extends AbstractController
      */
     public function getManager()
     {
-        return $this->get('ds.topic.manager.subscription');
+        return $this->get('ds.topic.manager.channel');
     }
 
     /**
@@ -114,17 +114,21 @@ class SubscriptionController extends AbstractController
     protected function transformEntityField($field, &$value)
     {
         switch ($field) {
-            case 'user':
-            case 'topic':
-                $value = $this->transformEntityToId($value);
-                break;
-
-            case 'channels':
-                $value = $this->transformEntitiesToIds($value);
+            case 'titles':
+            case 'descriptions':
+                $value = $this->transformLocalizedValuesToTexts($value);
                 break;
 
             default:
                 parent::transformEntityField($field, $value);
         }
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    protected function getFallbackLocalizationFields()
+    {
+        return [ 'titles', 'descriptions' ];
     }
 }

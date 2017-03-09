@@ -1,0 +1,19 @@
+services:
+    ds.topic.repository.topic:
+        class: Doctrine\Common\Persistence\ObjectRepository
+        factory_service: doctrine
+        factory_method: getRepository
+        arguments:
+            - Ds\Bundle\TopicBundle\Entity\Topic
+    ds.topic.repository.subscription:
+        class: Doctrine\Common\Persistence\ObjectRepository
+        factory_service: doctrine
+        factory_method: getRepository
+        arguments:
+            - Ds\Bundle\TopicBundle\Entity\Subscription
+    ds.topic.repository.channel:
+        class: Doctrine\Common\Persistence\ObjectRepository
+        factory_service: doctrine
+        factory_method: getRepository
+        arguments:
+            - Ds\Bundle\TopicBundle\Entity\Channel
