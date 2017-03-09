@@ -1,0 +1,2 @@
+bundles:
+    - { name: Ds\Bundle\PortalTopicBundle\DsPortalTopicBundle, priority: 30 }

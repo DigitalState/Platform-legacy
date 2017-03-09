@@ -1,0 +1,5 @@
+services:
+    ds.portaltopic.form.type.portal.subscription:
+        class: Ds\Bundle\PortalTopicBundle\Form\Type\Portal\SubscriptionType
+        tags:
+            - { name: form.type, alias: ds_portaltopic_portal_subscription }

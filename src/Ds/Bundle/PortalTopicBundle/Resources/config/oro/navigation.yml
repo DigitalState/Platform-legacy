@@ -1,0 +1,13 @@
+navigation:
+    menu_config:
+        items:
+            ds_portaltopic_portal_topic_index:
+                label: ds.portaltopic.page.portal.topic.index.title
+                route: ds_portaltopic_portal_topic_index
+                extras:
+                    position: 30
+                    show_non_authorized: true
+        tree:
+            ds_portal_main:
+                children:
+                    ds_portaltopic_portal_topic_index: ~

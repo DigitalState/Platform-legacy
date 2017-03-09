@@ -1,0 +1,15 @@
+ds:
+    portaltopic:
+        page:
+            portal:
+                topic:
+                    index:
+                        title: Topics
+                        search:
+                            placeholder: What would you like to be notified about?
+                        grid:
+                            empty: No records found.
+                    view:
+                        channels:
+                            title: Channels
+                            description: Select the channels you would like to receive these topics.
