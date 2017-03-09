@@ -1,0 +1,13 @@
+ds_template:
+    resource: @DsTemplateBundle/Controller
+    type: annotation
+
+ds_template_api_rest:
+    resource: @DsTemplateBundle/Resources/config/oro/routing/api.yml
+    type: rest
+    prefix: %ds.api.rest.prefix%
+    requirements:
+        version: %ds.api.rest.requirements.version%
+        _format: json
+    defaults:
+        version: %ds.api.rest.defaults.version%

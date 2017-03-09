@@ -1,0 +1,23 @@
+services:
+    ds.template.form.type.template:
+        class: Ds\Bundle\TemplateBundle\Form\Type\TemplateType
+        tags:
+            - { name: form.type, alias: ds_template_template }
+    ds.template.form.type.api.template:
+        class: Ds\Bundle\TemplateBundle\Form\Type\Api\TemplateType
+        tags:
+            - { name: form.type, alias: ds_template_api_template }
+    ds.template.form.api.template:
+        class: Symfony\Component\Form\Form
+        factory_method: createNamed
+        factory_service: form.factory
+        arguments:
+            - ~
+            - ds_template_api_template
+    ds.template.form.handler.template:
+        class: Ds\Bundle\TemplateBundle\Form\Handler\TemplateHandler
+        scope: request
+        arguments:
+            - @ds.template.form.api.template
+            - @request
+            - @doctrine.orm.entity_manager

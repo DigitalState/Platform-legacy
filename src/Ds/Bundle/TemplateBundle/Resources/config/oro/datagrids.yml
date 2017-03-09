@@ -1,87 +1,87 @@
 datagrids:
-    ds-message-message:
-        extended_entity_name: Ds\Bundle\MessageBundle\Entity\Message
+    ds-template-template:
+        extended_entity_name: Ds\Bundle\TemplateBundle\Entity\Template
         source:
-            acl_resource: ds.communication.message.view
+            acl_resource: ds.template.template.view
             type: orm
             query:
                 select:
-                    - m.id
-                    - m.title
-                    - m.createdAt
-                    - m.updatedAt
+                    - t.id
+                    - t.title
+                    - t.createdAt
+                    - t.updatedAt
                 from:
-                    - { table: DsMessageBundle:Message, alias: m }
+                    - { table: DsTemplateBundle:Template, alias: t }
         inline_editing:
             enable: true
         columns:
             id:
-                label: ds.message.id.label
+                label: ds.template.id.label
             title:
-                label: ds.message.title.label
+                label: ds.template.title.label
             createdAt:
-                label: ds.message.created_at.label
+                label: ds.template.created_at.label
                 frontend_type: datetime
             updatedAt:
-                label: ds.message.updated_at.label
+                label: ds.template.updated_at.label
                 frontend_type: datetime
         properties:
             id: ~
             update_link:
                 type: url
-                route: ds_message_message_edit
+                route: ds_template_template_edit
                 params:
                     - id
             view_link:
                 type: url
-                route: ds_message_message_view
+                route: ds_template_template_view
                 params:
                     - id
             delete_link:
                 type: url
-                route: ds_message_api_rest_delete_message
+                route: ds_template_api_rest_delete_template
                 params:
                     - id
         sorters:
             columns:
                 id:
-                    data_name: m.id
+                    data_name: t.id
                 title:
-                    data_name: m.title
+                    data_name: t.title
                 createdAt:
-                    data_name: m.createdAt
+                    data_name: t.createdAt
                 updatedAt:
-                    data_name: m.updatedAt
+                    data_name: t.updatedAt
             default:
                 id: ASC
         filters:
             columns:
                 title:
                     type: string
-                    data_name: m.title
+                    data_name: t.title
                 createdAt:
                     type: datetime
-                    data_name: m.createdAt
+                    data_name: t.createdAt
                 updatedAt:
                     type: datetime
-                    data_name: m.updatedAt
+                    data_name: t.updatedAt
         actions:
             view:
                 type: navigate
-                label: ds.message.grid.actions.view
+                label: ds.template.grid.actions.view
                 link: view_link
                 icon: eye
-                acl_resource: ds.message.message.view
+                acl_resource: ds.template.template.view
                 rowAction: true
             update:
                 type: navigate
-                label: ds.message.grid.actions.update
+                label: ds.template.grid.actions.update
                 link: update_link
                 icon: edit
-                acl_resource: ds.message.message.edit
+                acl_resource: ds.template.template.edit
             delete:
                 type: delete
-                label: ds.message.grid.actions.delete
+                label: ds.template.grid.actions.delete
                 link: delete_link
                 icon: trash
-                acl_resource: ds.message.message.delete
+                acl_resource: ds.template.template.delete

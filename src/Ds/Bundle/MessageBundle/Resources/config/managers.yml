@@ -3,6 +3,6 @@ services:
         class: Ds\Bundle\MessageBundle\Manager\MessageManager
         parent: oro_soap.manager.entity_manager.abstract
         arguments:
-            - Ds\Bundle\CommunicationBundle\Entity\Message
+            - Ds\Bundle\MessageBundle\Entity\Message
             - @doctrine.orm.entity_manager
             - @ds.transport.collection.transport

@@ -1,0 +1,42 @@
+ds:
+    template:
+        entity_label: Modèle
+        entity_plural_label: Modèles
+        entity_description: The modèle.
+        id:
+            label: Id
+            description: ~
+        created_at:
+            label: Créé le
+            description: ~
+        updated_at:
+            label: Mis à jour le
+            description: ~
+        title:
+            label: Titre
+            description: ~
+        presentation:
+            label: Présentation
+            description: ~
+        owner:
+            label: Unité d'affaires
+            description: ~
+        menu:
+            index:
+                label: Modèles
+        page:
+            index:
+                title: Modèles
+            view: ~
+            edit: ~
+        grid:
+            actions:
+                view: Visionner
+                update: Editer
+                delete: Supprimer
+        button:
+            create: Créer un modèle
+        widget:
+            entity: Modèle
+            form: Modèle
+            owner: Propriétaire

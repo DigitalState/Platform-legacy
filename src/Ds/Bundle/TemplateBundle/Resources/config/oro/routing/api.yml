@@ -1,0 +1,3 @@
+ds_template_api_rest_template:
+    resource: Ds\Bundle\TemplateBundle\Controller\Api\Rest\TemplateController
+    type: rest

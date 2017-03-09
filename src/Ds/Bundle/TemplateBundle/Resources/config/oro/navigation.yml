@@ -1,0 +1,17 @@
+navigation:
+    menu_config:
+        items:
+            ds_template_template_tab:
+                label: ds.template.menu.tab.label
+                uri: '#'
+                extras:
+                    position: 20
+            ds_template_template_index:
+                label: ds.template.menu.index.label
+                route: ds_template_template_index
+        tree:
+            application_menu:
+                children:
+                    ds_template_template_tab:
+                        children:
+                            ds_template_template_index: ~

@@ -1,0 +1,3 @@
+api:
+    entities:
+        Ds\Bundle\TemplateBundle\Entity\Template: ~

@@ -1,0 +1,7 @@
+services:
+    ds.template.repository.template:
+        class: Doctrine\Common\Persistence\ObjectRepository
+        factory_service: doctrine
+        factory_method: getRepository
+        arguments:
+            - Ds\Bundle\TemplateBundle\Entity\Template

@@ -1,0 +1,7 @@
+services:
+    ds.template.data.resolver.template:
+        class: Ds\Bundle\TemplateBundle\Data\Resolver\TemplateResolver
+        arguments:
+            - @ds.template.manager.template
+        tags:
+            - { name: ds.data.resolver }

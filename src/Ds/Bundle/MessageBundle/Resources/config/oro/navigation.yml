@@ -12,11 +12,11 @@ navigation:
                 attributes:
                     class: oro-email-user-emails
         tree:
-#            application_menu:
-#                children:
-#                    ds_message_message_tab:
-#                        children:
-#                            ds_message_message_index: ~
+            application_menu:
+                children:
+                    ds_message_message_tab:
+                        children:
+                            ds_message_message_index: ~
             usermenu:
                 children:
                     ds_message_message_index: ~

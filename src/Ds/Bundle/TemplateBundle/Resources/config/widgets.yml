@@ -1,0 +1,16 @@
+services:
+    ds.template.widget.template.entity:
+        parent: ds.widget.widget.abstract
+        class: Ds\Bundle\TemplateBundle\Widget\Template\EntityWidget
+        tags:
+            - { name: ds.widget, position: ds_template_template_entity }
+    ds.template.widget.template.form:
+        parent: ds.widget.widget.abstract
+        class: Ds\Bundle\TemplateBundle\Widget\Template\FormWidget
+        tags:
+            - { name: ds.widget, position: ds_template_template_form }
+    ds.template.widget.template.owner:
+        parent: ds.widget.widget.abstract
+        class: Ds\Bundle\TemplateBundle\Widget\Template\OwnerWidget
+        tags:
+            - { name: ds.widget, position: ds_template_template_form }

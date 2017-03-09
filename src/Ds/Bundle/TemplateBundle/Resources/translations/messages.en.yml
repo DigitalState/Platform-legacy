@@ -1,0 +1,44 @@
+ds:
+    template:
+        entity_label: Template
+        entity_plural_label: Templates
+        entity_description: The template.
+        id:
+            label: ID
+            description: ~
+        created_at:
+            label: Created At
+            description: ~
+        updated_at:
+            label: Updated At
+            description: ~
+        title:
+            label: Title
+            description: ~
+        presentation:
+            label: Presentation
+            description: ~
+        owner:
+            label: Business Unit
+            description: ~
+        menu:
+            tab:
+                label: Templates
+            index:
+                label: Templates
+        page:
+            index:
+                title: Templates
+            view: ~
+            edit: ~
+        grid:
+            actions:
+                view: View
+                update: Edit
+                delete: Delete
+        button:
+            create: Create Template
+        widget:
+            entity: Template
+            form: Template
+            owner: Owner

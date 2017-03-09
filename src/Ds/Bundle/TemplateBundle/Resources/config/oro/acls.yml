@@ -1,0 +1,17 @@
+acls:
+    ds.template.template.view:
+        type: entity
+        class: DsTemplateBundle:Template
+        permission: VIEW
+    ds.template.template.create:
+        type: entity
+        class: DsTemplateBundle:Template
+        permission: CREATE
+    ds.template.template.edit:
+        type: entity
+        class: DsTemplateBundle:Template
+        permission: EDIT
+    ds.template.template.delete:
+        type: entity
+        class: DsTemplateBundle:Template
+        permission: DELETE

@@ -1,0 +1,7 @@
+services:
+    ds.template.manager.template:
+        class: Ds\Bundle\TemplateBundle\Manager\TemplateManager
+        parent: oro_soap.manager.entity_manager.abstract
+        arguments:
+            - Ds\Bundle\TemplateBundle\Entity\Template
+            - @doctrine.orm.entity_manager
