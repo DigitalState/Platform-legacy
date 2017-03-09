@@ -7,7 +7,6 @@ use Oro\Bundle\OrganizationBundle\Entity\Ownership;
 use Oro\Bundle\LocaleBundle\Entity\FallbackTrait;
 use Doctrine\Common\Collections\ArrayCollection;
 use Oro\Bundle\UserBundle\Entity\User;
-use Ds\Bundle\CommunicationBundle\Entity\Channel;
 
 use Oro\Bundle\EntityConfigBundle\Metadata\Annotation\Config;
 use Oro\Bundle\EntityConfigBundle\Metadata\Annotation\ConfigField;
@@ -133,7 +132,7 @@ class Subscription
 
     /**
      * @var \Doctrine\Common\Collections\ArrayCollection
-     * @ORM\ManyToMany(targetEntity="Ds\Bundle\CommunicationBundle\Entity\Channel")
+     * @ORM\ManyToMany(targetEntity="Ds\Bundle\TopicBundle\Entity\Channel")
      * @ORM\JoinTable(name="ds_topic_subscription_channel")
      */
     protected $channels; # region accessors
@@ -141,7 +140,7 @@ class Subscription
     /**
      * Add channel
      *
-     * @param \Ds\Bundle\CommunicationBundle\Entity\Channel $channel
+     * @param \Ds\Bundle\TopicBundle\Entity\Channel $channel
      * @return \Ds\Bundle\TopicBundle\Entity\Subscription
      */
     public function addChannel(Channel $channel)
@@ -154,7 +153,7 @@ class Subscription
     /**
      * Remove channel
      *
-     * @param \Ds\Bundle\CommunicationBundle\Entity\Channel $channel
+     * @param \Ds\Bundle\TopicBundle\Entity\Channel $channel
      */
     public function removeChannel(Channel $channel)
     {

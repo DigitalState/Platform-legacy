@@ -13,13 +13,6 @@
 {% endblock pageHeader %}
 
 {% block navButtons %}
-    {% if resource_granted('ds.communication.communication.create') %}
-        {#{{ UI.button({#}
-            {#path: path('ds_topic_communication_create', { id: entity.id }),#}
-            {#label: 'ds.communication.button.create'|trans,#}
-            {#aCss: 'btn-primary'#}
-        {#}) }}#}
-    {% endif %}
     {% if resource_granted('ds.topic.topic.edit', entity) %}
         {{ UI.editButton({
             path: path('ds_topic_topic_edit', { id: entity.id }),

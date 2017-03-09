@@ -1,2 +1,2 @@
 bundles:
-#    - { name: Ds\Bundle\TopicBundle\DsTopicBundle, priority: 20 }
+    - { name: Ds\Bundle\TopicBundle\DsTopicBundle, priority: 20 }

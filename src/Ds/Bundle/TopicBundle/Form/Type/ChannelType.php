@@ -5,28 +5,12 @@ namespace Ds\Bundle\TopicBundle\Form\Type;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
-use Ds\Bundle\TopicBundle\Collection\ChannelCollection;
 
 /**
  * Class ChannelType
  */
 class ChannelType extends AbstractType
 {
-    /**
-     * @var \Ds\Bundle\TopicBundle\Collection\ChannelCollection
-     */
-    protected $channelCollection;
-
-    /**
-     * Constructor
-     *
-     * @param \Ds\Bundle\TopicBundle\Collection\ChannelCollection $channelCollection
-     */
-    public function __construct(ChannelCollection $channelCollection)
-    {
-        $this->channelCollection = $channelCollection;
-    }
-
     /**
      * {@inheritdoc}
      */

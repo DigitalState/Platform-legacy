@@ -48,7 +48,7 @@ class TopicType extends AbstractType
         ]);
 
         $builder->add('channels', 'entity', [
-            'class' => 'DsCommunicationBundle:Channel',
+            'class' => 'DsTopicBundle:Channel',
             'choice_label' => 'defaultTitle',
             'multiple' => true,
             'expanded' => true

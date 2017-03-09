@@ -43,7 +43,7 @@ class SubscriptionType extends AbstractType
 
         $builder->add('channels', 'entity', [
             'label' => 'ds.topic.subscription.channels.label',
-            'class' => 'DsCommunicationBundle:Channel',
+            'class' => 'DsTopicBundle:Channel',
             'query_builder' => function(EntityRepository $repository) use ($options) {
                 $query = $repository->createQueryBuilder('c');
 

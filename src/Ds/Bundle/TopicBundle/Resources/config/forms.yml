@@ -45,8 +45,6 @@ services:
             - @doctrine.orm.entity_manager
     ds.topic.form.type.channel:
         class: Ds\Bundle\TopicBundle\Form\Type\ChannelType
-        arguments:
-            - @ds.topic.collection.channel
         tags:
             - { name: form.type, alias: ds_topic_channel }
     ds.topic.form.type.api.channel:

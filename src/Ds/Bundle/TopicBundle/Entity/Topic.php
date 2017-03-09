@@ -6,7 +6,7 @@ use Ds\Bundle\EntityBundle\Entity\Attribute;
 use Oro\Bundle\OrganizationBundle\Entity\Ownership;
 use Oro\Bundle\LocaleBundle\Entity\FallbackTrait;
 use Doctrine\Common\Collections\ArrayCollection;
-use Ds\Bundle\CommunicationBundle\Entity\Channel;
+use Ds\Bundle\TopicBundle\Entity\Channel;
 
 use Oro\Bundle\EntityConfigBundle\Metadata\Annotation\Config;
 use Oro\Bundle\EntityConfigBundle\Metadata\Annotation\ConfigField;
@@ -119,7 +119,7 @@ class Topic
 
     /**
      * @var \Doctrine\Common\Collections\ArrayCollection
-     * @ORM\ManyToMany(targetEntity="Ds\Bundle\CommunicationBundle\Entity\Channel")
+     * @ORM\ManyToMany(targetEntity="Ds\Bundle\TopicBundle\Entity\Channel")
      * @ORM\JoinTable(name="ds_topic_topicchannel")
      */
     protected $channels; # region accessors

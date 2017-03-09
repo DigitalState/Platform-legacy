@@ -1,7 +1,0 @@
-services:
-    ds.topic.criterion.topic:
-        class: Ds\Bundle\TopicBundle\Criterion\TopicCriterion
-        arguments:
-            - @doctrine.orm.entity_manager
-        tags:
-            - { name: ds.communication.criterion, implementation: topic }
