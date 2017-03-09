@@ -1,6 +1,6 @@
 <?php
 
-namespace Ds\Bundle\CommunicationBundle\Repository;
+namespace Ds\Bundle\MessageBundle\Repository;
 
 use Ds\Bundle\EntityBundle\Repository\EntityRepository;
 

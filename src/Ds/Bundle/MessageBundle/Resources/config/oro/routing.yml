@@ -1,9 +1,9 @@
-ds_communication:
-    resource: @DsCommunicationBundle/Controller
+ds_message:
+    resource: @DsMessageBundle/Controller
     type: annotation
 
-ds_communication_api_rest:
-    resource: @DsCommunicationBundle/Resources/config/oro/routing/api.yml
+ds_message_api_rest:
+    resource: @DsMessageBundle/Resources/config/oro/routing/api.yml
     type: rest
     prefix: %ds.api.rest.prefix%
     requirements:

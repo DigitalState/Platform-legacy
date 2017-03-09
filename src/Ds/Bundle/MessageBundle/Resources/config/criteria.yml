@@ -1,5 +1,0 @@
-services:
-    ds.communication.criterion.column:
-        class: Ds\Bundle\CommunicationBundle\Criterion\ColumnCriterion
-        tags:
-            - { name: ds.communication.criterion, implementation: column }

@@ -1,8 +1,3 @@
 api:
     entities:
-        Ds\Bundle\CommunicationBundle\Entity\Channel: ~
-        Ds\Bundle\CommunicationBundle\Entity\Communication: ~
-        Ds\Bundle\CommunicationBundle\Entity\Content: ~
-        Ds\Bundle\CommunicationBundle\Entity\Criterion: ~
-        Ds\Bundle\CommunicationBundle\Entity\Message: ~
-        Ds\Bundle\CommunicationBundle\Entity\Template: ~
+        Ds\Bundle\MessageBundle\Entity\Message: ~

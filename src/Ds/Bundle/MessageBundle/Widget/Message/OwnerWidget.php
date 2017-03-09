@@ -1,6 +1,6 @@
 <?php
 
-namespace Ds\Bundle\CommunicationBundle\Widget\Message;
+namespace Ds\Bundle\MessageBundle\Widget\Message;
 
 use Ds\Bundle\WidgetBundle\Widget\Widget;
 
@@ -14,7 +14,7 @@ class OwnerWidget extends Widget
      */
     public function getTitle()
     {
-        return 'ds.communication.message.widget.owner';
+        return 'ds.message.widget.owner';
     }
 
     /**
@@ -22,6 +22,6 @@ class OwnerWidget extends Widget
      */
     public function getContent(array $data = [])
     {
-        return $this->templating->render('@DsCommunicationBundle/Resources/views/Message/widget/owner.html.twig', $data);
+        return $this->templating->render('@DsMessageBundle/Resources/views/Message/widget/owner.html.twig', $data);
     }
 }

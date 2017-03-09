@@ -1,6 +1,6 @@
 <?php
 
-namespace Ds\Bundle\CommunicationBundle\Form\Type\Api;
+namespace Ds\Bundle\MessageBundle\Form\Type\Api;
 
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
@@ -35,7 +35,7 @@ class MessageType extends AbstractType
      */
     public function getName()
     {
-        return 'ds_communication_api_message';
+        return 'ds_message_api_message';
     }
 
     /**
@@ -43,6 +43,6 @@ class MessageType extends AbstractType
      */
     public function getParent()
     {
-        return 'ds_communication_message';
+        return 'ds_message_message';
     }
 }

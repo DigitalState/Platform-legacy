@@ -2,15 +2,15 @@
 
 {% import 'OroUIBundle::macros.html.twig' as UI %}
 
-{% set pageTitle = 'ds.communication.message.page.index.title'|trans %}
+{% set pageTitle = 'ds.message.page.index.title'|trans %}
 
 {% block navButtons %}
-    {% if resource_granted('ds.communication.message.create') %}
+    {% if resource_granted('ds.message.message.create') %}
         <div class="btn-group pull-right">
-            <a href="{{ path('ds_communication_message_create') }}" class="btn btn-primary action-button">
-                {% trans %}ds.communication.message.button.create{% endtrans %}
+            <a href="{{ path('ds_message_message_create') }}" class="btn btn-primary action-button">
+                {% trans %}ds.message.button.create{% endtrans %}
             </a>
-            {% set widgets = ds_widgets({ position: 'ds_communication_message_button_create' }) %}
+            {% set widgets = ds_widgets({ position: 'ds_message_message_button_create' }) %}
             {% if widgets is not empty %}
                 <a href="#" class="btn-primary btn dropdown-toggle" data-toggle="dropdown">
                     <span class="caret"></span>

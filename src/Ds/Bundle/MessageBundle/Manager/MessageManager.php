@@ -1,12 +1,11 @@
 <?php
 
-namespace Ds\Bundle\CommunicationBundle\Manager;
+namespace Ds\Bundle\MessageBundle\Manager;
 
 use Oro\Bundle\SoapBundle\Entity\Manager\ApiEntityManager;
 use Doctrine\Common\Persistence\ObjectManager;
-use Ds\Bundle\CommunicationBundle\Collection\ChannelCollection;
 use Ds\Bundle\TransportBundle\Collection\TransportCollection;
-use Ds\Bundle\CommunicationBundle\Entity\Message;
+use Ds\Bundle\MessageBundle\Entity\Message;
 use Ds\Bundle\TransportBundle\Entity\Profile;
 use DateTime;
 
@@ -15,11 +14,6 @@ use DateTime;
  */
 class MessageManager extends ApiEntityManager
 {
-    /**
-     * @var \Ds\Bundle\CommunicationBundle\Collection\ChannelCollection
-     */
-    protected $channelCollection;
-
     /**
      * @var \Ds\Bundle\TransportBundle\Collection\TransportCollection
      */
@@ -30,22 +24,20 @@ class MessageManager extends ApiEntityManager
      *
      * @param string $class
      * @param \Doctrine\Common\Persistence\ObjectManager $om
-     * @param \Ds\Bundle\CommunicationBundle\Collection\ChannelCollection $channelCollection
      */
-    public function __construct($class, ObjectManager $om, ChannelCollection $channelCollection, TransportCollection $transportCollection)
+    public function __construct($class, ObjectManager $om, TransportCollection $transportCollection)
     {
         parent::__construct($class, $om);
 
-        $this->channelCollection = $channelCollection;
         $this->transportCollection = $transportCollection;
     }
 
     /**
      * Send message
      *
-     * @param \Ds\Bundle\CommunicationBundle\Entity\Message $message
+     * @param \Ds\Bundle\MessageBundle\Entity\Message $message
      * @param \Ds\Bundle\TransportBundle\Entity\Profile $profile
-     * @return \Ds\Bundle\CommunicationBundle\Manager\MessageManager
+     * @return \Ds\Bundle\MessageBundle\Manager\MessageManager
      */
     public function send(Message $message, Profile $profile)
     {

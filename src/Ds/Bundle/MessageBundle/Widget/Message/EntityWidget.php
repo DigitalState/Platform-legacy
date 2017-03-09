@@ -1,6 +1,6 @@
 <?php
 
-namespace Ds\Bundle\CommunicationBundle\Widget\Message;
+namespace Ds\Bundle\MessageBundle\Widget\Message;
 
 use Ds\Bundle\WidgetBundle\Widget\Widget;
 
@@ -14,7 +14,7 @@ class EntityWidget extends Widget
      */
     public function getTitle()
     {
-        return 'ds.communication.message.widget.entity';
+        return 'ds.message.widget.entity';
     }
 
     /**
@@ -22,6 +22,6 @@ class EntityWidget extends Widget
      */
     public function getContent(array $data = [])
     {
-        return $this->templating->render('@DsCommunicationBundle/Resources/views/Message/widget/entity.html.twig', $data);
+        return $this->templating->render('@DsMessageBundle/Resources/views/Message/widget/entity.html.twig', $data);
     }
 }

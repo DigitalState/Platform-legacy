@@ -1,6 +1,6 @@
 <?php
 
-namespace Ds\Bundle\CommunicationBundle\Form\Handler;
+namespace Ds\Bundle\MessageBundle\Form\Handler;
 
 use Ds\Bundle\EntityBundle\Form\Handler\EntityHandler;
 
