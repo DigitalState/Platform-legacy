@@ -1,3 +1,0 @@
-{% set entity = entity_provider.find('DsNotificationBundle:Subscription', record.getValue('id')) %}
-{% set entity = entity_provider.find('DsNotificationBundle:Notification', entity.notification.id) %}
-{{ entity.defaultTitle }}

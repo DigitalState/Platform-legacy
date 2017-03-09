@@ -1,7 +1,0 @@
-services:
-    ds.notification.criterion.notification:
-        class: Ds\Bundle\NotificationBundle\Criterion\NotificationCriterion
-        arguments:
-            - @doctrine.orm.entity_manager
-        tags:
-            - { name: ds.communication.criterion, implementation: notification }
